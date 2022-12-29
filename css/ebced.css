@@ -1,0 +1,1497 @@
+/* in the name of the god the gracious the compassionate */
+
+.HiddenSecret{ display: none !important; }
+
+@font-face {
+    font-family: KawkabMono-Regular;
+    src: url(/css/KawkabMono-Regular.ttf);
+}
+@font-face {
+    font-family: Dancing-Script;
+    src: url(/css/DancingScript-VariableFont.ttf);
+}
+@font-face {
+    font-family: Geeza-Pro-Bold;
+    src: url(/css/Geeza-Pro-Bold.ttf);
+}
+@font-face {
+    font-family: Menlo-Bold;
+    src: url(/css/Menlo-Bold.ttf);
+}
+@font-face {
+    font-family: Times;
+    src: url(Times.ttf) format('truetype');
+}
+
+#coloredDiv {
+	display: inline-table; /* very important partially bug fix for chrome and mobile safari about shifting of markings
+	kalan hata chrome'da white space: pre-wrap; 'ın çalışma şekliyle ilgili */
+}
+
+body{ scroll-behavior: smooth; }
+
+.bismPadding{
+	padding: 8px;
+}
+
+.bismBack {
+	margin: auto;
+    width: fit-content;
+    height: fit-content;
+	background: url(/pic/Bismillahirrahmanirrahim19.png), rgba(255,255,255,0.74);
+	background-size: 78.6% auto, 100% 100%;
+    background-repeat: no-repeat;
+	background-position: center 33.5%;
+	backdrop-filter: blur(14px) saturate(180%);
+	-webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-radius: 1em;
+}
+
+.nameOrder{
+	color: red;
+	font-weight: bold;
+    padding: 4px;
+}
+#bismTable19 {
+	border-collapse:collapse;
+    margin-top: 44px;
+}
+#bismHead {
+    font-size: 20px;
+	border:1px solid #b3adad;
+	background: #f0f0f0;
+}
+#bismTable19 td {
+	border:1px solid #b3adad;
+	text-align:center;
+}
+#coefficients-left {
+	border-right: 0;
+	text-align: right;
+	padding: 8px;
+	padding-right: 0;
+}
+#coefficients-right {
+	border-left: 0;
+	text-align: left;
+	padding: 8px;
+	padding-left: 0;
+}
+#abjad{ margin-top: 6px; }
+#captionLeft{
+	display: block;
+    padding: 8px;
+	padding-right: 0px !important;
+    color: midnightblue;
+    text-align: right;
+}
+#captionRight{
+	display: block;
+    padding: 8px;
+	padding-left: 0px !important;
+    color: midnightblue;
+    text-align: left;
+}
+th.ayraç {
+    border-right: 0;
+    border-left: 0;
+}
+.tamkat{
+	background: rgba(0,0,139,0.74);
+    color: gold;
+    font-weight: bold;
+}
+.repetitions{
+	padding-top: 44px !important;
+    padding-bottom: 44px !important;
+	padding-right: 0px;
+	text-align: right;
+}
+.abjad{
+	padding-top: 44px !important;
+    padding-bottom: 44px !important;
+	padding-left: 0px;
+	text-align: left;
+}
+.lineHeight30 { line-height: 30px; }
+
+.no-border-right{
+	border-right: 0;
+}
+.no-border-left{
+	border-left: 0;
+}
+
+#say{margin-left: 7px;}
+
+#nameCountWrapper{
+	display: none;
+}
+.toggler-wrapper {
+	display: inline-block;
+	margin-right: 7px;
+	width: 45px;
+	height: 25px;
+	cursor: pointer;
+	position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+	display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+	background-color: yellow; /* #44cc66 */
+}
+
+#count-switch:checked #nameLabel {
+	color: white !important;
+}
+
+.toggler-wrapper .toggler-slider {
+	background-color: #ccc;
+	position: absolute;
+	border-radius: 100px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+	position: absolute;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-6 {
+	width: 54px;
+	-webkit-box-shadow: 0 0.07em 0.1em -0.1em rgba(0, 0, 0, 0.4) inset, 0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7);
+	box-shadow: 0 0.07em 0.1em -0.1em rgba(0, 0, 0, 0.4) inset, 0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.07)), to(rgba(255, 255, 255, 0))), #ddd;
+	background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0)), #ddd;
+	border-radius: 100px;
+}
+
+.toggler-wrapper.style-6 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+	left: calc(100% - 21px);
+}
+
+.toggler-wrapper.style-6 .toggler-slider {
+	-webkit-box-shadow: 0 0.08em 0.15em -0.1em rgba(0, 0, 0, 0.5) inset, 0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(68, 204, 102, 0.7) inset;
+	box-shadow: 0 0.08em 0.15em -0.1em rgba(0, 0, 0, 0.5) inset, 0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(68, 204, 102, 0.7) inset;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.07)), to(rgba(255, 255, 255, 0.1))), #d0d0d0;
+	background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.1)), #d0d0d0;
+	top: 5px;
+	left: 5px;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+}
+
+.toggler-wrapper.style-6 .toggler-knob {
+	width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    left: -5px;
+    top: -5px;
+	-webkit-box-shadow: 0 0.1em 0.15em -0.05em rgba(255, 255, 255, 0.9) inset, 0 0.2em 0.2em -0.12em rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0.1em 0.15em -0.05em rgba(255, 255, 255, 0.9) inset, 0 0.2em 0.2em -0.12em rgba(0, 0, 0, 0.5);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #f5f5f5), to(#eeeeee));
+	background: linear-gradient(#f5f5f5 10%, #eeeeee);
+}
+#nameLabel{
+	margin-right: 23px;
+	position: relative;
+    top: -5px;
+	color: yellow;
+	text-shadow: -1px -1px 4px black, 1px -1px 4px black, -1px 1px 4px black, 1px 1px 4px black;
+    text-align: center;
+    font-size: 22px;
+}
+
+#ĤM4143-wrapper {
+	margin-top: 45px;
+    margin-left: 38px;
+}
+#ĤM-wrapper {
+	margin: auto;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+	z-index: 1; /* if you remove this tables at right becomes not clickable */
+}
+#ĤM4042-wrapper{
+	margin-bottom: 38px;
+}
+.nineteen{ color: white; }
+.antique-link{color: yellow;}
+.antique{
+	color: yellow;
+	text-shadow: -1px -1px 4px black, 1px -1px 4px black, -1px 1px 4px black, 1px 1px 4px black;
+	text-align: center;
+	margin-left: 3%;
+    margin-right: 3%;
+	line-height: 38px;
+	font-size: 22px;
+}
+.antique:hover {
+	color: white;
+	text-shadow: -1px -1px 6px black, 1px -1px 6px black, -1px 1px 6px black, 1px 1px 6px black;
+}
+.first-tour {
+	color: white;
+	text-shadow: -1px -1px 6px black, 1px -1px 6px black, -1px 1px 6px black, 1px 1px 6px black;
+}
+.selectedRow{ background: rgba(240, 240, 240, 0.66); border: 1.1px solid midnightblue; }
+.flip-card {
+	background-color: transparent;
+    width: 3rem;
+    height: 39px;
+    perspective: 114px;
+}
+  
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.flip-card-front { /* only for others than safari */
+	background-color: rgba(255, 255, 255, 0.74);
+	backdrop-filter: blur(14px) saturate(180%);
+	-webkit-backdrop-filter: blur(14px) saturate(180%);
+	border-radius: 4px;
+	color: black;
+    line-height: 39px;
+}
+.flip-card-back {
+	border-radius: 4px;
+	background-color: #2980b9;
+	color: white;
+	transform: rotateY(180deg);
+	line-height: 34px;
+}
+.flip-card-inner.is-flipped {
+	transform: rotateY(180deg);
+}
+.flip-card:hover .flip-card-inner.is-flipped {
+	transform: rotateY(0deg);
+}
+#BISMILLAHIRRAHMANIRRAHIM-table{
+	display: block;
+    text-align: -webkit-center;
+	text-align: -moz-center;
+    margin-bottom: 11px;
+}
+.üç {
+    width: 4rem;
+    perspective: 8rem;
+}
+.ondört{
+	width: 38rem;
+    perspective: 76rem;
+}
+.beş{
+	width: 6rem;
+    perspective: 12rem;
+}
+.dört{
+	width: 5rem;
+    perspective: 10rem;
+}
+.ikibuçuk{
+	width: 3.5rem;
+	perspective: 7rem;
+}
+.iki{
+	width: 3rem;
+    perspective: 6rem;
+}
+.bir{
+	width: 2.5rem;
+    perspective: 5rem;
+}
+.bism-text{
+	width: max-content;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+#isim-table:before {
+	display: table;
+    text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    z-index: -19;
+    position: absolute;
+    font-size: 361px;
+    color: #bdbdbd;
+	content: "19";
+    font-family: Menlo-Bold;
+    font-weight: bold;
+    margin-left: 174px !important;
+    margin-right: 174px !important;
+    margin-top: 77px !important;
+    margin-bottom: 10px !important;
+}
+
+#isim-table:hover:before {
+	content: "واحد";
+	font-family: Geeza-Pro-Bold;
+	font-weight: normal;
+	margin-left: 121px !important;
+    margin-right: 107px !important;
+    margin-top: 39px !important;
+    margin-bottom: 10px !important;
+}
+tr.suraRow:hover a {
+	background-color: rgba(25, 25, 112, 0.74) !important;
+	color: white !important;
+	outline: 1px solid midnightblue;
+}
+td a {
+	font-family: Times;
+    display: block;
+	padding: 8px;
+	padding-top: 11px;
+	padding-bottom: 10px;
+}
+table#BISMILLAHIRRAHMANIRRAHIM td a, table#BISMILLAHIRRAHMANIRRAHIM-2 td a {
+	font-family: Times;
+}
+table#bismTable19 td a {
+	font-family: Times;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+table {
+	width: max-content;
+	margin: auto;
+	caption-side: bottom;
+	display: none;
+	border-collapse:collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}
+caption{ background-color: white; }
+table th {
+	border:1px solid #b3adad;
+	padding: 8px;
+	background: #f0f0f0;
+	color: #313030;
+}
+table td {
+	padding: 0px;
+	border:1px solid #b3adad;
+	text-align: center;
+	background: transparent;
+	color: #313030;
+}
+.back {
+	width: fit-content;
+    height: fit-content;
+	margin: auto;
+	background: url(/pic/book-arabic-019.png), rgba(255,255,255,0.74);
+	background-size: 47.8% auto, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+	backdrop-filter: blur(14px) saturate(180%);
+	-webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-radius: 1em;
+}
+#ELMRŜ:before {
+	display: table;
+    text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    z-index: -19;
+    position: absolute;
+    font-size: 190px;
+    color: #bdbdbd;
+	content: "19";
+    font-family: Menlo-Bold;
+    font-weight: bold;
+    margin-left: 244px !important;
+    margin-right: 244px !important;
+    margin-top: 249px !important;
+    margin-bottom: 203px !important;
+}
+table#ELMRŜ:hover:before {
+    content: "واحد";
+	font-family: Geeza-Pro-Bold;
+	font-weight: normal;
+    margin-top: 228px !important;
+    margin-bottom: 228px !important;
+    margin-left: 202px !important;
+}
+#THSM:before {
+	display: table;
+    text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    z-index: -19;
+    position: absolute;
+    font-size: 152px;
+    color: #bdbdbd;
+	content: "19";
+    font-family: Menlo-Bold;
+    font-weight: bold;
+    margin-top: 68px !important;
+    margin-bottom: 68px !important;
+    margin-left: 176px !important;
+    margin-right: 176px !important;
+}
+table#THSM:hover:before {
+    content: "واحد";
+	font-family: Geeza-Pro-Bold;
+	font-weight: normal;
+    margin-top: 52px !important;
+    margin-bottom: 52px !important;
+    margin-left: 144px !important;
+    margin-right: 144px !important;
+}
+#ĤM4042:before {
+	display: table;
+    text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    z-index: -19;
+    position: absolute;
+    font-size: 114px;
+    color: #bdbdbd;
+	content: "19";
+    font-family: Menlo-Bold;
+    font-weight: bold;
+    margin-top: 45px !important;
+    margin-bottom: 45px !important;
+    margin-left: 162px !important;
+    margin-right: 162px !important;
+}
+table#ĤM4042:hover:before {
+    content: "واحد";
+	font-family: Geeza-Pro-Bold;
+	font-weight: normal;
+    margin-top: 33px !important;
+    margin-bottom: 33px !important;
+    margin-left: 137px !important;
+    margin-right: 137px !important;
+}
+#ĤM4346:before {
+	display: table;
+    text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    z-index: -19;
+    position: absolute;
+    font-size: 114px;
+    color: #bdbdbd;
+	content: "19";
+    font-family: Menlo-Bold;
+    font-weight: bold;
+    margin-top: 68px !important;
+    margin-bottom: 68px !important;
+    margin-left: 162px !important;
+    margin-right: 162px !important;
+}
+table#ĤM4346:hover:before {
+    content: "واحد";
+	font-family: Geeza-Pro-Bold;
+	font-weight: normal;
+    margin-top: 56px !important;
+    margin-bottom: 56px !important;
+    margin-left: 137px !important;
+    margin-right: 137px !important;
+}
+#ĤM4143:before {
+	display: table;
+    text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    z-index: -19;
+    position: absolute;
+    font-size: 114px;
+    color: #bdbdbd;
+	content: "19";
+    font-family: Menlo-Bold;
+    font-weight: bold;
+    margin-top: 45px !important;
+    margin-bottom: 45px !important;
+    margin-left: 162px !important;
+    margin-right: 162px !important;
+}
+table#ĤM4143:hover:before {
+    content: "واحد";
+	font-family: Geeza-Pro-Bold;
+	font-weight: normal;
+    margin-top: 33px !important;
+    margin-bottom: 33px !important;
+    margin-left: 138px !important;
+    margin-right: 138px !important;
+}
+#Ŝ:before {
+	display: table;
+    text-shadow: -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white, 1px 1px 0px white;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    z-index: -19;
+    position: absolute;
+    font-size: 114px;
+    color: #bdbdbd;
+	content: "19";
+    font-family: Menlo-Bold;
+    font-weight: bold;
+    margin-top: 45px !important;
+    margin-bottom: 45px !important;
+    margin-left: 103px !important;
+    margin-right: 103px !important;
+}
+table#Ŝ:hover:before {
+    content: "واحد";
+	font-family: Geeza-Pro-Bold;
+	font-weight: normal;
+    margin-top: 33px !important;
+    margin-bottom: 33px !important;
+    margin-left: 78px !important;
+    margin-right: 78px !important;
+}
+#r{
+	justify-content: center;
+	margin: 19px;
+}
+.tables{
+	display: inline-block;
+    border-radius: 4px;
+    margin: 5px;
+}
+#captionLink{
+	display: block;
+    padding: 8px;
+}
+.counts{
+	padding-bottom: 10px;
+    padding-top: 11px;
+}
+.totals{padding: 8px;}
+.countsTotal{
+	padding-bottom: 10px;
+    padding-top: 11px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: darkblue;
+    color: gold;
+    font-weight: bold;
+}
+.hover-class {
+	background-color: rgba(25, 25, 112, 0.74);
+	color: white !important;
+}
+#saat-table {
+	display: block;
+    text-align: -webkit-center;
+	text-align: -moz-center;
+}
+.onsekiz {
+    width: 331.4px;
+    perspective: 662.8px;
+}
+.saat-text{
+	width: max-content;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.saat {line-height: 39px;}
+.suras{ text-align: left; }
+table#Ŝ, #Ŝ-back, table#N, #N-back {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+table#BISMILLAHIRRAHMANIRRAHIM {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 0;
+}
+table#BISMILLAHIRRAHMANIRRAHIM-2 {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 0;
+}
+
+#N_caption{
+	padding: 8px;
+	display: none;
+	padding-top: 10px;
+	background-color: white;
+	border-radius: 1em;
+}
+#Ŝ_caption{
+	padding: 8px;
+	background-color: white;
+	display: none;
+	width: fit-content;
+    margin: auto;
+	border-radius: 1em;
+}
+textarea:focus{
+	outline: 0;
+}
+textarea::-webkit-scrollbar {
+    width: 15px;
+}
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+textarea::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 1px solid slategrey;
+    outline-offset: -1px;
+	border-radius: 7.5px;
+}
+@-moz-document url-prefix() {
+	textarea {
+		scrollbar-color: darkgrey transparent;
+	}
+	.repetitions, .abjad{
+		padding-top: 44px !important;
+		padding-bottom: 43px !important;
+	}
+	.selectedRow{outline: 1.1px solid midnightblue;}
+}
+.row{
+	line-height: 45px;
+	border-bottom: 1px solid #999;
+	text-align: center;
+    width: 40px;
+	min-width: fit-content;
+}
+@media only screen and (min-width: 768px) {
+	#nextSura{
+		display: none;
+		position: relative;
+		float: right;
+		margin-right: 7px;
+		font-size: 22px;
+		color: midnightblue;
+	}
+	#ovpll{ margin-right: 7px; }
+	#v7430{
+		margin-top: 38px;
+	}
+	#N_caption {
+		margin-left: 7%;
+		margin-right: 7%;
+	}
+	#messengers{
+		background-image: url(/pic/messengers-horizontal.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 100%;
+		height: 342px;
+		background-position: center;
+		margin-bottom: 44px;
+		margin-top: 33px;
+	}
+	html, body { overflow-x: auto !important; /* gerektiğinde scroll çubuğunu mobil olmadığında gizler tablolar ekrana sığdığı için */ }
+	@-moz-document url-prefix() {
+		mark {
+			padding-bottom: 4px !important;
+		}
+	}
+	.container{
+		height: calc(41.5vw - 46px);
+		width: 100%;
+		position: relative;
+	}
+	.text{
+		font-size: 15pt;
+		width: 66%;
+		margin-left: 17%;
+	}
+	#all-tables{font-size: 15pt;}
+	#orta-before{
+		margin-top: 26px;
+		margin-bottom: -2px; /* bazı pencere genişliklerinde oluşan 2px'lik boşluğu gidermek için */
+		margin-left: 5vw;
+		margin-right: 5vw;
+		padding-left: 13vw;
+		padding-right: 13vw;
+		padding-top: 6%;
+		height: 28vw;
+		width: 64vw;
+		background-image: url(/pic/papyrus-top.png) !important;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: relative; /* if removed colored textarea moves when window is scrolled */
+	}
+	#orta{
+		background-image: url(/pic/papyrus-middle.png) !important;
+		background-size: 100% !important;
+		background-repeat: repeat-y !important;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		padding-left: 13vw;
+		padding-right: 13vw;
+		width: 64vw;
+	}
+	#orta-after{
+		background-image: url(/pic/papyrus-bottom.png) !important;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		padding-left: 13vw;
+		padding-right: 13vw;
+		height: 26.2vw;
+		width: 64vw;
+	}
+	textarea {
+		max-width: 100% !important;
+		padding: 0;
+		overflow-y: auto !important;
+		overflow-x: hidden;
+		display: inline-block !important;
+		position: relative !important;
+		white-space: pre-wrap !important;
+		word-wrap: break-word !important;
+		font-family: KawkabMono-Regular;
+		line-height: 46px !important; /* !important 'ı eklemezsen çalışmıyor, kayma oluşuyor farklı işletim sistemi ve tarayıcılarda */
+		resize: vertical;
+		border: 0;
+		font-size: 18px;
+		direction: rtl;
+		background: linear-gradient(transparent 45px, #999 1px), url(/pic/pen-50.png);
+		background-repeat: repeat, no-repeat;
+		background-position: 0px 0px, center center;
+		background-size: 100% 46px, auto auto !important;
+	}
+	textarea:invalid { /* when textarea is empty */
+		background: url(/pic/pen_full.png);
+		background-repeat: no-repeat;
+		background-position: center center !important;
+		background-size: auto 262px !important;
+	}
+	.okundu{
+		background: #7398ec !important;
+		color: white !important;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		border-bottom: 1px solid #e3e3e3 !important;
+	}
+	.rows{
+		border-right: 1px solid #999;
+		display: none;
+		padding-top: 1px;
+		padding-bottom: 62px;
+		font-size: 18px;
+		box-sizing: border-box;
+		color: black;
+		text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+		font-family: KawkabMono-Regular;
+		height: 272px;
+		overflow: hidden;
+	}
+	.total{
+		background: #716cff;
+	}
+}
+
+@media only screen and (min-width: 1585px) {
+	#N_caption {
+		margin-left: 17%;
+		margin-right: 17%;
+	}
+	.antique{
+		margin-left: calc((100% - 1046px) / 2);
+		margin-right: calc((100% - 1046px) / 2);
+	}
+	#sv {
+		margin-left: calc((((100vw - 1426px) / 2) - 17%) + 84px);
+    	margin-right: calc((((100vw - 1426px) / 2) - 17%) + 84px);
+	}
+	#orta-before{
+		margin-left: calc((100vw - 1426px) / 2);
+		margin-right: calc((100vw - 1426px) / 2);
+		padding-left: 206px;
+		padding-right: 206px;
+		padding-top: 94px;
+		height: 443px;
+		width: 1014px;
+	}
+	#orta{
+		margin-left: calc((100vw - 1426px) / 2);
+		margin-right: calc((100vw - 1426px) / 2);
+		padding-left: 206px;
+		padding-right: 206px;
+		width: 1014px;
+	}
+	#orta-after{
+		margin-left: calc((100vw - 1426px) / 2);
+		margin-right: calc((100vw - 1426px) / 2);
+		padding-left: 206px;
+		padding-right: 206px;
+		width: 1014px;
+		height: 414px;
+	}
+	.container {
+		width: 100%;
+		height: 598px;
+	}
+	#alt{
+		margin-left: calc(((100vw - 1426px) / 2) + 188px);
+		margin-right: calc(((100vw - 1426px) / 2) + 148px);
+		width: fit-content;
+	}
+}
+
+#copyText{
+	display:inline-block;
+	font-family: KawkabMono-Regular;
+	direction: rtl;
+	font-size: 18px;
+	line-height: 46px;
+	visibility: hidden;
+	border-color: transparent !important;
+	white-space: pre-wrap !important;
+	word-wrap: break-word !important;
+	position: fixed;
+	color: transparent !important;
+	overflow: hidden !important;
+}
+
+/** {box-sizing: border-box}*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+
+@media (hover:hover) {
+	a:hover { text-decoration: none; color: white !important; background-color: midnightblue !important;}
+	.huruf:hover {background-color: cornflowerblue;}
+	.harf:hover {background-color: coral;}
+	#ovpll:hover, #snl:hover {
+		background-color: midnightblue;
+		color: white;
+	}
+}
+@media screen and (pointer: coarse) {
+	a:active { text-decoration: underline; }
+	.huruf:active {background-color: cornflowerblue;}
+	.harf:active {background-color: coral;}
+	#ovpll:active, #snl:active  {
+		background-color: midnightblue;
+		color: white;
+	}
+}
+#ovpll, #snl { color:midnightblue;}
+
+.analiz {
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0px 19px -10px;
+    position: relative;
+    width: 100%;
+}
+.empty {
+	content: "";
+    flex: 1 0 200px;
+    margin: 0;
+    visibility: hidden;
+}
+.selection{
+	color: black;
+	text-align: center;
+	border-radius: 4px;
+	margin: 11px;
+    padding: 12px 15px 12px 15px;
+	height: auto;
+	border: 1px solid black;
+	backdrop-filter: blur(14px) saturate(180%);
+	-webkit-backdrop-filter: blur(14px) saturate(180%);
+}
+@supports (-moz-appearance:none) {
+	.flip-card-back {line-height: 39px;}
+	td a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+@supports not (-moz-appearance:none) {  /* animations for safari and chrome... firefox has issues about this... */
+    @media (hover:hover) {
+		.selections:hover .huruf{
+			transform: rotateY(36deg);
+		}
+		.selections:hover .harf{
+			transform: rotateY(-36deg);
+		}
+		.selections:hover .isim{
+			transform: rotateY(36deg);
+		}
+		.huruf {
+			transition: transform 0.77s cubic-bezier(.2, .85, .4, 1.275);
+		}
+		.harf {
+			transition: transform 0.77s cubic-bezier(.2, .85, .4, 1.275);
+		}
+		.isim {
+			transition: transform 0.77s cubic-bezier(.2, .85, .4, 1.275);
+		}
+	}
+	.selections:active .huruf{
+		transform: rotateY(360deg);
+	}
+	.huruf {
+		transition: transform 0.77s cubic-bezier(.2, .85, .4, 1.275);
+	}
+	.selections:active .harf{
+		transform: rotateY(-360deg);
+	}
+	.harf {
+		transition: transform 0.77s cubic-bezier(.2, .85, .4, 1.275);
+	}
+	.selections:active .isim{
+		transform: rotateY(360deg);
+	}
+	.isim {
+		transition: transform 0.77s cubic-bezier(.2, .85, .4, 1.275);
+	}
+	.selections {
+		transform-style: preserve-3d;
+	}
+	.analiz {
+		perspective: 100vh;
+	}
+}
+.selections {
+	flex-grow: 1;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.seçenekler{display:none}
+
+.hselected{background-color: cornflowerblue}
+.selected{background-color: coral}
+.not-selected{background-color: rgba(255, 255, 255, 0.74)}
+
+html, body {
+	margin: 0 !important;
+	padding: 0 !important; /* gerektiğinde scroll çubuğunu gösterir mobilde sağa kaydırıp tabloları inceleyebilmek için gerekli*/
+}
+
+body {
+	background-color: black;
+	color: white;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+@supports not (-webkit-touch-callout: none) {
+	/* Every device other than ipadOS and iOS Safari */
+	body {
+		width: 100%;
+		min-height: 100vh !important;
+		background-image: url(/pic/space.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+  	}
+	#bg{display: none;}
+	audio{
+		border: 1px solid midnightblue;
+		border-radius: 55px;
+		height: 44px;
+		width: 100px;
+	}
+	@supports (-webkit-appearance:none){
+		audio{
+			border: 0;
+		}
+	}
+}
+
+/* Avoid Chrome to see Safari iOS hack */
+@supports (-webkit-touch-callout: none) {
+	/* The hack for iOS Safari */
+	#bg {
+		background-image: url(/pic/space.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: fixed;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		z-index: -1;
+		-webkit-transform: translateZ(0);
+		pointer-events: none;
+	}
+	mark { padding-bottom: 5px !important; }
+}
+
+_::-webkit-full-page-media, _:future, :root .flip-card-front {
+	/* only for safari */
+	background-color: #dcdbe8;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
+
+#açıklama{
+	text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+#primary {
+	float: left;
+    display: inline-block !important;
+	font-size: 15pt;
+	text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+#sv {
+	text-align: center;
+}
+#book {padding-top: 19px;}
+
+@media only screen and (max-width: 767px) {
+	#nextSura{
+		display: none;
+		position: relative;
+		float: right;
+		margin-top: 8px;
+		margin-right: 14px;
+		font-size: 22px;
+		color: white;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+	#nameLabel {
+		margin-right: 11px;
+	}
+	.ondört {
+		width: initial;
+		height: 78px;
+		line-height: 78px;
+	}
+	.bism-text {
+		line-height: 32px;
+		padding: 8px;
+		width: 424px;
+		perspective: 848px;
+		height: max-content;
+	}
+	.bism {
+		width: 424px;
+		perspective: 848px;
+	}
+
+	#ELMRŜ:before {
+		margin-left: calc((100% - 228px) / 2) !important;
+		margin-right: 0px !important;
+	}
+	table#ELMRŜ:hover:before {
+		margin-left: calc((100% - 311px) / 2) !important;
+		margin-right: 0px !important;
+	}
+	
+	@media only screen and (max-width: 554px) {
+		#THSM:before {
+			margin-left: calc((100% - 183px) / 2) !important;
+			margin-right: 0px !important;
+		}
+		table#THSM:hover:before {
+			margin-left: calc((100% - 249px) / 2) !important;
+			margin-right: 0px !important;
+		}
+	}
+	
+	#Ŝ:before {
+		margin-left: 113px !important;
+		margin-right: 0px !important;
+	}
+	table#Ŝ:hover:before {
+		margin-left: 88px !important;
+    	margin-right: 0px !important;
+	}
+
+	#isim-table:before {
+		font-size: 190px;
+		margin-left: calc((100% - 228px) / 2) !important;
+		margin-right: 0px !important;
+		margin-top: 166px !important;
+		margin-bottom: 0px !important;
+	}
+	#isim-table:hover:before {
+		margin-left: calc((100% - 310px) / 2) !important;
+		margin-right: 0px !important;
+		margin-top: 166px !important;
+		margin-bottom: 0px !important;
+	}
+
+	.repetitions, .abjad{
+		padding-top: 44px !important;
+		padding-bottom: 43px !important;
+	}
+
+	#messengers{
+		background-image: url(/pic/messengers.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 100vw;
+    	height: 128.6vw;
+    	background-position: center;
+    	margin-bottom: 44px;
+    	margin-top: 33px;
+	}
+	#ovpll, #snl {
+		color: white;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	}
+	html, body { overflow-x: auto !important; /* gerektiğinde scroll çubuğunu gösterir mobilde sağa kaydırıp tabloları inceleyebilmek için gerekli*/ }
+	@-moz-document url-prefix() {
+		mark {
+			padding-top: 4px !important;
+		}
+		textarea {
+			border: 1px solid #999;
+		}
+	}
+	.container{
+		background: wheat;
+		height: initial;
+		position: relative;
+	}
+	@media only screen and (max-width: 425px) and (min-width: 351px) {
+		#sv {
+			text-align: center;
+			margin-left: 0px !important;
+		}
+	}
+	.selection{
+		padding: 12px 10px 12px 10px;
+	}
+	#kopyala, #primary {
+		margin-left: 10px;
+	}
+	.analiz {
+		margin: 15px 0px 19px 0px;
+	}
+	.text{
+		width: 96%;
+		margin-left: 2%;
+		font-size: 16pt;
+	}
+	#all-tables{font-size: 16pt;}
+	.rows {
+		border-right: 0px;
+	}
+	th {font-size: 14pt;}
+	#primary {font-size: 15pt;}
+	#sv { font-size: 16pt; }
+	#kopyala {font-size: 14pt; padding: 6px;}
+	.ayetbox {	width: 74px;	height: 36px;	border-radius: 3px;	font-size: 19px;
+		padding: 5px 5px 5px 5px;	font: 100 1.9rem 'Merriweather', serif;
+	}
+	#orta-before{
+		width: 100%;
+		position: relative;
+    	display: inline-block;
+		margin-left: 0px;
+		position: relative; /* if removed colored textarea moves when window is scrolled */
+	}
+	textarea {
+		height: 322px;
+		max-width: 100% !important;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: inherit; /*768in üstünde kaldırılmalı*/
+		overflow-y: auto !important;
+		overflow-x: hidden;
+		display: inline-block !important;
+		position: relative !important;
+		white-space: pre-wrap !important;
+		word-wrap: break-word !important;
+		font-family: KawkabMono-Regular;
+		line-height: 46px !important; /* !important 'ı eklemezsen çalışmıyor, kayma oluşuyor farklı işletim sistemi ve tarayıcılarda */
+		resize: vertical;
+		border-radius: 2px; /*768in üstünde kaldırılmalı*/
+		font-size: 18px;
+		direction: rtl;
+		background: linear-gradient(transparent 45px, #999 1px), url(/pic/pen-50.png), url(/pic/background.png);
+		background-repeat: repeat, no-repeat, repeat;
+		background-position: 0px 0px, center center, center center;/*background-position: 20%;*/
+		background-size: 100% 46px, auto auto, auto auto !important;
+	}
+	textarea:invalid { /* when textarea is empty */
+		background: url(/pic/pen_full.png), url(/pic/background.png);
+		background-repeat: no-repeat, repeat;
+		background-position: center center, center center !important;
+		background-size: auto 262px, auto !important;/*background-size: 80% auto, auto !important;*/
+	}
+	.okundu{
+		background: #999 !important;
+		color: #e3e3e3 !important;
+		border-bottom: 1px solid #e3e3e3 !important;
+	}
+	.rows{
+		border-left: 1px solid #999;
+		display: none;
+		padding-top: 1px;
+		padding-bottom: 62px;
+		font-size: 18px;
+		background: #e3e3e3;
+		box-sizing: border-box;
+		color: #999;
+		font-family: KawkabMono-Regular;
+		height: 272px;
+		overflow: hidden;
+		border-bottom: 1px solid #999;
+	}
+	.total {
+		background: gray;
+	}
+}
+
+@media only screen and (max-width: 468px) {
+
+	.bism-text {
+		width: 259px;
+		perspective: 514px;
+		height: max-content;
+	}
+	.bism {
+		width: 259px;
+		perspective: 514px;
+	}
+	.ondört {
+		height: 112px;
+		line-height: 112px;
+	}
+}
+
+#kopyala {margin-bottom: 14px; display: none; font-size: 14pt; padding: 4px 6px 4px 6px;}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	.text{
+		width: 92%;
+		margin-left: 4%;
+	}
+}
+
+
+@media only screen and (min-width: 1025px) {
+	.fa-play{
+		background-image: url(/pic/play.png);
+		background-size: contain;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		z-index: 998;
+		right: 19px;
+		top: 19px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 2px gray);
+	}
+	.fa-pause{
+		background-image: url(/pic/pause.png);
+		background-size: contain;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		z-index: 998;
+		right: 19px;
+		top: 19px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 2px gray);
+	}
+}
+
+#versesOf74{
+	height: 76px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+	.fa-play{
+		background-image: url(/pic/play.png);
+		background-size: contain;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		z-index: 998;
+		right: 19px;
+		bottom: 19px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 2px gray);
+	}
+	.fa-pause{
+		background-image: url(/pic/pause.png);
+		background-size: contain;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		z-index: 998;
+		right: 19px;
+		bottom: 19px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 2px gray);
+	}
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+	.text{
+		width: 92%;
+		margin-left: 4%;
+	}
+}
+
+@media only screen and (min-width: 425px) and (max-width: 740px) {
+
+}
+	
+.ayetbox {	width: 71px;	height: 32px;	box-sizing: border-box;
+	border: 1px solid rgba(17, 147, 153, 0.19); border-radius: 4px;	font-size: 17px;
+	text-align: center;	letter-spacing: 1.7px;	padding: 0px 4px 0px 4px;	padding-left: 1.52px;
+}
+
+#sırano1 {
+	margin : 0px 1px 0px 0px;
+}
+
+#sırano2 {
+	margin : 0px 1px 0px 0px;
+}
+
+#baslik {
+	font-family: Dancing-Script;
+	font-size: 30px;
+    line-height: 38px;
+	text-align: center;
+	text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+
+#sonradan {
+	display: block;
+	text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+}
+
+.sadeceno {
+	float: right;
+	display: inline-block;
+	line-height: 46px;
+}
+.total {
+	float: left;
+	display: inline-block;
+	width: 42px;
+    min-width: fit-content;
+	text-align: center;
+    color: white;
+    box-sizing: border-box;
+    line-height: 46px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#dürümle {
+	width: 100%;
+	height: 46px;
+	font-size: 22px !important;
+}
+.checky {
+	height: 15px;
+	width: 15px;
+}
+
+.inline {
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 0em;
+	display: inline;
+}
+
+.tamKat{
+	background: linear-gradient(150deg, darkblue 0%, indigo 100%);
+    padding-left: 12px;
+    padding-right: 12px;
+    color: gold;
+    font-weight: bold;
+}
+
+#table19 {
+	display: flex;
+}
+
+#isim-table{
+	flex-flow: column;
+}
+
+#caption {
+    padding: 8px;
+	color: midnightblue;
+	background-color: white;
+	text-align: center;
+}
+
+#captionBottom {
+	display: none;
+	padding: 8px;
+	text-align: center;
+	border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+	background-color: red;
+    color: black;
+}
+
+#captionBottom:hover {
+	background-color: midnightblue !important;
+	color: white !important;
+}
