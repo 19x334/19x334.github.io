@@ -1,0 +1,54 @@
+/* in the name of the god the gracious the compassionate */
+
+.linkbarparent {
+	background-color: #003399;
+	width: 100%;
+	margin-left: 0%;
+	margin-bottom: 0%;
+	padding: 0;
+}
+.currsec {
+	background-color:#4864A0;
+}
+.search {
+	display:inline;
+}
+.sbutton {
+	color:#333;
+	margin-left:0px;
+	margin-right:0px;
+}
+.stext{
+	color:#333;
+	font-weight:normal;
+}
+li.search form {
+   margin-left:5px;
+   padding: 6px;
+}
+ul.linkbar{
+    list-style-type: none;
+    margin: 0;
+	margin-left:6px;
+    padding: 0;
+    overflow: hidden;
+	vertical-align: middle;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+ul.linkbar li {
+    float: left;
+	color:white;
+	margin-left:-1px;
+	display: block;
+}
+ul.linkbar li a{
+    display: block;
+    padding: 10px;
+	color:white;
+	text-decoration: none;
+}
+ul.linkbar li a:hover{
+	background-color: #666;
+}
+.linkbar li {margin-bottom:0;}
