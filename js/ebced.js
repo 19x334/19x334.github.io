@@ -2226,7 +2226,7 @@ function message() {
 	var ovpl = document.getElementById('ovpl');
 	var sn = document.getElementById('sn');
 
-    var kopyalamaLinki = "MuqattaCounter.github.io/#"
+    var kopyalamaLinki = "19x334.github.io/#"
     
     if (surebir) {
 		if (ayetbir1) {
