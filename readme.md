@@ -1,4 +1,4 @@
 # 19x334.github.io
-visual aid tool for counting muqatta letters, calculating abjad value and witnessing to miracle 19 in the honourable quran.
+Visual Aid Tool for Counting Muqatta Letters, Calculating Abjad Value and Witnessing to Miracle 19 in The Honourable Quran.
 
 9:128 and 129 are from satan! NOT FROM THE GOD!
