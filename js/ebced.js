@@ -2595,17 +2595,6 @@ function addLines(numberOfLines) {
 $(window).resize(copyTextSizer);
 $(document).ready(copyTextSizer);
 
-function useFirefox() {
-	Swal.fire({
-		title: "Error of row color countings or shifting of colorings may occur!",
-		html: "<p style='font-size: x-large;'>For solution: Change window width or just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>use Firefox</a> instead of " + detectBrowser() + "!</p>",
-		imageUrl: "pic/firefox.png",
-		imageWidth: 'auto',
-		imageHeight: 301,
-		imageAlt: "Error of row color countings or shifting of colorings may occur!"
-	})
-}
-
 function widther(){
 	var width = ifade.clientWidth;
 	var cntrlWidth = ifade.getBoundingClientRect().right - ifade.getBoundingClientRect().left;
@@ -2615,8 +2604,7 @@ function widther(){
 		if(document.getElementById("coloredDiv")) {
 			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
 			{
-				console.log("renklendirmelerde kayma var");
-				useFirefox();
+				console.log("renklendirmelerdeki kayma düzeltilmeye çalışılıyor...");
 				if(13 == sure1.value)
 				{
 					// if (window.innerWidth == 1522 || 1497 || 1424 || 1325)
@@ -2866,7 +2854,8 @@ function renkleriSay()
 	addLines(numberOfLines);
 
 	if(ChromeEdgeFlag == 1 && ChromeEdgeLinkFlag == 1) isChromeEdge();
-	
+	useFirefox();
+
 	$('#ifade').trigger("scroll"); // örneğin 13.sureyi açıp yazı alanını en alta sürükledikten sonra 36. sure açıldığında satırların solundaki numaraların scrollTop değerinin güncellenmesi ve soldaki numaraların yazı alanı en aşağı sürüklenmemiş olmasına rağmen, yazı alanı en aşağıda sürüklenmiş gibi gözükmemesi/oluşan dikey kaymayı gidermek için
 
 	var page = new Page(".row", totals);
@@ -2880,6 +2869,26 @@ function renkleriSay()
 		oldPosition = newPosition;
         showActiveRows(page.getActiveItem());
     });
+}
+
+function useFirefox() {
+	if(detectBrowser() != "Firefox") {
+		if(document.getElementById("coloredDiv")) {
+			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
+			{
+				console.log("renklendirmelerde kayma var");
+				Swal.fire({
+					title: "Error of row color countings or shifting of colorings may occur!",
+					html: "<p style='font-size: x-large;'>For solution: Change window width or just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>use Firefox</a> instead of " + detectBrowser() + "!</p>",
+					imageUrl: "pic/firefox.png",
+					imageWidth: 'auto',
+					imageHeight: 301,
+					imageAlt: "Error of row color countings or shifting of colorings may occur!",
+					timer: 7400
+				})
+			}
+		}
+	}
 }
 
 function isChromeEdge() {
