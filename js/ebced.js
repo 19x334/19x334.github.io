@@ -2876,15 +2876,14 @@ function useFirefox() {
 		if(document.getElementById("coloredDiv")) {
 			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
 			{
-				console.log("renklendirmelerde kayma var");
+				console.log("renklendirmelerde veya satır sayımlarında kayma oluştu");
 				Swal.fire({
-					title: "Error of row color countings or shifting of colorings may occur!",
+					title: "Error of row color countings or shifting of colorings has occured!",
 					html: "<p style='font-size: x-large;'>For solution: Change window width or just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>use Firefox</a> instead of " + detectBrowser() + "!</p>",
 					imageUrl: "pic/firefox.png",
 					imageWidth: 'auto',
 					imageHeight: 301,
-					imageAlt: "Error of row color countings or shifting of colorings may occur!",
-					timer: 7400
+					imageAlt: "Error of row color countings or shifting of colorings has occured!"
 				})
 			}
 		}
