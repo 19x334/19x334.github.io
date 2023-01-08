@@ -3293,7 +3293,7 @@ function countSwitcher() {
 	else {
 		document.querySelector("#isimler").style.display = "none";
 		document.querySelector("#harfler").style.display = "flex";
-		document.getElementById("nameLabel").innerHTML = "count names of واحد"
+		document.getElementById("nameLabel").innerHTML = "count Names of واحد"
 		document.getElementById("nameLabel").style.color = "yellow";
 	}
 }
