@@ -2491,8 +2491,6 @@ function getfromlink() {
 		loading();
 		
 		alertFlag = 0;
-		ChromeEdgeLinkFlag = 0;
-		ChromeEdgeFlag = 0;
 		ifadeFlag = 0;
 
 		var sure, harf;
@@ -2549,7 +2547,6 @@ function getfromlink() {
 		}
 		resize_ob.observe(ifade);
 		$(window).trigger("resize");
-		ChromeEdgeFlag = 1;
 		alertt();
 		if(ifadeFlag == 1){
 			kalem();
@@ -2693,10 +2690,8 @@ $('.seçenekler').on('change', function(){
 });
 
 $(window).resize(function(){
-	ChromeEdgeFlag = 0;
 	if(document.getElementById("ovpl").checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
 	else renkleriSay();
-	ChromeEdgeFlag = 1;
 });
 
 var direction;
@@ -2755,15 +2750,13 @@ function alertt()
 					imageHeight: 190,
 					imageAlt: 'Clean Up!'
 				}).then((value) => {
-					if(ChromeEdgeLinkFlag == 0) isChromeEdge();
-					v = 0;
+					v = 0; // starts verses from 0
 					expressFlag = 1;
 				})
 			})
 		})
 		uyarı = false;
 	}
-	else ChromeEdgeLinkFlag = 1;
 
 	localStorage.setItem('lastVisit', today);
 }
@@ -2812,9 +2805,6 @@ function yataylaştırıcı(){
 	}
 }
 
-var ChromeEdgeFlag = 1;
-var ChromeEdgeLinkFlag = 1;
-
 function renkleriSay()
 {
 	copyText();
@@ -2853,7 +2843,6 @@ function renkleriSay()
 	numberOfLines = renderedRows.length;
 	addLines(numberOfLines);
 
-	if(ChromeEdgeFlag == 1 && ChromeEdgeLinkFlag == 1) isChromeEdge();
 	useFirefox();
 
 	$('#ifade').trigger("scroll"); // örneğin 13.sureyi açıp yazı alanını en alta sürükledikten sonra 36. sure açıldığında satırların solundaki numaraların scrollTop değerinin güncellenmesi ve soldaki numaraların yazı alanı en aşağı sürüklenmemiş olmasına rağmen, yazı alanı en aşağıda sürüklenmiş gibi gözükmemesi/oluşan dikey kaymayı gidermek için
@@ -2886,28 +2875,6 @@ function useFirefox() {
 					imageAlt: "Error of row color countings or shifting of colorings has occured!"
 				})
 			}
-		}
-	}
-}
-
-function isChromeEdge() {
-	var today = new Date();
-	today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-
-	var lastVisitChromeEdge = localStorage.getItem('lastVisitChromeEdge');
-
-	if (lastVisitChromeEdge == null || lastVisitChromeEdge != today) {
-		if(navigator.userAgent.indexOf("Edge") == -1 && navigator.userAgent.indexOf("Chrome") == -1 && (clrltrs[28][0] == 'الله' || clrltrs[30][0] == 'الرحمن' || clrltrs[31][0] == 'الرحيم' || clrltrs[32][0] == 'اسم'))
-		{
-			Swal.fire({
-				title: "Use Chrome or Edge for Counting Names of واحد More Easily ✓",
-				html: "Other browsers can't handle counting and highlighting Names of واحد in all of The Quran at once. So if you use other browsers for to check countings of Names of واحد you must to check countings of 114 surah seperately. Instead of counting seperately in every surah you can count in all Quran at once using Chrome or Edge!",
-				imageUrl: "/pic/chrome-edge.png",
-				imageWidth: "auto",
-				imageHeight: "auto",
-				imageAlt: 'Use Chrome or Edge for Counting Names of واحد More Easily ✓'
-			})
-			localStorage.setItem('lastVisitChromeEdge', today);
 		}
 	}
 }
@@ -3237,6 +3204,11 @@ function expresser() {
 		}
 	});
 }
+
+document.getElementById("start").addEventListener("click", function() {
+	uyarı = true;
+	localStorage.setItem('lastVisit', null); // in order to call alertt() function non-spa app correctly
+})
 
 var intervalId = setInterval(expresser, 2760);
 
