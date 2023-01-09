@@ -1,4 +1,4 @@
 # 19x334.github.io
-Visual Aid Tool for Counting Muqatta Letters, Calculating Abjad Value and Witnessing to Miracle 19 in The Honourable Quran.
+Visual Count Assist Tool For To Be Witness To The Miracle Error Correction Code Of 19 Exist In The Honourable QURAN
 
-9:128 and 129 are from satan! NOT FROM THE GOD!
+9:128 and 129 are from satan!  NOT FROM THE GOD!
