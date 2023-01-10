@@ -3229,45 +3229,321 @@ document.getElementById("start").addEventListener("click", function() {
 
 var intervalId = setInterval(expresser, 2760);
 
-const table1 = document.getElementById("ĤM4042");
-const table2 = document.getElementById("ĤM4346");
-const table3 = document.getElementById("ĤM4143");
+const HM4042Rows = document.getElementById("ĤM4042").querySelectorAll("tr");
+const HM4346Rows = document.getElementById("ĤM4346").querySelectorAll("tr");
+const HM4143Rows = document.getElementById("ĤM4143").querySelectorAll("tr");
 
-const table1Rows = table1.querySelectorAll("tr");
-const table2Rows = table2.querySelectorAll("tr");
-const table3Rows = table3.querySelectorAll("tr");
+// this bi-directional css effects only possible with brute force without using loops like below as far as i can resolve with PERMISSION OF 1
 
-for (let i = 0; i < table3Rows.length; i++) {
-	if(0 < i && i < table3Rows.length - 2) {
-		table3Rows[i].addEventListener("mouseover", function(e) {
-			for(var c = 0; c < 4; c++) table1Rows[i+1].children[c].querySelector('.ĤMcell').classList.add("hover-class");
+for (let r = 0; r < HM4143Rows.length; r++)
+{
+	if(0 < r && r < HM4143Rows.length - 2)
+	{
+		HM4143Rows[r].children[0].addEventListener("mouseover", function(e)
+		{
+			HM4042Rows[r+1].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4042Rows[r+1].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
 		});
-		table3Rows[i].addEventListener("mouseleave", function(e) {
-			for(var c = 0; c < 4; c++) table1Rows[i+1].children[c].querySelector('.ĤMcell').classList.remove("hover-class");
+		HM4143Rows[r].children[1].addEventListener("mouseover", function(e)
+		{
+			HM4042Rows[r+1].children[1].querySelector('.ĤMcell').classList.add("حح");
+			HM4042Rows[r+1].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4042Rows[r+1].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		HM4143Rows[r].children[2].addEventListener("mouseover", function(e)
+		{
+			HM4042Rows[r+1].children[2].querySelector('.ĤMcell').classList.add("مم");
+			HM4042Rows[r+1].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4042Rows[r+1].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		HM4143Rows[r].children[3].addEventListener("mouseover", function(e)
+		{
+			HM4042Rows[r+1].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4042Rows[r+1].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4042Rows[r+1].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+
+
+		HM4143Rows[r].children[0].addEventListener("mouseleave", function(e)
+		{
+			HM4042Rows[r+1].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4042Rows[r+1].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4143Rows[r].children[1].addEventListener("mouseleave", function(e)
+		{
+			HM4042Rows[r+1].children[1].querySelector('.ĤMcell').classList.remove("حح");
+			HM4042Rows[r+1].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4042Rows[r+1].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4143Rows[r].children[2].addEventListener("mouseleave", function(e)
+		{
+			HM4042Rows[r+1].children[2].querySelector('.ĤMcell').classList.remove("مم");
+			HM4042Rows[r+1].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4042Rows[r+1].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4143Rows[r].children[3].addEventListener("mouseleave", function(e)
+		{
+			HM4042Rows[r+1].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4042Rows[r+1].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4042Rows[r+1].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
 		});
 	}
-	if(i == table3Rows.length - 2){
-		table3Rows[i].addEventListener("mouseover", function(e) {
-			for(var c = 0; c < 4; c++) table2Rows[i-2].children[c].querySelector('.ĤMcell').classList.add("hover-class");
+
+	if(r == HM4143Rows.length - 2)
+	{
+		HM4143Rows[r].children[0].addEventListener("mouseover", function(e)
+		{
+			HM4346Rows[r-2].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4346Rows[r-2].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
 		});
-		table3Rows[i].addEventListener("mouseleave", function(e) {
-			for(var c = 0; c < 4; c++) table2Rows[i-2].children[c].querySelector('.ĤMcell').classList.remove("hover-class");
+		HM4143Rows[r].children[1].addEventListener("mouseover", function(e)
+		{
+			HM4346Rows[r-2].children[1].querySelector('.ĤMcell').classList.add("حح");
+			HM4346Rows[r-2].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4346Rows[r-2].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		HM4143Rows[r].children[2].addEventListener("mouseover", function(e)
+		{
+			HM4346Rows[r-2].children[2].querySelector('.ĤMcell').classList.add("مم");
+			HM4346Rows[r-2].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4346Rows[r-2].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		HM4143Rows[r].children[3].addEventListener("mouseover", function(e)
+		{
+			HM4346Rows[r-2].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4346Rows[r-2].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4346Rows[r-2].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		
+		HM4143Rows[r].children[0].addEventListener("mouseleave", function(e)
+		{
+			HM4346Rows[r-2].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4346Rows[r-2].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4143Rows[r].children[1].addEventListener("mouseleave", function(e)
+		{
+			HM4346Rows[r-2].children[1].querySelector('.ĤMcell').classList.remove("حح");
+			HM4346Rows[r-2].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4346Rows[r-2].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4143Rows[r].children[2].addEventListener("mouseleave", function(e)
+		{
+			HM4346Rows[r-2].children[2].querySelector('.ĤMcell').classList.remove("مم");
+			HM4346Rows[r-2].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4346Rows[r-2].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4143Rows[r].children[3].addEventListener("mouseleave", function(e)
+		{
+			HM4346Rows[r-2].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4346Rows[r-2].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4346Rows[r-2].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
 		});
 	}
-	if(1 < i && i < 4) {
-		table1Rows[i].addEventListener("mouseover", function(e) {
-			for(var c = 0; c < 4; c++) table3Rows[i-1].children[c].querySelector('.ĤMcell').classList.add("hover-class");
+
+	if(1 < r && r < 4)
+	{
+		HM4042Rows[r].children[0].addEventListener("mouseover", function(e)
+		{
+			HM4143Rows[r-1].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r-1].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
 		});
-		table1Rows[i].addEventListener("mouseleave", function(e) {
-			for(var c = 0; c < 4; c++) table3Rows[i-1].children[c].querySelector('.ĤMcell').classList.remove("hover-class");
+		HM4042Rows[r].children[1].addEventListener("mouseover", function(e)
+		{
+			HM4143Rows[r-1].children[1].querySelector('.ĤMcell').classList.add("حح");
+			HM4143Rows[r-1].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r-1].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		HM4042Rows[r].children[2].addEventListener("mouseover", function(e)
+		{
+			HM4143Rows[r-1].children[2].querySelector('.ĤMcell').classList.add("مم");
+			HM4143Rows[r-1].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r-1].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		HM4042Rows[r].children[3].addEventListener("mouseover", function(e)
+		{
+			HM4143Rows[r-1].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r-1].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r-1].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+
+
+		HM4042Rows[r].children[0].addEventListener("mouseleave", function(e)
+		{
+			HM4143Rows[r-1].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r-1].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4042Rows[r].children[1].addEventListener("mouseleave", function(e)
+		{
+			HM4143Rows[r-1].children[1].querySelector('.ĤMcell').classList.remove("حح");
+			HM4143Rows[r-1].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r-1].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4042Rows[r].children[2].addEventListener("mouseleave", function(e)
+		{
+			HM4143Rows[r-1].children[2].querySelector('.ĤMcell').classList.remove("مم");
+			HM4143Rows[r-1].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r-1].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4042Rows[r].children[3].addEventListener("mouseleave", function(e)
+		{
+			HM4143Rows[r-1].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r-1].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r-1].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
 		});
 	}
-	if(i == 1){
-		table2Rows[i].addEventListener("mouseover", function(e) {
-			for(var c = 0; c < 4; c++) table3Rows[i+2].children[c].querySelector('.ĤMcell').classList.add("hover-class");
+
+	if(r == 1)
+	{
+		HM4346Rows[r].children[0].addEventListener("mouseover", function(e)
+		{
+			HM4143Rows[r+2].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r+2].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
 		});
-		table2Rows[i].addEventListener("mouseleave", function(e) {
-			for(var c = 0; c < 4; c++) table3Rows[i+2].children[c].querySelector('.ĤMcell').classList.remove("hover-class");
+		HM4346Rows[r].children[1].addEventListener("mouseover", function(e)
+		{
+			HM4143Rows[r+2].children[1].querySelector('.ĤMcell').classList.add("حح");
+			HM4143Rows[r+2].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r+2].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		HM4346Rows[r].children[2].addEventListener("mouseover", function(e)
+		{
+			HM4143Rows[r+2].children[2].querySelector('.ĤMcell').classList.add("مم");
+			HM4143Rows[r+2].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r+2].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		HM4346Rows[r].children[3].addEventListener("mouseover", function(e)
+		{
+			HM4143Rows[r+2].children[0].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[1].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[2].querySelector('.ĤMcell').classList.add("hover-class");
+			HM4143Rows[r+2].children[3].querySelector('.ĤMcell').classList.add("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r+2].children[c].querySelector('.ĤMcell').classList.add("selectedCell");
+		});
+		
+		HM4346Rows[r].children[0].addEventListener("mouseleave", function(e)
+		{
+			HM4143Rows[r+2].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r+2].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4346Rows[r].children[1].addEventListener("mouseleave", function(e)
+		{
+			HM4143Rows[r+2].children[1].querySelector('.ĤMcell').classList.remove("حح");
+			HM4143Rows[r+2].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r+2].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4346Rows[r].children[2].addEventListener("mouseleave", function(e)
+		{
+			HM4143Rows[r+2].children[2].querySelector('.ĤMcell').classList.remove("مم");
+			HM4143Rows[r+2].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r+2].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
+		});
+		HM4346Rows[r].children[3].addEventListener("mouseleave", function(e)
+		{
+			HM4143Rows[r+2].children[0].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[1].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[2].querySelector('.ĤMcell').classList.remove("hover-class");
+			HM4143Rows[r+2].children[3].querySelector('.ĤMcell').classList.remove("hover-class");
+			for(var c = 0; c < 4; ++c)
+				HM4143Rows[r+2].children[c].querySelector('.ĤMcell').classList.remove("selectedCell");
 		});
 	}
 }

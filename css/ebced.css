@@ -363,6 +363,9 @@ tr.suraRow:hover a {
 	color: white !important;
 	outline: 1px solid midnightblue;
 }
+.selectedCell{
+	outline: 1px solid midnightblue;
+}
 td a {
     display: block;
 	padding: 8px;
@@ -1494,4 +1497,9 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 #uyarı:hover {
 	background-color: midnightblue !important;
 	color: white !important;
+}
+
+#N_caption {
+	text-align: center;
+	line-height: 32px;
 }
