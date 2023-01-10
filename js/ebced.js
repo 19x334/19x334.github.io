@@ -2597,8 +2597,10 @@ function widther(){
 	// controlWidth : ctrlWdth
 	var ctrlWdth = ifade.getBoundingClientRect().right - ifade.getBoundingClientRect().left;
 	
+	var browser = detectBrowser();
 	// ALLAH'IM, SANA SONSUZ TEŞEKKÜRLER EDERİM SONUNDA BU YÖNTEMLE(dead reckoning ve exception handling ile) RENKLENDİRMELERİN KAYMASI CHROME FLOATİNG POİNT ARITHMETIC BUG'INI TEMELİNDEN DÜZELTEBİLDİM! =) 1483 px genişliğinde 13:41 ayetinin 2. satırının taşması gibi durumları henüz düzeltemedim.. ALLAH dilerse düzelteceğim o gibi durumları da...
-	if(detectBrowser() != "Firefox") {
+	if(browser == "Chrome" || browser == "Edge")
+	{ // safari uses different system than edge and chrome, firefox has no issues about shifting of color markings with WILL OF 1
 		if(document.getElementById("coloredDiv")) {
 			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
 			{
@@ -3293,10 +3295,10 @@ function detectBrowser()
 {
 	var browser;
 	if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) browser = "Safari";
-	else if(navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Android"; // if it is android device don't check rest
 	else if(navigator.userAgent.indexOf("Chrome") > -1) browser = "Chrome";
 	else if(navigator.userAgent.indexOf("Firefox") > -1) browser = "Firefox";
 	else if(navigator.userAgent.indexOf("Edge") > -1) browser = "Edge";
+	else if(navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Android"; // if it is android device don't check rest
 	else browser = "Other";
 	return browser;
 }
