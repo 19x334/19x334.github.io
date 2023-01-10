@@ -2594,7 +2594,8 @@ $(document).ready(copyTextSizer);
 
 function widther(){
 	var width = ifade.clientWidth;
-	var cntrlWidth = ifade.getBoundingClientRect().right - ifade.getBoundingClientRect().left;
+	// controlWidth : ctrlWdth
+	var ctrlWdth = ifade.getBoundingClientRect().right - ifade.getBoundingClientRect().left;
 	
 	// ALLAH'IM, SANA SONSUZ TEŞEKKÜRLER EDERİM SONUNDA BU YÖNTEMLE(dead reckoning ve exception handling ile) RENKLENDİRMELERİN KAYMASI CHROME FLOATİNG POİNT ARITHMETIC BUG'INI TEMELİNDEN DÜZELTEBİLDİM! =) 1483 px genişliğinde 13:41 ayetinin 2. satırının taşması gibi durumları henüz düzeltemedim.. ALLAH dilerse düzelteceğim o gibi durumları da...
 	if(detectBrowser() != "Firefox") {
@@ -2602,23 +2603,34 @@ function widther(){
 			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
 			{
 				console.log("renklendirmelerdeki kayma düzeltilmeye çalışılıyor...");
-				if(13 == sure1.value && !ayet1.value
-					&& (document.getElementById("ا").checked || document.getElementById("ل").checked || document.getElementById("م").checked || document.getElementById("ر").checked)
-					)
+				if(13 == sure1.value && !ayet1.value && (document.getElementById("ا").checked || document.getElementById("ل").checked || document.getElementById("م").checked || document.getElementById("ر").checked) )
 				{
-					// if (window.innerWidth == 1522 || 1497 || 1424 || 1325)
-					if(933 == cntrlWidth || 917 == cntrlWidth || 870 == cntrlWidth || 807 == cntrlWidth) // when sura is 13 and browser is chrome desktop
-						width = cntrlWidth - 14;
+					// if (window.innerWidth == 1522 || 1497 || 1424 || 1325 || 1227 || 833)
+					if(933 == ctrlWdth || 917 == ctrlWdth || 870 == ctrlWdth || 807 == ctrlWdth || 744 == ctrlWdth || 492 == ctrlWdth) // when sura is 13 and browser is chrome desktop
+						width = ctrlWdth - 14;
 					// satırlardaki toplam sayımların denk gelmesi için: if (window.innerWidth == 1422)
-					else if(869 == cntrlWidth) // when sura is 13
-						width = cntrlWidth - 12.61 * 2;
-					// satırlardaki toplam sayımların denk gelmesi için: if (window.innerWidth == 1583 || 1577 || 1561 || 1524 || 1521 || 1505 || 1499 || 1496
-					// || 1464 || 1463 || 1425 || 1341 || 1327 || 1324) 
-					else if(972 == cntrlWidth || 968 == cntrlWidth || 958 == cntrlWidth || 934 == cntrlWidth || 932 == cntrlWidth || 922 == cntrlWidth || 918 == cntrlWidth || 916 == cntrlWidth
-						|| 896 == cntrlWidth || 895 == cntrlWidth || 871 == cntrlWidth || 817 == cntrlWidth || 808 == cntrlWidth || 806 == cntrlWidth)
+					else if(869 == ctrlWdth) // when sura is 13
+						width = ctrlWdth - 12.61 * 2;
+					/* satırlardaki toplam sayımların denk gelmesi için: if (window.innerWidth == 1583 || 1577 || 1561 || 1524 || 1521 || 1505 || 1499 || 1496
+					  || 1464 || 1463 || 1425 || 1341 || 1327 || 1324 || 1305 || 1282
+					  || 1267 || 1249 || 1228 || 1225 || 1189 || 1169 || 1147 || 1130
+					  || 1125 || 1105 || 1088 || 1086 || 1071 || 1052 || 1049 || 1032
+					  || 1024 || 1013 || 1010 || 989 || 972 || 953 || 950
+					  || 930 || 914 || 911 || 874 || 869 || 855 || 835
+					  || 832 || 816 || 813 || 810 || 796 || 775 || 773
+					  || 761)
+					*/
+					else if(972 == ctrlWdth || 968 == ctrlWdth || 958 == ctrlWdth || 934 == ctrlWdth || 932 == ctrlWdth || 922 == ctrlWdth || 918 == ctrlWdth || 916 == ctrlWdth
+						|| 896 == ctrlWdth || 895 == ctrlWdth || 871 == ctrlWdth || 817 == ctrlWdth || 808 == ctrlWdth || 806 == ctrlWdth || 794 == ctrlWdth || 779 == ctrlWdth
+						|| 770 == ctrlWdth || 758 == ctrlWdth || 745 == ctrlWdth || 743 == ctrlWdth || 720 == ctrlWdth || 707 == ctrlWdth || 693 == ctrlWdth || 682 == ctrlWdth
+						|| 679 == ctrlWdth || 666 == ctrlWdth || 655 == ctrlWdth || 654 == ctrlWdth || 644 == ctrlWdth || 632 == ctrlWdth || 630 == ctrlWdth || 619 == ctrlWdth
+						|| 614 == ctrlWdth || 607 == ctrlWdth || 605 == ctrlWdth || 592 == ctrlWdth || 581 == ctrlWdth || 569 == ctrlWdth || 567 == ctrlWdth
+						|| 554 == ctrlWdth || 544 == ctrlWdth || 542 == ctrlWdth || 518 == ctrlWdth || 515 == ctrlWdth || 506 == ctrlWdth || 493 == ctrlWdth
+						|| 491 == ctrlWdth || 481 == ctrlWdth || 479 == ctrlWdth || 477 == ctrlWdth || 468 == ctrlWdth || 455 == ctrlWdth || 454 == ctrlWdth
+						|| 722 == ctrlWdth)
 						width = width;
 					else {
-						width = cntrlWidth - 12.61;
+						width = ctrlWdth - 12.61;
 					}
 				}
 			}
