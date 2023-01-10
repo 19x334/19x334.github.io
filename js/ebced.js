@@ -2602,7 +2602,9 @@ function widther(){
 			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
 			{
 				console.log("renklendirmelerdeki kayma düzeltilmeye çalışılıyor...");
-				if(13 == sure1.value)
+				if(13 == sure1.value && !ayet1.value
+					&& (document.getElementById("ا").checked || document.getElementById("ل").checked || document.getElementById("م").checked || document.getElementById("ر").checked)
+					)
 				{
 					// if (window.innerWidth == 1522 || 1497 || 1424 || 1325)
 					if(933 == cntrlWidth || 917 == cntrlWidth || 870 == cntrlWidth || 807 == cntrlWidth) // when sura is 13 and browser is chrome desktop
@@ -2629,7 +2631,7 @@ function copyTextSizer() {
 
 	document.getElementById("copyText").style.setProperty("width", widther() + "px");
 
-	if(document.getElementById("ovpl").checked == true){
+	if(document.getElementById("ovpl").checked){
 		document.getElementsByClassName("hwt-backdrop")[0].style.setProperty('width', 'max-content', 'important');
 		document.getElementsByClassName("hwt-highlights")[0].style.setProperty('width', 'max-content', 'important');
 	}
@@ -2775,7 +2777,7 @@ $('#ovpl').change(function(){
 
 function yataylaştırıcı(){
 	// önce "satır başına 1 ayet"i seçtiğimizde ve sonra renklendirecek harf seçtiğimizde renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için:
-	if(document.getElementById("ovpl").checked == true){
+	if(document.getElementById("ovpl").checked){
 		if(detectBrowser() != "Firefox") {
 			if(windowWidth < 768) document.getElementById("nextSura").style.marginTop = "24px";
 			else document.getElementById("nextSura").style.marginTop = "15px";
@@ -2788,7 +2790,8 @@ function yataylaştırıcı(){
 			document.getElementsByClassName("hwt-highlights")[0].style.setProperty('white-space', 'pre', 'important');
 			document.getElementsByClassName("hwt-highlights")[0].style.setProperty('width', 'max-content', 'important');
 		}
-	}else{
+	}
+	else{
 		if(detectBrowser() != "Firefox") {
 			if(windowWidth < 768) document.getElementById("nextSura").style.marginTop = "8px";
 			else document.getElementById("nextSura").style.marginTop = "0px";
