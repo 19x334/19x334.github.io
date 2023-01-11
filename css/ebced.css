@@ -26,7 +26,7 @@
 body{ scroll-behavior: smooth; }
 
 #kapsayıcı {
-	position: absolute; /* ALLAH'IN İZNİYLE, firefoxta tüm pencere genişliklerinde ve diğer tarayıcılarda küçük pencere genişliklerinde textareanın aşağı kaymasını önler! */
+	position: absolute; /* ALLAH İSTERSE kaldırma! ALLAH'IN İZNİYLE, mobil tatrayıcılarda ve firefoxta bazı durumlarda bazı pencere genişliklerinde ve diğer tarayıcılarda 100px'den küçük pencere genişliklerinde textareanın aşağı kaymasını önler! */
 }
 
 .bismPadding{
