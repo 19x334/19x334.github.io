@@ -2604,16 +2604,16 @@ function widther(){
 	if(browser == "Chrome" || browser == "Edge")
 	{ // safari uses different system than edge and chrome, firefox has no issues about shifting of color markings with WILL OF 1
 		if(document.getElementById("coloredDiv")) {
-			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
+			if((document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height) % 46 != 0)
 			{
 				console.log("renklendirmelerdeki kayma düzeltilmeye çalışılıyor...");
 				if(13 == sure1.value && !ayet1.value && (document.getElementById("ا").checked || document.getElementById("ل").checked || document.getElementById("م").checked || document.getElementById("ر").checked) )
 				{
 					// if (window.innerWidth == 1522 || 1497 || 1424 || 1325 || 1227 || 833)
-					if(933 == ctrlWdth || 917 == ctrlWdth || 870 == ctrlWdth || 807 == ctrlWdth || 744 == ctrlWdth || 492 == ctrlWdth) // when sura is 13 and browser is chrome desktop
+					if(windowWidth >= 768 && (933 == ctrlWdth || 917 == ctrlWdth || 870 == ctrlWdth || 807 == ctrlWdth || 744 == ctrlWdth || 492 == ctrlWdth)) // when sura is 13 and browser is chrome desktop
 						width = ctrlWdth - 14;
 					// satırlardaki toplam sayımların denk gelmesi için: if (window.innerWidth == 1422)
-					else if(869 == ctrlWdth) // when sura is 13
+					else if(windowWidth >= 768 && (869 == ctrlWdth)) // when sura is 13
 						width = ctrlWdth - 12.61 * 2;
 					/*
 					   761 || 533 || 407 || 380 || 344 || 281 || 254
@@ -2630,7 +2630,7 @@ function widther(){
 					  || 930 || 914 || 911 || 874 || 869 || 855 || 835
 					  || 832 || 816 || 813 || 810 || 796 || 775 || 773)
 					*/
-					else if((windowWidth >= 768 && (972 == ctrlWdth || 968 == ctrlWdth || 958 == ctrlWdth || 934 == ctrlWdth || 932 == ctrlWdth || 922 == ctrlWdth || 918 == ctrlWdth || 916 == ctrlWdth
+					else if((windowWidth >= 768 && (972 == ctrlWdth || 968 == ctrlWdth || 958 == ctrlWdth || 934 == ctrlWdth || 932 == ctrlWdth || 922 == ctrlWdth || 918 == ctrlWdth || 916 == ctrlWdth
 						|| 896 == ctrlWdth || 895 == ctrlWdth || 871 == ctrlWdth || 817 == ctrlWdth || 808 == ctrlWdth || 806 == ctrlWdth || 794 == ctrlWdth || 779 == ctrlWdth
 						|| 770 == ctrlWdth || 758 == ctrlWdth || 745 == ctrlWdth || 743 == ctrlWdth || 720 == ctrlWdth || 707 == ctrlWdth || 693 == ctrlWdth || 682 == ctrlWdth
 						|| 679 == ctrlWdth || 666 == ctrlWdth || 655 == ctrlWdth || 654 == ctrlWdth || 644 == ctrlWdth || 632 == ctrlWdth || 630 == ctrlWdth || 619 == ctrlWdth
@@ -2889,7 +2889,7 @@ function renkleriSay()
 function useFirefox() {
 	if(browser != "Firefox") {
 		if(document.getElementById("coloredDiv")) {
-			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
+			if((document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height) % 46 != 0)
 			{
 				console.log("renklendirmelerde veya satır sayımlarında kayma oluştu");
 				Swal.fire({
