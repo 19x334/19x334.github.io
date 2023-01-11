@@ -2592,12 +2592,14 @@ function addLines(numberOfLines) {
 $(window).resize(copyTextSizer);
 $(document).ready(copyTextSizer);
 
+var browserDebug = true; // IF ALLAH WILLS DO NOT FORGET THIS FLAG AS true BEFORE COMMITING TO GIT
+var browser = detectBrowser();
+
 function widther(){
 	var width = ifade.clientWidth;
 	// controlWidth : ctrlWdth
 	var ctrlWdth = ifade.getBoundingClientRect().right - ifade.getBoundingClientRect().left;
 	
-	var browser = detectBrowser();
 	// ALLAH'IM, SANA SONSUZ TEŞEKKÜRLER EDERİM SONUNDA BU YÖNTEMLE(dead reckoning ve exception handling ile) RENKLENDİRMELERİN KAYMASI CHROME FLOATİNG POİNT ARITHMETIC BUG'INI TEMELİNDEN DÜZELTEBİLDİM! =) 1483 px genişliğinde 13:41 ayetinin 2. satırının taşması gibi durumları henüz düzeltemedim.. ALLAH dilerse düzelteceğim o gibi durumları da...
 	if(browser == "Chrome" || browser == "Edge")
 	{ // safari uses different system than edge and chrome, firefox has no issues about shifting of color markings with WILL OF 1
@@ -2613,23 +2615,28 @@ function widther(){
 					// satırlardaki toplam sayımların denk gelmesi için: if (window.innerWidth == 1422)
 					else if(869 == ctrlWdth) // when sura is 13
 						width = ctrlWdth - 12.61 * 2;
+					/*
+					   761 || 533 || 407 || 380 || 344 || 281 || 254
+					|| 218 || 155 || 92
+					*/
+					else if(windowWidth < 768 && (722 == ctrlWdth || 494 == ctrlWdth || 368 == ctrlWdth || 341 == ctrlWdth || 305 == ctrlWdth || 242 == ctrlWdth || 215 == ctrlWdth
+						|| 179 == ctrlWdth || 116 == ctrlWdth || 53 == ctrlWdth))
+						width = ctrlWdth - 16;
 					/* satırlardaki toplam sayımların denk gelmesi için: if (window.innerWidth == 1583 || 1577 || 1561 || 1524 || 1521 || 1505 || 1499 || 1496
 					  || 1464 || 1463 || 1425 || 1341 || 1327 || 1324 || 1305 || 1282
 					  || 1267 || 1249 || 1228 || 1225 || 1189 || 1169 || 1147 || 1130
 					  || 1125 || 1105 || 1088 || 1086 || 1071 || 1052 || 1049 || 1032
 					  || 1024 || 1013 || 1010 || 989 || 972 || 953 || 950
 					  || 930 || 914 || 911 || 874 || 869 || 855 || 835
-					  || 832 || 816 || 813 || 810 || 796 || 775 || 773
-					  || 761)
+					  || 832 || 816 || 813 || 810 || 796 || 775 || 773)
 					*/
-					else if(972 == ctrlWdth || 968 == ctrlWdth || 958 == ctrlWdth || 934 == ctrlWdth || 932 == ctrlWdth || 922 == ctrlWdth || 918 == ctrlWdth || 916 == ctrlWdth
+					else if((windowWidth >= 768 && (972 == ctrlWdth || 968 == ctrlWdth || 958 == ctrlWdth || 934 == ctrlWdth || 932 == ctrlWdth || 922 == ctrlWdth || 918 == ctrlWdth || 916 == ctrlWdth
 						|| 896 == ctrlWdth || 895 == ctrlWdth || 871 == ctrlWdth || 817 == ctrlWdth || 808 == ctrlWdth || 806 == ctrlWdth || 794 == ctrlWdth || 779 == ctrlWdth
 						|| 770 == ctrlWdth || 758 == ctrlWdth || 745 == ctrlWdth || 743 == ctrlWdth || 720 == ctrlWdth || 707 == ctrlWdth || 693 == ctrlWdth || 682 == ctrlWdth
 						|| 679 == ctrlWdth || 666 == ctrlWdth || 655 == ctrlWdth || 654 == ctrlWdth || 644 == ctrlWdth || 632 == ctrlWdth || 630 == ctrlWdth || 619 == ctrlWdth
 						|| 614 == ctrlWdth || 607 == ctrlWdth || 605 == ctrlWdth || 592 == ctrlWdth || 581 == ctrlWdth || 569 == ctrlWdth || 567 == ctrlWdth
 						|| 554 == ctrlWdth || 544 == ctrlWdth || 542 == ctrlWdth || 518 == ctrlWdth || 515 == ctrlWdth || 506 == ctrlWdth || 493 == ctrlWdth
-						|| 491 == ctrlWdth || 481 == ctrlWdth || 479 == ctrlWdth || 477 == ctrlWdth || 468 == ctrlWdth || 455 == ctrlWdth || 454 == ctrlWdth
-						|| 722 == ctrlWdth)
+						|| 491 == ctrlWdth || 481 == ctrlWdth || 479 == ctrlWdth || 477 == ctrlWdth || 468 == ctrlWdth || 455 == ctrlWdth || 454 == ctrlWdth)))
 						width = width;
 					else {
 						width = ctrlWdth - 12.61;
@@ -2641,9 +2648,11 @@ function widther(){
 	return width;
 }
 
-function copyTextSizer() {
+function copyTextSizer()
+{
+	var width = widther();
 
-	document.getElementById("copyText").style.setProperty("width", widther() + "px");
+	document.getElementById("copyText").style.setProperty("width", width + "px");
 
 	if(document.getElementById("ovpl").checked){
 		document.getElementsByClassName("hwt-backdrop")[0].style.setProperty('width', 'max-content', 'important');
@@ -2652,7 +2661,7 @@ function copyTextSizer() {
 	// jquery ile genişlik ataması yapma inşALLAH çünkü floating point arithmetic hatasına neden oluyor
 	// ve bu nedenle renklendirmeler kayıyor bazı genişliklerde chrome ve mobil safari'de
 	else if(document.getElementById("coloredDiv"))
-		document.getElementById("coloredDiv").style.setProperty("width", widther() + "px");
+		document.getElementById("coloredDiv").style.setProperty("width", width + "px");
 }
 var harfler = ['ء','ـٔ','ا','آ','ٱ','أ','إ','ب','پ','ج','چ','د','ه','ة','و','ؤ','ز','ژ','ح','ط','ی','ي','ئ','ى','ک','ك','گ','ڭ','ل','م','ن','س','ع','ف','ڢ','ڤ','ص','ق','ڨ','ر','ش','ت','ث','خ','ذ','ض','ظ','غ','ﻻ','ﻹ','ﻷ','ﻵ'];
 
@@ -2792,7 +2801,7 @@ $('#ovpl').change(function(){
 function yataylaştırıcı(){
 	// önce "satır başına 1 ayet"i seçtiğimizde ve sonra renklendirecek harf seçtiğimizde renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için:
 	if(document.getElementById("ovpl").checked){
-		if(detectBrowser() != "Firefox") {
+		if(browser != "Firefox") {
 			if(windowWidth < 768) document.getElementById("nextSura").style.marginTop = "24px";
 			else document.getElementById("nextSura").style.marginTop = "15px";
 		}
@@ -2806,7 +2815,7 @@ function yataylaştırıcı(){
 		}
 	}
 	else{
-		if(detectBrowser() != "Firefox") {
+		if(browser != "Firefox") {
 			if(windowWidth < 768) document.getElementById("nextSura").style.marginTop = "8px";
 			else document.getElementById("nextSura").style.marginTop = "0px";
 		}
@@ -2878,14 +2887,14 @@ function renkleriSay()
 }
 
 function useFirefox() {
-	if(detectBrowser() != "Firefox") {
+	if(browser != "Firefox") {
 		if(document.getElementById("coloredDiv")) {
 			if(document.getElementById("coloredDiv").getBoundingClientRect().height - document.getElementById('copyText').getBoundingClientRect().height != 46)
 			{
 				console.log("renklendirmelerde veya satır sayımlarında kayma oluştu");
 				Swal.fire({
 					title: "Error of row color countings or shifting of colorings has occured!",
-					html: "<p style='font-size: x-large;'>For solution: Change window width or just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>use Firefox</a> instead of " + detectBrowser() + "!</p>",
+					html: "<p style='font-size: x-large;'>For solution: Change window width or just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>use Firefox</a> instead of " + browser + "!</p>",
 					imageUrl: "pic/firefox.png",
 					imageWidth: 'auto',
 					imageHeight: 301,
@@ -3569,20 +3578,33 @@ $(window).load(linkChanger);
 
 function detectBrowser()
 {
-	var browser;
+	var browser = "Other";
+
 	if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) browser = "Safari";
-	else if(navigator.userAgent.indexOf("Chrome") > -1) browser = "Chrome";
-	else if(navigator.userAgent.indexOf("Firefox") > -1) browser = "Firefox";
-	else if(navigator.userAgent.indexOf("Edge") > -1) browser = "Edge";
-	else if(navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Android"; // if it is android device don't check rest
-	else browser = "Other";
+	else if(navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Android";
+
+	if(browserDebug) {
+		if(navigator.userAgent.indexOf("Chrome") > -1) browser = "Chrome";
+		if(navigator.userAgent.indexOf("Firefox") > -1) browser = "Firefox";
+		if(navigator.userAgent.indexOf("Edge") > -1) browser = "Edge";
+	}
+	else {
+		// if it is android device don't check rest:
+		if(navigator.userAgent.indexOf("Chrome") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Chrome-Android";
+		else if(navigator.userAgent.indexOf("Chrome") > -1) browser = "Chrome";
+		
+		if(navigator.userAgent.indexOf("Firefox") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Firefox-Android";
+		else if(navigator.userAgent.indexOf("Firefox") > -1) browser = "Firefox";
+		
+		if(navigator.userAgent.indexOf("Edge") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Edge-Android";
+		else if(navigator.userAgent.indexOf("Edge") > -1) browser = "Edge";
+	}
+
 	return browser;
 }
 
 function linkChanger()
 {
-	var browser = detectBrowser();
-
 	if(browser == "Chrome" || browser == "Edge")
 	{
 		document.getElementById("start").href = "#ovpl=0&onv=1&sura=1&verse=1&sura2=114&verse2=6&count=الله";
