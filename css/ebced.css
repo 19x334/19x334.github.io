@@ -1076,6 +1076,9 @@ body {
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
+	#caption {
+		font-size: 22px;
+	}
 	#bg {
 		background-image: url(/pic/space.png);
 		background-position: center;
@@ -1490,7 +1493,6 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 }
 
 #caption {
-	font-size: 20px;
 	display: none;
     padding: 8px;
 	color: midnightblue;
