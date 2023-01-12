@@ -1076,8 +1076,11 @@ body {
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
-	#caption, #uyarı {
+	#caption {
 		font-size: 23px !important;
+	}
+	#uyarı {
+		font-size: 23px !important; /* bunları birleştirirsen çalışmıyor! */
 	}
 	#bg {
 		background-image: url(/pic/space.png);
