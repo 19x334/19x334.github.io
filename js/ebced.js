@@ -7,7 +7,7 @@ var ayet2 = document.getElementById('ayet2');
 var sırano1 = document.getElementById('sırano1');
 var sırano2 = document.getElementById('sırano2');
 var ifade = document.getElementById('ifade');
-
+var playing = false;
 // for reloading single page application page when user clicks back/forward button of browser
 // ayrıca aşağıdaki fonksiyon, tüm kuranda ALLAH'ın isimlerinin renklendirilip sayılması ile harf sayımı linkleri arasında geçiş yapılırken
 // uygulamanın hızını ve kararlılığını dramatik artırıyor
@@ -16,8 +16,13 @@ jQuery( document ).ready(function( $ )
 {
 	//Use this inside your document ready jQuery 
 	$(window).on('popstate', function() {
-		// exclude verse 74 click links here inşALLAH
-		location.reload(true);
+		/*
+		ALLAH İSTERSE Sesli olarak oynatılan surenin sesinin Uygulama kullanılırken kesilmemesi
+		ve aynı zamanda surenin sesi oynatılmazken linke tıklandığında sayfanın yenilenerek
+		gereksiz olarak uygulamanın değişkenlerinin hafızada şişmesinin önlenmesi için Flag kullanılması fikri:
+		*/
+		if(playing) getfromlink(); // while playing
+		else location.reload(true); // default and after playing of sura audio ended
 	});
 });
 
@@ -3080,6 +3085,7 @@ $(window).load(function(){
 			$('#play-pause-button').removeClass('fa-play');
 			$('#play-pause-button').addClass('fa-pause');
 		}
+		playing = true;
 		isMusicPlayed = "true";
 		localStorage.setItem('isMusicPlayed', isMusicPlayed);
 	}
@@ -3088,6 +3094,7 @@ $(window).load(function(){
 var syncFlag = 0;
 
 $('#play-pause-button').click(function(){
+	playing = true; // for while playing, pausing except self ending WITH PERMISSION OF 1
 	if($(this).hasClass('fa-play'))
 	{
 		$(this).removeClass('fa-play');
@@ -3110,6 +3117,7 @@ $('#play-pause-button').click(function(){
 });
 
 audio.onended = function() {
+	playing = false;
     $("#play-pause-button").removeClass('fa-pause');
     $("#play-pause-button").addClass('fa-play');
 };
