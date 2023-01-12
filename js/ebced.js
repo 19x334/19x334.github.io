@@ -2592,7 +2592,6 @@ function addLines(numberOfLines) {
 $(window).resize(copyTextSizer);
 $(document).ready(copyTextSizer);
 
-var browserDebug = false; // IF ALLAH WILLS DO NOT FORGET THIS FLAG AS true BEFORE COMMITING TO GIT
 var browser = detectBrowser();
 
 function copyTextSizer()
@@ -3516,27 +3515,17 @@ $(window).load(linkChanger);
 
 function detectBrowser()
 {
-	var browser = "Other";
+	var browser;
 
 	if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) browser = "Safari";
-	else if(navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Android";
-
-	if(browserDebug) {
-		if(navigator.userAgent.indexOf("Chrome") > -1) browser = "Chrome";
-		if(navigator.userAgent.indexOf("Firefox") > -1) browser = "Firefox";
-		if(navigator.userAgent.indexOf("Edge") > -1) browser = "Edge";
-	}
-	else {
-		// if it is android device don't check rest:
-		if(navigator.userAgent.indexOf("Chrome") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Chrome-Android";
-		else if(navigator.userAgent.indexOf("Chrome") > -1) browser = "Chrome";
-		
-		if(navigator.userAgent.indexOf("Firefox") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Firefox-Android";
-		else if(navigator.userAgent.indexOf("Firefox") > -1) browser = "Firefox";
-		
-		if(navigator.userAgent.indexOf("Edge") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Edge-Android";
-		else if(navigator.userAgent.indexOf("Edge") > -1) browser = "Edge";
-	}
+	else if(navigator.userAgent.indexOf("Chrome") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Chrome-Android";
+	else if(navigator.userAgent.indexOf("Firefox") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Firefox-Android";
+	else if(navigator.userAgent.indexOf("Edge") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Edge-Android";
+	else if(navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Other-Android";
+	else if(navigator.userAgent.indexOf("Chrome") > -1) browser = "Chrome";
+	else if(navigator.userAgent.indexOf("Firefox") > -1) browser = "Firefox";
+	else if(navigator.userAgent.indexOf("Edge") > -1) browser = "Edge";
+	else browser = "Other-Desktop";
 
 	return browser;
 }
