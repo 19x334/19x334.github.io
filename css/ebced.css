@@ -46,6 +46,11 @@ body{ scroll-behavior: smooth; }
     border-radius: 1em;
 }
 #beyaz{color: white;}
+.kırma {
+	white-space: pre !important;
+	overflow-x: auto !important;
+	width: max-content !important;
+}
 .nameOrder{
 	color: red;
 	font-weight: bold;
