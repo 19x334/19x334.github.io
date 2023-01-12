@@ -1077,7 +1077,7 @@ body {
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
 	#caption {
-		font-size: 22px;
+		font-size: 23px;
 	}
 	#bg {
 		background-image: url(/pic/space.png);
