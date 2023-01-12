@@ -1076,7 +1076,7 @@ body {
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
-	#caption {
+	#caption, #uyarı {
 		font-size: 23px;
 	}
 	#bg {
