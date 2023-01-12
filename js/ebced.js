@@ -2724,7 +2724,7 @@ function alertt()
 				}).then((value) => {
 					Swal.fire({
 						title: "Shifting of row color countings or Shifting of color markings may occur in " + ((browser == "Firefox") ? "other browsers" : browser) + "!",
-						html: "<p style='font-size: x-large;'>In that case Change window width or Rotate your device or Just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>Use Firefox</a>" + ((browser == "Firefox") ? "!</p>" : (" instead of " + browser + "!</p>")),
+						html: "<p style='font-size: x-large;'>In that case Change window width or Rotate your device and then continue counting from verse you remained or Just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>Use Firefox</a>" + ((browser == "Firefox") ? "!</p>" : (" instead of " + browser + "!</p>")),
 						imageUrl: "pic/firefox.png",
 						imageWidth: 'auto',
 						imageHeight: 301,
