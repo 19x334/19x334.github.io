@@ -45,11 +45,13 @@ body{ scroll-behavior: smooth; }
 	-webkit-backdrop-filter: blur(14px) saturate(180%);
     border-radius: 1em;
 }
-
+#beyaz{color: white;}
 .nameOrder{
 	color: red;
 	font-weight: bold;
-    padding: 4px;
+    padding: 8px;
+	padding-right: 14px;
+    padding-left: 14px;
 }
 #bismTable19 {
 	border-collapse:collapse;
