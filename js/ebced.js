@@ -3134,7 +3134,7 @@ var versesOf74 = [
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#8">74:8</a>&nbsp;then, when the horn is blown.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#9">74:9</a>&nbsp;that will be a difficult day.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#10">74:10</a>&nbsp;for the disbelievers, not easy.</p>',
-	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#11">74:11</a>&nbsp;leave ME and whom I created ALONE.</p>',
+	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#11">74:11</a>&nbsp;leave ME and whom I CREATED ALONE.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#12">74:12</a>&nbsp;and I GRANTED to him an extensive wealth.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#13">74:13</a>&nbsp;and children to behold.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#14">74:14</a>&nbsp;and I HAVE ARRANGED smoothness for him.</p>',
