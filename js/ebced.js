@@ -22,7 +22,7 @@ jQuery( document ).ready(function( $ )
 		gereksiz olarak uygulamanın değişkenlerinin hafızada şişmesinin önlenmesi için Flag kullanılması fikri:
 		*/
 		if(playing) getfromlink(); // while playing
-		else location.reload(true); // default and after playing of sura audio ended
+		else location.reload(true); // this default and after playing of sura audio ended behavior has massive performance gains like coloring sura 13 with e+l+m+r letters after colored all QURAN with 2698 occurence of NAME OF ALLAH in chrome for example.. it can not finish the coloring process of sura 13 with e+l+m+r letters even after 3 minutes!
 	});
 });
 
