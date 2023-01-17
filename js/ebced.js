@@ -2065,12 +2065,12 @@ function renklendir(ltr)
 	document.documentElement.style.cursor = "wait";
 	loading();
 
-	var varmı = 0;
-	for(var r = 0; r < 33; r++) // 33 harf + isimli renklendirme matrisi içinde
-		if(clrltrs[r][0] == ltr) // harf varsa
-			varmı = 1;
+	var varmı = false;
+	for(var r = 0; r < clrltrs.length; r++) // 33 harf + İSİM'den oluşan clrltrs renklendirme matrisi içinde
+		if(clrltrs[r][0] == ltr) // harf ya da İSİM varsa
+			varmı = true;
 
-	if(varmı == 1){ // harf varsa o harfi çıkar/sil:
+	if(varmı){ // harf ya da İSİM varsa o harf ya da İSMİ çıkar/sil:
 		if(ltr == 'ا') {
 			clrltrs[0] = [];
 			clrltrs[34] = [];
@@ -2118,7 +2118,7 @@ function renklendir(ltr)
 			clrltrs[33] = [];
 		}
 	}
-	else{ // harf yoksa o harfi renklendirilecek harflere kat
+	else{ // harf ya da İSİM yoksa o harf ya da İSMİ renklendirilecek harf veya İSİM'lere kat
 		if(ltr == 'ا') {
 			clrltrs[0].push('ا','ء','ـٔ','آ','ٱ','أ','إ');
 			if(clrltrs[11][0] == 'ل') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
