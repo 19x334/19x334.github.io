@@ -816,41 +816,41 @@ $("#count-switch").change(function(){
 	
 			for(harf in selections){
 				if(selections[harf] == 'ا') {
-					clrltrs[0].splice(0,clrltrs[0].length);
-					clrltrs[34].splice(0,clrltrs[34].length);
-					clrltrs[36].splice(0,clrltrs[36].length);
+					clrltrs[0] = [];
+					clrltrs[34] = [];
+					clrltrs[36] = [];
 				}
-				else if(selections[harf] == 'ب') clrltrs[1].splice(0,2);
-				else if(selections[harf] == 'ج') clrltrs[2].splice(0,2);
-				else if(selections[harf] == 'د') clrltrs[3].pop();
-				else if(selections[harf] == 'ه') clrltrs[4].splice(0,2);
-				else if(selections[harf] == 'و') clrltrs[5].splice(0,2);
-				else if(selections[harf] == 'ز') clrltrs[6].splice(0,2);
-				else if(selections[harf] == 'ح') clrltrs[7].pop();
-				else if(selections[harf] == 'ط') clrltrs[8].pop();
-				else if(selections[harf] == 'ي') clrltrs[9].splice(0,4);
-				else if(selections[harf] == 'ك') clrltrs[10].splice(0,4);
+				else if(selections[harf] == 'ب') clrltrs[1] = [];
+				else if(selections[harf] == 'ج') clrltrs[2] = [];
+				else if(selections[harf] == 'د') clrltrs[3] = [];
+				else if(selections[harf] == 'ه') clrltrs[4] = [];
+				else if(selections[harf] == 'و') clrltrs[5] = [];
+				else if(selections[harf] == 'ز') clrltrs[6] = [];
+				else if(selections[harf] == 'ح') clrltrs[7] = [];
+				else if(selections[harf] == 'ط') clrltrs[8] = [];
+				else if(selections[harf] == 'ي') clrltrs[9] = [];
+				else if(selections[harf] == 'ك') clrltrs[10] = [];
 				else if(selections[harf] == 'ل') {
-					clrltrs[11].splice(0,clrltrs[11].length);
-					clrltrs[34].splice(0,clrltrs[34].length);
-					clrltrs[35].splice(0,clrltrs[35].length);
+					clrltrs[11] = [];
+					clrltrs[34] = [];
+					clrltrs[35] = [];
 				}
-				else if(selections[harf] == 'م') clrltrs[12].pop();
-				else if(selections[harf] == 'ن') clrltrs[13].pop();
-				else if(selections[harf] == 'س') clrltrs[14].pop();
-				else if(selections[harf] == 'ع') clrltrs[15].pop();
-				else if(selections[harf] == 'ف') clrltrs[16].splice(0,3);
-				else if(selections[harf] == 'ص') clrltrs[17].pop();
-				else if(selections[harf] == 'ق') clrltrs[18].splice(0,2);
-				else if(selections[harf] == 'ر') clrltrs[19].pop();
-				else if(selections[harf] == 'ش') clrltrs[20].pop();
-				else if(selections[harf] == 'ت') clrltrs[21].pop();
-				else if(selections[harf] == 'ث') clrltrs[22].pop();
-				else if(selections[harf] == 'خ') clrltrs[23].pop();
-				else if(selections[harf] == 'ذ') clrltrs[24].pop();
-				else if(selections[harf] == 'ض') clrltrs[25].pop();
-				else if(selections[harf] == 'ظ') clrltrs[26].pop();
-				else if(selections[harf] == 'غ') clrltrs[27].pop();
+				else if(selections[harf] == 'م') clrltrs[12] = [];
+				else if(selections[harf] == 'ن') clrltrs[13] = [];
+				else if(selections[harf] == 'س') clrltrs[14] = [];
+				else if(selections[harf] == 'ع') clrltrs[15] = [];
+				else if(selections[harf] == 'ف') clrltrs[16] = [];
+				else if(selections[harf] == 'ص') clrltrs[17] = [];
+				else if(selections[harf] == 'ق') clrltrs[18] = [];
+				else if(selections[harf] == 'ر') clrltrs[19] = [];
+				else if(selections[harf] == 'ش') clrltrs[20] = [];
+				else if(selections[harf] == 'ت') clrltrs[21] = [];
+				else if(selections[harf] == 'ث') clrltrs[22] = [];
+				else if(selections[harf] == 'خ') clrltrs[23] = [];
+				else if(selections[harf] == 'ذ') clrltrs[24] = [];
+				else if(selections[harf] == 'ض') clrltrs[25] = [];
+				else if(selections[harf] == 'ظ') clrltrs[26] = [];
+				else if(selections[harf] == 'غ') clrltrs[27] = [];
 				document.getElementById(selections[harf]).checked = false;	$("#"+selections[harf]).trigger('change');	colorButton(selections[harf]);
 			}
 		}
@@ -860,14 +860,14 @@ $("#count-switch").change(function(){
 	
 			for(harf in selections){
 				if(selections[harf] == 'الله') {
-					clrltrs[28].splice(0,6);
-					clrltrs[29].splice(0,6);
+					clrltrs[28] = [];
+					clrltrs[29] = [];
 				}
-				else if(selections[harf] == 'الرحمن') clrltrs[30].splice(0,4);
-				else if(selections[harf] == 'الرحيم') clrltrs[31].splice(0,5);
+				else if(selections[harf] == 'الرحمن') clrltrs[30] = [];
+				else if(selections[harf] == 'الرحيم') clrltrs[31] = [];
 				else if(selections[harf] == 'اسم') {
-					clrltrs[32].splice(0,8);
-					clrltrs[33].splice(0,4);
+					clrltrs[32] = [];
+					clrltrs[33] = [];
 				}
 				document.getElementById(selections[harf]).checked = false;	$("#"+selections[harf]).trigger('change');	colorButton(selections[harf]);
 			}
@@ -1381,50 +1381,50 @@ function renkleri_temizle()
 
 	for(harf in selections){
 		if(selections[harf] == 'ا') {
-			clrltrs[0].splice(0,clrltrs[0].length);
-			clrltrs[34].splice(0,clrltrs[34].length);
-			clrltrs[36].splice(0,clrltrs[36].length);
+			clrltrs[0] = [];
+			clrltrs[34] = [];
+			clrltrs[36] = [];
 		}
-		else if(selections[harf] == 'ب') clrltrs[1].splice(0,2);
-		else if(selections[harf] == 'ج') clrltrs[2].splice(0,2);
-		else if(selections[harf] == 'د') clrltrs[3].pop();
-		else if(selections[harf] == 'ه') clrltrs[4].splice(0,2);
-		else if(selections[harf] == 'و') clrltrs[5].splice(0,2);
-		else if(selections[harf] == 'ز') clrltrs[6].splice(0,2);
-		else if(selections[harf] == 'ح') clrltrs[7].pop();
-		else if(selections[harf] == 'ط') clrltrs[8].pop();
-		else if(selections[harf] == 'ي') clrltrs[9].splice(0,4);
-		else if(selections[harf] == 'ك') clrltrs[10].splice(0,4);
+		else if(selections[harf] == 'ب') clrltrs[1] = [];
+		else if(selections[harf] == 'ج') clrltrs[2] = [];
+		else if(selections[harf] == 'د') clrltrs[3] = [];
+		else if(selections[harf] == 'ه') clrltrs[4] = [];
+		else if(selections[harf] == 'و') clrltrs[5] = [];
+		else if(selections[harf] == 'ز') clrltrs[6] = [];
+		else if(selections[harf] == 'ح') clrltrs[7] = [];
+		else if(selections[harf] == 'ط') clrltrs[8] = [];
+		else if(selections[harf] == 'ي') clrltrs[9] = [];
+		else if(selections[harf] == 'ك') clrltrs[10] = [];
 		else if(selections[harf] == 'ل') {
-			clrltrs[11].splice(0,clrltrs[11].length);
-			clrltrs[34].splice(0,clrltrs[34].length);
-			clrltrs[35].splice(0,clrltrs[35].length);
+			clrltrs[11] = [];
+			clrltrs[34] = [];
+			clrltrs[35] = [];
 		}
-		else if(selections[harf] == 'م') clrltrs[12].pop();
-		else if(selections[harf] == 'ن') clrltrs[13].pop();
-		else if(selections[harf] == 'س') clrltrs[14].pop();
-		else if(selections[harf] == 'ع') clrltrs[15].pop();
-		else if(selections[harf] == 'ف') clrltrs[16].splice(0,3);
-		else if(selections[harf] == 'ص') clrltrs[17].pop();
-		else if(selections[harf] == 'ق') clrltrs[18].splice(0,2);
-		else if(selections[harf] == 'ر') clrltrs[19].pop();
-		else if(selections[harf] == 'ش') clrltrs[20].pop();
-		else if(selections[harf] == 'ت') clrltrs[21].pop();
-		else if(selections[harf] == 'ث') clrltrs[22].pop();
-		else if(selections[harf] == 'خ') clrltrs[23].pop();
-		else if(selections[harf] == 'ذ') clrltrs[24].pop();
-		else if(selections[harf] == 'ض') clrltrs[25].pop();
-		else if(selections[harf] == 'ظ') clrltrs[26].pop();
-		else if(selections[harf] == 'غ') clrltrs[27].pop();
+		else if(selections[harf] == 'م') clrltrs[12] = [];
+		else if(selections[harf] == 'ن') clrltrs[13] = [];
+		else if(selections[harf] == 'س') clrltrs[14] = [];
+		else if(selections[harf] == 'ع') clrltrs[15] = [];
+		else if(selections[harf] == 'ف') clrltrs[16] = [];
+		else if(selections[harf] == 'ص') clrltrs[17] = [];
+		else if(selections[harf] == 'ق') clrltrs[18] = [];
+		else if(selections[harf] == 'ر') clrltrs[19] = [];
+		else if(selections[harf] == 'ش') clrltrs[20] = [];
+		else if(selections[harf] == 'ت') clrltrs[21] = [];
+		else if(selections[harf] == 'ث') clrltrs[22] = [];
+		else if(selections[harf] == 'خ') clrltrs[23] = [];
+		else if(selections[harf] == 'ذ') clrltrs[24] = [];
+		else if(selections[harf] == 'ض') clrltrs[25] = [];
+		else if(selections[harf] == 'ظ') clrltrs[26] = [];
+		else if(selections[harf] == 'غ') clrltrs[27] = [];
 		else if(selections[harf] == 'الله') {
-			clrltrs[28].splice(0,6);
-			clrltrs[29].splice(0,6);
+			clrltrs[28] = [];
+			clrltrs[29] = [];
 		}
-		else if(selections[harf] == 'الرحمن') clrltrs[30].splice(0,4);
-		else if(selections[harf] == 'الرحيم') clrltrs[31].splice(0,5);
+		else if(selections[harf] == 'الرحمن') clrltrs[30] = [];
+		else if(selections[harf] == 'الرحيم') clrltrs[31] = [];
 		else if(selections[harf] == 'اسم') {
-			clrltrs[32].splice(0,8);
-			clrltrs[33].splice(0,4);
+			clrltrs[32] = [];
+			clrltrs[33] = [];
 		}
 		document.getElementById(selections[harf]).checked = false;
 		colorButton(selections[harf]);
@@ -1442,50 +1442,50 @@ function tüm_renkleri_temizle()
 {
 	for(harf in lttrs){
 		if(lttrs[harf] == 'ا') {
-			clrltrs[0].splice(0,clrltrs[0].length);
-			clrltrs[34].splice(0,clrltrs[34].length);
-			clrltrs[36].splice(0,clrltrs[36].length);
+			clrltrs[0] = [];
+			clrltrs[34] = [];
+			clrltrs[36] = [];
 		}
-		else if(lttrs[harf] == 'ب') clrltrs[1].splice(0,2);
-		else if(lttrs[harf] == 'ج') clrltrs[2].splice(0,2);
-		else if(lttrs[harf] == 'د') clrltrs[3].pop();
-		else if(lttrs[harf] == 'ه') clrltrs[4].splice(0,2);
-		else if(lttrs[harf] == 'و') clrltrs[5].splice(0,2);
-		else if(lttrs[harf] == 'ز') clrltrs[6].splice(0,2);
-		else if(lttrs[harf] == 'ح') clrltrs[7].pop();
-		else if(lttrs[harf] == 'ط') clrltrs[8].pop();
-		else if(lttrs[harf] == 'ي') clrltrs[9].splice(0,4);
-		else if(lttrs[harf] == 'ك') clrltrs[10].splice(0,4);
+		else if(lttrs[harf] == 'ب') clrltrs[1] = [];
+		else if(lttrs[harf] == 'ج') clrltrs[2] = [];
+		else if(lttrs[harf] == 'د') clrltrs[3] = [];
+		else if(lttrs[harf] == 'ه') clrltrs[4] = [];
+		else if(lttrs[harf] == 'و') clrltrs[5] = [];
+		else if(lttrs[harf] == 'ز') clrltrs[6] = [];
+		else if(lttrs[harf] == 'ح') clrltrs[7] = [];
+		else if(lttrs[harf] == 'ط') clrltrs[8] = [];
+		else if(lttrs[harf] == 'ي') clrltrs[9] = [];
+		else if(lttrs[harf] == 'ك') clrltrs[10] = [];
 		else if(lttrs[harf] == 'ل') {
-			clrltrs[11].splice(0,clrltrs[11].length);
-			clrltrs[34].splice(0,clrltrs[34].length);
-			clrltrs[35].splice(0,clrltrs[35].length);
+			clrltrs[11] = [];
+			clrltrs[34] = [];
+			clrltrs[35] = [];
 		}
-		else if(lttrs[harf] == 'م') clrltrs[12].pop();
-		else if(lttrs[harf] == 'ن') clrltrs[13].pop();
-		else if(lttrs[harf] == 'س') clrltrs[14].pop();
-		else if(lttrs[harf] == 'ع') clrltrs[15].pop();
-		else if(lttrs[harf] == 'ف') clrltrs[16].splice(0,3);
-		else if(lttrs[harf] == 'ص') clrltrs[17].pop();
-		else if(lttrs[harf] == 'ق') clrltrs[18].splice(0,2);
-		else if(lttrs[harf] == 'ر') clrltrs[19].pop();
-		else if(lttrs[harf] == 'ش') clrltrs[20].pop();
-		else if(lttrs[harf] == 'ت') clrltrs[21].pop();
-		else if(lttrs[harf] == 'ث') clrltrs[22].pop();
-		else if(lttrs[harf] == 'خ') clrltrs[23].pop();
-		else if(lttrs[harf] == 'ذ') clrltrs[24].pop();
-		else if(lttrs[harf] == 'ض') clrltrs[25].pop();
-		else if(lttrs[harf] == 'ظ') clrltrs[26].pop();
-		else if(lttrs[harf] == 'غ') clrltrs[27].pop();
+		else if(lttrs[harf] == 'م') clrltrs[12] = [];
+		else if(lttrs[harf] == 'ن') clrltrs[13] = [];
+		else if(lttrs[harf] == 'س') clrltrs[14] = [];
+		else if(lttrs[harf] == 'ع') clrltrs[15] = [];
+		else if(lttrs[harf] == 'ف') clrltrs[16] = [];
+		else if(lttrs[harf] == 'ص') clrltrs[17] = [];
+		else if(lttrs[harf] == 'ق') clrltrs[18] = [];
+		else if(lttrs[harf] == 'ر') clrltrs[19] = [];
+		else if(lttrs[harf] == 'ش') clrltrs[20] = [];
+		else if(lttrs[harf] == 'ت') clrltrs[21] = [];
+		else if(lttrs[harf] == 'ث') clrltrs[22] = [];
+		else if(lttrs[harf] == 'خ') clrltrs[23] = [];
+		else if(lttrs[harf] == 'ذ') clrltrs[24] = [];
+		else if(lttrs[harf] == 'ض') clrltrs[25] = [];
+		else if(lttrs[harf] == 'ظ') clrltrs[26] = [];
+		else if(lttrs[harf] == 'غ') clrltrs[27] = [];
 		else if(lttrs[harf] == 'الله') {
-			clrltrs[28].splice(0,6);
-			clrltrs[29].splice(0,6);
+			clrltrs[28] = [];
+			clrltrs[29] = [];
 		}
-		else if(lttrs[harf] == 'الرحمن') clrltrs[30].splice(0,4);
-		else if(lttrs[harf] == 'الرحيم') clrltrs[31].splice(0,5);
+		else if(lttrs[harf] == 'الرحمن') clrltrs[30] = [];
+		else if(lttrs[harf] == 'الرحيم') clrltrs[31] = [];
 		else if(lttrs[harf] == 'اسم') {
-			clrltrs[32].splice(0,8);
-			clrltrs[33].splice(0,4);
+			clrltrs[32] = [];
+			clrltrs[33] = [];
 		}
 		document.getElementById(lttrs[harf]).checked = false;
 		colorButton(lttrs[harf]);
@@ -2066,56 +2066,56 @@ function renklendir(ltr)
 	loading();
 
 	var varmı = 0;
-	for(var r = 0; r < 29; r++) // 29 harfli renklendirme matrisi içinde
+	for(var r = 0; r < 33; r++) // 33 harf + isimli renklendirme matrisi içinde
 		if(clrltrs[r][0] == ltr) // harf varsa
 			varmı = 1;
-		
+
 	if(varmı == 1){ // harf varsa o harfi çıkar/sil:
 		if(ltr == 'ا') {
-			clrltrs[0].splice(0,clrltrs[0].length);
-			clrltrs[34].splice(0,clrltrs[34].length);
-			clrltrs[36].splice(0,clrltrs[36].length);
+			clrltrs[0] = [];
+			clrltrs[34] = [];
+			clrltrs[36] = [];
 		}
-		else if(ltr == 'ب') clrltrs[1].splice(0,2);
-		else if(ltr == 'ج') clrltrs[2].splice(0,2);
-		else if(ltr == 'د') clrltrs[3].pop();
-		else if(ltr == 'ه') clrltrs[4].splice(0,2);
-		else if(ltr == 'و') clrltrs[5].splice(0,2);
-		else if(ltr == 'ز') clrltrs[6].splice(0,2);
-		else if(ltr == 'ح') clrltrs[7].pop();
-		else if(ltr == 'ط') clrltrs[8].pop();
-		else if(ltr == 'ي') clrltrs[9].splice(0,4);
-		else if(ltr == 'ك') clrltrs[10].splice(0,4);
+		else if(ltr == 'ب') clrltrs[1] = [];
+		else if(ltr == 'ج') clrltrs[2] = [];
+		else if(ltr == 'د') clrltrs[3] = [];
+		else if(ltr == 'ه') clrltrs[4] = [];
+		else if(ltr == 'و') clrltrs[5] = [];
+		else if(ltr == 'ز') clrltrs[6] = [];
+		else if(ltr == 'ح') clrltrs[7] = [];
+		else if(ltr == 'ط') clrltrs[8] = [];
+		else if(ltr == 'ي') clrltrs[9] = [];
+		else if(ltr == 'ك') clrltrs[10] = [];
 		else if(ltr == 'ل') {
-			clrltrs[11].splice(0,clrltrs[11].length);
-			clrltrs[34].splice(0,clrltrs[34].length);
-			clrltrs[35].splice(0,clrltrs[35].length);
+			clrltrs[11] = [];
+			clrltrs[34] = [];
+			clrltrs[35] = [];
 		}
-		else if(ltr == 'م') clrltrs[12].pop();
-		else if(ltr == 'ن') clrltrs[13].pop();
-		else if(ltr == 'س') clrltrs[14].pop();
-		else if(ltr == 'ع') clrltrs[15].pop();
-		else if(ltr == 'ف') clrltrs[16].splice(0,3);
-		else if(ltr == 'ص') clrltrs[17].pop();
-		else if(ltr == 'ق') clrltrs[18].splice(0,2);
-		else if(ltr == 'ر') clrltrs[19].pop();
-		else if(ltr == 'ش') clrltrs[20].pop();
-		else if(ltr == 'ت') clrltrs[21].pop();
-		else if(ltr == 'ث') clrltrs[22].pop();
-		else if(ltr == 'خ') clrltrs[23].pop();
-		else if(ltr == 'ذ') clrltrs[24].pop();
-		else if(ltr == 'ض') clrltrs[25].pop();
-		else if(ltr == 'ظ') clrltrs[26].pop();
-		else if(ltr == 'غ') clrltrs[27].pop();
+		else if(ltr == 'م') clrltrs[12] = [];
+		else if(ltr == 'ن') clrltrs[13] = [];
+		else if(ltr == 'س') clrltrs[14] = [];
+		else if(ltr == 'ع') clrltrs[15] = [];
+		else if(ltr == 'ف') clrltrs[16] = [];
+		else if(ltr == 'ص') clrltrs[17] = [];
+		else if(ltr == 'ق') clrltrs[18] = [];
+		else if(ltr == 'ر') clrltrs[19] = [];
+		else if(ltr == 'ش') clrltrs[20] = [];
+		else if(ltr == 'ت') clrltrs[21] = [];
+		else if(ltr == 'ث') clrltrs[22] = [];
+		else if(ltr == 'خ') clrltrs[23] = [];
+		else if(ltr == 'ذ') clrltrs[24] = [];
+		else if(ltr == 'ض') clrltrs[25] = [];
+		else if(ltr == 'ظ') clrltrs[26] = [];
+		else if(ltr == 'غ') clrltrs[27] = [];
 		else if(ltr == 'الله') {
-			clrltrs[28].splice(0,6);
-			clrltrs[29].splice(0,6);
+			clrltrs[28] = [];
+			clrltrs[29] = [];
 		}
-		else if(ltr == 'الرحمن') clrltrs[30].splice(0,4);
-		else if(ltr == 'الرحيم') clrltrs[31].splice(0,5);
+		else if(ltr == 'الرحمن') clrltrs[30] = [];
+		else if(ltr == 'الرحيم') clrltrs[31] = [];
 		else if(ltr == 'اسم') {
-			clrltrs[32].splice(0,8);
-			clrltrs[33].splice(0,4);
+			clrltrs[32] = [];
+			clrltrs[33] = [];
 		}
 	}
 	else{ // harf yoksa o harfi renklendirilecek harflere kat
