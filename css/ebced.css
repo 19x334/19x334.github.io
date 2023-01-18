@@ -1073,6 +1073,8 @@ body {
 	}
 }
 
+.yeşil { color: green; }
+
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
