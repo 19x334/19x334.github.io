@@ -1072,8 +1072,40 @@ body {
 		}
 	}
 }
-
+.inlineLtr { display: inline; text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; }
 .yeşil { color: green; }
+.red { color: red; }
+/* ALLAH'IN İZNİYLE, uyarıda yer alan: 'THESE ARE MIRACLES OF THE BOOK!' ayetinin her harfinin ayrı ayrı renklendirilmesinde kullanılıyorlar: */
+.ااا{ color: #c6e535; }
+.ببب{ color: #d962ee; }
+.ججج{ color: #9ccb7b; }
+.ددد{ color: #d680e1; }
+.ههه{ color: #60cfd5; }
+.ووو{ color: #e979bc; }
+.ززز{ color: #57d679; }
+.ححح{ color: #ef7089; }
+.ططط{ color: #dae02c; }
+.ييي{ color: #7398ec; }
+.ككك{ color: #71d85d; }
+.للل{ color: #ed7f61; }
+.ممم{ color: #bea4dc; }
+.ننن{ color: #0094fd; }
+.سسس{ color: #ec7f2b; }
+.ععع{ color: yellow; } /* #d6a347 */
+.ففف{ color: #bdc656; }
+.صصص{ color: #65d29e; }
+.ققق{ color: lightblue; } /* #69df3b */
+.ررر{ color: #da9cb6; }
+.ششش{ color: #b7b8c6; }
+.تتت{ color: #8dc53f; }
+.ثثث{ color: #7eccb6; }
+.خخخ{ color: #d8a194; }
+.ذذذ{ color: #d2b26c; }
+.ضضض{ color: #b8c3b3; }
+/* HENÜZ KULLANMADIKLARIM:
+.ظظظ{ color: #cfb380; }
+.غغغ{ color: #b9c298; }
+*/
 
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
