@@ -88,14 +88,14 @@ body{ scroll-behavior: smooth; }
 	display: block;
     padding: 8px;
 	padding-right: 0px !important;
-    color: midnightblue;
+    color: rgb(0,0,142);
     text-align: right;
 }
 #captionRight{
 	display: block;
     padding: 8px;
 	padding-left: 0px !important;
-    color: midnightblue;
+    color: rgb(0,0,142);
     text-align: left;
 }
 th.ayraç {
@@ -103,7 +103,7 @@ th.ayraç {
     border-left: 0;
 }
 .tamkat{
-	background: rgba(0,0,139,0.74);
+	background: rgba(0,0,142,0.74);
     color: gold;
     font-weight: bold;
 }
@@ -250,7 +250,7 @@ th.ayraç {
 	color: white;
 	text-shadow: -1px -1px 6px black, 1px -1px 6px black, -1px 1px 6px black, 1px 1px 6px black;
 }
-.selectedRow{ background: rgba(240, 240, 240, 0.66); border: 1.1px solid midnightblue; }
+.selectedRow{ background: rgba(240, 240, 240, 0.66); border: 1.1px solid rgb(0,0,142); }
 .flip-card {
 	background-color: transparent;
     width: 3rem;
@@ -372,10 +372,10 @@ th.ayraç {
 tr.suraRow:hover a {
 	background-color: rgba(25, 25, 112, 0.74) !important;
 	color: white !important;
-	outline: 1px solid midnightblue;
+	outline: 1px solid rgb(0,0,142);
 }
 .selectedCell{
-	outline: 1px solid midnightblue;
+	outline: 1px solid rgb(0,0,142);
 }
 td a {
     display: block;
@@ -699,7 +699,7 @@ textarea::-webkit-scrollbar-thumb {
 		padding-top: 44px !important;
 		padding-bottom: 43px !important;
 	}
-	.selectedRow{outline: 1.1px solid midnightblue;}
+	.selectedRow{outline: 1.1px solid rgb(0,0,142);}
 }
 .row{
 	line-height: 45px;
@@ -715,7 +715,7 @@ textarea::-webkit-scrollbar-thumb {
 		float: right;
 		margin-right: 7px;
 		font-size: 22px;
-		color: midnightblue;
+		color: rgb(0,0,142);
 	}
 	#ovpll{ margin-right: 7px; }
 	#v7430{
@@ -915,11 +915,11 @@ a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 
 @media (hover:hover) {
-	a:hover { text-decoration: none; color: white !important; background-color: midnightblue !important;}
+	a:hover { text-decoration: none; color: white !important; background-color: rgb(0,0,142) !important;}
 	.huruf:hover {background-color: cornflowerblue;}
 	.harf:hover {background-color: coral;}
 	#ovpll:hover, #snl:hover {
-		background-color: midnightblue;
+		background-color: rgb(0,0,142);
 		color: white;
 	}
 }
@@ -928,11 +928,11 @@ a:visited { text-decoration: none; }
 	.huruf:active {background-color: cornflowerblue;}
 	.harf:active {background-color: coral;}
 	#ovpll:active, #snl:active  {
-		background-color: midnightblue;
+		background-color: rgb(0,0,142);
 		color: white;
 	}
 }
-#ovpll, #snl { color:midnightblue;}
+#ovpll, #snl { color:rgb(0,0,142);}
 
 .analiz {
 	display: flex;
@@ -1061,7 +1061,7 @@ body {
   	}
 	#bg{display: none;}
 	audio{
-		border: 1px solid midnightblue;
+		border: 1px solid rgb(0,0,142);
 		border-radius: 55px;
 		height: 44px;
 		width: 100px;
@@ -1072,7 +1072,7 @@ body {
 		}
 	}
 }
-.inlineLtr { display: inline; text-shadow: -0.6px -0.6px 0 midnightblue, 0.6px -0.6px 0 midnightblue, -0.6px 0.6px 0 midnightblue, 0.6px 0.6px 0 midnightblue; }
+.inlineLtr { display: inline; text-shadow: -0.6px -0.6px 0 rgb(0,0,142), 0.6px -0.6px 0 rgb(0,0,142), -0.6px 0.6px 0 rgb(0,0,142), 0.6px 0.6px 0 rgb(0,0,142); }
 .yeşil { color: green; }
 .red { color: red; }
 /* ALLAH'IN İZNİYLE, uyarıda yer alan: 'THESE ARE MIRACLES OF THE BOOK!' ayetinin her harfinin ayrı ayrı renklendirilmesinde kullanılıyorlar: */
@@ -1110,7 +1110,7 @@ body {
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
-	#caption { font-size: 22px !important; }
+	.caption { font-size: 22px !important; }
 	#bg {
 		background-image: url(/pic/space.png);
 		background-position: center;
@@ -1524,27 +1524,39 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	flex-flow: column;
 }
 
-#caption {
+.caption {
 	display: none;
     padding: 8px;
-	color: midnightblue;
-	background-color: white;
 	text-align: center;
+	background-color: white;
+	color: rgb(0,0,142);
 }
 
 #uyarı {
 	display: none;
 	padding: 8px;
 	text-align: center;
-	border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
 	background-color: red;
-    color: black;
+    color: rgb(0,0,142);
+	padding-top: 10.5px;
+    padding-bottom: 10.5px;
+}
+#uyarı:hover {
+	background-color: rgb(0,0,142) !important;
+	color: white !important;
 }
 
-#uyarı:hover {
-	background-color: midnightblue !important;
-	color: white !important;
+.dip{
+	border-bottom-left-radius: 1em !important;
+    border-bottom-right-radius: 1em !important;
+	background-color: rgb(0,0,142);
+	color: white;
+}
+.dip:hover {
+	background-color: red !important;
+	color: rgb(0,0,142) !important;
+	border-bottom-left-radius: 1em !important;
+    border-bottom-right-radius: 1em !important;
 }
 
 #N_caption {
