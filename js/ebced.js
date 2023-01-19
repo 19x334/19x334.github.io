@@ -2700,7 +2700,7 @@ function alertt()
 
 	if (lastVisit == null || lastVisit != today || uyarı) {
 
-		expressFlag = 0;
+		clickLink = false;
 
 		Swal.fire({
 			title: notifications[0].title,
@@ -2735,7 +2735,7 @@ function alertt()
 						imageAlt: "Shifting of row color countings or Shifting of color markings may occur in " + browser + "!"
 					}).then((value) => {
 						v = 0; // starts verses from 0
-						expressFlag = 1;
+						clickLink = true;
 					})
 				})
 			})
@@ -3156,7 +3156,7 @@ var versesOf74 = [
 
 var verseHead = document.getElementById("versesOf74");
 var v = 0;
-var expressFlag = 1;
+var clickLink = true;
 
 function expresser() {
 	$('#versesOf74').fadeOut("1380", function() {
@@ -3167,9 +3167,10 @@ function expresser() {
 		{
 			$('#versesOf74').removeClass('first-tour');
 			$('#v7429').addClass('first-tour');
-			if (expressFlag == 1 && !sure1.value && !ifade.value)
+			if (clickLink && !sure1.value && !ifade.value)
 			{
-				setTimeout(function(){document.getElementById("start").click()}, 2760);
+				setTimeout(function(){document.getElementById("start").click()}, 2700); // not 2760 since v=0; should not resulted after click IF 1 WILLS
+				clickLink = false;
 			}
 			v = 0; // it restarts loop at the end of it
 		}

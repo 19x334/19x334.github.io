@@ -1072,7 +1072,7 @@ body {
 		}
 	}
 }
-.inlineLtr { display: inline; text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; }
+.inlineLtr { display: inline; text-shadow: -0.6px -0.6px 0 midnightblue, 0.6px -0.6px 0 midnightblue, -0.6px 0.6px 0 midnightblue, 0.6px 0.6px 0 midnightblue; }
 .yeşil { color: green; }
 .red { color: red; }
 /* ALLAH'IN İZNİYLE, uyarıda yer alan: 'THESE ARE MIRACLES OF THE BOOK!' ayetinin her harfinin ayrı ayrı renklendirilmesinde kullanılıyorlar: */
