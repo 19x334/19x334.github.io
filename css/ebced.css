@@ -1107,45 +1107,10 @@ body {
 .غغغ{ color: #b9c298; }
 */
 
-/*
-.caption {
-	display: none;
-    padding: 8px;
-	text-align: center;
-	background-color: white;
-	color: rgb(0,0,142);
-}
-
-#uyarı {
-	display: none;
-	padding: 8px;
-	text-align: center;
-	background-color: red;
-    color: rgb(0,0,142);
-	padding-top: 10.5px;
-    padding-bottom: 10.5px;
-}
-#uyarı:hover {
-	background-color: rgb(0,0,142) !important;
-	color: white !important;
-}
-
-.dip{
-	border-bottom-left-radius: 1em !important;
-    border-bottom-right-radius: 1em !important;
-	background-color: rgb(0,0,142);
-	color: white;
-}
-.dip:hover {
-	background-color: red !important;
-	color: rgb(0,0,142) !important;
-	border-bottom-left-radius: 1em !important;
-    border-bottom-right-radius: 1em !important;
-}*/
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
-	.caption, #uyarı { font-size: 20px !important; }
+	.caption, #uyarı { font-size: 22px !important; }
 	#bg {
 		background-image: url(/pic/space.png);
 		background-position: center;
@@ -1162,9 +1127,13 @@ body {
 	}
 	mark { padding-bottom: 5px !important; }
 	/* below is only for iphones */
-	@media only screen and (max-width: 767px) {
-		.caption { font-size: 18px !important; }
-		#uyarı { font-size: 19px !important; }
+	@media only screen and (max-width: 767px)
+	{
+		.caption, #uyarı { font-size: 20px !important; }
+		/*
+			.caption { font-size: 18px !important; }
+			#uyarı { font-size: 19px !important; }
+		*/
 	}
 }
 
