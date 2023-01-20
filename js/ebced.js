@@ -3200,7 +3200,7 @@ var versesOf74 = [
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#2">74:2</a>&nbsp;Get Up and Warn!</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#3">74:3</a>&nbsp;Magnify your OWNER!</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#4">74:4</a>&nbsp;and Purify your garments.</p>',
-	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#5">74:5</a>&nbsp;and Move Away from wrath.</p>',
+	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#5">74:5</a>&nbsp;and Give Up from punishing.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#6">74:6</a>&nbsp;and Do Not Make Grateful by increasing.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#7">74:7</a>&nbsp;and Be Patient for your OWNER.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#8">74:8</a>&nbsp;then, When The Horn Is Blown.</p>',
