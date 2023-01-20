@@ -1434,7 +1434,9 @@ function renkleri_temizle()
 	// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
 	document.getElementById("toplam").style.display = "none";
 	
-	$('#ifade').highlightWithinTextarea('destroy');
+	if(document.getElementById("coloredDiv"))
+		$('#ifade').highlightWithinTextarea('destroy');
+
 	ifadeWidther();
 }
 
@@ -1495,7 +1497,9 @@ function tüm_renkleri_temizle()
 	// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
 	document.getElementById("toplam").style.display = "none";
 	
-	$('#ifade').highlightWithinTextarea('destroy');
+	if(document.getElementById("coloredDiv"))
+		$('#ifade').highlightWithinTextarea('destroy');
+	
 	ifadeWidther();
 }
 
@@ -3060,7 +3064,14 @@ function grabTextNodes(elem) {
 $(".seçenekler").change(addRemoveRows);
 
 function addRemoveRows(){
-	if(document.getElementById("coloredDiv")){
+
+	var boş = true;
+
+	for(var i = 0; i < document.getElementsByClassName("seçenekler").length; ++i)
+		if(document.getElementsByClassName("seçenekler")[i].checked)
+			boş = false;
+
+	if(!boş){
 		document.getElementById("satirlar").style.display = "inline-block";
 		// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
 		document.getElementById("satirlar").scrollTop = "0px";

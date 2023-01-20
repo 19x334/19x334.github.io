@@ -1145,7 +1145,7 @@ body {
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
-	.caption, #uyarı { font-size: 19px !important; }
+	.caption, #uyarı { font-size: 20px !important; }
 	#bg {
 		background-image: url(/pic/space.png);
 		background-position: center;
@@ -1161,6 +1161,11 @@ body {
 		pointer-events: none;
 	}
 	mark { padding-bottom: 5px !important; }
+	/* below is only for iphones */
+	@media only screen and (max-width: 767px) {
+		.caption { font-size: 18px !important; }
+		#uyarı { font-size: 19px !important; }
+	}
 }
 
 _::-webkit-full-page-media, _:future, :root .flip-card-front {
