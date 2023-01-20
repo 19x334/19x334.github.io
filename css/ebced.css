@@ -1053,7 +1053,7 @@ body {
 	body {
 		width: 100%;
 		min-height: 100vh !important;
-		background-image: url(/pic/space.png);
+		background-color: black;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -1112,7 +1112,7 @@ body {
 	/* The hack for iOS Safari */
 	.caption, #uyarı { font-size: 22px !important; }
 	#bg {
-		background-image: url(/pic/space.png);
+		background-color: black;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
