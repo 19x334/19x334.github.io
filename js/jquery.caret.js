@@ -1,4 +1,4 @@
-// in the name of the god the gracious the compassionate
+// IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL
 
 // Set caret position easily in jQuery
 // Written by and Copyright of Luke Morton, 2011
