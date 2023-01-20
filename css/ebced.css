@@ -1130,10 +1130,6 @@ body {
 	@media only screen and (max-width: 767px)
 	{
 		.caption, #uyarı { font-size: 20px !important; }
-		/*
-			.caption { font-size: 18px !important; }
-			#uyarı { font-size: 19px !important; }
-		*/
 	}
 }
 
