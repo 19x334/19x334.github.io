@@ -26,18 +26,76 @@ jQuery( document ).ready(function( $ )
 	});
 });
 
-function randombg(){
+function randombg()
+{
+	var genişlik = screen.width,
+		yükseklik = screen.height,
+		biggestSide;
+
+	if(genişlik > yükseklik)
+		biggestSide = genişlik;
+	else
+		biggestSide = yükseklik;
+	
+	var bigSize;
+
+	if(biggestSide < 425)
+		bigSize = ["url('/pic/size/425/space.png')",
+		"url('/pic/size/425/space2.png')",
+		"url('/pic/size/425/space3.png')",
+		"url('/pic/size/425/space4.png')",
+		"url('/pic/size/425/space5.png')",
+		"url('/pic/size/425/space6.png')",
+		"url('/pic/size/425/space7.png')",
+		"url('/pic/size/425/space8.jpg')",
+		"url('/pic/size/425/heavenandhell.png')",
+		"url('/pic/size/425/tree-and-star-prostrate.png')"];
+	else if(biggestSide < 768)
+		bigSize = ["url('/pic/size/768/space.png')",
+		"url('/pic/size/768/space2.png')",
+		"url('/pic/size/768/space3.png')",
+		"url('/pic/size/768/space4.png')",
+		"url('/pic/size/768/space5.png')",
+		"url('/pic/size/768/space6.png')",
+		"url('/pic/size/768/space7.png')",
+		"url('/pic/size/768/space8.jpg')",
+		"url('/pic/size/768/heavenandhell.png')",
+		"url('/pic/size/768/tree-and-star-prostrate.png')"];
+	else if(biggestSide < 1024)
+		bigSize = ["url('/pic/size/1024/space.png')",
+		"url('/pic/size/1024/space2.png')",
+		"url('/pic/size/1024/space3.png')",
+		"url('/pic/size/1024/space4.png')",
+		"url('/pic/size/1024/space5.png')",
+		"url('/pic/size/1024/space6.png')",
+		"url('/pic/size/1024/space7.png')",
+		"url('/pic/size/1024/space8.jpg')",
+		"url('/pic/size/1024/heavenandhell.png')",
+		"url('/pic/size/1024/tree-and-star-prostrate.png')"];
+	else if(biggestSide < 1585)
+		bigSize = ["url('/pic/size/1585/space.png')",
+		"url('/pic/size/1585/space2.png')",
+		"url('/pic/size/1585/space3.png')",
+		"url('/pic/size/1585/space4.png')",
+		"url('/pic/size/1585/space5.png')",
+		"url('/pic/size/1585/space6.png')",
+		"url('/pic/size/1585/space7.png')",
+		"url('/pic/size/1585/space8.jpg')",
+		"url('/pic/size/1585/heavenandhell.png')",
+		"url('/pic/size/1585/tree-and-star-prostrate.png')"];
+	else
+		 bigSize = ["url('/pic/space.png')",
+					"url('/pic/space2.png')",
+					"url('/pic/space3.png')",
+					"url('/pic/space4.png')",
+					"url('/pic/space5.png')",
+					"url('/pic/space6.png')",
+					"url('/pic/space7.png')",
+					"url('/pic/space8.jpg')",
+					"url('/pic/heavenandhell.png')",
+					"url('/pic/tree-and-star-prostrate.png')"];
+
 	var random = Math.floor(Math.random() * 10);
-	var bigSize = ["url('/pic/space.png')",
-				   "url('/pic/space2.png')",
-				   "url('/pic/space3.png')",
-				   "url('/pic/space4.png')",
-				   "url('/pic/space5.png')",
-				   "url('/pic/space6.png')",
-				   "url('/pic/space7.png')",
-				   "url('/pic/space8.jpg')",
-				   "url('/pic/heavenandhell.png')",
-				   "url('/pic/tree-and-star-prostrate.png')"];
 	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 10);
     document.getElementById("bg").style.backgroundImage = bigSize[random];
     document.getElementById("vücut").style.backgroundImage = bigSize[random];
