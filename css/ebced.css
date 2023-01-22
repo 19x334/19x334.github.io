@@ -709,7 +709,7 @@ textarea::-webkit-scrollbar-thumb {
 	min-width: fit-content;
 }
 @media only screen and (min-width: 768px) {
-	#nextSura{
+	#nextSura, #notFirefox{
 		display: none;
 		position: relative;
 		float: right;
@@ -726,7 +726,7 @@ textarea::-webkit-scrollbar-thumb {
 		margin-right: 7%;
 	}
 	#messengers{
-		background-image: url(/pic/messengers-horizontal.png);
+		background-image: url(/pic/messengers.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		width: 100%;
@@ -1155,7 +1155,9 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 #book {padding-top: 19px;}
 
 @media only screen and (max-width: 767px) {
-	#nextSura{
+	#nextSura, #notFirefox{
+		text-align: center;
+		line-height: 32px;
 		display: none;
 		position: relative;
 		float: right;
@@ -1354,6 +1356,11 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 
 @media only screen and (max-width: 468px) {
 
+	#notFirefox{
+		line-height: 32px;
+		text-align: center;
+		margin-right: 0px;
+	}
 	.bism-text {
 		width: 259px;
 		perspective: 514px;

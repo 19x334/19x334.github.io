@@ -523,7 +523,11 @@ function ayet2yegeç() {
 				$("#sure2").val().substr(1, 1) >  "1"	)	{ document.getElementById("ayet2").focus() }
 		if (	$("#sure2").val().substr(0, 1) >= "2" &&
 				$("#sure2").val().substr(1, 1) >= "0"	)	{ document.getElementById("ayet2").focus() }
-		if (	$("#sure2").val().length >= 3	)	{ document.getElementById("ayet2").focus() }
+		if (	$("#sure2").val().length >= 3	)
+		{
+			document.getElementById("ayet2").focus();
+			if (	$("#sure2").val() >= 115	) document.getElementById("ayet2").value = lastverses[114]; // 6
+		}
 		if (	key == 13	)	{ document.getElementById("ayet2").focus() }
 	}
 }
