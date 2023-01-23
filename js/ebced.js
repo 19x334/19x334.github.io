@@ -863,94 +863,79 @@ function sayım()
 	}
 }
 
-var switchFlag = true;
 
-$("#count-switch").change(function(){
-	selectorFlag = false;
-	if(switchFlag) {
-		if(document.getElementById('count-switch').checked){
-			var idSelector = function() { return this.id; };
-			var selections = $("input[class=seçenekler]:checked").map(idSelector).get();
-	
-			for(harf in selections){
-				if(selections[harf] == 'ا') {
-					clrltrs[0] = [];
-					clrltrs[34] = [];
-					clrltrs[36] = [];
-				}
-				else if(selections[harf] == 'ب') clrltrs[1] = [];
-				else if(selections[harf] == 'ج') clrltrs[2] = [];
-				else if(selections[harf] == 'د') clrltrs[3] = [];
-				else if(selections[harf] == 'ه') clrltrs[4] = [];
-				else if(selections[harf] == 'و') clrltrs[5] = [];
-				else if(selections[harf] == 'ز') clrltrs[6] = [];
-				else if(selections[harf] == 'ح') clrltrs[7] = [];
-				else if(selections[harf] == 'ط') clrltrs[8] = [];
-				else if(selections[harf] == 'ي') clrltrs[9] = [];
-				else if(selections[harf] == 'ك') clrltrs[10] = [];
-				else if(selections[harf] == 'ل') {
-					clrltrs[11] = [];
-					clrltrs[34] = [];
-					clrltrs[35] = [];
-				}
-				else if(selections[harf] == 'م') clrltrs[12] = [];
-				else if(selections[harf] == 'ن') clrltrs[13] = [];
-				else if(selections[harf] == 'س') clrltrs[14] = [];
-				else if(selections[harf] == 'ع') clrltrs[15] = [];
-				else if(selections[harf] == 'ف') clrltrs[16] = [];
-				else if(selections[harf] == 'ص') clrltrs[17] = [];
-				else if(selections[harf] == 'ق') clrltrs[18] = [];
-				else if(selections[harf] == 'ر') clrltrs[19] = [];
-				else if(selections[harf] == 'ش') clrltrs[20] = [];
-				else if(selections[harf] == 'ت') clrltrs[21] = [];
-				else if(selections[harf] == 'ث') clrltrs[22] = [];
-				else if(selections[harf] == 'خ') clrltrs[23] = [];
-				else if(selections[harf] == 'ذ') clrltrs[24] = [];
-				else if(selections[harf] == 'ض') clrltrs[25] = [];
-				else if(selections[harf] == 'ظ') clrltrs[26] = [];
-				else if(selections[harf] == 'غ') clrltrs[27] = [];
-				document.getElementById(selections[harf]).checked = false;	$("#"+selections[harf]).trigger('change');	colorButton(selections[harf]);
+$("#count-switch").change(function () {
+	var idSelector = function() { return this.id; };
+	var selections = $("input[class=seçenekler]:checked").map(idSelector).get();
+
+	if(document.getElementById('count-switch').checked){
+		// when turning into name counting behavior:
+
+		$('#sn').prop("checked", true);
+		$('#sn').trigger("change");
+
+		for(harf in selections){
+			if(selections[harf] == 'ا') {
+				clrltrs[0] = [];
+				clrltrs[34] = [];
+				clrltrs[36] = [];
 			}
-		}
-		else {
-			var idSelector = function() { return this.id; };
-			var selections = $("input[class=seçenekler]:checked").map(idSelector).get();
-	
-			for(harf in selections){
-				if(selections[harf] == 'الله') {
-					clrltrs[28] = [];
-					clrltrs[29] = [];
-				}
-				else if(selections[harf] == 'الرحمن') clrltrs[30] = [];
-				else if(selections[harf] == 'الرحيم') clrltrs[31] = [];
-				else if(selections[harf] == 'اسم') {
-					clrltrs[32] = [];
-					clrltrs[33] = [];
-				}
-				document.getElementById(selections[harf]).checked = false;	$("#"+selections[harf]).trigger('change');	colorButton(selections[harf]);
+			else if(selections[harf] == 'ب') clrltrs[1] = [];
+			else if(selections[harf] == 'ج') clrltrs[2] = [];
+			else if(selections[harf] == 'د') clrltrs[3] = [];
+			else if(selections[harf] == 'ه') clrltrs[4] = [];
+			else if(selections[harf] == 'و') clrltrs[5] = [];
+			else if(selections[harf] == 'ز') clrltrs[6] = [];
+			else if(selections[harf] == 'ح') clrltrs[7] = [];
+			else if(selections[harf] == 'ط') clrltrs[8] = [];
+			else if(selections[harf] == 'ي') clrltrs[9] = [];
+			else if(selections[harf] == 'ك') clrltrs[10] = [];
+			else if(selections[harf] == 'ل') {
+				clrltrs[11] = [];
+				clrltrs[34] = [];
+				clrltrs[35] = [];
 			}
+			else if(selections[harf] == 'م') clrltrs[12] = [];
+			else if(selections[harf] == 'ن') clrltrs[13] = [];
+			else if(selections[harf] == 'س') clrltrs[14] = [];
+			else if(selections[harf] == 'ع') clrltrs[15] = [];
+			else if(selections[harf] == 'ف') clrltrs[16] = [];
+			else if(selections[harf] == 'ص') clrltrs[17] = [];
+			else if(selections[harf] == 'ق') clrltrs[18] = [];
+			else if(selections[harf] == 'ر') clrltrs[19] = [];
+			else if(selections[harf] == 'ش') clrltrs[20] = [];
+			else if(selections[harf] == 'ت') clrltrs[21] = [];
+			else if(selections[harf] == 'ث') clrltrs[22] = [];
+			else if(selections[harf] == 'خ') clrltrs[23] = [];
+			else if(selections[harf] == 'ذ') clrltrs[24] = [];
+			else if(selections[harf] == 'ض') clrltrs[25] = [];
+			else if(selections[harf] == 'ظ') clrltrs[26] = [];
+			else if(selections[harf] == 'غ') clrltrs[27] = [];
+			document.getElementById(selections[harf]).checked = false;	$("#"+selections[harf]).trigger('change');	colorButton(selections[harf]);
 		}
-		rengarenk();
 	}
-	selectorFlag = true;
+	else {
+		// when turning back to default letter counting behavior:
+
+		$('#sn').prop("checked", false);
+		$('#sn').trigger("change");
+
+		for(harf in selections){
+			if(selections[harf] == 'الله') {
+				clrltrs[28] = [];
+				clrltrs[29] = [];
+			}
+			else if(selections[harf] == 'الرحمن') clrltrs[30] = [];
+			else if(selections[harf] == 'الرحيم') clrltrs[31] = [];
+			else if(selections[harf] == 'اسم') {
+				clrltrs[32] = [];
+				clrltrs[33] = [];
+			}
+			document.getElementById(selections[harf]).checked = false;	$("#"+selections[harf]).trigger('change');	colorButton(selections[harf]);
+		}
+	}
+	rengarenk();
 });
-
-var selectorFlag = true;
-
-$(".seçenekler").change(countSelector);
-
-function countSelector(){
-	switchFlag = false;
-	if(selectorFlag == true) {
-		if(document.getElementById('اسم').checked || document.getElementById('الله').checked || document.getElementById('الرحمن').checked || document.getElementById('الرحيم').checked)
-			document.getElementById('count-switch').checked = true;
-		else
-			document.getElementById('count-switch').checked = false;
-	
-		$('#count-switch').trigger('change');
-	}
-	switchFlag = true;
-}
 
 $('.seçenekler').on('change', seçilen_harfler)
 
