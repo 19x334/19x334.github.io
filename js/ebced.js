@@ -2754,7 +2754,7 @@ notifications.push({
 	imageHeight: 301,
 	imageAlt: "Shifting of row color countings or Shifting of color markings may occur in " + browser + "!",
 	title: "Coloring Markings or Row Coloring Countings May Shift in " + ((browser == "Firefox") ? "other browsers" : browser) + "!",
-	html: "<p style='font-size: x-large;'>In That Case " + ((browser == "Safari" || browser.includes("Android")) ? "Rotate Your Device" : "Change Window Width") + " And Then Continue Counting From Unshifted Verse You Remained Or Just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>Use Firefox</a>" + ((browser == "Firefox") ? "!</p>" : (" Instead Of " + browser + "!</p>"))
+	html: "<p style='font-size: x-large;'>In That Case " + ((browser == "Safari" || browser.includes("Android")) ? "Rotate Your Device" : "Resize Width of Your Browser Window") + " and Then Continue Counting From Unshifted Verse You Remained or Just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>Use Firefox</a>" + ((browser == "Firefox") ? "!</p>" : (" Instead of " + browser + "!</p>"))
 });
 
 var uyarı = false;
@@ -3603,15 +3603,24 @@ function detectBrowser()
 {
 	var browser;
 
-	if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) browser = "Safari";
-	else if(navigator.userAgent.indexOf("Chrome") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Chrome-Android";
-	else if(navigator.userAgent.indexOf("Firefox") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Firefox-Android";
-	else if(navigator.userAgent.indexOf("Edge") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Edge-Android";
-	else if(navigator.userAgent.toLowerCase().indexOf("android") > -1) browser = "Other-Android";
-	else if(navigator.userAgent.indexOf("Chrome") > -1) browser = "Chrome";
-	else if(navigator.userAgent.indexOf("Firefox") > -1) browser = "Firefox";
-	else if(navigator.userAgent.indexOf("Edge") > -1) browser = "Edge";
-	else browser = "Other-Desktop";
+	if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+		browser = "Safari";
+	else if(navigator.userAgent.indexOf("Chrome") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1)
+		browser = "Chrome-Android";
+	else if(navigator.userAgent.indexOf("Firefox") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1)
+		browser = "Firefox-Android";
+	else if(navigator.userAgent.indexOf("Edge") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1)
+		browser = "Edge-Android";
+	else if(navigator.userAgent.toLowerCase().indexOf("android") > -1)
+		browser = "Other-Android";
+	else if(navigator.userAgent.indexOf("Chrome") > -1)
+		browser = "Chrome";
+	else if(navigator.userAgent.indexOf("Firefox") > -1)
+		browser = "Firefox";
+	else if(navigator.userAgent.indexOf("Edge") > -1)
+		browser = "Edge";
+	else
+		browser = "Other-Desktop";
 
 	var tempBrowser = browser;
 	document.getElementById("notFirefox").innerText = "coloring markings or countings may shift in " + (
