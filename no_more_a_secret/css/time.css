@@ -215,11 +215,12 @@ a { color: yellow; font-weight: bolder; }
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 .text{
-	line-height: 44pt;
-	font-size: 22pt;
+	color: aqua;
+	font-size: 40px;
+    line-height: 61px;
 	display: block;
 	font-family: Dancing-Script;
-	text-shadow: -1px -1px 5px black, 1px -1px 5px black, -1px 1px 5px black, 1px 1px 5px black;
+	text-shadow: -1px -1px 4px black, 1px -1px 4px black, -1px 1px 4px black, 1px 1px 4px black;
 }
 .aralık {
     display: block;
@@ -239,14 +240,13 @@ a:visited { text-decoration: none; }
 	}
 	a#knowledge-link { letter-spacing: 0.19vw; font-weight: bolder; }
 }
-#But-How-Do-I-know-That {
+#But-How-Do-We-know-That {
 	margin-top: 0;
-    padding-top: 44px;
 	font-family: Dancing-Script;
 	font-size: 40px;
     line-height: 61px;
 	text-align: center;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	text-shadow: -1px -1px 4px black, 1px -1px 4px black, -1px 1px 4px black, 1px 1px 4px black;
 }
 #ilkbaslik {
 	font-family: Dancing-Script;
