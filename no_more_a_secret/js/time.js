@@ -117,7 +117,7 @@ var bgIntervalId;
 function hover(isReal) {
 	clearInterval(bgIntervalId);
 
-	if(random == 6 || random == 4) headLine.innerText = "Knowledge of Time Remaining to The Day of The Resurrection:";
+	if(random == 6 || random == 4) headLine.innerText = "Knowledge of Time Remaining to Day of The Resurrection:";
 	else headLine.innerText = "Knowledge of Time Remaining to The End of The 7 Universes:";
 
 	if(windowWidth > 767){
@@ -146,7 +146,7 @@ function unhover(isReal) {
 		if(heaven.getBoundingClientRect().left == (document.documentElement.clientWidth - 2560) / 2) {
 			// when heaven and hell images touch together with +-19ms accuracy
 			clearInterval(bgIntervalId);
-			headLine.innerText = "Knowledge of Time Remaining to The Day of The Resurrection:";
+			headLine.innerText = "Knowledge of Time Remaining to Day of The Resurrection:";
 			randombg();
 		}
 	}, 19);
@@ -166,7 +166,7 @@ const syncData75 = [
 	{start: '21.784', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#3">75:3</a>&nbsp;Does the human being think that WE will not reconstruct his bones?</p>'},
 	{start: '26.500', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#4">75:4</a>&nbsp;Yes indeed; WE are able to reconstruct his finger tip.</p>'},
 	{start: '30.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#5">75:5</a>&nbsp;But the human being tends to believe only what he sees in front of him.</p>'},
-	{start: '35.610', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#6">75:6</a>&nbsp;He asks, "When is The Day of The Resurrection?"</p>'},
+	{start: '35.610', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#6">75:6</a>&nbsp;He asks, "When is Day of The Resurrection?"</p>'},
 	{start: '38.902', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#7">75:7</a>&nbsp;Once the vision is sharpened.</p>'},
 	{start: '40.863', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#8">75:8</a>&nbsp;And the moon is eclipsed.</p>'},
 	{start: '42.625', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#9">75:9</a>&nbsp;And the sun and the moon crash into one another.</p>'},
