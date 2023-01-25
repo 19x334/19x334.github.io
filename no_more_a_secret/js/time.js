@@ -1,4 +1,4 @@
-// ZARİF ŞEFKATLİ ALLAH'IN İSMİYLE
+// İSMİYLE TANRI'NIN ZARİF MERHAMETLİ
 
 /*
 
@@ -61,26 +61,26 @@ function handleTickInit(tick) {
 	};
 }
 
-$(window).load(function() {
+$(document).ready(function() {
 	setTimeout(gizleyici, 500);
 });
 $(window).resize(gizleyici);
 
-var windowWidth;
+var windowWidth = Math.min(window.innerWidth, screen.width);
 
 function gizleyici() {
 
-	windowWidth = window.innerWidth;
-
+	windowWidth = Math.min(window.innerWidth, screen.width);
+	
 	if(windowWidth < 768){
 		for(var i = 0; i < 12; i ++) {
 			if(3 <= i && i < 9) document.getElementsByClassName("tick-group")[i].style.display = "none";
-			else document.getElementsByClassName("tick-group")[i].style.display = "block";
+			else continue;
 		}
 	}
 	else{
 		for(var i = 0; i < 12; i ++) {
-			if(0 <= i && i < 6) document.getElementsByClassName("tick-group")[i].style.display = "block";
+			if(0 <= i && i < 6) continue;
 			else document.getElementsByClassName("tick-group")[i].style.display = "none";
 		}		
 	}
@@ -160,7 +160,7 @@ timeWrapper.addEventListener("mouseleave", function(){unhover(true)});
 
 const syncData75 = [
 	{start: '5.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1">Sura 75</a>&nbsp;The Resurrection Al-Qeyaamah</p>'},
-	{start: '10.000', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#0">75:0</a>&nbsp;In The Name of ALLAH, THE GRACIOUS, THE COMPASSIONATE.</p>'},
+	{start: '10.000', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#0">75:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>'},
 	{start: '15.800', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#1">75:1</a>&nbsp;I swear by the Day of Resurrection.</p>'},
 	{start: '18.721', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#2">75:2</a>&nbsp;And I swear by the blaming soul.</p>'},
 	{start: '21.784', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#3">75:3</a>&nbsp;Does the human being think that WE will not reconstruct his bones?</p>'},
@@ -205,7 +205,7 @@ const syncData75 = [
 
 const syncData89 = [
 	{start: '7.795', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1">Sura 89</a>&nbsp;The Dawn Al-Fajr</p>'},
-	{start: '13.583', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#0">89:0</a>&nbsp;In The Name of ALLAH, THE GRACIOUS, THE COMPASSIONATE.</p>'},
+	{start: '13.583', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#0">89:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>'},
 	{start: '18.861', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#1">89:1</a>&nbsp;By the dawn.</p>'},
 	{start: '20.313', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#2">89:2</a>&nbsp;And the ten nights.</p>'},
 	{start: '22.706', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#3">89:3</a>&nbsp;By the even and the odd.</p>'},
