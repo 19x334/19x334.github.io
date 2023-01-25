@@ -1,0 +1,338 @@
+/* in the name of the god the gracious the compassionate */
+
+@font-face {
+    font-family: Dancing-Script;
+    src: url(/css/DancingScript-VariableFont.ttf);
+}
+.image { width: 100%; }
+.yellow { color: yellow; font-weight: bolder; }
+
+a#knowledge-link { color: black; }
+a#knowledge-link:hover {
+	color: white !important;
+	background-color: transparent !important;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000 !important;
+}
+a#knowwledge-link { color: white; }
+a#knowwledge-link:hover .tick-label, a#knowwledge-link:hover #headLine{
+	color: black !important; background-color: transparent !important;
+	text-shadow: -1px -1px 5px white, 1px -1px 5px white, -1px 1px 5px white, 1px 1px 5px white !important;
+}
+a#knowwledge-link:hover .tick-flip-panel { color: #000 !important; background-color: #fff !important; }
+a#knowwledge-link:hover .tick-flip-front { border-top: 1px solid black !important; border-left: 1px solid black !important; border-right: 1px solid black !important; }
+a#knowwledge-link:hover .tick-flip-back { border-bottom: 1px solid black !important; border-left: 1px solid black !important; border-right: 1px solid black !important; }
+html, body{ scroll-behavior: smooth; }
+.tick { display: flex; justify-content: center; font-size: 1rem; white-space: nowrap; font-family: Dancing-Script; }
+.tick-flip,.tick-text-inline { font-size:2.5em; }
+.tick-label { margin-top:1em;font-size:1em; }
+.tick-char { width:1.5em; }
+.tick-text-inline { display:inline-block; text-align:center; min-width:1em; }
+.tick-text-inline+.tick-text-inline { margin-left:-.325em; }
+.tick-group { margin:0 .5em; text-align:center; }
+.tick-text-inline { color: #595d63 !important; }
+.tick-label { margin-top: 0.61em; font-size: 1.9em; text-shadow: -1px -1px 5px black, 1px -1px 5px black, -1px 1px 5px black, 1px 1px 5px black; }
+.tick-flip-panel { color: #fff !important; background-color: #3c3e3c !important; }
+.tick-flip-front { border-top: 1px solid white !important; border-left: 1px solid white !important; border-right: 1px solid white !important; }
+.tick-flip-back { border-bottom: 1px solid white !important; border-left: 1px solid white !important; border-right: 1px solid white !important; }
+.tick-flip { border-radius:0.12em !important; }
+a.tick-credits { display: none; }
+#timeWrapper {
+    display: block;
+    margin: 0;
+    width: 77vw;
+    height: fit-content;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#remainedTime{ display: block; }
+#headLine{
+	display: block;
+	font-family: Dancing-Script;
+    font-size: 3.4vw;
+	text-shadow: -1px -1px 5px black, 1px -1px 5px black, -1px 1px 5px black, 1px 1px 5px black;
+	margin-bottom: 1.9vw;
+	text-align: center;
+}
+.verses{
+	top: 0;
+	display: block;
+	position: absolute;
+	width: 80vw;
+	font-family: Dancing-Script;
+    font-size: 30px;
+}
+#verses{
+	top: 0;
+	width: 80vw;
+	height: 76px;
+	margin: auto;
+	margin-left: -16px;
+	margin-top: 30px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+	z-index: 1919;
+}
+.antique-link{color: yellow;}
+.antique{
+	color: white;
+	text-shadow: -1px -1px 5px black, 1px -1px 5px black, -1px 1px 5px black, 1px 1px 5px black;
+	text-align: center;
+	margin-left: 3%;
+    margin-right: 3%;
+	line-height: 38px;
+	font-size: 22px;
+}
+.antique:hover {
+	color: white;
+	text-shadow: -1px -1px 6px black, 1px -1px 6px black, -1px 1px 6px black, 1px 1px 6px black;
+}
+@media only screen and (min-width: 1025px) {
+	.fa-play{
+		background-image: url(/no_more_a_secret/pic/play.png);
+		background-size: contain;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		z-index: 998;
+		right: 19px;
+		top: 19px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 2px gray);
+	}
+	.fa-pause{
+		background-image: url(/no_more_a_secret/pic/pause.png);
+		background-size: contain;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		z-index: 998;
+		right: 19px;
+		top: 19px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 2px gray);
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.fa-play{
+		background-image: url(/no_more_a_secret/pic/play.png);
+		background-size: contain;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		z-index: 998;
+		right: 19px;
+		bottom: 19px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 2px gray);
+	}
+	.fa-pause{
+		background-image: url(/no_more_a_secret/pic/pause.png);
+		background-size: contain;
+		display: block;
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		z-index: 998;
+		right: 19px;
+		bottom: 19px;
+		cursor: pointer;
+		filter: drop-shadow(0 0 2px gray);
+	}
+}
+/* Safari 10.1+ */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+    #headLine{
+		font-size: 3.03vw;
+	}
+}}
+
+#sayaç{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	/*z-index: -1;*/
+	-webkit-transform: translateZ(0);
+	display: grid;
+    justify-content: center;
+}
+#moonEarthSun{
+	background-color: black;
+	background-image: url(/no_more_a_secret/pic/moonEarthSun.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	/*z-index: -1;*/
+	-webkit-transform: translateZ(0);
+	display: grid;
+    justify-content: center;
+}
+#heaven{
+	background-image: url(/no_more_a_secret/pic/heaven.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+    width: 2560px;
+    margin-right: calc(-1 * ((2560px - 100%) / 2));
+	height: 100vh;
+	/*z-index: -1;*/
+	-webkit-transform: translateZ(0);
+	display: grid;
+    justify-content: center;
+	right: 0;
+	transition-duration: 1900ms;
+	transition-property: right;
+}
+#hell{
+	background-image: url(/no_more_a_secret/pic/hell.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+    width: 2560px;
+    margin-left: calc(-1 * ((2560px - 100%) / 2));
+	height: 100vh;
+	/*z-index: -1;*/
+	-webkit-transform: translateZ(0);
+	display: grid;
+    justify-content: center;
+	left: 0;
+	transition-duration: 1900ms;
+	transition-property: left;
+}
+a { color: yellow; font-weight: bolder; }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+.text{
+	line-height: 44pt;
+	font-size: 22pt;
+	display: block;
+	font-family: Dancing-Script;
+	text-shadow: -1px -1px 5px black, 1px -1px 5px black, -1px 1px 5px black, 1px 1px 5px black;
+}
+.aralık {
+    display: block;
+    height: 0px;
+    margin-top: -15pt;
+}
+@media (hover:hover) {
+	a:hover { text-decoration: none; color: white !important; background-color: midnightblue !important;}
+}
+@media screen and (pointer: coarse) {
+	a:active { text-decoration: underline; }
+}
+@media only screen and (min-width: 768px) {
+	.text{
+		width: 77%;
+		margin-left: 11.5%;
+	}
+	a#knowledge-link { letter-spacing: 0.19vw; font-weight: bolder; }
+}
+#But-How-Do-I-know-That {
+	margin-top: 0;
+    padding-top: 44px;
+	font-family: Dancing-Script;
+	font-size: 40px;
+    line-height: 61px;
+	text-align: center;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#ilkbaslik {
+	font-family: Dancing-Script;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: 30px;
+    line-height: 38px;
+	text-align: center;
+	color: black !important;
+	text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+html, body {
+	margin: 0 !important;
+	padding: 0 !important; /* gerektiğinde scroll çubuğunu gösterir mobilde sağa kaydırıp tabloları inceleyebilmek için gerekli*/
+}
+
+html, body {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow-x: hidden !important;
+	position: relative; /* without this overflow-x: hidden; property doesn't working! */
+}
+body {
+	background-color: black;
+	color: white;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+@supports not (-webkit-touch-callout: none) {
+	/* Every device other than ipadOS and iOS Safari */
+	body {
+		width: 100%;
+		min-height: 100vh !important;
+		background-image: url(/no_more_a_secret/pic/El-Konstantiniyye.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+  	}
+	#bg{display: none;}
+}
+
+/* Avoid Chrome to see Safari iOS hack */
+@supports (-webkit-touch-callout: none) {
+	/* The hack for iOS Safari */
+	#bg {
+		background-image: url(/no_more_a_secret/pic/El-Konstantiniyye.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: fixed;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		z-index: -1;
+		-webkit-transform: translateZ(0);
+		pointer-events: none;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.text{ text-align: center; }
+	#ikinciSayaç{ margin-top: 5vw; }
+	.text{
+		width: 96%;
+		margin-left: 2%;
+	}
+	#timeWrapper { width: 92vw;}
+	#headLine{ 
+		font-size: 8vw;
+		margin-bottom: 7vw;
+		line-height: 14vw;
+	}
+	/* Safari 10.1+ */
+	@media not all and (min-resolution:.001dpcm)
+	{ @supports (-webkit-appearance:none) {
+		#headLine{
+			font-size: 7.57vw;
+		}
+	}}
+	#verses{
+		margin-left: unset;
+	}
+}
