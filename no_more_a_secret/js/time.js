@@ -117,8 +117,8 @@ var bgIntervalId;
 function hover(isReal) {
 	clearInterval(bgIntervalId);
 
-	if(random == 6 || random == 4) headLine.innerText = "Knowledge of Time Remaining to Day of The Resurrection:";
-	else headLine.innerText = "Knowledge of Time Remaining to The End of The 7 Universes:";
+	if(random == 6 || random == 4) headLine.innerText = "Time Remaining to Day of The Resurrection:";
+	else headLine.innerText = "Time Remaining to The End of The 7 Universes:";
 
 	if(windowWidth > 767){
 		heaven.style.right = "-25%";
@@ -146,7 +146,7 @@ function unhover(isReal) {
 		if(heaven.getBoundingClientRect().left == (document.documentElement.clientWidth - 2560) / 2) {
 			// when heaven and hell images touch together with +-19ms accuracy
 			clearInterval(bgIntervalId);
-			headLine.innerText = "Knowledge of Time Remaining to Day of The Resurrection:";
+			headLine.innerText = "Time Remaining to Day of The Resurrection:";
 			randombg();
 		}
 	}, 19);
