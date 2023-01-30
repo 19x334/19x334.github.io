@@ -159,11 +159,11 @@ timeWrapper.addEventListener("mouseover", function(){hover(true)});
 timeWrapper.addEventListener("mouseleave", function(){unhover(true)});
 
 const syncData75 = [
-	{start: '5.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1">Sura 75</a>&nbsp;The Resurrection Al-Qeyaamah</p>'},
+	{start: '5.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1">Chapter 75</a>&nbsp;The Resurrection</p>'},
 	{start: '10.000', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#0">75:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>'},
-	{start: '15.800', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#1">75:1</a>&nbsp;I swear by Day of Resurrection.</p>'},
-	{start: '18.721', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#2">75:2</a>&nbsp;And I swear by the blaming soul.</p>'},
-	{start: '21.784', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#3">75:3</a>&nbsp;Does the human being think that WE will not reconstruct his bones?</p>'},
+	{start: '15.800', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#1">75:1</a>&nbsp;I swear to DAY OF RESURRECTION (Chapters 89 & 100).</p>'},
+	{start: '18.721', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#2">75:2</a>&nbsp;And I swear to the blaming soul (89:23-24, 100:6-11).</p>'},
+	{start: '21.784', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#3">75:3</a>&nbsp;Does the human being think that WE will not reconstruct his bones (100:9, 89:21-23) ?</p>'},
 	{start: '26.500', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#4">75:4</a>&nbsp;Yes indeed; WE are able to reconstruct his finger tip.</p>'},
 	{start: '30.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#5">75:5</a>&nbsp;But the human being tends to believe only what he sees in front of him.</p>'},
 	{start: '35.610', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#6">75:6</a>&nbsp;He asks, "When is Day of The Resurrection?"</p>'},
@@ -177,8 +177,8 @@ const syncData75 = [
 	{start: '66.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#14">75:14</a>&nbsp;The human being will be his own judge.</p>'},
 	{start: '69.875', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#15">75:15</a>&nbsp;No excuses will be accepted.</p>'},
 	{start: '73.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#16">75:16</a>&nbsp;Do not move your tongue to hasten it.</p>'},
-	{start: '76.875', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#17">75:17</a>&nbsp;It is WE who will collect it into Quran.</p>'},
-	{start: '81.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#18">75:18</a>&nbsp;Once WE recite it, you shall follow such a Quran.</p>'},
+	{start: '76.875', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#17">75:17</a>&nbsp;It is WE who will collect it into QURAN.</p>'},
+	{start: '81.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#18">75:18</a>&nbsp;Once WE recite it, you shall follow such a QURAN.</p>'},
 	{start: '85.600', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#19">75:19</a>&nbsp;Then it is WE who will explain it.</p>'},
 	{start: '89.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#20">75:20</a>&nbsp;Indeed, you love this fleeting life.</p>'},
 	{start: '93.250', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#21">75:21</a>&nbsp;While disregarding the Hereafter.</p>'},
@@ -204,7 +204,7 @@ const syncData75 = [
 ];
 
 const syncData89 = [
-	{start: '7.795', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1">Sura 89</a>&nbsp;The Dawn Al-Fajr</p>'},
+	{start: '7.795', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1">Chapter 89</a>&nbsp;The Dawn</p>'},
 	{start: '13.583', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#0">89:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>'},
 	{start: '18.861', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#1">89:1</a>&nbsp;By the dawn.</p>'},
 	{start: '20.313', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#2">89:2</a>&nbsp;And the ten nights.</p>'},
@@ -236,6 +236,22 @@ const syncData89 = [
 	{start: '138.247', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#28">89:28</a>&nbsp;Return to your OWNER, pleased and pleasing.</p>'},
 	{start: '142.583', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#29">89:29</a>&nbsp;Welcome into MY servants.</p>'},
 	{start: '145.261', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#30">89:30</a>&nbsp;Welcome into MY Paradise.</p>'}
+];
+
+const syncData100 = [
+	{start: '3.709', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1">Chapter 100</a>&nbsp;The Gallopers</p>'},
+	{start: '6.979', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#0">100:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>'},
+	{start: '11.868', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#1">100:1</a>&nbsp;By the fast gallopers (of gog (han) and magog (zhuang) races of china).</p>'},
+	{start: '13.575', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#2">100:2</a>&nbsp;Igniting sparks.</p>'},
+	{start: '15.343', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#3">100:3</a>&nbsp;Invading (Uyghurs) by morning.</p>'},
+	{start: '17.845', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#4">100:4</a>&nbsp;Striking terror therein (The East Turkistan).</p>'},
+	{start: '20.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#5">100:5</a>&nbsp;Penetrating to the heart of their territory (Urumchi).</p>'},
+	{start: '23.181', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#6">100:6</a>&nbsp;the (atheist or pagan) human being (of chinese gog (han) and magog (zhuang) races) is unappreciative of his OWNER.</p>'},
+	{start: '26.853', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#7">100:7</a>&nbsp;he bears witness to this FACT.</p>'},
+	{start: '29.445', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#8">100:8</a>&nbsp;he loves material things excessively.</p>'},
+	{start: '32.445', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#9">100:9</a>&nbsp;Does he not realize that THE DAY will come when the graves are OPENED?</p>'},
+	{start: '37.464', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#10">100:10</a>&nbsp;And all secrets are BROUGHT OUT.</p>'},
+	{start: '40.028', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#11">100:11</a>&nbsp;they (humans of gog (han) and magog (zhuang) races of china) will find out, on THAT DAY, that their OWNER HAS BEEN FULLY COGNIZANT OF them</p>'}
 ];
 
 const audio = document.getElementById("player"), audio2 = document.getElementById("player2");
@@ -277,23 +293,36 @@ $('#play-pause-button').click(function(){
 	}
 });
 
-var is89played = false, audio2Flag = true;
+var playingSura = 75,
+	audio2Flag = true;
 
 audio2.onended = function() { audio2Flag = false }
 
-audio.onended = function() {
-	//play sura 89 after sura 75
-	if(!is89played) {
-		is89played = true;
+audio.onended = function()
+{
+	if(75 == playingSura) // play Chapter 89 after Chapter 75
+	{
+		playingSura = 89;
 		audio2Flag = true;
 		audio.pause();
 		audio.src = "89.mp3";
 		audio.load();
 		audio.play();
-		audio2.play();
+		audio2.play(); // Here Comes THE KING (THE GOD)
 	}
-	else if(is89played) {
-		is89played = false;
+	else if(89 == playingSura) // play Chapter 100 after Chapter 89
+	{
+		playingSura = 100;
+		audio2Flag = true;
+		audio.pause();
+		audio.src = "100.mp3";
+		audio.load();
+		audio.play();
+		audio2.play(); // Here Comes THE KING (THE GOD)
+	}
+	else if(100 == playingSura) // load Chapter 75 after Chapter 100
+	{
+		playingSura = 75;
 		audio2Flag = true;
 		$("#play-pause-button").removeClass('fa-pause');
 		$("#play-pause-button").addClass('fa-play');
@@ -323,7 +352,8 @@ var period = 4028;
 function expresser() {
 	$('#verses').fadeOut(halfPeriod, function() {
 		if(v < syncData75.length) verseHead.innerHTML = syncData75[v].text;
-		else verseHead.innerHTML = syncData89[v - syncData75.length].text;
+		else if(syncData75.length <= v && v < syncData75.length + syncData89.length) verseHead.innerHTML = syncData89[v - syncData75.length].text;
+		else verseHead.innerHTML = syncData100[v - syncData75.length - syncData89.length].text;
 
 		verse = document.getElementsByClassName('verses')[0]; // her seferinde güncellenmeli
 		if(elementsOverlap(headLine, verse)) headLine.style.visibility = "hidden";
@@ -331,10 +361,7 @@ function expresser() {
 
 		v++;
 		$('#verses').fadeIn(halfPeriod);
-		if (v == syncData75.length + syncData89.length)
-		{
-			v = 0; // it restarts loop at the end of it
-		}
+		if (syncData75.length + syncData89.length + syncData100.length == v) v = 0; // it restarts loop at the end of it
 		else if (v == 2) randombg(6);
 		else if (v == syncData75.length + 7) randombg(4); // 89:5
 		else if (v == 9 || v == 44 || v == 64 || v == syncData75.length + 15) randombg(5); // ... 89:13
@@ -355,35 +382,61 @@ var intervalId = setInterval(expresser, period);
 
 var currentVerse, lastCurrentVerse;
 
-audio.addEventListener('timeupdate', () => {
+let vrs = 0;
+
+audio.addEventListener('timeupdate', () =>
+{
 	if(audio.duration > 0 && !audio.paused)
 	{
-		clearInterval(intervalId); // only when audio is not paused/playing
+		clearInterval(intervalId); // only when audio is not paused and already playing
 
-		let vrs = 0;
+		vrs = 0;
 
 		if(lastCurrentVerse != undefined) vrs = lastCurrentVerse;
 
-		if(!is89played) {
-			if(vrs == syncData89.length - 1) vrs = 0; // at the end of sura 89 restart from verse 0
-			while(vrs < syncData75.length) {
-				if (audio.currentTime >= syncData75[vrs].start) currentVerse = vrs;
+		if(75 == playingSura)  // while Chapter 75 is currently playing
+		{
+			vrs = 0; // at the start of Chapter 75 restart from verse 0
+			while(vrs < syncData75.length) // only while passing from Chapter 75 to 89
+			{
+				if (audio.currentTime >= syncData75[vrs].start)
+					currentVerse = vrs;
+
 				vrs++;
 			}
+			vrs = 0; // at the end of Chapter 75 restart from verse 0
 		}
-		else if(is89played) {
-			if(vrs == syncData75.length - 1) vrs = 0; // at the end of sura 75 restart from verse 0
-			while(vrs < syncData89.length) {
-				if (audio.currentTime >= syncData89[vrs].start) currentVerse = vrs;
+		else if(89 == playingSura) // while Chapter 89 is currently playing
+		{
+			vrs = 0; // at the start of Chapter 89 restart from verse 0
+			while(vrs < syncData89.length) // only while passing from Chapter 89 to 100
+			{
+				if (audio.currentTime >= syncData89[vrs].start)
+					currentVerse = vrs;
+
 				vrs++;
 			}
+			vrs = 0; // at the end of Chapter 89 restart from verse 0
 		}
-		
+		else if(100 == playingSura) // while Chapter 100 is currently playing
+		{
+			vrs = 0; // at the start of Chapter 100 restart from verse 0
+			while(vrs < syncData100.length) // only while passing from Chapter 100 to 75
+			{
+				if (audio.currentTime >= syncData100[vrs].start)
+					currentVerse = vrs;
+
+				vrs++;
+			}
+			vrs = 0; // at the end of Chapter 100 restart from verse 0
+		}
+
 		if(lastCurrentVerse != currentVerse) // for running once at a time inside 'timeupdate' event
 		{
 			$('#verses').fadeOut(halfPeriod, function()
 			{
-				if(!is89played) {
+				if(75 == playingSura)  // while Chapter 75 is currently playing
+				{
 					verseHead.innerHTML = syncData75[currentVerse].text;
 	
 					if (currentVerse == 1) // 75:0
@@ -395,7 +448,8 @@ audio.addEventListener('timeupdate', () => {
 					else if (currentVerse == 13 && !$("#timeWrapper").hasClass("hovering") && !$("#knowledge-link").hasClass("hovering")) // 75:12
 						unhover(false); // 75:12
 				}
-				else if(is89played) {
+				else if(89 == playingSura) // while Chapter 89 is currently playing
+				{
 					verseHead.innerHTML = syncData89[currentVerse].text;
 	
 					if (currentVerse == 1 || currentVerse == 14 || currentVerse == 21) // 89:0 // 89:13 // 89:20
@@ -406,6 +460,10 @@ audio.addEventListener('timeupdate', () => {
 						hover(false);  // 89:1 // 89:21
 					else if ((currentVerse == 15 || currentVerse == 24) && !$("#timeWrapper").hasClass("hovering") && !$("#knowledge-link").hasClass("hovering")) // 89:14 // 89:23
 						unhover(false); // 89:14 // 89:23
+				}
+				else if(100 == playingSura) // while Chapter 100 is currently playing
+				{
+					verseHead.innerHTML = syncData100[currentVerse].text;
 				}
 				
 				verse = document.getElementsByClassName('verses')[0]; // her seferinde güncellenmeli

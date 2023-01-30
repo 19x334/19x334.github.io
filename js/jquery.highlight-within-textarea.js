@@ -331,7 +331,7 @@
 			// horizontal scrolling, this compensates by shifting highlights by the
 			// horizontally scrolled amount to keep things aligned
 			let scrollLeft = this.$el.scrollLeft();
-			// with will of ALLAH, I have fixed this according to rtl direction hence .scrollRight() member function doesn't defined by idolators and .scrollLeft() member function return negative values if direction is rtl and when scrolled from rightmost scroll position to some left value
+			// with will of GOD, I have fixed this according to rtl direction hence .scrollRight() member function doesn't defined by idolators and .scrollLeft() member function return negative values if direction is rtl and when scrolled from rightmost scroll position to some left value
 			this.$backdrop.css('transform', (scrollLeft < 0) ? 'translateX(' + -scrollLeft + 'px)' : '');
 		},
 
