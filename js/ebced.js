@@ -49,7 +49,8 @@ function randombg()
 		"url('pic/size/425/moonEarthSun.png')",
 		"url('pic/size/425/resurrection.png')",
 		"url('/pic/size/425/heavenandhell.png')",
-		"url('/pic/size/425/tree-and-star-prostrate.png')"];
+		"url('/pic/size/425/tree-and-star-prostrate.png')",
+		"url('/pic/size/425/LION.png')"];
 	else if(biggestSide < 768)
 		bigSize = [
 		"url('/pic/size/768/space2.png')",
@@ -60,7 +61,8 @@ function randombg()
 		"url('pic/size/768/moonEarthSun.png')",
 		"url('pic/size/768/resurrection.png')",
 		"url('/pic/size/768/heavenandhell.png')",
-		"url('/pic/size/768/tree-and-star-prostrate.png')"];
+		"url('/pic/size/768/tree-and-star-prostrate.png')",
+		"url('/pic/size/768/LION.png')"];
 	else if(biggestSide < 1024)
 		bigSize = [
 		"url('/pic/size/1024/space2.png')",
@@ -71,7 +73,8 @@ function randombg()
 		"url('pic/size/1024/moonEarthSun.png')",
 		"url('pic/size/1024/resurrection.png')",
 		"url('/pic/size/1024/heavenandhell.png')",
-		"url('/pic/size/1024/tree-and-star-prostrate.png')"];
+		"url('/pic/size/1024/tree-and-star-prostrate.png')",
+		"url('/pic/size/1024/LION.png')"];
 	else if(biggestSide < 1585)
 		bigSize = [
 		"url('/pic/size/1585/space2.png')",
@@ -82,7 +85,8 @@ function randombg()
 		"url('pic/size/1585/moonEarthSun.png')",
 		"url('pic/size/1585/resurrection.png')",
 		"url('/pic/size/1585/heavenandhell.png')",
-		"url('/pic/size/1585/tree-and-star-prostrate.png')"];
+		"url('/pic/size/1585/tree-and-star-prostrate.png')",
+		"url('/pic/size/1585/LION.png')"];
 	else
 		 bigSize = [
 		 "url('pic/space2.png')",
@@ -93,10 +97,11 @@ function randombg()
 		 "url('pic/moonEarthSun.png')",
 		 "url('pic/resurrection.png')",
 		 "url('/pic/heavenandhell.png')",
-		 "url('/pic/tree-and-star-prostrate.png')"];
+		 "url('/pic/tree-and-star-prostrate.png')",
+		 "url('/pic/LION.png')"];
 
-	var random = Math.floor(Math.random() * 9);
-	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 10);
+	var random = Math.floor(Math.random() * 10);
+	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 10); // FOR DIFFERENT BACKGROUND IF GOD WILLS
     document.getElementById("bg").style.backgroundImage = bigSize[random];
     document.getElementById("vücut").style.backgroundImage = bigSize[random];
 	localStorage.setItem("lastBgIndex", random);
@@ -319,7 +324,7 @@ function loadXMLDoc() {
 	xmlhttp.send();
 }
 
-var ifadeArr;
+// var ifadeArr;
 
 function bölümaçıcı(xml)
 {
@@ -407,7 +412,7 @@ function bölümaçıcı(xml)
 									if (s == ikisure && a == ikiayet) { break; }
 									ayet = xmlDoc.querySelector('sura[index=s'+s+']').querySelector('aya[index=a'+a+']').getAttribute('text') + "\n";
 									aralık += ayet;
-									ifadeArr.push(ayet);
+									// ifadeArr.push(ayet);
 									// later you can flush ifadeArr by:
 									// ifadeArr = [];
 								}
