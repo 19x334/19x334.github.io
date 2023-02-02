@@ -25,6 +25,12 @@
 
 body{ scroll-behavior: smooth; }
 
+.swal2-html-container {
+    font-size: larger !important;
+}
+.red { color: red; }
+.blue { color: blue; }
+
 .flip-card-brothers {
 	cursor: pointer;
     background-color: transparent;
@@ -1165,7 +1171,7 @@ body {
 }
 .inlineLtr { display: inline; text-shadow: -0.6px -0.6px 0 rgb(0,0,142), 0.6px -0.6px 0 rgb(0,0,142), -0.6px 0.6px 0 rgb(0,0,142), 0.6px 0.6px 0 rgb(0,0,142); }
 .yeşil { color: green; }
-.red { color: red; }
+
 /* ALLAH'IN İZNİYLE, uyarıda yer alan: 'THESE ARE MIRACLES OF THE BOOK!' ayetinin her harfinin ayrı ayrı renklendirilmesinde kullanılıyorlar: */
 .ااا{ color: #c6e535; }
 .ببب{ color: #d962ee; }
