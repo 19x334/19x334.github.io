@@ -1455,9 +1455,14 @@ function ifadeHeighter()
 	if(windowWidth >= 768) {
 		ifade.style.setProperty("height", yükseklik + 'px');
 		ifade.style.setProperty("min-height", yükseklik + 'px');
+		document.getElementById("nextSura").style.marginTop = 7 - ((heightC + heightO) % 46) + "px";
+		document.getElementById("notFirefox").style.marginTop = 7 - ((heightC + heightO) % 46) + "px";
 	}
-	else
+	else {
 		ifade.style.setProperty("min-height", '322px');
+		document.getElementById("nextSura").style.marginTop = "0px";
+		document.getElementById("notFirefox").style.marginTop = "0px";
+	}
 }
 
 var lttrs = ['ا','ب','ج','د','ه','و','ز','ح','ط','ي','ك','ل','م','ن','س','ع','ف','ص','ق','ر','ش','ت','ث','خ','ذ','ض','ظ','غ','الله','الرحمن','الرحيم','اسم'];
