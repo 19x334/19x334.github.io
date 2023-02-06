@@ -218,17 +218,18 @@ function kalem(){
 			ifade.style.backgroundRepeat = "no-repeat, repeat";
 		}
 	}
-	lineKeeper(); // for keeping row lines of textarea aligned at the end of window resizing event
+	lineKeeper();
 }
 
 $("#ifade").on("input", function(){
 	if(!sure1.value) {
-		window.addEventListener("resize", kalem);
 		kalem(); // bunu kaldırma resize etmediğinde de çalışabilmesi için!
 	}
 })
 
-function loading(){
+function loading()
+{
+	document.documentElement.style.cursor = "wait";
 	resizeFlag = 1;
 	if(768 <= windowWidth){
 		ifade.style.background = "linear-gradient(transparent 45px, #999 1px), url(/pic/loading.gif)";
@@ -259,6 +260,7 @@ function loaded()
 			ifade.style.backgroundPosition = "0px 0px, center center, center center";
 		}
 	}
+	document.documentElement.style.cursor = "unset";
 }
 
 function opener(){
@@ -266,7 +268,6 @@ function opener(){
 	randombg();
 	if(document.activeElement === sure1 || document.activeElement === sure2){
 		if (document.activeElement.value) {
-			document.documentElement.style.cursor = "wait";
 			loading();
 			document.getElementById('açıklama').innerHTML = "Verses are loading ... Please wait ...";
 			ifade.placeholder = " Verses are loading\n... Please wait";
@@ -278,7 +279,6 @@ function opener(){
 	}
 	else if(document.activeElement === ayet1){
 		if (ayet1.value) {
-			document.documentElement.style.cursor = "wait";
 			loading();
 			document.getElementById('açıklama').innerHTML = "Verse is loading ... Please wait ...";
 			ifade.placeholder = " Verse is loading\n... Please wait";
@@ -290,7 +290,6 @@ function opener(){
 	}
 	else if(document.activeElement === ayet2){
 		if (ayet2.value) {
-			document.documentElement.style.cursor = "wait";
 			loading();
 			document.getElementById('açıklama').innerHTML = "Verses are loading ... Please wait ...";
 			ifade.placeholder = " Verses are loading\n... Please wait";
@@ -324,7 +323,7 @@ function loadXMLDoc() {
 	xmlhttp.send();
 }
 
-// var ifadeArr;
+// var ifadeArr; // for proof of 66 x 165 IF GOD WILLS i will continue to make the tool be able to count both number of chapters and number of verses containing selected letters or names
 
 function bölümaçıcı(xml)
 {
@@ -545,15 +544,15 @@ function bölümaçıcı(xml)
 		}
 	}
 	ifade.value = aralık;
-	document.getElementById('açıklama').innerHTML = txt;
-	resizeFlag = 0; // resize bug fix for true background in all window widths
-	if(nameFlag == 1){
-		document.documentElement.style.cursor = "unset";
-		loaded();
-	}
+	ifade.value += ekleme; // yükleme yapıldıktan sonra gerekli miktarda boşluk ekler
 	$('#ifade').trigger('input');
+
+	document.getElementById('açıklama').innerHTML = txt;
+
+	resizeFlag = 0; // resize bug fix for true background in all window widths
+	if(nameFlag == 1) loaded();
+
 	if(isColorMuqatta == 1)	colorMuqatta();
-	else ifade.value += ekleme; // linkten yükleme yapıldıktan sonra gerekli boşluk miktarınca ekleme yapılması için bu atama burada yapılmalı getfromlink() 'in içinde değişiklikleri
 	isColorMuqatta = 1; // bu atamanın bu konumda, bölümaçıcı(xml) fonksiyonunun en son satırında olması, linkten bölüm açıldıktan sonra açılan yeni surelerin renklendirilebilmesi ve linkten sure özel harflerle bir muqatta  suresi açıldıktan sonra colorMuqatta() fonksiyonunun tetiklenip özel harflerin üzerine ekleme yapmaması için önemli!
 }
 
@@ -681,38 +680,37 @@ $(document).keypress( function otomatikyazıcı () {
 	}
 });
 
-var cursorPosition;
-var ifadeTopScroll;
+var cursorPosition, windowTopScroll;
 
-$('#ifade').on('keypress', function noları_sil(event)
-{
-	ifadeTopScroll = ifade.scrollTop; // for getting back to first typed position after char \n
-
-	cursorPosition = $('#ifade').caret();
-
-	sure1.value = '';
-	ayet1.value = '';
-	sure2.value = '';
-	ayet2.value = '';
-	sırano1.value = '';
-	sırano2.value = '';
-	document.getElementById('açıklama').innerHTML = '';
-
-	var idSelector = function() { return this.id; };
-	var selections = $("input[class=seçenekler]:checked").map(idSelector).get();
-
-	if(selections.length > 0) renkleri_temizle();
-
-	if(event.keyCode == 13) // if char is '\n'
+document.getElementById("ifade").addEventListener("keydown",
+	function noları_sil(event)
 	{
-		cursorPosition++; // do not wait in the same position
-		ifade.scrollTop = ifadeTopScroll; // for getting back to first typed position after char \n typed
+		windowTopScroll = window.scrollY;
+		cursorPosition = $('#ifade').caret();
+
+		if(event.keyCode == 13) cursorPosition++; // if char is '\n' then do not wait in the same position
+		
+		setTimeout(function(){$('#ifade').caret(cursorPosition)}, 0); // settimeout 0 eklemezsen çalışmıyor
+
+		var idSelector = function() { return this.id; };
+		var selections = $("input[class=seçenekler]:checked").map(idSelector).get();
+
+		if(selections.length > 0) 
+		{
+			sure1.value = '';
+			ayet1.value = '';
+			sure2.value = '';
+			ayet2.value = '';
+			sırano1.value = '';
+			sırano2.value = '';
+			document.getElementById('açıklama').innerHTML = '';
+
+			renkleri_temizle();
+			
+			setTimeout(function(){window.scrollTo(window.scrollX, (windowTopScroll - (window.innerHeight / 2) + 23 - 4 * 46))}, 0); // settimeout 0 eklemezsen çalışmıyor
+		}
 	}
-	
-	setTimeout(function() {
-		$('#ifade').caret(cursorPosition);
-	}, 0); // settimeout 0 eklemezsen çalışmıyor
-})
+)
 
 $('#sn').on('change', nosuzayetlerisil) // sure, ayet ve sıranolar boş olsa bile
 $('#ifade').on('input', yazarkennosuzayetlerisil) // numarasız ayet yazımına izin verme
@@ -2162,7 +2160,6 @@ $("body").on('click', function(){ifade.placeholder = "copy & paste your own QURA
 
 function renklendir(ltr)
 {
-	document.documentElement.style.cursor = "wait";
 	loading();
 
 	var varmı = false;
@@ -2271,6 +2268,8 @@ function renklendir(ltr)
 
 function rengarenk()
 {
+	loading();
+
 	$('textarea').highlightWithinTextarea({
 		highlight:
 		[
@@ -2316,7 +2315,6 @@ function rengarenk()
 	setTimeout(function(){
 		$(window).trigger("resize");
 		loaded();
-		document.documentElement.style.cursor = "unset";
 	}, 1000) // bug fix for: /#ovpl=0&onv=1&sura=10&verse=10&count=الله
 }
 
@@ -2590,9 +2588,8 @@ var ifadeFlag = 0;
 function getfromlink() {
 	var hashParams = window.location.hash.substr(1).replace(/[_]+/gim, " ").replace(/[-]+/gim, "\n").split('&');
 
-	if (window.location.hash) {
-
-		document.documentElement.style.cursor = "wait";
+	if (window.location.hash)
+	{
 		loading();
 		
 		alertFlag = 0;
@@ -2634,10 +2631,7 @@ function getfromlink() {
 						document.getElementById(harf).checked = true;    $("#"+harf).trigger('change');    colorButton(harf); // mukatta harfinin/harflerinin toplam sayısı için
 					}
 					nameFlag = 1;
-					setTimeout(function(){
-						loaded();
-						document.documentElement.style.cursor = "unset";
-					}, 1000);
+					setTimeout(loaded, 1000);
 				}, 1000);
 			}
 			else if (p[0] == 'ovpl') {
@@ -2914,6 +2908,14 @@ function yataylaştırıcı(){
 	}
 }
 
+function contains(array, element)
+{
+	for(var i = 0; i < array.length; ++i)
+		if(array[i] == element)
+			return true;
+	return false;
+}
+
 function renkleriSay()
 {
 	copyText();
@@ -2925,7 +2927,7 @@ function renkleriSay()
 		for(var i = 0; i < 52; i++) // 52 harften biri
 			for(var r = 0; r < 28; r++) // 28 satırlı
 				for(var c = 0; c < clrltrs[r].length; c++) // c sütunlu
-					if(clrltrs[r][c] == harfler[i]) // renklendirme matrisi içinde varsa
+					if(clrltrs[r][c] == harfler[i] && !contains(seçililer, harfler[i])) // renklendirme matrisi içinde varsa ve seçililere daha önce eklenmemişse (bu kontrolü yapmak önemli asenkron js bazen 2 kat push edebiliyor seçililerin içine ve bu yüzden satır sayımları 2 katına çıkıyordu bu kontrolü yapmadan önce üstelik 6 satır önce seçililer = []; ataması yapmış olmama rağmen)
 						seçililer.push(harfler[i]); // o harfleri seç
 	
 		lineSums = numaralandır(renderedRows, seçililer);
@@ -2934,7 +2936,7 @@ function renkleriSay()
 		for(var i = 0; i < isimler.length; i++) // ALLAH'ın isimlerinden her biri
 			for(var r = 28; r < clrltrs.length; r++) // r satırlı
 				for(var c = 0; c < clrltrs[r].length; c++) // c sütunlu
-					if(clrltrs[r][c] == isimler[i]) // renklendirme matrisi içinde varsa
+					if(clrltrs[r][c] == isimler[i] && !contains(seçililer, isimler[i])) // renklendirme matrisi içinde varsa ve seçililere daha önce eklenmemişse (bu kontrolü yapmak önemli asenkron js bazen 2 kat push edebiliyor seçililerin içine ve bu yüzden satır sayımları 2 katına çıkıyordu bu kontrolü yapmadan önce üstelik 15 satır önce seçililer = []; ataması yapmış olmama rağmen)
 						seçililer.push(isimler[i]); // o isimleri seç
 		
 		lineSums = isimleriNumaralandır(renderedRows, seçililer);
