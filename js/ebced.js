@@ -1594,40 +1594,26 @@ function tüm_renkleri_temizle()
 	ifadeWidther();
 }
 
-function renkle(ltr){
-	renklendirr(ltr);
-	rengarenk();
-	document.getElementById(ltr).checked = true;    $("#"+ltr).trigger('change');    colorButton(ltr); // mukatta harfinin/harflerinin toplam sayısı için
-}
-function renkle2(ltr1, ltr2){
-	renklendirr(ltr1);	renklendirr(ltr2);
-	rengarenk();
-	document.getElementById(ltr1).checked = true;    $("#"+ltr1).trigger('change');    colorButton(ltr1); // mukatta harfinin/harflerinin toplam sayısı için
-	document.getElementById(ltr2).checked = true;    $("#"+ltr2).trigger('change');    colorButton(ltr2);
-}
-function renkle3(ltr1, ltr2, ltr3){
-	renklendirr(ltr1);	renklendirr(ltr2);	renklendirr(ltr3);
-	rengarenk();
-	document.getElementById(ltr1).checked = true;    $("#"+ltr1).trigger('change');    colorButton(ltr1); // mukatta harfinin/harflerinin toplam sayısı için
-	document.getElementById(ltr2).checked = true;    $("#"+ltr2).trigger('change');    colorButton(ltr2);
-	document.getElementById(ltr3).checked = true;    $("#"+ltr3).trigger('change');    colorButton(ltr3);
-}
-function renkle4(ltr1, ltr2, ltr3, ltr4){
-	renklendirr(ltr1);	renklendirr(ltr2);	renklendirr(ltr3);	renklendirr(ltr4);
-	rengarenk();
-	document.getElementById(ltr1).checked = true;    $("#"+ltr1).trigger('change');    colorButton(ltr1); // mukatta harfinin/harflerinin toplam sayısı için
-	document.getElementById(ltr2).checked = true;    $("#"+ltr2).trigger('change');    colorButton(ltr2);
-	document.getElementById(ltr3).checked = true;    $("#"+ltr3).trigger('change');    colorButton(ltr3);
-	document.getElementById(ltr4).checked = true;    $("#"+ltr4).trigger('change');    colorButton(ltr4);
-}
-function renkle5(ltr1, ltr2, ltr3, ltr4, ltr5){
-	renklendirr(ltr1);	renklendirr(ltr2);	renklendirr(ltr3);	renklendirr(ltr4);	renklendirr(ltr5);
-	rengarenk();
-	document.getElementById(ltr1).checked = true;    $("#"+ltr1).trigger('change');    colorButton(ltr1); // mukatta harfinin/harflerinin toplam sayısı için
-	document.getElementById(ltr2).checked = true;    $("#"+ltr2).trigger('change');    colorButton(ltr2);
-	document.getElementById(ltr3).checked = true;    $("#"+ltr3).trigger('change');    colorButton(ltr3);
-	document.getElementById(ltr4).checked = true;    $("#"+ltr4).trigger('change');    colorButton(ltr4);
-	document.getElementById(ltr5).checked = true;    $("#"+ltr5).trigger('change');    colorButton(ltr5);
+function renkle(ltrArray)
+{
+	loading();
+
+	let harf;
+
+	nameFlag = 0;
+	setTimeout(function(){
+		for (var j = 0; j < ltrArray.length; j++) {
+			harf = ltrArray[j];
+			renklendirr(harf);
+		}
+		rengarenk();
+		for (var j = 0; j < ltrArray.length; j++) {
+			harf = ltrArray[j];
+			document.getElementById(harf).checked = true;    $("#"+harf).trigger('change');    colorButton(harf); // mukatta harfinin/harflerinin toplam sayısı için
+		}
+		nameFlag = 1;
+		setTimeout(loaded, 1000);
+	}, 1000);	
 }
 
 var lastTable;
@@ -2087,20 +2073,20 @@ function colorMuqatta()
 {
 	if(sure1.value && !ayet1.value)
 	{
-		if(sure1.value == 2 || sure1.value == 3 || (29 <= sure1.value && sure1.value <= 32)) renkle3('ا','ل','م');
-		else if(sure1.value == 7) renkle4('ا','ل','م','ص');
-		else if(sure1.value != 13 && 10 <= sure1.value && sure1.value <= 15) renkle3('ا','ل','ر');
-		else if(sure1.value == 13) renkle4('ا','ل','م','ر');
-		else if(sure1.value == 19) renkle5('ك','ه','ي','ع','ص');
-		else if(sure1.value == 20) renkle2('ط','ه');
-		else if(sure1.value == 26 || sure1.value == 28) renkle3('ط','س','م');
-		else if(sure1.value == 27) renkle2('ط','س');
-		else if(sure1.value == 36) renkle2('ي','س');
-		else if(sure1.value == 38) renkle('ص');
-		else if(sure1.value != 42 && 40 <= sure1.value && sure1.value <= 46) renkle2('ح','م');
-		else if(sure1.value == 42) renkle5('ح','م','ع','س','ق');
-		else if(sure1.value == 50) renkle('ق');
-		else if(sure1.value == 68) renkle('ن');
+		if(sure1.value == 2 || sure1.value == 3 || (29 <= sure1.value && sure1.value <= 32)) renkle(['ا','ل','م']);
+		else if(sure1.value == 7) renkle(['ا','ل','م','ص']);
+		else if(sure1.value != 13 && 10 <= sure1.value && sure1.value <= 15) renkle(['ا','ل','ر']);
+		else if(sure1.value == 13) renkle(['ا','ل','م','ر']);
+		else if(sure1.value == 19) renkle(['ك','ه','ي','ع','ص']);
+		else if(sure1.value == 20) renkle(['ط','ه']);
+		else if(sure1.value == 26 || sure1.value == 28) renkle(['ط','س','م']);
+		else if(sure1.value == 27) renkle(['ط','س']);
+		else if(sure1.value == 36) renkle(['ي','س']);
+		else if(sure1.value == 38) renkle(['ص']);
+		else if(sure1.value != 42 && 40 <= sure1.value && sure1.value <= 46) renkle(['ح','م']);
+		else if(sure1.value == 42) renkle(['ح','م','ع','س','ق']);
+		else if(sure1.value == 50) renkle(['ق']);
+		else if(sure1.value == 68) renkle(['ن']);
 	}
 }
 
@@ -2108,51 +2094,59 @@ var clrltrs = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
 
 function renklendirr(ltr)
 {
-	if(ltr == 'ا') {
-		clrltrs[0].push('ا','ء','ـٔ','آ','ٱ','أ','إ');
-		if(clrltrs[11][0] == 'ل') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
-		clrltrs[36] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
-	}
-	else if(ltr == 'ب') clrltrs[1].push('ب','پ');
-	else if(ltr == 'ج') clrltrs[2].push('ج','چ');
-	else if(ltr == 'د') clrltrs[3].push('د');
-	else if(ltr == 'ه') clrltrs[4].push('ه','ة');
-	else if(ltr == 'و') clrltrs[5].push('و','ؤ');
-	else if(ltr == 'ز') clrltrs[6].push('ز','ژ');
-	else if(ltr == 'ح') clrltrs[7].push('ح');
-	else if(ltr == 'ط') clrltrs[8].push('ط');
-	else if(ltr == 'ي') clrltrs[9].push('ي','ی','ئ','ى');
-	else if(ltr == 'ك') clrltrs[10].push('ك','ک','گ','ڭ');
-	else if(ltr == 'ل') {
-		clrltrs[11].push('ل');
-		if(clrltrs[0][0] == 'ا') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
-		clrltrs[35] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
-	}
-	else if(ltr == 'م') clrltrs[12].push('م');
-	else if(ltr == 'ن') clrltrs[13].push('ن');
-	else if(ltr == 'س') clrltrs[14].push('س');
-	else if(ltr == 'ع') clrltrs[15].push('ع');
-	else if(ltr == 'ف') clrltrs[16].push('ف','ڢ','ڤ');
-	else if(ltr == 'ص') clrltrs[17].push('ص');
-	else if(ltr == 'ق') clrltrs[18].push('ق','ڨ');
-	else if(ltr == 'ر') clrltrs[19].push('ر');
-	else if(ltr == 'ش') clrltrs[20].push('ش');
-	else if(ltr == 'ت') clrltrs[21].push('ت');
-	else if(ltr == 'ث') clrltrs[22].push('ث');
-	else if(ltr == 'خ') clrltrs[23].push('خ');
-	else if(ltr == 'ذ') clrltrs[24].push('ذ');
-	else if(ltr == 'ض') clrltrs[25].push('ض');
-	else if(ltr == 'ظ') clrltrs[26].push('ظ');
-	else if(ltr == 'غ') clrltrs[27].push('غ');
-	else if(ltr == 'الله' || ltr == 'ٱللَّهِ' || ltr == 'لِلَّهِ' || ltr == 'ٱللَّهُ' || ltr == 'ٱللَّهَ' || ltr == 'لِّلَّهِ') {
-		clrltrs[28].push('الله','لله','ٱللَّه','لِلَّه','لِّلَّه','آللَّه');
-		clrltrs[29].push('اللهم','ٱللَّهُم','اللهو','ٱللَّهْو','اللهب','ٱللَّهَب');
-	}
-	else if(ltr == 'الرحمن' || ltr == 'رحمن' || ltr == 'ٱلرَّحْمَـٰن' || ltr == 'رَّحْمَـٰن') clrltrs[30].push('الرحمن','رحمن','ٱلرَّحْمَـٰن','رَّحْمَـٰن');
-	else if(ltr == 'الرحيم' || ltr == 'رحيم' || ltr == 'ٱلرَّحِيم' || ltr == 'رَّحِيم' || ltr == 'رَحِيم') clrltrs[31].push('الرحيم','رحيم','ٱلرَّحِيم','رَّحِيم','رَحِيم');
-	else if(ltr == 'اسم' || ltr == 'ٱسْم' || ltr == 'باسم' || ltr == 'بٱسْم' || ltr == 'الاسم' || ltr == 'ٱلٱسْم') {
-		clrltrs[32].push('اسم','ٱسْم','باسم','بٱسْم','الاسم','ٱلٱسْم','ٱلِٱسْم','بِٱسْم');
-		clrltrs[33].push('اسمه','ٱسْمُه','ٱسْمَع','ٱسْمَعُوا');
+	var varmı = false;
+	for(var r = 0; r < clrltrs.length; r++) // 33 harf + İSİM'den oluşan clrltrs renklendirme matrisi içinde
+		if(clrltrs[r][0] == ltr) // harf ya da İSİM varsa
+			varmı = true; // vardır
+
+	if(!varmı) // harf ya da İSİM yoksa, o harf ya da İSMİ renklendirilecek harf veya İSİM'lere kat
+	{
+		if(ltr == 'ا') {
+			clrltrs[0].push('ا','ء','ـٔ','آ','ٱ','أ','إ');
+			if(clrltrs[11][0] == 'ل') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
+			clrltrs[36] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
+		}
+		else if(ltr == 'ب') clrltrs[1].push('ب','پ');
+		else if(ltr == 'ج') clrltrs[2].push('ج','چ');
+		else if(ltr == 'د') clrltrs[3].push('د');
+		else if(ltr == 'ه') clrltrs[4].push('ه','ة');
+		else if(ltr == 'و') clrltrs[5].push('و','ؤ');
+		else if(ltr == 'ز') clrltrs[6].push('ز','ژ');
+		else if(ltr == 'ح') clrltrs[7].push('ح');
+		else if(ltr == 'ط') clrltrs[8].push('ط');
+		else if(ltr == 'ي') clrltrs[9].push('ي','ی','ئ','ى');
+		else if(ltr == 'ك') clrltrs[10].push('ك','ک','گ','ڭ');
+		else if(ltr == 'ل') {
+			clrltrs[11].push('ل');
+			if(clrltrs[0][0] == 'ا') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
+			clrltrs[35] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
+		}
+		else if(ltr == 'م') clrltrs[12].push('م');
+		else if(ltr == 'ن') clrltrs[13].push('ن');
+		else if(ltr == 'س') clrltrs[14].push('س');
+		else if(ltr == 'ع') clrltrs[15].push('ع');
+		else if(ltr == 'ف') clrltrs[16].push('ف','ڢ','ڤ');
+		else if(ltr == 'ص') clrltrs[17].push('ص');
+		else if(ltr == 'ق') clrltrs[18].push('ق','ڨ');
+		else if(ltr == 'ر') clrltrs[19].push('ر');
+		else if(ltr == 'ش') clrltrs[20].push('ش');
+		else if(ltr == 'ت') clrltrs[21].push('ت');
+		else if(ltr == 'ث') clrltrs[22].push('ث');
+		else if(ltr == 'خ') clrltrs[23].push('خ');
+		else if(ltr == 'ذ') clrltrs[24].push('ذ');
+		else if(ltr == 'ض') clrltrs[25].push('ض');
+		else if(ltr == 'ظ') clrltrs[26].push('ظ');
+		else if(ltr == 'غ') clrltrs[27].push('غ');
+		else if(ltr == 'الله') {
+			clrltrs[28].push('الله','لله','ٱللَّه','لِلَّه','لِّلَّه','آللَّه');
+			clrltrs[29].push('اللهم','ٱللَّهُم','اللهو','ٱللَّهْو','اللهب','ٱللَّهَب');
+		}
+		else if(ltr == 'الرحمن') clrltrs[30].push('الرحمن','رحمن','ٱلرَّحْمَـٰن','رَّحْمَـٰن');
+		else if(ltr == 'الرحيم') clrltrs[31].push('الرحيم','رحيم','ٱلرَّحِيم','رَّحِيم','رَحِيم');
+		else if(ltr == 'اسم') {
+			clrltrs[32].push('اسم','ٱسْم','باسم','بٱسْم','الاسم','ٱلٱسْم','ٱلِٱسْم','بِٱسْم');
+			clrltrs[33].push('اسمه','ٱسْمُه','ٱسْمَع','ٱسْمَعُوا');
+		}
 	}
 }
 
@@ -2618,22 +2612,7 @@ function getfromlink() {
 			else if (p[0] === 'verse2') {
 				ayet2.value = p[1];
 			}
-			else if (p[0] === 'count') {
-				nameFlag = 0;
-				setTimeout(function(){
-					for (var j = 0; j < p[1].split('+').length; j++) {
-						harf = p[1].split('+')[j];
-						renklendirr(harf);
-					}
-					rengarenk();
-					for (var j = 0; j < p[1].split('+').length; j++) {
-						harf = p[1].split('+')[j];
-						document.getElementById(harf).checked = true;    $("#"+harf).trigger('change');    colorButton(harf); // mukatta harfinin/harflerinin toplam sayısı için
-					}
-					nameFlag = 1;
-					setTimeout(loaded, 1000);
-				}, 1000);
-			}
+			else if (p[0] === 'count') renkle(p[1].split('+'));
 			else if (p[0] == 'ovpl') {
 				if (p[1] == '1') document.getElementById("ovpl").checked = true;
 				else document.getElementById("ovpl").checked = false;
