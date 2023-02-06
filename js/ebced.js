@@ -1331,6 +1331,15 @@ $('.seçenekler').on('change', function(){
 
 var initialHeight;
 var ekleme = "";
+const container = document.getElementsByClassName("container")[0];
+const bottomRightBox = document.getElementById("bottomRightBox");
+
+function elementsOverlap(el1, el2) {
+	var domRect1 = el1.getBoundingClientRect();
+	var domRect2 = el2.getBoundingClientRect();
+  
+	return (domRect1.top < domRect2.bottom && domRect1.bottom > domRect2.top);
+}
 
 const resize_ob = new ResizeObserver(function(entries) {
 	// since we are observing only a single element, so we access the first element in entries array
@@ -1371,16 +1380,20 @@ const resize_ob = new ResizeObserver(function(entries) {
 
 	if(windowWidth < 768) {
 		$("#orta").css({ 'display': 'none' });
-		document.getElementsByClassName("container")[0].style.height = ifade.offsetHeight + "px"; // sure1 değerini boşaltıp tekrar doldurduktan sonra renklendirme yapılmasa dahi ve ifadenin genişliği artırılsa dahi container'ın yüksekliğini güncelle ki aşağıdaki harf sayımları yukarı kaymasın
+		container.style.height = ifade.offsetHeight + "px"; // sure1 değerini boşaltıp tekrar doldurduktan sonra renklendirme yapılmasa dahi ve ifadenin genişliği artırılsa dahi container'ın yüksekliğini güncelle ki aşağıdaki harf sayımları yukarı kaymasın
 	}
 	else if(768 <= windowWidth && windowWidth < 1585){
-		document.getElementsByClassName("container")[0].style.height = "calc(41.5vw - 46px)";
+		container.style.height = "calc(41.5vw - 46px)";
 		$("#orta").css({ 'display': 'block' });
 	}
 	else if(1585 <= windowWidth){
-		document.getElementsByClassName("container")[0].style.height = "598px";
+		container.style.height = "598px";
 		$("#orta").css({ 'display': 'block' });
 	}
+
+	if(elementsOverlap(ifade, bottomRightBox)) bottomRightBox.style.visibility = "hidden";
+	else bottomRightBox.style.visibility = "visible";
+
 	colorTable(); // bu fonksiyonun burada çağrılmasının nedeni linkten yükleme yapıldığında VAHİD, ZU'L FADL'İL AZİM, MECİD, CAMİ isimlerinin ebced değeri kontrol edilirken BISMILLAHIRRAHMANIRRAHIM tablosunu gösterebilmek
 });
 
@@ -1392,11 +1405,11 @@ $(".ayetbox").on("input", function(){
 		ifadeWidther();
 		ifade.value = '';
 		if(windowWidth < 768)
-			document.getElementsByClassName("container")[0].style.height = ifade.offsetHeight + "px";
+			container.style.height = ifade.offsetHeight + "px";
 		else if(windowWidth >= 768 && windowWidth < 1585)
-			document.getElementsByClassName("container")[0].style.height = "calc(41.5vw - 46px)";
+			container.style.height = "calc(41.5vw - 46px)";
 		else if(1585 <= windowWidth)
-			document.getElementsByClassName("container")[0].style.height = "598px";
+			container.style.height = "598px";
 	}
 })
 
@@ -1439,7 +1452,7 @@ function labelChanger(){
 
 function ifadeWidther()
 {
-	var widthC = document.getElementsByClassName("container")[0].offsetWidth;
+	var widthC = container.offsetWidth;
 	var widthS = document.getElementById("satirlar").offsetWidth;
 	ifade.style.width = widthC - widthS + 'px';
 	copyTextSizer();

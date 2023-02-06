@@ -25,6 +25,15 @@
 
 body{ scroll-behavior: smooth; }
 
+#bottomRightBox {
+	display: block;
+	position: relative;
+    visibility: visible;
+    width: fit-content;
+    height: 28px;
+    float: right;
+}
+
 .swal2-html-container {
     font-size: larger !important;
 }
