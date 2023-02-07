@@ -223,7 +223,7 @@ function kalem(){
 
 $("#ifade").on("input", function(){
 	if(!sure1.value) {
-		kalem(); // bunu kaldırma resize etmediğinde de çalışabilmesi için!
+		kalem(); // "sitenin" orijinal KURAN metni üzerinde kullanıcı kaynaklı değişiklik yapıldığını gösterir kullanıcıya
 	}
 })
 
@@ -544,7 +544,7 @@ function bölümaçıcı(xml)
 		}
 	}
 	ifade.value = aralık;
-	ifade.value += ekleme; // yükleme yapıldıktan sonra gerekli miktarda boşluk ekler
+	
 	$('#ifade').trigger('input');
 
 	document.getElementById('açıklama').innerHTML = txt;
@@ -1255,8 +1255,10 @@ $("#ifade").on('input', function()
 			$("#verses").html("");
 		}
 		
+		bottomRightBox.style.display = "block";
 	}
 	else{
+		bottomRightBox.style.display = "none";
 		if (ifade === document.activeElement) {
 			document.getElementById('açıklama').innerHTML = '';
 			sure1.value = '';
@@ -1320,11 +1322,13 @@ function getAndroidVersion() {
 	}
 };
 
+const toplam = document.getElementById("toplam");
+
 $('.seçenekler').on('change', function(){
 	document.getElementById("satirlar").style.display = "inline-block";
 	// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
 	document.getElementById("satirlar").scrollTop = "0px";
-	document.getElementById("toplam").style.display = "inline-block";
+	toplam.style.display = "inline-block";
 	resize_ob.observe(ifade);
 	ifadeWidther();
 });
@@ -1368,7 +1372,7 @@ const resize_ob = new ResizeObserver(function(entries) {
 	if(sure1.value == '' && ifade.value == ekleme){
 		document.getElementById("satirlar").style.display = "none";
 		// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
-		document.getElementById("toplam").style.display = "none";
+		toplam.style.display = "none";
 		ifadeWidther();
 		ifade.value = '';
 	}
@@ -1390,7 +1394,7 @@ const resize_ob = new ResizeObserver(function(entries) {
 		container.style.height = "598px";
 		$("#orta").css({ 'display': 'block' });
 	}
-
+	
 	if(elementsOverlap(ifade, bottomRightBox)) bottomRightBox.style.visibility = "hidden";
 	else bottomRightBox.style.visibility = "visible";
 
@@ -1401,7 +1405,7 @@ $(".ayetbox").on("input", function(){
 	if(sure1.value == '' && ifade.value == ekleme){
 		document.getElementById("satirlar").style.display = "none";
 		// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
-		document.getElementById("toplam").style.display = "none";
+		toplam.style.display = "none";
 		ifadeWidther();
 		ifade.value = '';
 		if(windowWidth < 768)
@@ -1536,7 +1540,7 @@ function renkleri_temizle()
 	
 	document.getElementById("satirlar").style.display = "none";
 	// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
-	document.getElementById("toplam").style.display = "none";
+	toplam.style.display = "none";
 	
 	if(document.getElementById("coloredDiv"))
 		$('#ifade').highlightWithinTextarea('destroy');
@@ -1599,7 +1603,7 @@ function tüm_renkleri_temizle()
 
 	document.getElementById("satirlar").style.display = "none";
 	// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
-	document.getElementById("toplam").style.display = "none";
+	toplam.style.display = "none";
 	
 	if(document.getElementById("coloredDiv"))
 		$('#ifade').highlightWithinTextarea('destroy');
@@ -2163,7 +2167,18 @@ function renklendirr(ltr)
 	}
 }
 
-$("body").on('click', function(){ifade.placeholder = "copy & paste your own QURAN text\n...or start writing arabic";}); // refreshes placeholder if you don't enter sura value and click on body
+const ovpl = document.getElementById("ovpl"),
+	  ovplBox = document.getElementById("ovplBox");
+
+$("body").on('click', placeHolder);
+$(window).resize(placeHolder);
+
+function placeHolder(){  // refreshes placeholder if you don't enter sura value and click on body
+	if(403 < windowWidth && windowWidth < 1162)
+		ifade.placeholder = "copy & paste your own QURAN text\n...or start writing arabic";
+	else
+		ifade.placeholder = "...copy & paste your own QURAN text or start writing arabic";
+}
 
 function renklendir(ltr)
 {
@@ -2333,7 +2348,6 @@ function message() {
 	var sureiki = sure2.value;
 	var ayetbir1 = ayet1.value;
 	var ayetiki2 = ayet2.value;
-	var ovpl = document.getElementById('ovpl');
 	var sn = document.getElementById('sn');
 
     var kopyalamaLinki = "19x334.github.io/#"
@@ -2627,8 +2641,8 @@ function getfromlink() {
 			}
 			else if (p[0] === 'count') renkle(p[1].split('+'));
 			else if (p[0] == 'ovpl') {
-				if (p[1] == '1') document.getElementById("ovpl").checked = true;
-				else document.getElementById("ovpl").checked = false;
+				if (p[1] == '1') ovpl.checked = true;
+				else ovpl.checked = false;
 				$('#ovpl').trigger('change'); // bunu kaldırma inşALLAH!
 			}
 			else if (p[0] == 'onv') {
@@ -2691,7 +2705,7 @@ function copyTextSizer()
 
 	document.getElementById("copyText").style.setProperty("width", width + "px");
 
-	if(document.getElementById("ovpl").checked){
+	if(ovpl.checked){
 		document.getElementsByClassName("hwt-backdrop")[0].style.setProperty('width', 'max-content', 'important');
 		document.getElementsByClassName("hwt-highlights")[0].style.setProperty('width', 'max-content', 'important');
 	}
@@ -2747,12 +2761,12 @@ function isimleriNumaralandır(renderedRows, seçililer){
 // renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için
 // değişiklikleri burada değil renkleriSay() ve renklileriSay() fonksiyonlarının içinde yapıyoruz:
 $('.seçenekler').on('change', function(){
-	if(document.getElementById("ovpl").checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
+	if(ovpl.checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
 	else renkleriSay();
 });
 
 $(window).resize(function(){
-	if(document.getElementById("ovpl").checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
+	if(ovpl.checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
 	else renkleriSay();
 });
 
@@ -2863,13 +2877,13 @@ $('#ovpl').change(function(){
 	// hwt classlı katmanların daha sonradan aktif olmasından dolayı
 	// renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için
 	// değişiklikleri burada değil renkleriSay() ve renklileriSay() fonksiyonlarının içinde yapıyoruz:
-	if(document.getElementById("ovpl").checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
+	if(ovpl.checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
 	else renkleriSay();
 })
 
 function yataylaştırıcı(){
 	// önce "satır başına 1 ayet"i seçtiğimizde ve sonra renklendirecek harf seçtiğimizde renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için:
-	if(document.getElementById("ovpl").checked){
+	if(ovpl.checked){
 		if(browser != "Firefox") {
 			if(windowWidth < 768) document.getElementById("nextSura").style.marginTop = "24px";
 			else document.getElementById("nextSura").style.marginTop = "15px";
@@ -2999,12 +3013,12 @@ function Page(rowsClass, sums)
 	if(sure1.value && !ayet1.value && (document.getElementById("اسم").checked || document.getElementById("الله").checked || document.getElementById("الرحمن").checked || document.getElementById("الرحيم").checked)){
 		if(sure1.value == 1){ /* do nothing skip first sura */ }
 		else if(say_toplam_isimler % 19 == 0) {
-			document.getElementById("toplam").className = "total tamKat";
-			document.getElementById("toplam").innerHTML = divide19(say_toplam_isimler);
+			toplam.className = "total tamKat";
+			toplam.innerHTML = divide19(say_toplam_isimler);
 		}
 		else {
-			document.getElementById("toplam").className = "total";
-			document.getElementById("toplam").innerHTML = say_toplam_isimler;
+			toplam.className = "total";
+			toplam.innerHTML = say_toplam_isimler;
 		}
 	}
 
@@ -3037,12 +3051,12 @@ function Page(rowsClass, sums)
 					if(i>0){
 						document.getElementById(i-1).className = "okundu row";
 						if(sure1.value && !ayet1.value && (document.getElementById("اسم").checked || document.getElementById("الله").checked || document.getElementById("الرحمن").checked || document.getElementById("الرحيم").checked)){
-							if((sums[i]+say_toplam_isimler) % 19 == 0) document.getElementById("toplam").className = "total tamKat";
-							else  document.getElementById("toplam").className = "total";
+							if((sums[i]+say_toplam_isimler) % 19 == 0) toplam.className = "total tamKat";
+							else  toplam.className = "total";
 						}
 						else{
-							if(sums[i] % 19 == 0) document.getElementById("toplam").className = "total tamKat";
-							else  document.getElementById("toplam").className = "total";
+							if(sums[i] % 19 == 0) toplam.className = "total tamKat";
+							else  toplam.className = "total";
 						}
 					}
 					if(sure1.value && !ayet1.value && (document.getElementById("اسم").checked || document.getElementById("الله").checked || document.getElementById("الرحمن").checked || document.getElementById("الرحيم").checked)) rows.push(sums[i]+say_toplam_isimler);
@@ -3054,13 +3068,13 @@ function Page(rowsClass, sums)
 
 						if(sure1.value && !ayet1.value && (document.getElementById("اسم").checked || document.getElementById("الله").checked || document.getElementById("الرحمن").checked || document.getElementById("الرحيم").checked)){
 							rows.push(sums[i]+say_toplam_isimler);
-							if((sums[i]+say_toplam_isimler) % 19 == 0) document.getElementById("toplam").className = "total tamKat";
-							else  document.getElementById("toplam").className = "total";
+							if((sums[i]+say_toplam_isimler) % 19 == 0) toplam.className = "total tamKat";
+							else  toplam.className = "total";
 						}
 						else{
 							rows.push(sums[i]);
-							if(sums[i] % 19 == 0) document.getElementById("toplam").className = "total tamKat";
-							else  document.getElementById("toplam").className = "total";
+							if(sums[i] % 19 == 0) toplam.className = "total tamKat";
+							else  toplam.className = "total";
 						}
 					}
 					else if(i < ogeler.length - 1){
@@ -3068,13 +3082,13 @@ function Page(rowsClass, sums)
 
 						if(sure1.value && !ayet1.value && (document.getElementById("اسم").checked || document.getElementById("الله").checked || document.getElementById("الرحمن").checked || document.getElementById("الرحيم").checked)){
 							rows.push(sums[i+1]+say_toplam_isimler);
-							if((sums[i+1]+say_toplam_isimler) % 19 == 0) document.getElementById("toplam").className = "total tamKat";
-							else  document.getElementById("toplam").className = "total";
+							if((sums[i+1]+say_toplam_isimler) % 19 == 0) toplam.className = "total tamKat";
+							else  toplam.className = "total";
 						}
 						else {
 							rows.push(sums[i+1]);
-							if(sums[i+1] % 19 == 0) document.getElementById("toplam").className = "total tamKat";
-							else  document.getElementById("toplam").className = "total";
+							if(sums[i+1] % 19 == 0) toplam.className = "total tamKat";
+							else  toplam.className = "total";
 						}
 					}
 				}
@@ -3091,6 +3105,20 @@ function Page(rowsClass, sums)
     construct(rowsClass);
 }
 
+function elementsOverlapHorizontally(el1, el2)
+{
+	var domRect1 = el1.getBoundingClientRect();
+	var domRect2 = el2.getBoundingClientRect();
+
+	return (domRect1.right > domRect2.left && domRect1.left < domRect2.right);
+}
+
+function hideOverlappedHorizontally(el1, el2)
+{
+	if(elementsOverlapHorizontally(el1, el2)) el1.style.visibility = "hidden";
+	else el1.style.visibility = "visible";
+}
+
 function lineKeeper() {
 	document.getElementById("satirlar").scrollTop = ifade.scrollTop;
 	if(windowWidth < 768)
@@ -3099,8 +3127,16 @@ function lineKeeper() {
 		ifade.style.setProperty("background-position", '0px -' + ifade.scrollTop + 'px, center center');
 }
 
-ifade.addEventListener("scroll", lineKeeper);
-window.addEventListener("resize", lineKeeper);
+ifade.addEventListener("scroll",function() {
+	lineKeeper();
+	hideOverlappedHorizontally(ovplBox, toplam);
+});
+
+window.addEventListener("resize",function() {
+	lineKeeper();
+	kalem(); // pencere genişliği değiştirilerek 768 px üstü ve altı arasında geçiş yapıldığında arkaplan tutarlılığını sağlar!
+	hideOverlappedHorizontally(ovplBox, toplam);
+});
 
 function getLineBreaks(elem) {
 	// our Range object form which we'll get the characters positions
@@ -3182,13 +3218,13 @@ function addRemoveRows(){
 		document.getElementById("satirlar").style.display = "inline-block";
 		// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
 		document.getElementById("satirlar").scrollTop = "0px";
-		document.getElementById("toplam").style.display = "inline-block";
+		toplam.style.display = "inline-block";
 		ifadeWidther();
 	}
 	else {
 		document.getElementById("satirlar").style.display = "none";
 		// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
-		document.getElementById("toplam").style.display = "none";
+		toplam.style.display = "none";
 		ifadeWidther();
 	}
 }
@@ -3696,8 +3732,7 @@ function linkChanger()
 }
 
 function sonrakiSureyeGeç(){
-	var ovpl = document.getElementById('ovpl'),
-	nextSura = document.getElementById("nextSura"),
+	var nextSura = document.getElementById("nextSura"),
 	sonrakiSure = parseInt(sure1.value) + 1,
 	notFirefox = document.getElementById("notFirefox");
 
