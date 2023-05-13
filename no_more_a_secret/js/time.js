@@ -51,12 +51,10 @@ function handleTickInit(tick) {
 	// format of since date is ISO8601
 	// https://en.wikipedia.org/wiki/ISO_8601
 
-	// '2000'                       to count up from 2000
-	// '2000-01-31T12:00:00'        to count up from 12 o'clock on the 31st of January 2000
 	// '2000-01-15T10:00:00+01:00'  to count up from 10 o'clock GMT+1 on the 15th of January 2000
 
-	// create counter
-	Tick.count.down('2280-01-17T15:49:31', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
+	// compose counter WITH WILL AND THE NAME OF THE SACRED KING SUPREME ELEGANT!
+	Tick.count.down('2280-01-17T15:49:31+00:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
 		tick.value = value;
 	};
 }
