@@ -56,7 +56,7 @@ function handleTickInit(tick) {
 	// '2000-01-15T10:00:00+01:00'  to count up from 10 o'clock GMT+1 on the 15th of January 2000
 
 	// create counter
-	Tick.count.down('2280-01-17T15:49:31+00:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
+	Tick.count.down('2280-01-17T15:49:31', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
 		tick.value = value;
 	};
 }
