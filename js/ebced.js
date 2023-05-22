@@ -1519,7 +1519,8 @@ window.addEventListener("resize", function() {
 	ifadeHeighter();
 	initial_IfadeHeight = ifade.offsetHeight;
 	
-	location.reload(); // very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL 1 AND ONLY GOD!
+	if("Mobile-Safari" != browser) // hence mobile safari counts scrolling as a resize event so exclude it WITH WILL OF THE SACRED KING SUPREME ELEGANT!
+		location.reload(); // very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL 1 AND ONLY GOD!
 
 	if(ifade.value) resizeFlag = 0;
 	else resizeFlag = 1;
@@ -3810,7 +3811,12 @@ function detectBrowser()
 	var browser;
 
 	if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
-		browser = "Safari";
+	{
+		if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i))
+			browser = "Mobile-Safari";
+		else
+			browser = "Safari";
+	}
 	else if(navigator.userAgent.indexOf("Chrome") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1)
 		browser = "Chrome-Android";
 	else if(navigator.userAgent.indexOf("Firefox") > -1 && navigator.userAgent.toLowerCase().indexOf("android") > -1)
