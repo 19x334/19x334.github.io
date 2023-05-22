@@ -333,6 +333,8 @@ function loadXMLDoc() {
 	xmlhttp.send();
 }
 
+var yazmayaBaşlamaTemizliği = false;
+
 // var ifadeArr; // for proof of 66 x 165 IF GOD WILLS i will continue to make the tool be able to count both number of chapters and number of verses containing selected letters or names
 
 function bölümaçıcı(xml)
@@ -564,6 +566,8 @@ function bölümaçıcı(xml)
 
 	if(isColorMuqatta == 1)	colorMuqatta();
 	isColorMuqatta = 1; // bu atamanın bu konumda, bölümaçıcı(xml) fonksiyonunun en son satırında olması, linkten bölüm açıldıktan sonra açılan yeni surelerin renklendirilebilmesi ve linkten sure özel harflerle bir muqatta  suresi açıldıktan sonra colorMuqatta() fonksiyonunun tetiklenip özel harflerin üzerine ekleme yapmaması için önemli!
+
+	yazmayaBaşlamaTemizliği = true;
 }
 
 var isColorMuqatta = 1;
@@ -702,10 +706,7 @@ document.getElementById("ifade").addEventListener("keydown",
 		
 		setTimeout(function(){$('#ifade').caret(cursorPosition)}, 0); // settimeout 0 eklemezsen çalışmıyor
 
-		var idSelector = function() { return this.id; };
-		var selections = $("input[class=seçenekler]:checked").map(idSelector).get();
-
-		if(selections.length > 0) 
+		if(yazmayaBaşlamaTemizliği)
 		{
 			sure1.value = '';
 			ayet1.value = '';
@@ -716,10 +717,13 @@ document.getElementById("ifade").addEventListener("keydown",
 			document.getElementById('açıklama').innerHTML = '';
 
 			renkleri_temizle();
+
 			if(browser == "Firefox")
 				setTimeout(function(){window.scrollTo(window.scrollX, (windowTopScroll - (window.innerHeight / 2) + 39.5 - 4 * 79))}, 0); // settimeout 0 eklemezsen çalışmıyor
 			else
 				setTimeout(function(){window.scrollTo(window.scrollX, (windowTopScroll - (window.innerHeight / 2) + 46 - 4 * 92))}, 0); // settimeout 0 eklemezsen çalışmıyor
+			
+			yazmayaBaşlamaTemizliği = false;
 		}
 	}
 )
@@ -762,7 +766,7 @@ function copyToClipboard(text) {
 
 $('#ifade').on('input', function (event) {
 	ifadeTopScroll = ifade.scrollTop; // for getting back to first typed position after swal alert
-	var pattern = /[^\u0600-\u06FF\n ﻻﻹﻷﻵ0-9:\u2028]/gimu;
+	var pattern = /[^\u0600-\u06FF\n ﻻﻹﻷﻵ0-9:]/gimu;
 	if(pattern.test(this.value) == true) Swal.fire({
 		title: "only arabic letters allowed!",
 		html: "you can't write nor count nor calculate gematrical values of non-arabic letters!",
@@ -771,7 +775,7 @@ $('#ifade').on('input', function (event) {
 		imageHeight: 190,
 		imageAlt: 'only arabic letters allowed!'
 	});
-    this.value = this.value.replace(/[^\u0600-\u06FF\n ﻻﻹﻷﻵ0-9:\u2028]/gimu, '');
+    this.value = this.value.replace(/[^\u0600-\u06FF\n ﻻﻹﻷﻵ0-9:]/gimu, '');
 	ifade.scrollTop = ifadeTopScroll; // for getting back to first typed position after swal alert
 	if(this.value == "" || this.value == ekleme) loaded();
 });
@@ -2428,7 +2432,10 @@ function rengarenk()
 			{ highlight: clrltrs[33], className: 'endSuffixedSoNotCounted' },
 			{ highlight: ["r"], className: 'newLine' } // special newLine reset character "r" for linebreak point detection with WILL OF THE SACRED KING SUPREME ELEGANT!
 		]
-	})
+	});
+
+	yazmayaBaşlamaTemizliği = true;
+
 	setTimeout(function(){
 		loaded();
 	}, 1000);
