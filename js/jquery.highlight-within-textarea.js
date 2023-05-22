@@ -1,4 +1,5 @@
-// IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL
+// IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!
+// SACRED & SUPREME ELEGANT YOUR NAME IS SACRED & SUPREME!
 
 /*
  * highlight-within-textarea
@@ -149,7 +150,106 @@
 		},
 
 		handleInput: function() {
-			let input = this.$el.val();
+
+			function getLineBreaks(elem)
+			{
+				// our Range object form which we'll get the characters positions
+				const range = document.createRange();
+				// here we'll store all our lines
+				const lines = [];
+				const nodes = grabTextNodes(elem);
+				let bottom = 0;
+				// initial position
+				let prevBottom = null;
+				let lineText = "";
+				let startRange = null;
+				for (const node of nodes) {
+					let nodeText = node.textContent;
+					const textLength = nodeText.length;
+					let rangeIndex = 0;
+					let textIndex = 0;
+					while (rangeIndex <= textLength) {
+						range.setStart(node, rangeIndex);
+						if (rangeIndex < textLength - 1) {
+							range.setEnd(node, rangeIndex + 1); // wrap the range (for Chrome...)
+						}
+						bottom = range.getBoundingClientRect().bottom;
+						if (prevBottom === null) { // first pass
+							prevBottom = bottom;
+							startRange = range.cloneRange();
+						}
+						else if (bottom > prevBottom) { // line break
+							// store the current line content
+							lineText += nodeText.slice(0, textIndex);
+							startRange.setEnd(range.endContainer, range.endOffset);
+							const { bottom } = startRange.getBoundingClientRect();
+							lines.push(lineText);
+							// start a new line
+							prevBottom = bottom;
+							lineText = "";
+							nodeText = nodeText.slice(textIndex);
+							textIndex = 0;
+							startRange = range.cloneRange();
+						}
+						rangeIndex++;
+						textIndex++;
+						prevBottom = bottom;
+					}
+					// add the remaining text from this node into the current line content
+					lineText += nodeText;
+				}
+				// push the last line
+				if(startRange != null){ // for skipping in first pass
+					startRange.setEnd(range.endContainer, range.endOffset);
+					const { bottom } = startRange.getBoundingClientRect();
+				}
+				lines.push(lineText);
+				lines.push("\n "); // textarea'nın sonuna kadar toplamın gösterilebilmesi için gerekli 
+			
+				return lines;
+			}
+			
+			function grabTextNodes(elem)
+			{
+				const walker = document.createTreeWalker(elem, NodeFilter.SHOW_TEXT, null);
+				const nodes = [];
+				while (walker.nextNode()) {
+					  nodes.push(walker.currentNode);
+				}
+				return nodes;
+			}
+
+			function copyText()
+			{
+				"use strict";
+		  
+				//variable to hold and manipulate the value of our textarea
+				var txtBoxVal = document.getElementById("ifade").value;
+		
+				//regular expression to replace new lines with line breaks
+				//txtBoxVal = txtBoxVal.replace(/(?:\r\n|\r|\n)/g, ' <br />'); BU YORUM SATIRI OLARAK KALMAZSA KAYMA OLUŞUYOR!
+		  
+				//copies the text from the textarea to the #copyText div
+				document.getElementById('copyText').innerHTML = txtBoxVal;
+		    }
+			
+			copyText();
+
+			// let input = this.$el.val();
+
+			let input = getLineBreaks(document.querySelector('.copiedText'));
+			
+			// console.log(input);
+
+			var tempInput = "";
+
+			for(var i = 0; i < input.length; ++i)
+				tempInput += input[i] + "r"; // buraya görünen ve genellikle kullanılmayan -firefox kararlılığı için- "arapça" bir işaret karakteri r ekleyip daha sonra o karakteri tespit edip replace ile silmek ve n=0 olarak sıfırlamak gerekiyor satır numaralandırma sayacını İNŞALLAH
+
+			input = tempInput;
+
+			// console.log(input)
+
 			let ranges = this.getRanges(input, this.highlight);
 			let unstaggeredRanges = this.removeStaggeredRanges(ranges);
 			let boundaries = this.getBoundaries(unstaggeredRanges);
@@ -284,9 +384,25 @@
 			});
 		},
 
-		renderMarks: function(boundaries) {
-			let input = this.$el.val();
-			boundaries.forEach(function(boundary, index) {
+		renderMarks: function(boundaries)
+		{
+			// let input = this.$el.val();
+
+			let input = getLineBreaks(document.querySelector('.copiedText'));
+			
+			// console.log(input);
+
+			var tempInput = "";
+
+			for(var i = 0; i < input.length; ++i)
+				tempInput += input[i] + "\u200C"; // buraya görünmeyen 0 genişlikli U+200C ZERO WIDTH NON-JOINER karakteri \u200C ekleyerek diğer NOKTASIZ kaf harfinin yerini alan 0px genişlikli yer tutmayan ve kaymaya yol açmayan bir metin oluşturmuş oluyoruz tüm tarayıcılarda MAŞALLAH : https://invisible-characters.com/  \u200D joiner karakterinden uzak dur İNŞALLAH çünkü her satırın başındaki harfte kaymaya neden oluyor her satırın başındaki harfi kendisine bağlayarak
+
+			input = tempInput;
+
+			// console.log(input);
+			
+			boundaries.forEach(function(boundary, index)
+			{
 				let markup;
 				if (boundary.type === 'start') {
 					markup = '{{hwt-mark-start|' + index + '}}';
@@ -296,6 +412,8 @@
 				input = input.slice(0, boundary.index) + markup + input.slice(boundary.index);
 			});
 
+			// console.log(input)
+			
 			// this keeps scrolling aligned when input ends with a newline
 			input = input.replace(/\n(\{\{hwt-mark-stop\}\})?$/, '\n\n$1');
 
@@ -307,19 +425,25 @@
 				input = input.replace(/ /g, ' <wbr>');
 			}
 
+			let n = 0;
+			
 			// replace start tokens with opening <mark> tags with class name
-			input = input.replace(/\{\{hwt-mark-start\|(\d+)\}\}/g, function(match, submatch) {
+			input = input.replace(/\{\{hwt-mark-start\|(\d+)\}\}/g, function(match, submatch)
+			{
 				var className = boundaries[+submatch].className;
+
 				if (className) {
-					return '<mark class="' + className + '">';
-				} else {
-					return '<mark>';
+					if(className == "newLine")
+						n = -1;
+					return '<mark id="n' + ++n + '" class="' + className + '">';
 				}
+				else
+					return '<mark>';
 			});
 
 			// replace stop tokens with closing </mark> tags
 			input = input.replace(/\{\{hwt-mark-stop\}\}/g, '</mark>');
-
+			// console.log(input);
 			this.$highlights.html(input);
 		},
 

@@ -51,12 +51,10 @@ function handleTickInit(tick) {
 	// format of since date is ISO8601
 	// https://en.wikipedia.org/wiki/ISO_8601
 
-	// '2000'                       to count up from 2000
-	// '2000-01-31T12:00:00'        to count up from 12 o'clock on the 31st of January 2000
 	// '2000-01-15T10:00:00+01:00'  to count up from 10 o'clock GMT+1 on the 15th of January 2000
 
 	// create counter
-	Tick.count.down('2280-06-14T00:12:54+03:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
+	Tick.count.down('2280-01-17T15:49:31+00:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
 		tick.value = value;
 	};
 }
@@ -111,10 +109,16 @@ const timeWrapper = document.getElementById("timeWrapper");
 const knowledgeLink = document.getElementById("knowledge-link");
 const heaven = document.getElementById("heaven");
 const hell = document.getElementById("hell");
+const headLine = document.getElementById('headLine');
 
+
+var verseHead = document.getElementById("verses");
 var bgIntervalId;
 
-function hover(isReal) {
+var devam = true;
+
+function hover(isReal)
+{
 	clearInterval(bgIntervalId);
 
 	if(random == 6 || random == 4) headLine.innerText = "Time Remaining to Day of The Resurrection:";
@@ -128,19 +132,47 @@ function hover(isReal) {
 		heaven.style.right = "-50%";
 		hell.style.left = "-50%";
 	}
+
 	if(isReal) {
 		$("#timeWrapper").addClass("hovering");
 		$("#knowledge-link").addClass("hovering");
+
+		if(currentlyPlaying)
+		{
+			if($("#play-pause-button").hasClass('fa-pause'))
+			{
+				$("#play-pause-button").removeClass('fa-pause');
+				$("#play-pause-button").addClass('fa-play');
+			}
+			audio.pause();
+			audio2.pause();
+		}
+		devam = false;
 	}
 }
 
-function unhover(isReal) {
+function unhover(isReal)
+{
 	heaven.style.right = "0";
 	hell.style.left = "0";
+
 	if(isReal) {
 		$("#timeWrapper").removeClass("hovering");
 		$("#knowledge-link").removeClass("hovering");
+
+		if(currentlyPlaying)
+		{
+			if($("#play-pause-button").hasClass('fa-play'))
+			{
+				$("#play-pause-button").removeClass('fa-play');
+				$("#play-pause-button").addClass('fa-pause');
+			}
+			audio.play();
+			if(audio2Flag) audio2.play();
+		}
+		devam = true;
 	}
+
 	bgIntervalId = setInterval(function()
 	{	
 		if(heaven.getBoundingClientRect().left == (document.documentElement.clientWidth - 2560) / 2) {
@@ -158,12 +190,15 @@ knowledgeLink.addEventListener("mouseleave", function(){unhover(true)});
 timeWrapper.addEventListener("mouseover", function(){hover(true)});
 timeWrapper.addEventListener("mouseleave", function(){unhover(true)});
 
+document.getElementsByClassName("verses")[0].addEventListener("mouseover", function(){hover(true)});
+document.getElementsByClassName("verses")[0].addEventListener("mouseleave", function(){unhover(true)});
+
 const syncData75 = [
 	{start: '5.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1">Chapter 75</a>&nbsp;The Resurrection</p>'},
-	{start: '10.000', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#0">75:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>'},
-	{start: '15.800', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#1">75:1</a>&nbsp;I swear to DAY OF RESURRECTION (Chapters 89 & 100).</p>'},
-	{start: '18.721', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#2">75:2</a>&nbsp;And I swear to the blaming soul (89:23-24, 100:6-11).</p>'},
-	{start: '21.784', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#3">75:3</a>&nbsp;Does the human being think that WE will not reconstruct his bones (100:9, 89:21-23) ?</p>'},
+	{start: '10.000', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#0">75:0</a>&nbsp;IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!</p>'},
+	{start: '15.800', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#1">75:1</a>&nbsp;I swear to DAY OF RESURRECTION.</p>'},
+	{start: '18.721', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#2">75:2</a>&nbsp;And I swear to the blaming soul.</p>'},
+	{start: '21.784', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#3">75:3</a>&nbsp;Does the human being think that WE will not reconstruct his bones?</p>'},
 	{start: '26.500', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#4">75:4</a>&nbsp;Yes indeed; WE are able to reconstruct his finger tip.</p>'},
 	{start: '30.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#5">75:5</a>&nbsp;But the human being tends to believe only what he sees in front of him.</p>'},
 	{start: '35.610', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#6">75:6</a>&nbsp;He asks, "When is Day of The Resurrection?"</p>'},
@@ -205,7 +240,7 @@ const syncData75 = [
 
 const syncData89 = [
 	{start: '7.795', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1">Chapter 89</a>&nbsp;The Dawn</p>'},
-	{start: '13.583', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#0">89:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>'},
+	{start: '13.583', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#0">89:0</a>&nbsp;IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!</p>'},
 	{start: '18.861', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#1">89:1</a>&nbsp;By the dawn.</p>'},
 	{start: '20.313', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#2">89:2</a>&nbsp;And the ten nights.</p>'},
 	{start: '22.706', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#3">89:3</a>&nbsp;By the even and the odd.</p>'},
@@ -240,7 +275,7 @@ const syncData89 = [
 
 const syncData100 = [
 	{start: '3.709', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1">Chapter 100</a>&nbsp;The Gallopers</p>'},
-	{start: '6.979', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#0">100:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>'},
+	{start: '6.979', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#0">100:0</a>&nbsp;IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!</p>'},
 	{start: '11.868', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#1">100:1</a>&nbsp;By the fast gallopers (of gog (han) and magog (zhuang) races of china).</p>'},
 	{start: '13.575', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#2">100:2</a>&nbsp;Igniting sparks.</p>'},
 	{start: '15.343', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#3">100:3</a>&nbsp;Invading (Uyghurs) by morning.</p>'},
@@ -267,6 +302,7 @@ $(window).load(function(){
 	if (isTimeMusicPlayed != "true") {
 		audio.play();
 		audio2.play();
+		currentlyPlaying = true;
 		if (!audio.paused) {
 			$('#play-pause-button').removeClass('fa-play');
 			$('#play-pause-button').addClass('fa-pause');
@@ -276,13 +312,14 @@ $(window).load(function(){
 	}
 });
 
-$('#play-pause-button').click(function(){
+$('#play-pause-button').click(function playOrNot() {
 	if($(this).hasClass('fa-play'))
 	{
 		$(this).removeClass('fa-play');
 		$(this).addClass('fa-pause');
 		audio.play();
 		if(audio2Flag) audio2.play();
+		currentlyPlaying = true;
 	}
 	else
 	{
@@ -290,11 +327,13 @@ $('#play-pause-button').click(function(){
 		$(this).addClass('fa-play');
 		audio.pause();
 		audio2.pause();
+		currentlyPlaying = false;
 	}
 });
 
 var playingSura = 75,
-	audio2Flag = true;
+	audio2Flag = true,
+	currentlyPlaying = false;
 
 audio2.onended = function() { audio2Flag = false }
 
@@ -309,6 +348,7 @@ audio.onended = function()
 		audio.load();
 		audio.play();
 		audio2.play(); // Here Comes THE KING (THE GOD)
+		currentlyPlaying = true;
 	}
 	else if(89 == playingSura) // play Chapter 100 after Chapter 89
 	{
@@ -319,6 +359,7 @@ audio.onended = function()
 		audio.load();
 		audio.play();
 		audio2.play(); // Here Comes THE KING (THE GOD)
+		currentlyPlaying = true;
 	}
 	else if(100 == playingSura) // load Chapter 75 after Chapter 100
 	{
@@ -329,6 +370,7 @@ audio.onended = function()
 		audio.pause();
 		audio.src = "75.mp3";
 		audio.load();
+		currentlyPlaying = false;
 		intervalId = setInterval(expresser, period);
 		document.getElementById("knowledge-link").click();
 	}
@@ -341,41 +383,45 @@ function elementsOverlap(el1, el2) {
 	return (domRect1.top < domRect2.bottom && domRect1.bottom > domRect2.top);
 }
 
-const headLine = document.getElementById('headLine');
 var verse;
 
-var verseHead = document.getElementById("verses");
 var v = 0;
 var halfPeriod = "2014";
 var period = 4028;
 
 function expresser() {
-	$('#verses').fadeOut(halfPeriod, function() {
-		if(v < syncData75.length) verseHead.innerHTML = syncData75[v].text;
-		else if(syncData75.length <= v && v < syncData75.length + syncData89.length) verseHead.innerHTML = syncData89[v - syncData75.length].text;
-		else verseHead.innerHTML = syncData100[v - syncData75.length - syncData89.length].text;
+	if(devam) {
+		$('#verses').fadeOut(halfPeriod, function() {
+			if(v < syncData75.length) verseHead.innerHTML = syncData75[v].text;
+			else if(syncData75.length <= v && v < syncData75.length + syncData89.length) verseHead.innerHTML = syncData89[v - syncData75.length].text;
+			else verseHead.innerHTML = syncData100[v - syncData75.length - syncData89.length].text;
+	
+			// her seferinde güncellenmeli:
+			verse = document.getElementsByClassName('verses')[0];
+			document.getElementsByClassName("verses")[0].addEventListener("mouseover", function(){hover(true)});
+			document.getElementsByClassName("verses")[0].addEventListener("mouseleave", function(){unhover(true)});
 
-		verse = document.getElementsByClassName('verses')[0]; // her seferinde güncellenmeli
-		if(elementsOverlap(headLine, verse)) headLine.style.visibility = "hidden";
-		else headLine.style.visibility = "visible";
-
-		v++;
-		$('#verses').fadeIn(halfPeriod);
-		if (syncData75.length + syncData89.length + syncData100.length == v) v = 0; // it restarts loop at the end of it
-		else if (v == 2) randombg(6);
-		else if (v == syncData75.length + 7) randombg(4); // 89:5
-		else if (v == 9 || v == 44 || v == 64 || v == syncData75.length + 15) randombg(5); // ... 89:13
-		else if (v == 3 || v == 45 || v == 65) // 75:1 // 89:1 // 89:21
-		{
-			if(!$("#timeWrapper").hasClass("hovering") && !$("#knowledge-link").hasClass("hovering"))
-				hover(false);
-		}
-		else if (v == 14 || v == 58 || v == 67) // 75:12 // 89:14 // 89:23
-		{
-			if(!$("#timeWrapper").hasClass("hovering") && !$("#knowledge-link").hasClass("hovering"))
-				unhover(false);
-		}
-	});
+			if(elementsOverlap(headLine, verse)) headLine.style.visibility = "hidden";
+			else headLine.style.visibility = "visible";
+	
+			v++;
+			$('#verses').fadeIn(halfPeriod);
+			if (syncData75.length + syncData89.length + syncData100.length == v) v = 0; // it restarts loop at the end of it
+			else if (v == 2) randombg(6);
+			else if (v == syncData75.length + 7) randombg(4); // 89:5
+			else if (v == 9 || v == 44 || v == 64 || v == syncData75.length + 15) randombg(5); // ... 89:13
+			else if (v == 3 || v == 45 || v == 65) // 75:1 // 89:1 // 89:21
+			{
+				if(!$("#timeWrapper").hasClass("hovering") && !$("#knowledge-link").hasClass("hovering"))
+					hover(false);
+			}
+			else if (v == 14 || v == 58 || v == 67) // 75:12 // 89:14 // 89:23
+			{
+				if(!$("#timeWrapper").hasClass("hovering") && !$("#knowledge-link").hasClass("hovering"))
+					unhover(false);
+			}
+		});
+	}
 }
 
 var intervalId = setInterval(expresser, period);
@@ -386,7 +432,7 @@ let vrs = 0;
 
 audio.addEventListener('timeupdate', () =>
 {
-	if(audio.duration > 0 && !audio.paused)
+	if(devam && audio.duration > 0 && !audio.paused)
 	{
 		clearInterval(intervalId); // only when audio is not paused and already playing
 
@@ -466,7 +512,10 @@ audio.addEventListener('timeupdate', () =>
 					verseHead.innerHTML = syncData100[currentVerse].text;
 				}
 				
-				verse = document.getElementsByClassName('verses')[0]; // her seferinde güncellenmeli
+				// her seferinde güncellenmeli:
+				verse = document.getElementsByClassName('verses')[0];
+				document.getElementsByClassName("verses")[0].addEventListener("mouseover", function(){hover(true)});
+				document.getElementsByClassName("verses")[0].addEventListener("mouseleave", function(){unhover(true)});
 			
 				if(elementsOverlap(headLine, verse)) headLine.style.visibility = "hidden";
 				else headLine.style.visibility = "visible";

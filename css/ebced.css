@@ -1,4 +1,7 @@
-/* IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL */
+/*
+	IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!
+    SACRED & SUPREME ELEGANT YOUR NAME IS SACRED & SUPREME!
+*/
 
 .HiddenSecret{ display: none !important; }
 
@@ -21,6 +24,16 @@
 @font-face {
     font-family: Timess;
     src: url(/css/Times.ttf);
+}
+
+:root {
+	--lineHeight: 92px;
+}
+
+@-moz-document url-prefix() {
+	:root {
+		--lineHeight: 79px;
+	}
 }
 
 body{ scroll-behavior: smooth; }
@@ -791,21 +804,15 @@ textarea::-webkit-scrollbar-thumb {
 	.selectedRow{outline: 1.1px solid rgb(0,0,142);}
 }
 .row{
-	line-height: 45px;
+	line-height: calc(var(--lineHeight) - 1px);
 	border-bottom: 1px solid #999;
 	text-align: center;
     width: 40px;
 	min-width: fit-content;
 }
-@media only screen and (min-width: 768px) {
-	#nextSura, #notFirefox{
-		display: none;
-		position: relative;
-		float: right;
-		margin-right: 7px;
-		font-size: 22px;
-		color: rgb(0,0,142);
-	}
+
+@media only screen and (min-width: 886px) {
+	
 	#ovpll{ margin-right: 7px; }
 	#v7430{
 		margin-top: 38px;
@@ -827,13 +834,8 @@ textarea::-webkit-scrollbar-thumb {
 		margin-top: 33px;
 	}
 	html, body { overflow-x: auto !important; /* gerektiğinde scroll çubuğunu mobil olmadığında gizler tablolar ekrana sığdığı için */ }
-	@-moz-document url-prefix() {
-		mark {
-			padding-bottom: 4px !important;
-		}
-	}
 	.container{
-		height: calc(41.5vw - 46px);
+		height: calc(41.5vw - 1px);
 		width: 100%;
 		position: relative;
 	}
@@ -850,7 +852,7 @@ textarea::-webkit-scrollbar-thumb {
 		margin-right: 5vw;
 		padding-left: 13vw;
 		padding-right: 13vw;
-		padding-top: 6%;
+		padding-top: 5.14%;
 		height: 28vw;
 		width: 64vw;
 		background-image: url(/pic/papyrus-top.png) !important;
@@ -889,15 +891,15 @@ textarea::-webkit-scrollbar-thumb {
 		white-space: pre-wrap !important;
 		word-wrap: break-word !important;
 		font-family: KawkabMono-Regular;
-		line-height: 46px !important; /* !important 'ı eklemezsen çalışmıyor, kayma oluşuyor farklı işletim sistemi ve tarayıcılarda */
+		line-height: 92px !important; /* !important 'ı eklemezsen çalışmıyor, kayma oluşuyor farklı işletim sistemi ve tarayıcılarda */
 		resize: vertical;
 		border: 0;
 		font-size: 18px;
 		direction: rtl;
-		background: linear-gradient(transparent 45px, #999 1px), url(/pic/pen-50.png);
+		background: linear-gradient(transparent 91px, #999 1px), url(/pic/pen-50.png);
 		background-repeat: repeat, no-repeat;
 		background-position: 0px 0px, center center;
-		background-size: 100% 46px, auto auto !important;
+		background-size: 100% 92px, auto auto !important;
 	}
 	textarea:invalid { /* when textarea is empty */
 		background: url(/pic/pen_full.png);
@@ -905,32 +907,17 @@ textarea::-webkit-scrollbar-thumb {
 		background-position: center center !important;
 		background-size: auto 262px !important;
 	}
-	.okundu{
-		background: #7398ec !important;
-		color: white !important;
-		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-		border-bottom: 1px solid #e3e3e3 !important;
-	}
-	.rows{
-		border-right: 1px solid #999;
-		display: none;
-		padding-top: 1px;
-		padding-bottom: 62px;
-		font-size: 18px;
-		box-sizing: border-box;
-		color: black;
-		text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-		font-family: KawkabMono-Regular;
-		height: 272px;
-		overflow: hidden;
-	}
-	.total{
-		background: #716cff;
+	@-moz-document url-prefix() {
+		textarea {
+			line-height: 79px !important; /* !important 'ı eklemezsen çalışmıyor, kayma oluşuyor farklı işletim sistemi ve tarayıcılarda */
+			background: linear-gradient(transparent 78px, #999 1px), url(/pic/pen-50.png);
+			background-size: 100% 79px, auto auto !important;
+		}
 	}
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1584px) {
+@media only screen and (min-width: 886px) and (max-width: 1584px) {
 
 	.flip-card-brothers {
 		width: 75vw;
@@ -962,7 +949,7 @@ textarea::-webkit-scrollbar-thumb {
 		margin-right: calc((100vw - 1426px) / 2);
 		padding-left: 206px;
 		padding-right: 206px;
-		padding-top: 94px;
+		padding-top: 81px;
 		height: 443px;
 		width: 1014px;
 	}
@@ -983,12 +970,18 @@ textarea::-webkit-scrollbar-thumb {
 	}
 	.container {
 		width: 100%;
-		height: 598px;
+		height: 632px;
 	}
 	#alt{
 		margin-left: calc(((100vw - 1426px) / 2) + 188px);
 		margin-right: calc(((100vw - 1426px) / 2) + 148px);
 		width: fit-content;
+	}
+	.container, textarea {
+		height:  calc((7 * var(--lineHeight)) - 0px); /* (7 * 79) - 1 = 467px  or  (7 * 92) - 1 = 545px*/
+	}
+	#notFirefox {
+		margin-top: 0;
 	}
 }
 
@@ -997,7 +990,7 @@ textarea::-webkit-scrollbar-thumb {
 	font-family: KawkabMono-Regular;
 	direction: rtl;
 	font-size: 18px;
-	line-height: 46px;
+	line-height: 92px;
 	visibility: hidden;
 	border-color: transparent !important;
 	white-space: pre-wrap !important;
@@ -1005,6 +998,12 @@ textarea::-webkit-scrollbar-thumb {
 	position: fixed;
 	color: transparent !important;
 	overflow: hidden !important;
+}
+
+@-moz-document url-prefix() {
+	#copyText{
+		line-height: 79px;
+	}
 }
 
 /** {box-sizing: border-box}*/
@@ -1231,9 +1230,8 @@ body {
 		-webkit-transform: translateZ(0);
 		pointer-events: none;
 	}
-	mark { padding-bottom: 5px !important; }
 	/* below is only for iphones */
-	@media only screen and (max-width: 767px)
+	@media only screen and (max-width: 885px)
 	{
 		.caption, #uyarı { font-size: 20px !important; }
 	}
@@ -1260,7 +1258,7 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 }
 #book {padding-top: 19px;}
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 885px) {
 	
 	.flip-card-brothers {
 		width: 100vw;
@@ -1271,19 +1269,6 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	.brothers {
 		width: 100vw;
 		height: auto;
-	}
-
-	#nextSura, #notFirefox{
-		text-align: center;
-		line-height: 32px;
-		display: none;
-		position: relative;
-		float: right;
-		margin-top: 8px;
-		margin-right: 14px;
-		font-size: 22px;
-		color: white;
-		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
 	#nameLabel {
 		margin-right: 11px;
@@ -1380,24 +1365,20 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
     	margin-bottom: 44px;
     	margin-top: 33px;
 	}
-	#ovpll, #snl {
-		color: white;
-		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-	}
 	html, body { overflow-x: auto !important; /* gerektiğinde scroll çubuğunu gösterir mobilde sağa kaydırıp tabloları inceleyebilmek için gerekli*/ }
 	@-moz-document url-prefix() {
-		mark {
-			padding-top: 4px !important;
-		}
 		textarea {
 			border: 1px solid #999;
 		}
 	}
+
 	.container{
-		background: wheat;
 		height: initial;
+		width: 100%;
 		position: relative;
+		margin-bottom: 10px;
 	}
+	
 	@media only screen and (max-width: 425px) and (min-width: 351px) {
 		#sv {
 			text-align: center;
@@ -1419,9 +1400,6 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 		font-size: 16pt;
 	}
 	#all-tables{font-size: 16pt;}
-	.rows {
-		border-right: 0px;
-	}
 	th {font-size: 14pt;}
 	#primary {font-size: 15pt;}
 	#sv { font-size: 16pt; }
@@ -1429,19 +1407,53 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	.ayetbox {	width: 74px;	height: 36px;	border-radius: 3px;	font-size: 19px;
 		padding: 5px 5px 5px 5px;	font: 100 1.9rem 'Merriweather', serif;
 	}
+
 	#orta-before{
+		margin-bottom: -35px; /* 886px den küçük pencere genişliklerinde ve özellikle firefox'ta daha büyükçe oluşan 35px'lik boşluğu gidermek için */
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 24px;
+		height: 35.204vw;
 		width: 100%;
-		position: relative;
+		background-image: url(/pic/parchment-background-top.png) !important;
+		background-size: 100%;
+		background-repeat: no-repeat;
     	display: inline-block;
-		margin-left: 0px;
 		position: relative; /* if removed colored textarea moves when window is scrolled */
 	}
+	#orta{
+		background-image: url(/pic/parchment-background-middle.png) !important;
+		background-size: 100% !important;
+		background-repeat: repeat-y !important;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		height: calc((100vw * 100vw * 0.000850837) - (1.57216 * 100vw) + 724.966px);
+	}
+	#orta-after{
+		background-image: url(/pic/parchment-background-bottom.png) !important;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		height: 35.204vw;
+		width: 100%;
+	}
+
 	textarea {
-		height: 322px;
+		border: 0;
+		height: calc((5 * var(--lineHeight)) - 1px); /* (5 * 79) - 1 = 388px  or  (5 * 92) - 1 = 453px depending on if it is firefox or not */
+		min-height: calc((5 * var(--lineHeight)) - 1px); /* (5 * 79) - 1 = 388px  or  (5 * 92) - 1 = 453px depending on if it is firefox or not */
 		max-width: 100% !important;
 		padding-left: 0px;
 		padding-right: 0px;
-		width: inherit; /*768in üstünde kaldırılmalı*/
+		width: inherit; /*886in üstünde kaldırılmalı*/
 		overflow-y: auto !important;
 		overflow-x: hidden;
 		display: inline-block !important;
@@ -1449,43 +1461,33 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 		white-space: pre-wrap !important;
 		word-wrap: break-word !important;
 		font-family: KawkabMono-Regular;
-		line-height: 46px !important; /* !important 'ı eklemezsen çalışmıyor, kayma oluşuyor farklı işletim sistemi ve tarayıcılarda */
+		line-height: 92px !important; /* !important 'ı eklemezsen çalışmıyor, kayma oluşuyor farklı işletim sistemi ve tarayıcılarda */
 		resize: vertical;
-		border-radius: 2px; /*768in üstünde kaldırılmalı*/
+		border-radius: 2px; /*886in üstünde kaldırılmalı*/
 		font-size: 18px;
 		direction: rtl;
-		background: linear-gradient(transparent 45px, #999 1px), url(/pic/pen-50.png), url(/pic/background.png);
+		background: linear-gradient(transparent 91px, #999 1px), url(/pic/pen-50.png), url(/pic/background.png);
 		background-repeat: repeat, no-repeat, repeat;
 		background-position: 0px 0px, center center, center center;/*background-position: 20%;*/
-		background-size: 100% 46px, auto auto, auto auto !important;
+		background-size: 100% 92px, auto auto, auto auto !important;
 	}
 	textarea:invalid { /* when textarea is empty */
-		background: url(/pic/pen_full.png), url(/pic/background.png);
-		background-repeat: no-repeat, repeat;
-		background-position: center center, center center !important;
-		background-size: auto 262px, auto !important;/*background-size: 80% auto, auto !important;*/
+		background: url(/pic/pen_full.png);
+		background-repeat: no-repeat;
+		background-position: center center !important;
+		background-size: auto 262px !important;
 	}
-	.okundu{
-		background: #999 !important;
-		color: #e3e3e3 !important;
-		border-bottom: 1px solid #e3e3e3 !important;
+	@-moz-document url-prefix() {
+		textarea {
+			line-height: 79px !important; /* !important 'ı eklemezsen çalışmıyor, kayma oluşuyor farklı işletim sistemi ve tarayıcılarda */
+			background: linear-gradient(transparent 78px, #999 1px), url(/pic/pen-50.png), url(/pic/background.png);
+			background-size: 100% 79px, auto auto, auto auto !important;
+		}
 	}
-	.rows{
-		border-left: 1px solid #999;
-		display: none;
-		padding-top: 1px;
-		padding-bottom: 62px;
-		font-size: 18px;
-		background: #e3e3e3;
-		box-sizing: border-box;
-		color: #999;
-		font-family: KawkabMono-Regular;
-		height: 272px;
-		overflow: hidden;
-		border-bottom: 1px solid #999;
-	}
-	.total {
-		background: gray;
+	@media only screen and (min-width: 756px) {
+		.container, textarea {
+			height:  calc((6 * var(--lineHeight)) - 1px); /* (6 * 79) - 1 = 467px  or  (6 * 92) - 1 = 545px*/
+		}
 	}
 }
 
@@ -1599,7 +1601,7 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	}
 }
 
-@media only screen and (min-width: 425px) and (max-width: 768px) {
+@media only screen and (min-width: 425px) and (max-width: 886px) {
 	.text{
 		width: 92%;
 		margin-left: 4%;
@@ -1646,6 +1648,24 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	display: inline-block;
 	line-height: 46px;
 }
+
+#nextSura, #notFirefox{
+	display: none;
+	position: relative;
+	float: right;
+	margin-right: 7px;
+	margin-top: 0px;
+	font-size: 22px;
+	color: rgb(0,0,142);
+}
+
+.okundu{
+	background: #7398ec !important;
+	color: white !important;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	border-bottom: 1px solid #e3e3e3 !important;
+}
+
 .total {
 	float: left;
 	display: inline-block;
@@ -1653,10 +1673,26 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
     min-width: fit-content;
 	text-align: center;
     color: white;
+	background: #716cff;
     box-sizing: border-box;
     line-height: 46px;
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+.rows{
+	border-right: 1px solid #999;
+	display: none;
+	padding-top: 1px;
+	padding-bottom: 62px;
+	font-size: 18px;
+	box-sizing: border-box;
+	color: black;
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+	font-family: KawkabMono-Regular;
+	height: 272px;
+	overflow: hidden;
+}
+
 #dürümle {
 	width: 100%;
 	height: 46px;

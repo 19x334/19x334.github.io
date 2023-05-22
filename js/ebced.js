@@ -1,4 +1,13 @@
-// IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL
+// IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!
+// SACRED & SUPREME ELEGANT YOUR NAME IS SACRED & SUPREME!
+
+var browser = detectBrowser();
+var lineHeight;
+
+if(browser == "Firefox")
+	lineHeight = 79;
+else
+	lineHeight = 92;
 
 var sure1 = document.getElementById('sure');
 var ayet1 = document.getElementById('ayet');
@@ -8,6 +17,7 @@ var sırano1 = document.getElementById('sırano1');
 var sırano2 = document.getElementById('sırano2');
 var ifade = document.getElementById('ifade');
 var playing = false;
+var linkUpdate = false;
 // for reloading single page application page when user clicks back/forward button of browser
 // ayrıca aşağıdaki fonksiyon, tüm kuranda ALLAH'ın isimlerinin renklendirilip sayılması ile harf sayımı linkleri arasında geçiş yapılırken
 // uygulamanın hızını ve kararlılığını dramatik artırıyor
@@ -21,8 +31,9 @@ jQuery( document ).ready(function( $ )
 		ve aynı zamanda surenin sesi oynatılmazken linke tıklandığında sayfanın yenilenerek
 		gereksiz olarak uygulamanın değişkenlerinin hafızada şişmesinin önlenmesi için Flag kullanılması fikri:
 		*/
-		if(!playing) location.reload(true); // this default and after playing of sura audio ended behavior has massive performance gains like coloring sura 13 with e+l+m+r letters after colored all QURAN with 2698 occurence of NAME OF ALLAH in chrome for example..
-		else getfromlink(); // otherwise while playing it can not finish the coloring process of sura 13 with e+l+m+r letters even after 3 minutes! after colored all QURAN with 2698 occurence of NAME OF ALLAH in chrome for example..
+		if(!playing && !linkUpdate)
+			location.reload(true); // this default and after playing of sura audio ended behavior has massive performance gains like coloring sura 13 with e+l+m+r letters after colored all QURAN with 2698 occurence of NAME OF ALLAH in chrome for example..
+		else if(!linkUpdate) getfromlink(); // otherwise while playing it can not finish the coloring process of sura 13 with e+l+m+r letters even after 3 minutes! after colored all QURAN with 2698 occurence of NAME OF ALLAH in chrome for example..
 	});
 });
 
@@ -51,18 +62,18 @@ function randombg()
 		"url('/pic/size/425/heavenandhell.png')",
 		"url('/pic/size/425/tree-and-star-prostrate.png')",
 		"url('/pic/size/425/LION.png')"];
-	else if(biggestSide < 768)
+	else if(biggestSide < 886)
 		bigSize = [
-		"url('/pic/size/768/space2.png')",
-		"url('/pic/size/768/space4.png')",
-		"url('/pic/size/768/space5.png')",
-		"url('/pic/size/768/space8.jpg')",
-		"url('pic/size/768/El-Konstantiniyye.png')",
-		"url('pic/size/768/moonEarthSun.png')",
-		"url('pic/size/768/resurrection.png')",
-		"url('/pic/size/768/heavenandhell.png')",
-		"url('/pic/size/768/tree-and-star-prostrate.png')",
-		"url('/pic/size/768/LION.png')"];
+		"url('/pic/size/886/space2.png')",
+		"url('/pic/size/886/space4.png')",
+		"url('/pic/size/886/space5.png')",
+		"url('/pic/size/886/space8.jpg')",
+		"url('pic/size/886/El-Konstantiniyye.png')",
+		"url('pic/size/886/moonEarthSun.png')",
+		"url('pic/size/886/resurrection.png')",
+		"url('/pic/size/886/heavenandhell.png')",
+		"url('/pic/size/886/tree-and-star-prostrate.png')",
+		"url('/pic/size/886/LION.png')"];
 	else if(biggestSide < 1024)
 		bigSize = [
 		"url('/pic/size/1024/space2.png')",
@@ -196,27 +207,17 @@ $('#sn').on('change', function(){
 function kalem(){
 	windowWidth = window.innerWidth; // bunu kaldırma ilk ana sayfa yüklendiğinde boş textareanın arkaplanının doğru yüklenmesi/karışmaması için!
 
-	if(768 <= windowWidth){
-		if(ifade.value != '' && ifade.value != ekleme){
-			ifade.style.background = "linear-gradient(transparent 45px, #999 1px), url(/pic/pen-50.png)";
-			ifade.style.backgroundRepeat = "repeat, no-repeat";
-			ifade.style.backgroundPosition = "0px 0px, center center";
-		}
-		else{
-			ifade.style.background = "url(/pic/pen_full.png)";
-			ifade.style.backgroundRepeat = "no-repeat";
-		}
+	if(ifade.value != '' && ifade.value != ekleme){
+		if("Firefox" == browser)
+			ifade.style.background = "linear-gradient(transparent 78px, #999 1px), url(/pic/pen-50.png)";
+		else
+			ifade.style.background = "linear-gradient(transparent 91px, #999 1px), url(/pic/pen-50.png)";
+		ifade.style.backgroundRepeat = "repeat, no-repeat";
+		ifade.style.backgroundPosition = "0px 0px, center center";
 	}
 	else{
-		if(ifade.value != '' && ifade.value != ekleme){
-			ifade.style.background = "linear-gradient(transparent 45px, #999 1px), url(/pic/pen-50.png), url(/pic/background.png)";
-			ifade.style.backgroundRepeat = "repeat, no-repeat, repeat";
-			ifade.style.backgroundPosition = "0px 0px, center center, center center";
-		}
-		else{
-			ifade.style.background = "url(/pic/pen_full.png), url(/pic/background.png)";
-			ifade.style.backgroundRepeat = "no-repeat, repeat";
-		}
+		ifade.style.background = "url(/pic/pen_full.png)";
+		ifade.style.backgroundRepeat = "no-repeat";
 	}
 	lineKeeper();
 }
@@ -231,34 +232,43 @@ function loading()
 {
 	document.documentElement.style.cursor = "wait";
 	resizeFlag = 1;
-	if(768 <= windowWidth){
-		ifade.style.background = "linear-gradient(transparent 45px, #999 1px), url(/pic/loading.gif)";
-		ifade.style.backgroundRepeat = "repeat, no-repeat";
-		ifade.style.backgroundPosition = "0px 0px, center center";
-		ifade.style.setProperty('background-size', '100% 46px, 57px auto', 'important');
+
+	if(browser == "Firefox") {
+		ifade.style.background = "linear-gradient(transparent 78px, #999 1px), url(/pic/loading.gif)";
+		if(886 <= windowWidth)
+			ifade.style.setProperty('background-size', '100% 79px, 57px auto', 'important');
+		else
+			ifade.style.setProperty('background-size', '100% 79px, auto 46px', 'important');
 	}
-	else{
-		ifade.style.background = "linear-gradient(transparent 45px, #999 1px), url(/pic/loading.gif), url(/pic/background.png)";
-		ifade.style.backgroundRepeat = "repeat, no-repeat, repeat";
-		ifade.style.backgroundPosition = "0px 0px, center center, center center";
-		ifade.style.setProperty('background-size', '100% 46px, auto 46px, auto auto', 'important');
+	else {
+		ifade.style.background = "linear-gradient(transparent 91px, #999 1px), url(/pic/loading.gif)";
+		if(886 <= windowWidth)
+			ifade.style.setProperty('background-size', '100% 92px, 57px auto', 'important');
+		else
+			ifade.style.setProperty('background-size', '100% 92px, auto 46px', 'important');
 	}
+	ifade.style.backgroundRepeat = "repeat, no-repeat";
+	ifade.style.backgroundPosition = "0px 0px, center center";
 }
 
 function loaded()
 {
 	if(!sure1.value) kalem();
 	else{
-		if(768 <= windowWidth){
-			ifade.style.background = "linear-gradient(transparent 45px, #999 1px), url(/pic/book-arabic-019-190p.png)";
-			ifade.style.backgroundRepeat = "repeat, no-repeat";
-			ifade.style.backgroundPosition = "0px 0px, center center";
+		if("Firefox" == browser) {
+			if(886 <= windowWidth)
+				ifade.style.background = "linear-gradient(transparent 78px, #999 1px), url(/pic/book-arabic-019-190p.png)";
+			else
+				ifade.style.background = "linear-gradient(transparent 78px, #999 1px), url(/pic/book-arabic-019-152p.png)";
 		}
-		else{
-			ifade.style.background = "linear-gradient(transparent 45px, #999 1px), url(/pic/book-arabic-019-152p.png), url(/pic/background.png)";
-			ifade.style.backgroundRepeat = "repeat, no-repeat, repeat";
-			ifade.style.backgroundPosition = "0px 0px, center center, center center";
+		else {
+			if(886 <= windowWidth)
+				ifade.style.background = "linear-gradient(transparent 91px, #999 1px), url(/pic/book-arabic-019-190p.png)";
+			else
+				ifade.style.background = "linear-gradient(transparent 91px, #999 1px), url(/pic/book-arabic-019-152p.png)";
 		}
+		ifade.style.backgroundRepeat = "repeat, no-repeat";
+		ifade.style.backgroundPosition = "0px 0px, center center";
 	}
 	document.documentElement.style.cursor = "unset";
 }
@@ -543,7 +553,7 @@ function bölümaçıcı(xml)
 			txt = '';
 		}
 	}
-	ifade.value = aralık;
+	ifade.value = aralık + ekleme;
 	
 	$('#ifade').trigger('input');
 
@@ -706,8 +716,10 @@ document.getElementById("ifade").addEventListener("keydown",
 			document.getElementById('açıklama').innerHTML = '';
 
 			renkleri_temizle();
-			
-			setTimeout(function(){window.scrollTo(window.scrollX, (windowTopScroll - (window.innerHeight / 2) + 23 - 4 * 46))}, 0); // settimeout 0 eklemezsen çalışmıyor
+			if(browser == "Firefox")
+				setTimeout(function(){window.scrollTo(window.scrollX, (windowTopScroll - (window.innerHeight / 2) + 39.5 - 4 * 79))}, 0); // settimeout 0 eklemezsen çalışmıyor
+			else
+				setTimeout(function(){window.scrollTo(window.scrollX, (windowTopScroll - (window.innerHeight / 2) + 46 - 4 * 92))}, 0); // settimeout 0 eklemezsen çalışmıyor
 		}
 	}
 )
@@ -716,11 +728,12 @@ $('#sn').on('change', nosuzayetlerisil) // sure, ayet ve sıranolar boş olsa bi
 $('#ifade').on('input', yazarkennosuzayetlerisil) // numarasız ayet yazımına izin verme
 
 function nosuzayetlerisil() {
+	loading();
 	var str = ifade.value;
 	if (document.getElementById('sn').checked) {
 		str = str.replace(/^.*(:0).*$\n/gm, ''); // 0 nolu ayetleri sil
 		// delete verses which doesn't begin with numbers
-		ifade.value = str.replace(/^(?![1-9]).*$\n/gm, '')
+		ifade.value = str.replace(/^(?![1-9]).*$\n/gm, '');
 	}
 }
 function yazarkennosuzayetlerisil() {
@@ -749,7 +762,7 @@ function copyToClipboard(text) {
 
 $('#ifade').on('input', function (event) {
 	ifadeTopScroll = ifade.scrollTop; // for getting back to first typed position after swal alert
-	var pattern = /[^\u0600-\u06FF\n ﻻﻹﻷﻵ0-9:]/gimu;
+	var pattern = /[^\u0600-\u06FF\n ﻻﻹﻷﻵ0-9:\u2028]/gimu;
 	if(pattern.test(this.value) == true) Swal.fire({
 		title: "only arabic letters allowed!",
 		html: "you can't write nor count nor calculate gematrical values of non-arabic letters!",
@@ -758,7 +771,7 @@ $('#ifade').on('input', function (event) {
 		imageHeight: 190,
 		imageAlt: 'only arabic letters allowed!'
 	});
-    this.value = this.value.replace(/[^\u0600-\u06FF\n ﻻﻹﻷﻵ0-9:]/gimu, '');
+    this.value = this.value.replace(/[^\u0600-\u06FF\n ﻻﻹﻷﻵ0-9:\u2028]/gimu, '');
 	ifade.scrollTop = ifadeTopScroll; // for getting back to first typed position after swal alert
 	if(this.value == "" || this.value == ekleme) loaded();
 });
@@ -895,8 +908,7 @@ $("#count-switch").change(function ()
 			for(harf in selections){
 				if(selections[harf] == 'ا') {
 					clrltrs[0] = [];
-					clrltrs[34] = [];
-					clrltrs[36] = [];
+					clrltrs[35] = [];
 				}
 				else if(selections[harf] == 'ب') clrltrs[1] = [];
 				else if(selections[harf] == 'ج') clrltrs[2] = [];
@@ -911,7 +923,6 @@ $("#count-switch").change(function ()
 				else if(selections[harf] == 'ل') {
 					clrltrs[11] = [];
 					clrltrs[34] = [];
-					clrltrs[35] = [];
 				}
 				else if(selections[harf] == 'م') clrltrs[12] = [];
 				else if(selections[harf] == 'ن') clrltrs[13] = [];
@@ -1299,8 +1310,8 @@ $("#ifade").on('input', function()
 		console.log("copied?", result);
 		Swal.fire({
 			title: "Results Copied!",
-			html: "HonourableQuran.blogspot.com<br>",
-			imageUrl: "pic/abjad.png",
+			html: "HonourableQURAN.com<br>",
+			imageUrl: "pic/66619.png",
 			imageWidth: 'auto',
 			imageHeight: 190,
 			imageAlt: 'Results Copied!',
@@ -1333,7 +1344,7 @@ $('.seçenekler').on('change', function(){
 	ifadeWidther();
 });
 
-var initialHeight;
+var initial_IfadeHeight;
 var ekleme = "";
 const container = document.getElementsByClassName("container")[0];
 const bottomRightBox = document.getElementById("bottomRightBox");
@@ -1345,18 +1356,110 @@ function elementsOverlap(el1, el2) {
 	return (domRect1.top < domRect2.bottom && domRect1.bottom > domRect2.top);
 }
 
+var orta = document.getElementById("orta");
+
+
+function ortaHeighter(ifadeHeight)
+{
+	// if("Firefox" != browser)
+	if(windowWidth >= 1581) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + 'px');
+		else
+			orta.style.setProperty("height", '0px');
+	}
+	else if(1526 <= windowWidth && windowWidth <= 1580) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.517857 * windowWidth) + 818.732 + 'px');
+		else
+			orta.style.setProperty("height", (-0.517857 * windowWidth) + 818.732 + 'px');
+	}
+	else if(1405 <= windowWidth && windowWidth <= 1525) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.241667 * windowWidth) - 339.542 + 'px');
+		else
+			orta.style.setProperty("height", (0.241667 * windowWidth) - 339.542 + 'px');
+	}
+	else if(1335 <= windowWidth && windowWidth <= 1404) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.478873 * windowWidth) + 672.817 + 'px');
+		else
+			orta.style.setProperty("height", (-0.478873 * windowWidth) + 672.817 + 'px');
+	}
+	else if(1234 <= windowWidth && windowWidth <= 1334) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.34 * windowWidth) - 419.56 + 'px');
+		else
+			orta.style.setProperty("height", (0.34 * windowWidth) - 419.56 + 'px');
+	}
+	else if(1145 <= windowWidth && windowWidth <= 1233) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.666667 * windowWidth) + 822.667 + 'px');
+		else
+			orta.style.setProperty("height", (-0.666667 * windowWidth) + 822.667 + 'px');
+	}
+	else if(1086 <= windowWidth && windowWidth <= 1144) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (1.03448 * windowWidth) - 1123.45 + 'px');
+		else
+			orta.style.setProperty("height", (1.03448 * windowWidth) - 1123.45 + 'px');
+	}
+	else if(955 <= windowWidth && windowWidth <= 1085) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.454545 * windowWidth) + 493.636 + 'px');
+		else
+			orta.style.setProperty("height", (-0.454545 * windowWidth) + 493.636 + 'px');
+	}
+	else if(886 <= windowWidth && windowWidth <= 954) {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.746269 * windowWidth) - 651.94 + 'px');
+		else
+			orta.style.setProperty("height", (0.746269 * windowWidth) - 651.94 + 'px');
+	}
+	else {
+		if(ifadeHeight > initial_IfadeHeight)
+			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (windowWidth * windowWidth * 0.000293752) - (0.927423 * windowWidth) + 590.695 + 'px');
+		else
+			orta.style.setProperty("height", (windowWidth * windowWidth * 0.000293752) - (0.927423 * windowWidth) + 590.695 + 'px');
+	}
+}
+
+function containerHeighter()
+{
+	if(1585 <= windowWidth) {
+		if("Firefox" != browser)
+			container.style.height =  (7 * lineHeight) + 'px'; // 7 * 92px = "644px";
+		else
+			container.style.height =  (8 * lineHeight) + 'px'; // 8 * 79px = "632px";
+	}
+	else if(886 <= windowWidth && windowWidth < 1585)
+		container.style.height = "calc(41.5vw - 1px)";
+	if(886 > windowWidth && windowWidth > 756)
+		container.style.height = ((6 * lineHeight) - 1) + 'px'; // (6 * 79) - 1 = 467px  or  (6 * 92) - 1 = 545px
+	else if(756 >= windowWidth)
+		container.style.height = ((5 * lineHeight) - 1) + 'px';  // (5 * 79) - 1 = 388px  or  (5 * 92) - 1 = 453px // sure1 değerini boşaltıp tekrar doldurduktan sonra renklendirme yapılmasa dahi ve ifadenin genişliği artırılsa dahi container'ın yüksekliğini güncelle ki aşağıdaki harf sayımları yukarı kaymasın
+}
+
+let heightIfade;
+
 const resize_ob = new ResizeObserver(function(entries) {
 	// since we are observing only a single element, so we access the first element in entries array
 	let rect = entries[0].contentRect;
 
 	// current width & height
-	let height = rect.height;
-	document.getElementsByClassName("rows")[0].style.setProperty("height", height + 2 + 'px');
+	heightIfade = rect.height;
+	document.getElementById("satirlar").style.setProperty("height", heightIfade + 'px');
 
 	ifade.value = ifade.value.replace(ekleme, "");
 	ekleme = "";
 
-	var num_of_nl = parseInt(height / 46) + 1; // textarea'nın sonuna kadar toplamın gösterilebilmesi için +1 gerekli 
+	var num_of_nl;
+
+	if(browser == "Firefox")
+		num_of_nl = parseInt(heightIfade / 79) + 1; // textarea'nın sonuna kadar toplamın gösterilebilmesi için +1 gerekli
+	else
+		num_of_nl = parseInt(heightIfade / 92) + 1; // textarea'nın sonuna kadar toplamın gösterilebilmesi için +1 gerekli
+
 	for(var i = 0; i < num_of_nl; i++)
 		ekleme += "\n";
 
@@ -1366,35 +1469,21 @@ const resize_ob = new ResizeObserver(function(entries) {
 	if (androidVersion >= 11) $('#ifade').trigger('input'); // for samsung devices which has android 11 or higher
 
 	if(document.getElementsByClassName("hwt-backdrop")[0]) // for to do not throw error when first called by load event function
-		document.getElementsByClassName("hwt-backdrop")[0].style.setProperty("padding-bottom", height + 'px');
-	document.getElementById("satirlar").style.setProperty("padding-bottom", height + 'px');
+		document.getElementsByClassName("hwt-backdrop")[0].style.setProperty("padding-bottom", heightIfade + 'px');
+	document.getElementById("satirlar").style.setProperty("padding-bottom", heightIfade-1 + 'px'); // -1 for esthetic reason of to not see the unnecessary bottom line at the loading
 	
 	if(sure1.value == '' && ifade.value == ekleme){
 		document.getElementById("satirlar").style.display = "none";
 		// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
 		toplam.style.display = "none";
-		ifadeWidther();
+		ifadeWidther(heightIfade);
 		ifade.value = '';
 	}
-		
-	if(height > initialHeight)
-		document.getElementById("orta").style.setProperty("height", height - initialHeight - 1 + 'px');
-	else
-		document.getElementById("orta").style.setProperty("height", '0px');
-
-	if(windowWidth < 768) {
-		$("#orta").css({ 'display': 'none' });
-		container.style.height = ifade.offsetHeight + "px"; // sure1 değerini boşaltıp tekrar doldurduktan sonra renklendirme yapılmasa dahi ve ifadenin genişliği artırılsa dahi container'ın yüksekliğini güncelle ki aşağıdaki harf sayımları yukarı kaymasın
-	}
-	else if(768 <= windowWidth && windowWidth < 1585){
-		container.style.height = "calc(41.5vw - 46px)";
-		$("#orta").css({ 'display': 'block' });
-	}
-	else if(1585 <= windowWidth){
-		container.style.height = "598px";
-		$("#orta").css({ 'display': 'block' });
-	}
 	
+	ortaHeighter(heightIfade);
+
+	containerHeighter();
+
 	if(elementsOverlap(ifade, bottomRightBox)) bottomRightBox.style.visibility = "hidden";
 	else bottomRightBox.style.visibility = "visible";
 
@@ -1408,12 +1497,7 @@ $(".ayetbox").on("input", function(){
 		toplam.style.display = "none";
 		ifadeWidther();
 		ifade.value = '';
-		if(windowWidth < 768)
-			container.style.height = ifade.offsetHeight + "px";
-		else if(windowWidth >= 768 && windowWidth < 1585)
-			container.style.height = "calc(41.5vw - 46px)";
-		else if(1585 <= windowWidth)
-			container.style.height = "598px";
+		containerHeighter();
 	}
 })
 
@@ -1421,10 +1505,9 @@ var windowWidth;
 
 $(window).load(function(){
 	windowWidth = window.innerWidth;
-	labelChanger();
 	ifadeWidther();
 	ifadeHeighter();
-	initialHeight = ifade.offsetHeight;
+	initial_IfadeHeight = ifade.offsetHeight;
 	resize_ob.observe(ifade); // en baştan hiç renklendirme yapılmayan bir sure açıldıktan sonra ifadenin genişliği artırılsa dahi container'ın yüksekliğini güncelle ki aşağıdaki harf sayımları yukarı kaymasın
 });
 
@@ -1432,27 +1515,17 @@ var resizeFlag = 1;
 
 window.addEventListener("resize", function() {
     windowWidth = window.innerWidth;
-	labelChanger();
 	ifadeWidther();
 	ifadeHeighter();
-	initialHeight = ifade.offsetHeight;
+	initial_IfadeHeight = ifade.offsetHeight;
+	
+	location.reload(); // very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL 1 AND ONLY GOD!
 
 	if(ifade.value) resizeFlag = 0;
 	else resizeFlag = 1;
 	
 	if(resizeFlag == 0) loaded();
 });
-
-function labelChanger(){
-	if(windowWidth < 768){
-		document.getElementById("snl").innerHTML = "only numbered";
-		document.getElementById("ovpll").innerHTML = "verse per line";
-	}
-	else{
-		document.getElementById("snl").innerHTML = "only numbered verses";
-		document.getElementById("ovpll").innerHTML = "one verse per line";
-	}
-}
 
 function ifadeWidther()
 {
@@ -1464,23 +1537,42 @@ function ifadeWidther()
 
 function ifadeHeighter()
 {
-	var heightC = document.querySelector(".container").offsetHeight;
-	var heightO = document.querySelector("#orta").offsetHeight;
-	var yükseklik = (heightC + heightO) - ((heightC + heightO) % 46);
-	if(windowWidth >= 768) {
+	ortaHeighter(heightIfade);
+	containerHeighter();
+
+	var heightC = container.offsetHeight;
+	var heightO = orta.offsetHeight;
+	
+	var artık = (heightC + heightO) % lineHeight;
+	
+	var yükseklik = heightC + heightO - artık - 1; // 1 px en alttaki satırın çizgisi gözükmesin diye estetik nedenlerle çıkarılıyor KUTSAL KRAL ULU ZARİF 'İN İSTEĞİYLE <3
+	
+	if(windowWidth >= 886) {
 		ifade.style.setProperty("height", yükseklik + 'px');
 		ifade.style.setProperty("min-height", yükseklik + 'px');
-		document.getElementById("nextSura").style.marginTop = 7 - ((heightC + heightO) % 46) + "px";
-		document.getElementById("notFirefox").style.marginTop = 7 - ((heightC + heightO) % 46) + "px";
+		document.getElementById("nextSura").style.marginTop = -1 * (heightC % lineHeight) + "px";
+		document.getElementById("notFirefox").style.marginTop = -1 * (heightC % lineHeight) + "px";
+	}
+	else if(886 > windowWidth && windowWidth > 756){
+		ifade.style.setProperty("height", ((6 * lineHeight) - 1) + 'px'); // (6 * 79) - 1 = 467px  or  (6 * 92) - 1 = 545px
+		ifade.style.setProperty("min-height", ((6 * lineHeight) - 1) + 'px'); // (6 * 79) - 1 = 467px  or  (6 * 92) - 1 = 545px
+		document.getElementById("nextSura").style.marginTop = "0px";
+		document.getElementById("notFirefox").style.marginTop = "0px";
 	}
 	else {
-		ifade.style.setProperty("min-height", '322px');
+		ifade.style.setProperty("height", ((5 * lineHeight) - 1) + 'px'); // (5 * 79) - 1 = 388px  or  (5 * 92) - 1 = 453px
+		ifade.style.setProperty("min-height", ((5 * lineHeight) - 1) + 'px'); // (5 * 79) - 1 = 388px  or  (5 * 92) - 1 = 453px
 		document.getElementById("nextSura").style.marginTop = "0px";
 		document.getElementById("notFirefox").style.marginTop = "0px";
 	}
 }
 
 var lttrs = ['ا','ب','ج','د','ه','و','ز','ح','ط','ي','ك','ل','م','ن','س','ع','ف','ص','ق','ر','ش','ت','ث','خ','ذ','ض','ظ','غ','الله','الرحمن','الرحيم','اسم'];
+
+function killColors() {
+	if(document.getElementById("coloredDiv"))
+		$('#ifade').highlightWithinTextarea('destroy');
+}
 
 function renkleri_temizle()
 {
@@ -1490,8 +1582,7 @@ function renkleri_temizle()
 	for(harf in selections){
 		if(selections[harf] == 'ا') {
 			clrltrs[0] = [];
-			clrltrs[34] = [];
-			clrltrs[36] = [];
+			clrltrs[35] = [];
 		}
 		else if(selections[harf] == 'ب') clrltrs[1] = [];
 		else if(selections[harf] == 'ج') clrltrs[2] = [];
@@ -1506,7 +1597,6 @@ function renkleri_temizle()
 		else if(selections[harf] == 'ل') {
 			clrltrs[11] = [];
 			clrltrs[34] = [];
-			clrltrs[35] = [];
 		}
 		else if(selections[harf] == 'م') clrltrs[12] = [];
 		else if(selections[harf] == 'ن') clrltrs[13] = [];
@@ -1542,8 +1632,7 @@ function renkleri_temizle()
 	// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
 	toplam.style.display = "none";
 	
-	if(document.getElementById("coloredDiv"))
-		$('#ifade').highlightWithinTextarea('destroy');
+	killColors();
 
 	ifadeWidther();
 }
@@ -1553,8 +1642,7 @@ function tüm_renkleri_temizle()
 	for(harf in lttrs){
 		if(lttrs[harf] == 'ا') {
 			clrltrs[0] = [];
-			clrltrs[34] = [];
-			clrltrs[36] = [];
+			clrltrs[35] = [];
 		}
 		else if(lttrs[harf] == 'ب') clrltrs[1] = [];
 		else if(lttrs[harf] == 'ج') clrltrs[2] = [];
@@ -1569,7 +1657,6 @@ function tüm_renkleri_temizle()
 		else if(lttrs[harf] == 'ل') {
 			clrltrs[11] = [];
 			clrltrs[34] = [];
-			clrltrs[35] = [];
 		}
 		else if(lttrs[harf] == 'م') clrltrs[12] = [];
 		else if(lttrs[harf] == 'ن') clrltrs[13] = [];
@@ -1605,8 +1692,7 @@ function tüm_renkleri_temizle()
 	// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
 	toplam.style.display = "none";
 	
-	if(document.getElementById("coloredDiv"))
-		$('#ifade').highlightWithinTextarea('destroy');
+	killColors();
 	
 	ifadeWidther();
 }
@@ -1729,12 +1815,15 @@ function clearTable(Id){
 		$("#bismTable19").find("*").removeClass("نن");
 		$("#bismTable19").find("*").removeClass("يي");
 	}
+	// for to not showing its ::before pseudo element in unwanted letter counting pages at some browsers one is firefox, #isim-table should always be hidden when clearing tables..:
+	document.getElementById("isim-table").style.display = "none";
 }
 
 function checkLetter(array){
 	for(var i = 0; i < array.length; i++) 
-		if(ifade.value == array[i] || ifade.value == array[i] + ekleme) return true;
-	return false
+		if(ifade.value == array[i] || ifade.value == array[i] + ekleme)
+			return true;
+	return false;
 }
 
 function colorBism(string) {
@@ -1769,9 +1858,10 @@ $("#ifade").on("input", colorTable);
 
 function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yüklemesi yapıldığında çalışsın...
 {
+	clearTable(lastTable);
+	
 	if(checkLetter(['ا','م','س','ب','ل','ه','ر','ح','ن','ي',"واحد","ذوالفضل العظیم","مجید","جامع","بسم","الله","الرحمن","الرحيم","بسم الله الرحمن الرحيم","بس","بسم","بسم ا","بسم ال","بسم الل","بسم الله","بسم الله ا","بسم الله ال","بسم الله الر","بسم الله الرح","بسم الله الرحم","بسم الله الرحمن","بسم الله الرحمن ا","بسم الله الرحمن ال","بسم الله الرحمن الر","بسم الله الرحمن الرح","بسم الله الرحمن الرحي"]) || document.getElementById('اسم').checked == true || document.getElementById('الله').checked == true || document.getElementById('الرحمن').checked == true || document.getElementById('الرحيم').checked == true)
 	{
-		clearTable(lastTable);
 		document.querySelector('#BISMILLAHIRRAHMANIRRAHIM-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("BISMILLAHIRRAHMANIRRAHIM").style.display = "inline-table";
 		document.getElementById("BISMILLAHIRRAHMANIRRAHIM-2").style.display = "inline-table";
@@ -1813,7 +1903,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && (sure1.value == 2 || sure1.value == 3 || (29 <= sure1.value && sure1.value <= 32)) && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#ELMRŜ-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("ELMRŜ").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -1826,7 +1915,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 7 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		if(localStorage.getItem('lastTable') != "#Ŝ") // #ELMRŜ ya da null da olabilir ve herhangi bir harf seçili olabilir
 		{
 			document.querySelector('#ELMRŜ-table').querySelector('.flip-card-inner').classList.add('is-flipped');
@@ -1854,7 +1942,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value != 13 && 10 <= sure1.value && sure1.value <= 15 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#ELMRŜ-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("ELMRŜ").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -1867,7 +1954,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 13 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#ELMRŜ-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("ELMRŜ").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -1881,7 +1967,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 19 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 
 		if((localStorage.getItem('lastTable') != "#Ŝ" && document.getElementById('ص').checked == true) || (localStorage.getItem('lastTable') != "#THSM" && document.getElementById('ه').checked == true) || document.getElementById('ك').checked == true || document.getElementById('ي').checked == true || document.getElementById('ع').checked == true) // null ya da #KHYAŜ ya da başka bir durumda
 		{
@@ -1921,7 +2006,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 20 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#THSM-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("THSM").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -1933,7 +2017,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && (sure1.value == 26 || sure1.value == 28) && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#THSM-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("THSM").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -1946,7 +2029,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 27 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#THSM-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("THSM").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -1958,7 +2040,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 36 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#YS-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("YS").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -1970,7 +2051,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 38 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#Ŝ-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("Ŝ").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -1982,7 +2062,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && 41 <= sure1.value && sure1.value <= 43 && document.getElementById('ع').checked == false && document.getElementById('س').checked == false && document.getElementById('ق').checked == false && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#ĤM-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("ĤM4042").style.display = "block";
 		document.getElementById("ĤM4346").style.display = "block";
@@ -2006,7 +2085,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && (sure1.value == 40 || (44 <= sure1.value && sure1.value <= 46)) && document.getElementById('ع').checked == false && document.getElementById('س').checked == false && document.getElementById('ق').checked == false && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#ĤM-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("ĤM4042").style.display = "block";
 		document.getElementById("ĤM4346").style.display = "block";
@@ -2023,7 +2101,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 42 && document.getElementById('ح').checked == false && document.getElementById('م').checked == false && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#ASQ-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("ASQ").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -2036,7 +2113,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 50 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#Q-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("Q").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -2047,7 +2123,6 @@ function colorTable() // colorMuqatta fonksiyonundan ayrı olmalı ki link yükl
 	}
 	else if(!ayet1.value && sure1.value == 68 && document.getElementById('اسم').checked == false && document.getElementById('الله').checked == false && document.getElementById('الرحمن').checked == false && document.getElementById('الرحيم').checked == false)
 	{
-		clearTable(lastTable);
 		document.querySelector('#N-table').querySelector('.flip-card-inner').classList.add('is-flipped');
 		document.getElementById("N").style.display = "block";
 		document.getElementById("r"+sure1.value).classList.add('selectedRow');
@@ -2107,7 +2182,7 @@ function colorMuqatta()
 	}
 }
 
-var clrltrs = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
+var clrltrs = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 
 function renklendirr(ltr)
 {
@@ -2120,8 +2195,7 @@ function renklendirr(ltr)
 	{
 		if(ltr == 'ا') {
 			clrltrs[0].push('ا','ء','ـٔ','آ','ٱ','أ','إ');
-			if(clrltrs[11][0] == 'ل') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
-			clrltrs[36] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
+			clrltrs[35] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
 		}
 		else if(ltr == 'ب') clrltrs[1].push('ب','پ');
 		else if(ltr == 'ج') clrltrs[2].push('ج','چ');
@@ -2135,8 +2209,7 @@ function renklendirr(ltr)
 		else if(ltr == 'ك') clrltrs[10].push('ك','ک','گ','ڭ');
 		else if(ltr == 'ل') {
 			clrltrs[11].push('ل');
-			if(clrltrs[0][0] == 'ا') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
-			clrltrs[35] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
+			clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
 		}
 		else if(ltr == 'م') clrltrs[12].push('م');
 		else if(ltr == 'ن') clrltrs[13].push('ن');
@@ -2192,8 +2265,7 @@ function renklendir(ltr)
 	if(varmı){ // harf ya da İSİM varsa o harf ya da İSMİ çıkar/sil:
 		if(ltr == 'ا') {
 			clrltrs[0] = [];
-			clrltrs[34] = [];
-			clrltrs[36] = [];
+			clrltrs[35] = [];
 		}
 		else if(ltr == 'ب') clrltrs[1] = [];
 		else if(ltr == 'ج') clrltrs[2] = [];
@@ -2208,7 +2280,6 @@ function renklendir(ltr)
 		else if(ltr == 'ل') {
 			clrltrs[11] = [];
 			clrltrs[34] = [];
-			clrltrs[35] = [];
 		}
 		else if(ltr == 'م') clrltrs[12] = [];
 		else if(ltr == 'ن') clrltrs[13] = [];
@@ -2240,8 +2311,7 @@ function renklendir(ltr)
 	else{ // harf ya da İSİM yoksa o harf ya da İSMİ renklendirilecek harf veya İSİM'lere kat
 		if(ltr == 'ا') {
 			clrltrs[0].push('ا','ء','ـٔ','آ','ٱ','أ','إ');
-			if(clrltrs[11][0] == 'ل') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
-			clrltrs[36] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
+			clrltrs[35] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
 		}
 		else if(ltr == 'ب') clrltrs[1].push('ب','پ');
 		else if(ltr == 'ج') clrltrs[2].push('ج','چ');
@@ -2255,8 +2325,7 @@ function renklendir(ltr)
 		else if(ltr == 'ك') clrltrs[10].push('ك','ک','گ','ڭ');
 		else if(ltr == 'ل') {
 			clrltrs[11].push('ل');
-			if(clrltrs[0][0] == 'ا') clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
-			clrltrs[35] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
+			clrltrs[34] = ['ﻻ','ﻹ','ﻷ','ﻵ','لَا','لِأ','لْأ','لَّا','لَٱ','لًا','لْإ','لَأ','لِٱ','لًّا','لَّٱ','لِّأ','لَإ','لِإ','لا'];
 		}
 		else if(ltr == 'م') clrltrs[12].push('م');
 		else if(ltr == 'ن') clrltrs[13].push('ن');
@@ -2286,6 +2355,10 @@ function renklendir(ltr)
 		}
 	}
 	rengarenk();
+
+	setTimeout(() => {
+		message(); // for updating url address of browser WITH WILL OF THE SACRED KING SUPREME ELEGANT		
+	}, 570);
 }
 
 function rengarenk()
@@ -2295,9 +2368,8 @@ function rengarenk()
 	$('textarea').highlightWithinTextarea({
 		highlight:
 		[
-			{ highlight: clrltrs[34], className: 'lamelif' },
-			{ highlight: clrltrs[36], className: 'lamelifinElifi' },
-			{ highlight: clrltrs[35], className: 'lamelifinLamı' },
+			{ highlight: clrltrs[35], className: 'lamelifinElifi' },
+			{ highlight: clrltrs[34], className: 'lamelifinLamı' },
 			{ highlight: clrltrs[0], className: 'ا' },
 			{ highlight: clrltrs[1], className: 'ب' },
 			{ highlight: clrltrs[2], className: 'ج' },
@@ -2331,14 +2403,16 @@ function rengarenk()
 			{ highlight: clrltrs[30], className: 'الرحمن' },
 			{ highlight: clrltrs[31], className: 'الرحيم' },
 			{ highlight: clrltrs[32], className: 'اسم' },
-			{ highlight: clrltrs[33], className: 'endSuffixedSoNotCounted' }
+			{ highlight: clrltrs[33], className: 'endSuffixedSoNotCounted' },
+			{ highlight: ["r"], className: 'newLine' } // special newLine reset character "r" for linebreak point detection with WILL OF THE SACRED KING SUPREME ELEGANT!
 		]
 	})
 	setTimeout(function(){
-		$(window).trigger("resize");
 		loaded();
-	}, 1000) // bug fix for: /#ovpl=0&onv=1&sura=10&verse=10&count=الله
+	}, 1000);
 }
+
+var currentURL;
 
 $("#kopyala").on('click', message);
 
@@ -2359,36 +2433,44 @@ function message() {
 					if (sayı == 0) {
 						if (ovpl.checked) {
 							if (sn.checked) {
-								mesaj = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2 + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2;
+								mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 							else{
-								mesaj = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2 + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2;
+								mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 						}
 						else {
 							if (sn.checked) {
-								mesaj = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2 + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2;
+								mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 							else{
-								mesaj = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2 + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2;
+								mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 						}
 					}
 					else {
 						if (ovpl.checked) {
 							if (sn.checked) {
-								mesaj = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2+"&count="+sclnhrf;
+								mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 							else{
-								mesaj = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2+"&count="+sclnhrf;
+								mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 						}
 						else {
 							if (sn.checked) {
-								mesaj = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2+"&count="+sclnhrf;
+								mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 							else{
-								mesaj = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&verse2="+ayetiki2+"&count="+sclnhrf;
+								mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 						}
 					}
@@ -2397,36 +2479,44 @@ function message() {
 					if (sayı == 0) {
 						if (ovpl.checked) {
 							if (sn.checked) {
-								mesaj = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki;
+								mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 							else{
-								mesaj = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki;
+								mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 						}
 						else {
 							if (sn.checked) {
-								mesaj = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki;
+								mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 							else{
-								mesaj = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki;
+								mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 						}
 					}
 					else {
 						if (ovpl.checked) {
 							if (sn.checked) {
-								mesaj = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&count="+sclnhrf;
+								mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 							else{
-								mesaj = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&count="+sclnhrf;
+								mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}	
 						}
 						else {
 							if (sn.checked) {
-								mesaj = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&count="+sclnhrf;
+								mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 							else{
-								mesaj = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+								currentURL = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&sura2="+sureiki+"&count="+sclnhrf;
+								mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 							}
 						}
 					}
@@ -2436,36 +2526,44 @@ function message() {
 				if (sayı == 0) {
 					if (ovpl.checked) {
 						if (sn.checked) {
-							mesaj = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1 + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+							currentURL = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1;
+							mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 						}
 						else{
-							mesaj = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1 + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+							currentURL = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1;
+							mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 						}
 					}
 					else {
 						if (sn.checked) {
-							mesaj = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1 + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+							currentURL = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1;
+							mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 						}
 						else{
-							mesaj = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1 + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+							currentURL = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1;
+							mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 						}
 					}
 				}
 				else {
 					if (ovpl.checked) {
 						if (sn.checked) {
-							mesaj = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+							currentURL = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&count="+sclnhrf;
+							mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 						}
 						else{
-							mesaj = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+							currentURL = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&count="+sclnhrf;
+							mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 						}
 					}
 					else{
 						if (sn.checked) {
-							mesaj = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+							currentURL = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&verse="+ayetbir1+"&count="+sclnhrf;
+							mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 						}
 						else{
-							mesaj = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+							currentURL = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&verse="+ayetbir1+"&count="+sclnhrf;
+							mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 						}
 					}
 				}
@@ -2475,36 +2573,44 @@ function message() {
 			if (sayı == 0) {
 				if (ovpl.checked) {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir;
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 					else{
-						mesaj = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir;
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 				}
 				else{
 					if (sn.checked) {
-						mesaj = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir;
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 					else{
-						mesaj = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir;
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 				}
 			}
 			else {
 				if (ovpl.checked) {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki+"ovpl=1"+"&onv=1"+"&sura="+surebir+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 					else{
-						mesaj = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki+"ovpl=1"+"&onv=0"+"&sura="+surebir+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 				}
 				else {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki+"ovpl=0"+"&onv=1"+"&sura="+surebir+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 					else{
-						mesaj = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki+"ovpl=0"+"&onv=0"+"&sura="+surebir+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 				}
 			}
@@ -2515,36 +2621,44 @@ function message() {
 			if (ayet_sayisi) {
 				if (ovpl.checked) {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki +"ovpl=1"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-") + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki +"ovpl=1"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-");
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 					else{
-						mesaj = kopyalamaLinki +"ovpl=1"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-") + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki +"ovpl=1"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-");
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 				}
 				else {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki +"ovpl=0"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-") + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki +"ovpl=0"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-");
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 					else{
-						mesaj = kopyalamaLinki +"ovpl=0"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-") + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki +"ovpl=0"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-");
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 				}
 			}
 			else {
 				if (ovpl.checked) {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki +"ovpl=1"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-") + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+						currentURL = kopyalamaLinki +"ovpl=1"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-");
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 					}
 					else{
-						mesaj = kopyalamaLinki +"ovpl=1"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-") + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+						currentURL = kopyalamaLinki +"ovpl=1"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-");
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 					}
 				}
 				else {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki +"ovpl=0"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-") + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+						currentURL = kopyalamaLinki +"ovpl=0"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-");
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 					}
 					else{
-						mesaj = kopyalamaLinki +"ovpl=0"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-") + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+						currentURL = kopyalamaLinki +"ovpl=0"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-");
+						mesaj = currentURL + "\n\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 					}
 				}
 			}
@@ -2553,41 +2667,52 @@ function message() {
 			if (ayet_sayisi) {
 				if (ovpl.checked) {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki +"ovpl=1"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki +"ovpl=1"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 					else{
-						mesaj = kopyalamaLinki +"ovpl=1"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki +"ovpl=1"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 				}
 				else {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki +"ovpl=0"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki +"ovpl=0"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 					else{
-						mesaj = kopyalamaLinki +"ovpl=0"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
+						currentURL = kopyalamaLinki +"ovpl=0"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime + "\n" + "number of verses: " + ayet_sayisi;
 					}
 				}
 			}
 			else {
 				if (ovpl.checked) {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki +"ovpl=1"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+						currentURL = kopyalamaLinki +"ovpl=1"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 					}
 					else{
-						mesaj = kopyalamaLinki +"ovpl=1"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+						currentURL = kopyalamaLinki +"ovpl=1"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 					}
 				}
 				else {
 					if (sn.checked) {
-						mesaj = kopyalamaLinki +"ovpl=0"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+						currentURL = kopyalamaLinki +"ovpl=0"+"&onv=1"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 					}
 					else{
-						mesaj = kopyalamaLinki +"ovpl=0"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
+						currentURL = kopyalamaLinki +"ovpl=0"+"&onv=0"+ "&statement=" + inputValue.replace(/[ ]+/gim, "_").replace(/[\n]+/gim, "-")+"&count="+sclnhrf;
+						mesaj = currentURL + "\n\n" + "Total " + metin + sayı + "\n" + "abjad value: " + ebced + "\n" + "number of letters: " + harf_sayisi + "\n" + "number of words: " + kelime;
 					}
 				}
 			}
 		}
 	}
+	linkUpdate = true;
+	window.location.hash = currentURL.slice(18, currentURL.length); // remove "19x334.github.io/#" section from start IF SACRED KING SUPREME ELEGANT WILLS
+	linkUpdate = false;
 }
 
 function colorButton(ltr) {
@@ -2686,18 +2811,22 @@ function addLines(numberOfLines) {
 	for (x = 0; x < numberOfLines; x++) {
     	holder += '<div class="row" id="' + x + '">' + lineSums[x] + '</div>';
 	}
+
 	document.getElementById('satirlar').innerHTML = holder;
 
-	if(windowWidth < 768) document.getElementById("0").style.setProperty('border-top', '1px solid #999', 'important');
-	else document.getElementById("0").style.setProperty('border-top', '0px', 'important');
-	
+	rengarenk();
+
+	// ULU ALLAH İSTERSE satırlar gösterildikten sonra daralan textarea satır genişliği nedeniyle alt satırlara taşan renklendirilen harflerin altındaki ve üstündeki yıldızlar içerisindeki satır sıra numaralarının satır başında sıfırlanacak şekilde tekrar hesaplanması gerekiyor yeni oluşan satır genişliklerine göre chrome dışındaki tarayıcılar safari, edge ve firefox'ta satır sıra numaralarının doğru gösterilmesi/hesaplanması için ... bunun içinde rengarenk(); fonksiyonu çağrılarak jquery.highlight-within-textarea.js içerisinde ULU ALLAH'IN İZNİYLE yaptığım değişikliklerle satır sıra numaralarının yeniden hesaplanması sağlanması gerekiyor ULU ALLAH'IN İZNİYLE doğru satır sıra numaralarının gözükmesi için chrome dışındaki tarayıcılar bu yenilemeyi kendileri yapmaları gerektiğini düşünemiyorlar ve benim burada manuel olarak rengarenk(); fonksiyonunu çağırmam gerekiyor firefox edge ve safari için ULU ALLAH'IN İZNİYLE :) bu rengarenk(); çağrısı aynı zamanda window resize durumunda da tetikleniyor olması gerektiği gibi ULU ALLAH'IN İSTEĞİYLE!
+
+	document.getElementById("0").style.setProperty('border-top', '0px', 'important');
 	document.getElementById("0").style.setProperty('margin-top', '-1px', 'important');
 }
 
 $(window).resize(copyTextSizer);
-$(document).ready(copyTextSizer);
-
-var browser = detectBrowser();
+$(document).ready(function (){
+	
+	copyTextSizer();
+});
 
 function copyTextSizer()
 {
@@ -2756,6 +2885,12 @@ function isimleriNumaralandır(renderedRows, seçililer){
 	return lineSums;
 }
 
+var alertFlag = 1;
+
+$(window).load(function(){
+	if(alertFlag == 1) alertt();
+});
+
 // önce "satır başına 1 ayet"i seçtiğimizde ve sonra renklendirecek harf seçtiğimizde
 // hwt classlı katmanların daha sonradan aktif olmasından dolayı
 // renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için
@@ -2772,12 +2907,6 @@ $(window).resize(function(){
 
 var direction;
 
-var alertFlag = 1;
-
-$(window).load(function(){
-	if(alertFlag == 1) alertt();
-});
-
 var notifications = [];
 
 notifications.push({
@@ -2789,7 +2918,7 @@ notifications.push({
 notifications.push({
 	imageUrl: "pic/clean-up.png",
 	title: "<span class='red'>NEVER TOUCH</span> <span class='blue'>QURAN</span><span class='red'>! WITHOUT</span> <span class='blue'>CLEAN</span><span class='red'>ED UP! EVEN WITH MOUSE!</span>",
-	text: '<br><b><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#74">56:74</a> YOU SHALL GLORIFY THE NAME OF YOUR OWNER, THE GREAT! (THE GOD IS GREAT! (<a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#74">56:74</a>, <a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#96">56:96</a>, <a target="_blank" href="http://honourableQURAN.blogspot.com/p/87.html?m=1#1">87:1</a>))<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#75">56:75</a> I SWEAR TO THE FALLING PLACES OF THE STARS! (<a target="_blank" href="https://www.youtube.com/watch?v=kOEDG3j1bjs">BLACK HOLES!</a>)<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#76">56:76</a> THIS IS AN OATH, IF ONLY YOU KNEW, THAT IS AWESOME!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#77">56:77</a> THIS IS HONOURABLE <a target="_blank" href="http://honourableQURAN.blogspot.com/p/1.html">QURAN</a>!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#78">56:78</a> IN A PROTECTED BOOK!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#79">56:79</a> NONE can touch <a target="_blank" href="http://honourableQURAN.blogspot.com/p/1.html">IT</a> EXCEPT THE CLEANED UP!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#80">56:80</a> A REVELATION FROM THE OWNER OF THE UNIVERSES!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#81">56:81</a> Do you dissemble this speech?<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#82">56:82</a> Do you make your disbelieve your sustenance?<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#83">56:83</a> When the time comes and it (your soul) reaches your throat -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#84">56:84</a> you will then look around.<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#85">56:85</a> WE ARE CLOSER to it than you are, but you do not see.<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#86">56:86</a> If it is true that you do not owe any accounting -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#87">56:87</a> why do you not restore (your soul), if you are truthful?<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#88">56:88</a> If he is one of those close to ME -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#89">56:89</a> then joy, flowers, and gardens of bliss.<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#90">56:90</a> And if he is one of the right -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#91">56:91</a> peace is the lot of those on the right.<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#92">56:92</a> But if he is one of the disbelievers, the strayers -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#93">56:93</a> then an abode of INFERNO -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#94">56:94</a> and burning in HELL!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#95">56:95</a> THIS IS THE ABSOLUTE TRUTH!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#96">56:96</a> YOU SHALL GLORIFY THE NAME OF YOUR OWNER, THE GREAT! (THE GRACIOUS IS GREAT! (<a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#74">56:74</a>, <a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#96">56:96</a>, <a target="_blank" href="http://honourableQURAN.blogspot.com/p/87.html?m=1#1">87:1</a>))</b>'
+	text: '<br><b><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#74">56:74</a> YOU SHALL GLORIFY THE NAME OF YOUR OWNER, THE GREAT! (SACRED & SUPREME ELEGANT YOUR NAME IS SACRED & SUPREME! (<a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#74">56:74</a>, <a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#96">56:96</a>, <a target="_blank" href="http://honourableQURAN.blogspot.com/p/87.html?m=1#1">87:1</a>))<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#75">56:75</a> I SWEAR TO THE FALLING PLACES OF THE STARS! (<a target="_blank" href="https://www.youtube.com/watch?v=kOEDG3j1bjs">BLACK HOLES!</a>)<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#76">56:76</a> THIS IS AN OATH, IF ONLY YOU KNEW, THAT IS AWESOME!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#77">56:77</a> THIS IS HONOURABLE <a target="_blank" href="http://honourableQURAN.blogspot.com/p/1.html">QURAN</a>!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#78">56:78</a> IN A PROTECTED BOOK!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#79">56:79</a> NONE can touch <a target="_blank" href="http://honourableQURAN.blogspot.com/p/1.html">IT</a> EXCEPT THE CLEANED UP!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#80">56:80</a> A REVELATION FROM THE OWNER OF THE UNIVERSES!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#81">56:81</a> Do you dissemble this speech?<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#82">56:82</a> Do you make your disbelieve your sustenance?<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#83">56:83</a> When the time comes and it (your soul) reaches your throat -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#84">56:84</a> you will then look around.<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#85">56:85</a> WE ARE CLOSER to it than you are, but you do not see.<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#86">56:86</a> If it is true that you do not owe any accounting -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#87">56:87</a> why do you not restore (your soul), if you are truthful?<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#88">56:88</a> If he is one of those close to ME -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#89">56:89</a> then joy, flowers, and gardens of bliss.<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#90">56:90</a> And if he is one of the right -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#91">56:91</a> peace is the lot of those on the right.<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#92">56:92</a> But if he is one of the disbelievers, the strayers -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#93">56:93</a> then an abode of INFERNO -<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#94">56:94</a> and burning in HELL!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#95">56:95</a> THIS IS THE ABSOLUTE TRUTH!<br><br><a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#96">56:96</a> YOU SHALL GLORIFY THE NAME OF YOUR OWNER, THE GREAT! (SACRED & SUPREME ELEGANT YOUR NAME IS SACRED & SUPREME! (<a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#74">56:74</a>, <a target="_blank" href="http://honourableQURAN.blogspot.com/p/56.html?m=1#96">56:96</a>, <a target="_blank" href="http://honourableQURAN.blogspot.com/p/87.html?m=1#1">87:1</a>))</b>'
 });
 
 notifications.push({
@@ -2885,7 +3014,7 @@ function yataylaştırıcı(){
 	// önce "satır başına 1 ayet"i seçtiğimizde ve sonra renklendirecek harf seçtiğimizde renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için:
 	if(ovpl.checked){
 		if(browser != "Firefox") {
-			if(windowWidth < 768) document.getElementById("nextSura").style.marginTop = "24px";
+			if(windowWidth < 886) document.getElementById("nextSura").style.marginTop = "24px";
 			else document.getElementById("nextSura").style.marginTop = "15px";
 		}
 		ifade.style.setProperty('white-space', 'pre', 'important');
@@ -2899,7 +3028,7 @@ function yataylaştırıcı(){
 	}
 	else{
 		if(browser != "Firefox") {
-			if(windowWidth < 768) document.getElementById("nextSura").style.marginTop = "8px";
+			if(windowWidth < 886) document.getElementById("nextSura").style.marginTop = "8px";
 			else document.getElementById("nextSura").style.marginTop = "0px";
 		}
 		ifade.style.setProperty('white-space', 'pre-wrap', 'important');
@@ -2940,7 +3069,7 @@ function renkleriSay()
 	}
 	else{
 		for(var i = 0; i < isimler.length; i++) // ALLAH'ın isimlerinden her biri
-			for(var r = 28; r < clrltrs.length; r++) // r satırlı
+			for(var r = 28; r <= 33; r++) // r satırlı (clrltrs[28] - clrltrs[33] arası isimler için ayrılmış durumda)
 				for(var c = 0; c < clrltrs[r].length; c++) // c sütunlu
 					if(clrltrs[r][c] == isimler[i] && !contains(seçililer, isimler[i])) // renklendirme matrisi içinde varsa ve seçililere daha önce eklenmemişse (bu kontrolü yapmak önemli asenkron js bazen 2 kat push edebiliyor seçililerin içine ve bu yüzden satır sayımları 2 katına çıkıyordu bu kontrolü yapmadan önce üstelik 15 satır önce seçililer = []; ataması yapmış olmama rağmen)
 						seçililer.push(isimler[i]); // o isimleri seç
@@ -3120,11 +3249,8 @@ function hideOverlappedHorizontally(el1, el2)
 }
 
 function lineKeeper() {
+	ifade.style.setProperty("background-position", '0px -' + ifade.scrollTop + 'px, center center');
 	document.getElementById("satirlar").scrollTop = ifade.scrollTop;
-	if(windowWidth < 768)
-		ifade.style.setProperty("background-position", '0px -' + ifade.scrollTop + 'px, center center, center -' + ifade.scrollTop + 'px');
-	else
-		ifade.style.setProperty("background-position", '0px -' + ifade.scrollTop + 'px, center center');
 }
 
 ifade.addEventListener("scroll",function() {
@@ -3134,7 +3260,7 @@ ifade.addEventListener("scroll",function() {
 
 window.addEventListener("resize",function() {
 	lineKeeper();
-	kalem(); // pencere genişliği değiştirilerek 768 px üstü ve altı arasında geçiş yapıldığında arkaplan tutarlılığını sağlar!
+	kalem(); // pencere genişliği değiştirilerek 886 px üstü ve altı arasında geçiş yapıldığında arkaplan tutarlılığını sağlar!
 	hideOverlappedHorizontally(ovplBox, toplam);
 });
 
@@ -3280,7 +3406,7 @@ audio.onended = function() {
 };
 
 var versesOf74 = [
-	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#0">74:0</a>&nbsp;IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL.</p>',
+	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#0">74:0</a>&nbsp;IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#1">74:1</a>&nbsp;o you hidden secret</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#2">74:2</a>&nbsp;Get Up and Warn!</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#3">74:3</a>&nbsp;Magnify your OWNER!</p>',

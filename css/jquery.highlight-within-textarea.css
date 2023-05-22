@@ -1,147 +1,73 @@
-/* IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL */
+/*
+	IN THE NAME OF ALLAH THE ELEGANT THE MERCIFUL!
+    SACRED & SUPREME ELEGANT YOUR NAME IS SACRED & SUPREME!
+*/
 
 @font-face {
     font-family: KawkabMono-Regular;
     src: url(/css/KawkabMono-Regular.ttf);
 }
-@media only screen and (max-width: 768px) {
-	.lamelifinElifi{ background-color: #b30057; }
-	.lamelifinLamı { background-color: #0065da; }
-	.lamelif {
-		background-image: url(/pic/lamelif768.png);
-		background-size: contain;
-		background-repeat: repeat-y;
-	}
-	.ا{ background-color: #b30057; }
-	.ب{ background-color: #56eea0; }
-	.ج{ background-color: #7843a8; }
-	.د{ background-color: #c3d546; }
-	.ه{ background-color: #6cc34c; }
-	.و{ background-color: red; }
-	.ز{ background-color: #af329f; }
-	.ح{ background-color: #01ebb9; }
-	.ط{ background-color: #a90025; }
-	.ي{ background-color: #01cac6; }
-	.ك{ background-color: #962b00; }
-	.ل{ background-color: #0065da; }
-	.م{ background-color: #ba9f00; }
-	.ن{ background-color: #0179ca; }
-	.س{ background-color: #ff9d4c; }
-	.ع{ background-color: #018dca; }
-	.ف{ background-color: #b26c00; }
-	.ص{ background-color: #75afff; }
-	.ق{ background-color: rgb(255, 255, 0); }
-	.ر{ background-color: #ff67b1; }
-	.ش{ background-color: #8fe895; }
-	.ت{ background-color: #921274; }
-	.ث{ background-color: #c4de8f; }
-	.خ{ background-color: #840023; }
-	.ذ{ background-color: #7e6400; }
-	.ض{ background-color: #ff8688; }
-	.ظ{ background-color: #246700; }
-	.غ{ background-color: #81816e; }
 
-	.بب{ background-color: rgba(86, 238, 160, 0.66); }
-	.Be:hover a{ background-color: rgba(86, 238, 160, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+mark.ا, p#ا:not(.not-selected){ background-color: #c5e633; }
+mark.ب, p#ب:not(.not-selected){ background-color: #d962ee; }
+mark.ج, p#ج:not(.not-selected){ background-color: #9ccb7b; }
+mark.د, p#د:not(.not-selected){ background-color: #d680e1; }
+mark.ه, p#ه:not(.not-selected){ background-color: #60cfd5; }
+mark.و, p#و:not(.not-selected){ background-color: #e979bc; }
+mark.ز, p#ز:not(.not-selected){ background-color: #57d679; }
+mark.ح, p#ح:not(.not-selected){ background-color: #ef7089; }
+mark.ط, p#ط:not(.not-selected){ background-color: #dae02c; }
+mark.ي, p#ي:not(.not-selected){ background-color: #7398ec; }
+mark.ك, p#ك:not(.not-selected){ background-color: #71d85d; }
+mark.ل, p#ل:not(.not-selected){ background-color: #ed7f61; }
+mark.م, p#م:not(.not-selected){ background-color: #bea4dc; }
+mark.ن, p#ن:not(.not-selected){ background-color: #0094fd; }
+mark.س, p#س:not(.not-selected){ background-color: #ec7f2b; }
+mark.ع, p#ع:not(.not-selected){ background-color: #ffff00; } /* yellow <-- #d6a347 */
+mark.ف, p#ف:not(.not-selected){ background-color: #bdc656; }
+mark.ص, p#ص:not(.not-selected){ background-color: #65d29e; }
+mark.ق, p#ق:not(.not-selected){ background-color: #add8e6; } /* lightblue <-- #69df3b */
+mark.ر, p#ر:not(.not-selected){ background-color: #da9cb6; }
+mark.ش, p#ش:not(.not-selected){ background-color: #b7b8c6; }
+mark.ت, p#ت:not(.not-selected){ background-color: #8dc53f; }
+mark.ث, p#ث:not(.not-selected){ background-color: #7eccb6; }
+mark.خ, p#خ:not(.not-selected){ background-color: #d8a194; }
+mark.ذ, p#ذ:not(.not-selected){ background-color: #d2b26c; }
+mark.ض, p#ض:not(.not-selected){ background-color: #b8c3b3; }
+mark.ظ, p#ظ:not(.not-selected){ background-color: #cfb380; }
+mark.غ, p#غ:not(.not-selected){ background-color: #b9c298; }
 
-	.اا{ background-color: rgba(179, 0, 87, 0.66); }
-	.Elif.counts:hover, .Elif:hover a{ background-color: rgba(179, 0, 87, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.هه{ background-color: rgba(108, 195, 76, 0.66); }
-	.He.counts:hover, .He:hover a{ background-color: rgba(108, 195, 76, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.حح{ background-color: rgba(1, 235, 185, 0.66); }
-	.Ha.counts:hover, .Ha:hover a{ background-color: rgba(1, 235, 185, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.طط{ background-color: rgba(169, 0, 37, 0.66); }
-	.Tı.counts:hover, .Tı:hover a{ background-color: rgba(169, 0, 37, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.يي{ background-color: rgba(1, 202, 198, 0.66); }
-	.Ye.counts:hover, .Ye:hover a{ background-color: rgba(1, 202, 198, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.كك{ background-color: rgba(150, 43, 0, 0.66); }
-	.Kef.counts:hover, .Kef:hover a{ background-color: rgba(150, 43, 0, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.لل{ background-color: rgba(0, 101, 218, 0.66); }
-	.Lam.counts:hover, .Lam:hover a{ background-color: rgba(0, 101, 218, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.مم{ background-color: rgba(186, 159, 0, 0.66); }
-	.Mim.counts:hover, .Mim:hover a{ background-color: rgba(186, 159, 0, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.نن{ background-color: rgba(1, 121, 202, 0.66); }
-	.Nun.link:hover, .Nun:hover a{ background-color: rgba(1, 121, 202, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.سس{ background-color: rgba(255, 157, 76, 0.66); }
-	.Sin.counts:hover, .Sin:hover a{ background-color: rgba(255, 157, 76, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.عع{ background-color: rgba(1, 141, 202, 0.66); }
-	.Ayn.counts:hover, .Ayn:hover a{ background-color: rgba(1, 141, 202, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.صص{ background-color: rgba(117, 175, 255, 0.66); }
-	.Sad.counts:hover, .Sad:hover a{ background-color: rgba(117, 175, 255, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.قق{ background-color: rgba(255, 255, 0, 0.66); }
-	.Qaf.link:hover, .Qaf:hover a{ background-color: rgba(255, 255, 0, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.رر{ background-color: rgba(255, 103, 177, 0.66); }
-	.Ra.counts:hover, .Ra:hover a{ background-color: rgba(255, 103, 177, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-}
-@media only screen and (min-width: 768px) {
-	.lamelifinElifi{ background-color: #c6e535; }
-	.lamelifinLamı { background-color: #ed7f61; }
-	.lamelif {
-		background-image: url(/pic/lamelif.png);
-		background-size: contain;
-		background-repeat: repeat-y;
-	}
-	.ا{ background-color: #c6e535; }
-	.ب{ background-color: #d962ee; }
-	.ج{ background-color: #9ccb7b; }
-	.د{ background-color: #d680e1; }
-	.ه{ background-color: #60cfd5; }
-	.و{ background-color: #e979bc; }
-	.ز{ background-color: #57d679; }
-	.ح{ background-color: #ef7089; }
-	.ط{ background-color: #dae02c; }
-	.ي{ background-color: #7398ec; }
-	.ك{ background-color: #71d85d; }
-	.ل{ background-color: #ed7f61; }
-	.م{ background-color: #bea4dc; }
-	.ن{ background-color: #0094fd; }
-	.س{ background-color: #ec7f2b; }
-	.ع{ background-color: yellow; } /* #d6a347 */
-	.ف{ background-color: #bdc656; }
-	.ص{ background-color: #65d29e; }
-	.ق{ background-color: lightblue; } /* #69df3b */
-	.ر{ background-color: #da9cb6; }
-	.ش{ background-color: #b7b8c6; }
-	.ت{ background-color: #8dc53f; }
-	.ث{ background-color: #7eccb6; }
-	.خ{ background-color: #d8a194; }
-	.ذ{ background-color: #d2b26c; }
-	.ض{ background-color: #b8c3b3; }
-	.ظ{ background-color: #cfb380; }
-	.غ{ background-color: #b9c298; }
+.بب{ background-color: rgba(156, 203, 123, 0.66); }
+.Be:hover a{ background-color: rgba(156, 203, 123, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
 
-	.بب{ background-color: rgba(156, 203, 123, 0.66); }
-	.Be:hover a{ background-color: rgba(156, 203, 123, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-
-	.اا{ background-color: rgba(198, 229, 53, 0.66); }
-	.Elif.counts:hover, .Elif:hover a{ background-color: rgba(198, 229, 53, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.هه{ background-color: rgba(96, 207, 213, 0.66); }
-	.He.counts:hover, .He:hover a{ background-color: rgba(96, 207, 213, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.حح{ background-color: rgba(239, 112, 137, 0.66); }
-	.Ha.counts:hover, .Ha:hover a{ background-color: rgba(239, 112, 137, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.طط{ background-color: rgba(218, 224, 44, 0.66); }
-	.Tı.counts:hover, .Tı:hover a{ background-color: rgba(218, 224, 44, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.يي{ background-color: rgba(115, 152, 236, 0.66); }
-	.Ye.counts:hover, .Ye:hover a{ background-color: rgba(115, 152, 236, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.كك{ background-color: rgba(113, 216, 93, 0.66); }
-	.Kef.counts:hover, .Kef:hover a{ background-color: rgba(113, 216, 93, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.لل{ background-color: rgba(237, 127, 97, 0.66); }
-	.Lam.counts:hover, .Lam:hover a{ background-color: rgba(237, 127, 97, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.مم{ background-color: rgba(190, 164, 220, 0.66); }
-	.Mim.counts:hover, .Mim:hover a{ background-color: rgba(190, 164, 220, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.نن{ background-color: rgba(0, 148, 253, 0.66); }
-	.Nun.link:hover, .Nun:hover a{ background-color: rgba(0, 148, 253, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.سس{ background-color: rgba(236, 127, 43, 0.66); }
-	.Sin.counts:hover, .Sin:hover a{ background-color: rgba(236, 127, 43, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.عع{ background-color: rgba(255, 255, 0, 0.66); } /* #d6a347 */
-	.Ayn.counts:hover, .Ayn:hover a{ background-color: rgba(255, 255, 0, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.صص{ background-color: rgba(101, 210, 158, 0.66); }
-	.Sad.counts:hover, .Sad:hover a{ background-color: rgba(101, 210, 158, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.قق{ background-color: rgba(173, 216, 230, 0.66); } /* #69df3b */
-	.Qaf.link:hover, .Qaf:hover a{ background-color: rgba(173, 216, 230, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-	.رر{ background-color: rgba(218, 156, 182, 0.66); }
-	.Ra.counts:hover, .Ra:hover a{ background-color: rgba(218, 156, 182, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
-}
+.اا{ background-color: rgba(198, 229, 53, 0.66); }
+.Elif.counts:hover, .Elif:hover a{ background-color: rgba(198, 229, 53, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.هه{ background-color: rgba(96, 207, 213, 0.66); }
+.He.counts:hover, .He:hover a{ background-color: rgba(96, 207, 213, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.حح{ background-color: rgba(239, 112, 137, 0.66); }
+.Ha.counts:hover, .Ha:hover a{ background-color: rgba(239, 112, 137, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.طط{ background-color: rgba(218, 224, 44, 0.66); }
+.Tı.counts:hover, .Tı:hover a{ background-color: rgba(218, 224, 44, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.يي{ background-color: rgba(115, 152, 236, 0.66); }
+.Ye.counts:hover, .Ye:hover a{ background-color: rgba(115, 152, 236, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.كك{ background-color: rgba(113, 216, 93, 0.66); }
+.Kef.counts:hover, .Kef:hover a{ background-color: rgba(113, 216, 93, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.لل{ background-color: rgba(237, 127, 97, 0.66); }
+.Lam.counts:hover, .Lam:hover a{ background-color: rgba(237, 127, 97, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.مم{ background-color: rgba(190, 164, 220, 0.66); }
+.Mim.counts:hover, .Mim:hover a{ background-color: rgba(190, 164, 220, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.نن{ background-color: rgba(0, 148, 253, 0.66); }
+.Nun.link:hover, .Nun:hover a{ background-color: rgba(0, 148, 253, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.سس{ background-color: rgba(236, 127, 43, 0.66); }
+.Sin.counts:hover, .Sin:hover a{ background-color: rgba(236, 127, 43, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.عع{ background-color: rgba(255, 255, 0, 0.66); } /* #d6a347 */
+.Ayn.counts:hover, .Ayn:hover a{ background-color: rgba(255, 255, 0, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.صص{ background-color: rgba(101, 210, 158, 0.66); }
+.Sad.counts:hover, .Sad:hover a{ background-color: rgba(101, 210, 158, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.قق{ background-color: rgba(173, 216, 230, 0.66); } /* #69df3b */
+.Qaf.link:hover, .Qaf:hover a{ background-color: rgba(173, 216, 230, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+.رر{ background-color: rgba(218, 156, 182, 0.66); }
+.Ra.counts:hover, .Ra:hover a{ background-color: rgba(218, 156, 182, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
 
 .اسم { background-color: lightblue; }
 .اسم19 { background-color: rgba(173, 216, 230, 0.66); border: 1.1px solid midnightblue !important; }
@@ -161,7 +87,7 @@ tr.RAHMAN-19:hover a.counts.lineHeight30, td.RAHMAN-19:hover a { background-colo
 .الرحيم { background-color: #7bc831; }
 .الرحيم19 { background-color: rgba(123, 200, 49, 0.66); border: 1.1px solid midnightblue !important; }
 .الرحيم1 { background-color: rgba(123, 200, 49, 0.66); }
-tr.RAHİM-19:hover a.counts.lineHeight30, td.RAHİM-19:hover a { background-color: rgba(123, 200, 49, 0.66) !important; color: midnightblue !important; outline: 1px solid midnightblue; }
+tr.RAHİM-19:hover a.counts.lineHeight30, td.RAHİM-19:hover a { background-color: rgba(123, 200, 49, 0.66) !important; color: midnightblue !important; outline: 1px solid #191970; }
 
 @-moz-document url-prefix() {
 	.اسم19 { background-color: rgba(173, 216, 230, 0.66); outline: 1.1px solid midnightblue !important; border: 0 !important; }
@@ -208,7 +134,7 @@ tr.RAHİM-19:hover a.counts.lineHeight30, td.RAHİM-19:hover a { background-colo
 	direction: rtl;
 	scrollbar-width: none;
 	position: absolute !important;
-	padding-bottom: 46px;
+	padding-bottom: 92px;
 	top: 0 !important;
 	left: -99px !important;
 	bottom: 0 !important;
@@ -217,7 +143,11 @@ tr.RAHİM-19:hover a.counts.lineHeight30, td.RAHİM-19:hover a { background-colo
 	overflow-x: hidden !important;
 	overflow-y: auto !important;
 }
-
+@-moz-document url-prefix() {
+	.hwt-backdrop {
+		padding-bottom: 79px;
+	}
+}
 .hwt-highlights {
 	direction: rtl;
 	width: inherit;
@@ -228,10 +158,16 @@ tr.RAHİM-19:hover a.counts.lineHeight30, td.RAHİM-19:hover a { background-colo
 	color: transparent !important;
 	overflow-x: hidden !important;
 	overflow-y: auto !important;
-    line-height: 46px !important; /* satırlar ile renklendirmeler arasında kayma olmaması için */
+    line-height: 92px !important; /* satırlar ile renklendirmeler arasında kayma olmaması için */
 	margin-bottom: 2160px !important; /* important bug fix for mutuality of textarea and highlighting colors at the end of the textarea when scrolled to the bottom of the textarea */
-}
 
+	/* color: white !important; for debugging slippings WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL ONE AND ONLY ABSOLUTE GOD */
+}
+@-moz-document url-prefix() {
+	.hwt-highlights {
+		line-height: 79px !important; /* satırlar ile renklendirmeler arasında kayma olmaması için */
+	}
+}
 .hwt-input {
 	direction: rtl;
 	display: block !important;
@@ -246,23 +182,47 @@ tr.RAHİM-19:hover a.counts.lineHeight30, td.RAHİM-19:hover a { background-colo
 }
 
 .hwt-content {
-	direction: rtl;
-	padding-top: 0.5px;
-	padding: 0 !important;
+    direction: rtl;
+    padding: 0 !important;
+    /*padding-top: 6px !important;*/
 }
 
 .hwt-content mark {
 	direction: rtl;
-	display: inline; /* ALLAH'ın izniyle en doğru işaretleme için */
-	
+	display: inline; /* ULU ALLAH'ın izniyle en doğru işaretleme için */
 }
 
 mark {
+	position: relative;
 	direction: rtl;
 	color: inherit;
-	padding-top: 5px !important;
-    padding-bottom: 6px !important;
-	padding-left: 0px !important;
-	padding-right: 0px !important;
-    line-height: 46px !important; /* android 11 ve üzeri samsung telefonlar için */
+	background-color: transparent;
+    line-height: 92px !important; /* android 11 ve üzeri samsung telefonlar için */
+    height: 92px;
+    width: 25px;
+
+    padding-top: 28.5px !important;
+    padding-bottom: 28.5px !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+	/* below is for showing right and left arms of stars WITH WILL OF THE SUPREME ALLAH <3 */
+
+    margin-left: -6px !important;
+    margin-right: -6px !important;
+
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+
+.newLine { background-color: transparent; }
+
+@-moz-document url-prefix() {
+	mark {
+		line-height: 79px !important; /* android 11 ve üzeri samsung telefonlar için */
+		height: 78px;
+		padding: 21px 0px 21px 0px !important;
+		margin: 0 !important;
+	}
 }

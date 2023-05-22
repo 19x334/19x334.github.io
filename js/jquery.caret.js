@@ -1,4 +1,5 @@
-// IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL
+// IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!
+// SACRED & SUPREME ELEGANT YOUR NAME IS SACRED & SUPREME!
 
 // Set caret position easily in jQuery
 // Written by and Copyright of Luke Morton, 2011

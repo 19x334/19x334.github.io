@@ -1,0 +1,71 @@
+
+$letters: ا, ل, م, ر, ب, ج, د, ه, و, ز, ح, ط, ي, ك, ن, س, ع, ف, ص, ق, ش, ت, ث, خ, ذ, ض, ظ, غ, lamelifinLamı, lamelifinElifi;
+
+@each $letter in $letters {
+    @for $i from 1 through 999 {   
+        mark.#{$letter}#{#n+$i}:nth-of-type(n) {
+            background-color: transparent;
+            background-image: url(/pic/numbers/#{$i}.png), url(/pic/markStars/#{$letter}/top.png);
+            background-position: center top, center top;
+            background-repeat: no-repeat, no-repeat;
+        }
+        mark.#{$letter}#{#n+$i}:nth-of-type(2n) {
+            background-color: transparent;
+            background-image: url(/pic/numbers/#{$i}.png), url(/pic/markStars/#{$letter}/bottom.png);
+            background-position: center bottom, center bottom;
+            background-repeat: no-repeat, no-repeat;
+        }
+    }
+}
+
+@for $i from 0 through 998 {
+    $j: $i + 1;
+    mark.lamelifinLamı#{#n+$i}:nth-of-type(n) > mark.lamelifinElifi#{#n+$j} {
+        background-color: transparent;
+        background-image: url(/pic/numbers/#{$j}.png), url(/pic/markStars/lamelifinElifi/bottom.png);
+        background-position: center bottom, center bottom;
+        background-repeat: no-repeat, no-repeat;
+    }
+    mark.lamelifinLamı#{#n+$i}:nth-of-type(2n) > mark.lamelifinElifi#{#n+$j} {
+        background-color: transparent;
+        background-image: url(/pic/numbers/#{$j}.png), url(/pic/markStars/lamelifinElifi/top.png);
+        background-position: center top, center top;
+        background-repeat: no-repeat, no-repeat;
+    }
+}
+
+@-moz-document url-prefix() {
+
+    @each $letter in $letters {
+        @for $i from 1 through 999 {   
+            mark.#{$letter}#{#n+$i}:nth-of-type(n) {
+                background-color: transparent;
+                background-image: url(/pic/numbers/firefox/#{$i}.png), url(/pic/markStars/#{$letter}/firefox/top.png);
+                background-position: center top, center top;
+                background-repeat: no-repeat, no-repeat;
+            }
+            mark.#{$letter}#{#n+$i}:nth-of-type(2n) {
+                background-color: transparent;
+                background-image: url(/pic/numbers/firefox/#{$i}.png), url(/pic/markStars/#{$letter}/firefox/bottom.png);
+                background-position: center bottom, center bottom;
+                background-repeat: no-repeat, no-repeat;
+            }
+        }
+    }
+    
+    @for $i from 0 through 998 {
+        $j: $i + 1;
+        mark.lamelifinLamı#{#n+$i}:nth-of-type(n) > mark.lamelifinElifi#{#n+$j} {
+            background-color: transparent;
+            background-image: url(/pic/numbers/firefox/#{$j}.png), url(/pic/markStars/lamelifinElifi/firefox/bottom.png);
+            background-position: center bottom, center bottom;
+            background-repeat: no-repeat, no-repeat;
+        }
+        mark.lamelifinLamı#{#n+$i}:nth-of-type(2n) > mark.lamelifinElifi#{#n+$j} {
+            background-color: transparent;
+            background-image: url(/pic/numbers/firefox/#{$j}.png), url(/pic/markStars/lamelifinElifi/firefox/top.png);
+            background-position: center top, center top;
+            background-repeat: no-repeat, no-repeat;
+        }
+    }
+}

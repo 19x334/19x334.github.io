@@ -1,4 +1,7 @@
-/* IN THE NAME OF THE GOD THE GRACIOUS THE MERCIFUL */
+/*
+	IN THE NAME OF THE GOD THE ELEGANT THE MERCIFUL!
+    SACRED & SUPREME ELEGANT YOUR NAME IS SACRED & SUPREME!
+*/
 
 @font-face {
     font-family: Dancing-Script;
@@ -59,7 +62,8 @@ a.tick-credits { display: none; }
 	top: 0;
 	display: block;
 	position: absolute;
-	width: 80vw;
+	width: fit-content;
+	max-width: 80vw;
 	font-family: Dancing-Script;
     font-size: 30px;
 }
