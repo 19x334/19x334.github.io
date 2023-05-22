@@ -1518,14 +1518,35 @@ window.addEventListener("resize", function() {
 	ifadeWidther();
 	ifadeHeighter();
 	initial_IfadeHeight = ifade.offsetHeight;
-	
-	if("Mobile-Safari" != browser) // hence mobile safari counts scrolling as a resize event so exclude it WITH WILL OF THE SACRED KING SUPREME ELEGANT!
-		location.reload(); // very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL 1 AND ONLY GOD!
 
 	if(ifade.value) resizeFlag = 0;
 	else resizeFlag = 1;
 	
 	if(resizeFlag == 0) loaded();
+});
+
+jQuery(document).ready(function($) {
+
+    // Store the window width
+    var windowWidth = $(window).width();
+
+    // Resize Event
+    $(window).resize(function()
+	{
+        // Check window width has actually changed and it's not just iOS triggering a resize event on scroll:
+        if ($(window).width() != windowWidth) {
+
+            // Update the window width for next time:
+            windowWidth = $(window).width();
+
+            // Do stuff here:
+
+			// hence mobile safari counts scrolling as a resize event so exclude it WITH WILL OF THE SACRED KING SUPREME ELEGANT!
+			location.reload(); // very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL 1 AND ONLY GOD!
+        }
+        // Otherwise do nothing
+
+    });
 });
 
 function ifadeWidther()
@@ -3812,7 +3833,7 @@ function detectBrowser()
 
 	if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
 	{
-		if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i))
+		if (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPhone/i)) // yeni ipad leri detect edemiyor
 			browser = "Mobile-Safari";
 		else
 			browser = "Safari";
