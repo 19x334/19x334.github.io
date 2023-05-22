@@ -1529,6 +1529,22 @@ window.addEventListener("resize", function() {
 	if(resizeFlag == 0) loaded();
 });
 
+function copyTextSizer()
+{
+	var width = ifade.clientWidth;
+
+	document.getElementById("copyText").style.setProperty("width", width + "px");
+
+	if(ovpl.checked){
+		document.getElementsByClassName("hwt-backdrop")[0].style.setProperty('width', 'max-content', 'important');
+		document.getElementsByClassName("hwt-highlights")[0].style.setProperty('width', 'max-content', 'important');
+	}
+	// jquery ile genişlik ataması yapma inşALLAH çünkü floating point arithmetic hatasına neden oluyor
+	// ve bu nedenle renklendirmeler kayıyor bazı genişliklerde chrome ve mobil safari'de
+	else if(document.getElementById("coloredDiv"))
+		document.getElementById("coloredDiv").style.setProperty("width", width + "px");
+}
+
 jQuery(document).ready(function($) {
 
     // Store the window width
@@ -1546,11 +1562,15 @@ jQuery(document).ready(function($) {
             // Do stuff here:
 
 			// hence mobile safari counts scrolling as a resize event so exclude it WITH WILL OF THE SACRED KING SUPREME ELEGANT!
-			location.reload(); // very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL 1 AND ONLY GOD!
+			copyTextSizer(); // is a very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL 1 AND ONLY GOD!
+
+			
         }
         // Otherwise do nothing
 
     });
+
+	copyTextSizer();
 });
 
 function ifadeWidther()
@@ -2851,27 +2871,6 @@ function addLines(numberOfLines) {
 	document.getElementById("0").style.setProperty('margin-top', '-1px', 'important');
 }
 
-$(window).resize(copyTextSizer);
-$(document).ready(function (){
-	
-	copyTextSizer();
-});
-
-function copyTextSizer()
-{
-	var width = ifade.clientWidth;
-
-	document.getElementById("copyText").style.setProperty("width", width + "px");
-
-	if(ovpl.checked){
-		document.getElementsByClassName("hwt-backdrop")[0].style.setProperty('width', 'max-content', 'important');
-		document.getElementsByClassName("hwt-highlights")[0].style.setProperty('width', 'max-content', 'important');
-	}
-	// jquery ile genişlik ataması yapma inşALLAH çünkü floating point arithmetic hatasına neden oluyor
-	// ve bu nedenle renklendirmeler kayıyor bazı genişliklerde chrome ve mobil safari'de
-	else if(document.getElementById("coloredDiv"))
-		document.getElementById("coloredDiv").style.setProperty("width", width + "px");
-}
 var harfler = ['ء','ـٔ','ا','آ','ٱ','أ','إ','ب','پ','ج','چ','د','ه','ة','و','ؤ','ز','ژ','ح','ط','ی','ي','ئ','ى','ک','ك','گ','ڭ','ل','م','ن','س','ع','ف','ڢ','ڤ','ص','ق','ڨ','ر','ش','ت','ث','خ','ذ','ض','ظ','غ','ﻻ','ﻹ','ﻷ','ﻵ'];
 
 function numaralandır(renderedRows, seçililer){
