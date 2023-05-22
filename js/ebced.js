@@ -1554,9 +1554,9 @@ jQuery(document).ready(function($) {
     $(window).resize(function()
 	{
         // Check window width has actually changed and it's not just iOS triggering a resize event on scroll:
-        if ($(window).width() != windowWidth) {
-
-            // Update the window width for next time:
+        if ($(window).width() != windowWidth) { // only when window width is change WITH WILL OF THE SACRED KING SUPREME ELEGANT 1 GOD
+            
+			// Update the window width for next time:
             windowWidth = $(window).width();
 
             // Do stuff here:
@@ -2863,7 +2863,7 @@ function addLines(numberOfLines) {
 
 	document.getElementById('satirlar').innerHTML = holder;
 
-	rengarenk();
+	rengarenk(); // for renumbering stars in case of resizing in order to prevent newlines starting from any other number than 1 WITH WILL OF THE SACRED KING SUPREME ELEGANT
 
 	// ULU ALLAH İSTERSE satırlar gösterildikten sonra daralan textarea satır genişliği nedeniyle alt satırlara taşan renklendirilen harflerin altındaki ve üstündeki yıldızlar içerisindeki satır sıra numaralarının satır başında sıfırlanacak şekilde tekrar hesaplanması gerekiyor yeni oluşan satır genişliklerine göre chrome dışındaki tarayıcılar safari, edge ve firefox'ta satır sıra numaralarının doğru gösterilmesi/hesaplanması için ... bunun içinde rengarenk(); fonksiyonu çağrılarak jquery.highlight-within-textarea.js içerisinde ULU ALLAH'IN İZNİYLE yaptığım değişikliklerle satır sıra numaralarının yeniden hesaplanması sağlanması gerekiyor ULU ALLAH'IN İZNİYLE doğru satır sıra numaralarının gözükmesi için chrome dışındaki tarayıcılar bu yenilemeyi kendileri yapmaları gerektiğini düşünemiyorlar ve benim burada manuel olarak rengarenk(); fonksiyonunu çağırmam gerekiyor firefox edge ve safari için ULU ALLAH'IN İZNİYLE :) bu rengarenk(); çağrısı aynı zamanda window resize durumunda da tetikleniyor olması gerektiği gibi ULU ALLAH'IN İSTEĞİYLE!
 
@@ -2928,8 +2928,8 @@ $('.seçenekler').on('change', function(){
 	else renkleriSay();
 });
 
-$(window).resize(function(){
-	if(ovpl.checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
+$(window).resize(function(){ // do not put this in "jquery ready > resize" event beacuse it is not working properly maybe because it is too far from definition line of renkleriSay(); function or something else... research by testing IF SACRED KING SUPREME ELEGANT WILLS
+	if(ovpl.checked) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
 	else renkleriSay();
 });
 
