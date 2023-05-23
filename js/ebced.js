@@ -1379,65 +1379,65 @@ function ortaHeighter(ifadeHeight)
 	{
 		if(browser == "Firefox" || browser == "Firefox-Android")
 		{
-			if(windowWidth >= 1581) {
+			if(windowWidth >= 1585) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + 4 + 'px');
+				else
+					orta.style.setProperty("height", '4px');
+			}
+			else if(1525 <= windowWidth && windowWidth <= 1584) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.440678 * windowWidth) + 702.034 + 'px');
+				else
+					orta.style.setProperty("height", (-0.440678 * windowWidth) + 702.034 + 'px');
+			}
+			else if(1334 <= windowWidth && windowWidth <= 1524) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.168421 * windowWidth) + 256.674 + 'px');
+				else
+					orta.style.setProperty("height", (-0.168421 * windowWidth) + 256.674 + 'px');
+			}
+			else if(1144 <= windowWidth && windowWidth <= 1333) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.174603 * windowWidth) + 232.746 + 'px');
+				else
+					orta.style.setProperty("height", (-0.174603 * windowWidth) + 232.746 + 'px');
+			}
+			else if(954 <= windowWidth && windowWidth <= 1143) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.190476 * windowWidth) + 217.714 + 'px');
+				else
+					orta.style.setProperty("height", (-0.190476 * windowWidth) + 217.714 + 'px');
+			}
+			else if(886 <= windowWidth && windowWidth <= 953) {
 				if(ifadeHeight > initial_IfadeHeight)
 					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + 'px');
 				else
 					orta.style.setProperty("height", '0px');
 			}
-			else if(1526 <= windowWidth && windowWidth <= 1580) {
+			else if(757 <= windowWidth && windowWidth <= 885) {
 				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.517857 * windowWidth) + 818.732 + 'px');
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.53125 * windowWidth) + 470.156 + 'px');
 				else
-					orta.style.setProperty("height", (-0.517857 * windowWidth) + 818.732 + 'px');
+					orta.style.setProperty("height", (-0.53125 * windowWidth) + 470.156 + 'px');
 			}
-			else if(1405 <= windowWidth && windowWidth <= 1525) {
+			else if(743 <= windowWidth && windowWidth <= 756) {
 				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.241667 * windowWidth) - 339.542 + 'px');
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + 'px');
 				else
-					orta.style.setProperty("height", (0.241667 * windowWidth) - 339.542 + 'px');
+					orta.style.setProperty("height", '0px');
 			}
-			else if(1335 <= windowWidth && windowWidth <= 1404) {
+			else if(296 <= windowWidth && windowWidth <= 742) {
 				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.478873 * windowWidth) + 672.817 + 'px');
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.692825 * windowWidth) + 514.076 + 'px');
 				else
-					orta.style.setProperty("height", (-0.478873 * windowWidth) + 672.817 + 'px');
-			}
-			else if(1234 <= windowWidth && windowWidth <= 1334) {
-				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.34 * windowWidth) - 419.56 + 'px');
-				else
-					orta.style.setProperty("height", (0.34 * windowWidth) - 419.56 + 'px');
-			}
-			else if(1145 <= windowWidth && windowWidth <= 1233) {
-				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.666667 * windowWidth) + 822.667 + 'px');
-				else
-					orta.style.setProperty("height", (-0.666667 * windowWidth) + 822.667 + 'px');
-			}
-			else if(1086 <= windowWidth && windowWidth <= 1144) {
-				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (1.03448 * windowWidth) - 1123.45 + 'px');
-				else
-					orta.style.setProperty("height", (1.03448 * windowWidth) - 1123.45 + 'px');
-			}
-			else if(955 <= windowWidth && windowWidth <= 1085) {
-				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.454545 * windowWidth) + 493.636 + 'px');
-				else
-					orta.style.setProperty("height", (-0.454545 * windowWidth) + 493.636 + 'px');
-			}
-			else if(886 <= windowWidth && windowWidth <= 954) {
-				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.746269 * windowWidth) - 651.94 + 'px');
-				else
-					orta.style.setProperty("height", (0.746269 * windowWidth) - 651.94 + 'px');
+					orta.style.setProperty("height", (-0.692825 * windowWidth) + 514.076 + 'px');
 			}
 			else {
 				if(ifadeHeight > initial_IfadeHeight)
-					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (windowWidth * windowWidth * 0.000293752) - (0.927423 * windowWidth) + 590.695 + 'px');
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (windowWidth * windowWidth * -0.000138739) - (0.615664 * windowWidth) + 502.695 + 'px');
 				else
-					orta.style.setProperty("height", (windowWidth * windowWidth * 0.000293752) - (0.927423 * windowWidth) + 590.695 + 'px');
+					orta.style.setProperty("height", (windowWidth * windowWidth * -0.000138739) - (0.615664 * windowWidth) + 502.695 + 'px');
 			}
 		}
 		else {
