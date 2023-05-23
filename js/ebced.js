@@ -1509,8 +1509,12 @@ function ortaHeighter(ifadeHeight)
 			}
 		}
 	}
-	else
-		orta.style.setProperty("height", '0px'); // removes div#orta when you click to sure1 and by doing so making sure1.value = '' and by doing so removing all text WITH WILL OF THE SACRED KING SUPREME ELEGANT ALLAH
+	else {
+		if(windowWidth <= 885)
+			orta.style.setProperty("height", (windowWidth * windowWidth * 0.000850837) - (1.57216 * windowWidth) + 724.966 + 'px');
+		else
+			orta.style.setProperty("height", '0px'); // removes div#orta when you click to sure1 and by doing so making sure1.value = '' and by doing so removing all text WITH WILL OF THE SACRED KING SUPREME ELEGANT ALLAH
+	}
 }
 
 function containerHeighter()
