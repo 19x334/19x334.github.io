@@ -1437,7 +1437,6 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 		padding-left: 0;
 		padding-right: 0;
 		width: 100%;
-		height: calc((100vw * 100vw * 0.000850837) - (1.57216 * 100vw) + 724.966px);
 	}
 	#orta-after{
 		background-image: url(/pic/parchment-background-bottom.png) !important;
@@ -1662,6 +1661,7 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	margin-top: 0px;
 	font-size: 22px;
 	color: rgb(0,0,142);
+	text-align: center;
 }
 
 .okundu{

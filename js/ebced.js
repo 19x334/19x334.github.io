@@ -4,7 +4,7 @@
 var browser = detectBrowser();
 var lineHeight;
 
-if(browser == "Firefox")
+if(browser == "Firefox" || browser == "Firefox-Android")
 	lineHeight = 79;
 else
 	lineHeight = 92;
@@ -208,7 +208,7 @@ function kalem(){
 	windowWidth = window.innerWidth; // bunu kaldırma ilk ana sayfa yüklendiğinde boş textareanın arkaplanının doğru yüklenmesi/karışmaması için!
 
 	if(ifade.value != '' && ifade.value != ekleme){
-		if("Firefox" == browser)
+		if(browser == "Firefox" || browser == "Firefox-Android")
 			ifade.style.background = "linear-gradient(transparent 78px, #999 1px), url(/pic/pen-50.png)";
 		else
 			ifade.style.background = "linear-gradient(transparent 91px, #999 1px), url(/pic/pen-50.png)";
@@ -223,7 +223,17 @@ function kalem(){
 }
 
 $("#ifade").on("input", function(){
-	if(!sure1.value) {
+	if(!sure1.value)
+	{
+		if(ifade.value == ekleme)
+		{
+			document.getElementById("satirlar").style.display = "none";
+			// below is bug fix for dangling 0 showing div of "toplam" only when ifade.value cleaned after scrolling until to the middle of the first line of textarea:
+			toplam.style.display = "none";
+			ifadeWidther(heightIfade);
+			ifade.value = '';
+			ortaHeighter();
+		}
 		kalem(); // "sitenin" orijinal KURAN metni üzerinde kullanıcı kaynaklı değişiklik yapıldığını gösterir kullanıcıya
 	}
 })
@@ -233,7 +243,7 @@ function loading()
 	document.documentElement.style.cursor = "wait";
 	resizeFlag = 1;
 
-	if(browser == "Firefox") {
+	if(browser == "Firefox" || browser == "Firefox-Android") {
 		ifade.style.background = "linear-gradient(transparent 78px, #999 1px), url(/pic/loading.gif)";
 		if(886 <= windowWidth)
 			ifade.style.setProperty('background-size', '100% 79px, 57px auto', 'important');
@@ -255,7 +265,7 @@ function loaded()
 {
 	if(!sure1.value) kalem();
 	else{
-		if("Firefox" == browser) {
+		if(browser == "Firefox" || browser == "Firefox-Android") {
 			if(886 <= windowWidth)
 				ifade.style.background = "linear-gradient(transparent 78px, #999 1px), url(/pic/book-arabic-019-190p.png)";
 			else
@@ -718,7 +728,7 @@ document.getElementById("ifade").addEventListener("keydown",
 
 			renkleri_temizle();
 
-			if(browser == "Firefox")
+			if(browser == "Firefox" || browser == "Firefox-Android")
 				setTimeout(function(){window.scrollTo(window.scrollX, (windowTopScroll - (window.innerHeight / 2) + 39.5 - 4 * 79))}, 0); // settimeout 0 eklemezsen çalışmıyor
 			else
 				setTimeout(function(){window.scrollTo(window.scrollX, (windowTopScroll - (window.innerHeight / 2) + 46 - 4 * 92))}, 0); // settimeout 0 eklemezsen çalışmıyor
@@ -1365,76 +1375,151 @@ var orta = document.getElementById("orta");
 
 function ortaHeighter(ifadeHeight)
 {
-	// if("Firefox" != browser)
-	if(windowWidth >= 1581) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + 'px');
-		else
-			orta.style.setProperty("height", '0px');
+	if(ifade.value)
+	{
+		if(browser == "Firefox" || browser == "Firefox-Android")
+		{
+			if(windowWidth >= 1581) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + 'px');
+				else
+					orta.style.setProperty("height", '0px');
+			}
+			else if(1526 <= windowWidth && windowWidth <= 1580) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.517857 * windowWidth) + 818.732 + 'px');
+				else
+					orta.style.setProperty("height", (-0.517857 * windowWidth) + 818.732 + 'px');
+			}
+			else if(1405 <= windowWidth && windowWidth <= 1525) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.241667 * windowWidth) - 339.542 + 'px');
+				else
+					orta.style.setProperty("height", (0.241667 * windowWidth) - 339.542 + 'px');
+			}
+			else if(1335 <= windowWidth && windowWidth <= 1404) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.478873 * windowWidth) + 672.817 + 'px');
+				else
+					orta.style.setProperty("height", (-0.478873 * windowWidth) + 672.817 + 'px');
+			}
+			else if(1234 <= windowWidth && windowWidth <= 1334) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.34 * windowWidth) - 419.56 + 'px');
+				else
+					orta.style.setProperty("height", (0.34 * windowWidth) - 419.56 + 'px');
+			}
+			else if(1145 <= windowWidth && windowWidth <= 1233) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.666667 * windowWidth) + 822.667 + 'px');
+				else
+					orta.style.setProperty("height", (-0.666667 * windowWidth) + 822.667 + 'px');
+			}
+			else if(1086 <= windowWidth && windowWidth <= 1144) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (1.03448 * windowWidth) - 1123.45 + 'px');
+				else
+					orta.style.setProperty("height", (1.03448 * windowWidth) - 1123.45 + 'px');
+			}
+			else if(955 <= windowWidth && windowWidth <= 1085) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.454545 * windowWidth) + 493.636 + 'px');
+				else
+					orta.style.setProperty("height", (-0.454545 * windowWidth) + 493.636 + 'px');
+			}
+			else if(886 <= windowWidth && windowWidth <= 954) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.746269 * windowWidth) - 651.94 + 'px');
+				else
+					orta.style.setProperty("height", (0.746269 * windowWidth) - 651.94 + 'px');
+			}
+			else {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (windowWidth * windowWidth * 0.000293752) - (0.927423 * windowWidth) + 590.695 + 'px');
+				else
+					orta.style.setProperty("height", (windowWidth * windowWidth * 0.000293752) - (0.927423 * windowWidth) + 590.695 + 'px');
+			}
+		}
+		else {
+			if(windowWidth >= 1582) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + 15 + 'px');
+				else
+					orta.style.setProperty("height", '15px');
+			}
+			else if(1554 <= windowWidth && windowWidth <= 1581) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.481481 * windowWidth) + 776.222 + 'px');
+				else
+					orta.style.setProperty("height", (-0.481481 * windowWidth) + 776.222 + 'px');
+			}
+			else if(1332 <= windowWidth && windowWidth <= 1553) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.140271 * windowWidth) + 217.842 + 'px');
+				else
+					orta.style.setProperty("height", (-0.140271 * windowWidth) + 217.842 + 'px');
+			}
+			else if(1110 <= windowWidth && windowWidth <= 1331) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.171946 * windowWidth) + 228.86 + 'px');
+				else
+					orta.style.setProperty("height", (-0.171946 * windowWidth) + 228.86 + 'px');
+			}
+			else if(888 <= windowWidth && windowWidth <= 1109) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.190045 * windowWidth) + 210.76 + 'px');
+				else
+					orta.style.setProperty("height", (-0.190045 * windowWidth) + 210.76 + 'px');
+			}
+			else if(886 <= windowWidth && windowWidth <= 887) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + 'px');
+				else
+					orta.style.setProperty("height", '0px');
+			}
+			else if(757 <= windowWidth && windowWidth <= 885) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.71875 * windowWidth) + 702.094 + 'px');
+				else
+					orta.style.setProperty("height", (-0.71875 * windowWidth) + 702.094 + 'px');
+			}
+			else if(470 <= windowWidth && windowWidth <= 756) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.678322 * windowWidth) + 578.811 + 'px');
+				else
+					orta.style.setProperty("height", (-0.678322 * windowWidth) + 578.811 + 'px');
+			}
+			else if(280 <= windowWidth && windowWidth <= 469) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.730159 * windowWidth) + 636.444 + 'px');
+				else
+					orta.style.setProperty("height", (-0.730159 * windowWidth) + 636.444 + 'px');
+			}
+			else if(168 <= windowWidth && windowWidth <= 279) {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.720721 * windowWidth) + 661.081 + 'px');
+				else
+					orta.style.setProperty("height", (-0.720721 * windowWidth) + 661.081 + 'px');
+			}
+			else {
+				if(ifadeHeight > initial_IfadeHeight)
+					orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (windowWidth * windowWidth * -0.0110193) + (1.2562 * windowWidth) + 668.532 + 'px');
+				else
+					orta.style.setProperty("height", (windowWidth * windowWidth * -0.0110193) + (1.2562 * windowWidth) + 668.532 + 'px');
+			}
+		}
 	}
-	else if(1526 <= windowWidth && windowWidth <= 1580) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.517857 * windowWidth) + 818.732 + 'px');
-		else
-			orta.style.setProperty("height", (-0.517857 * windowWidth) + 818.732 + 'px');
-	}
-	else if(1405 <= windowWidth && windowWidth <= 1525) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.241667 * windowWidth) - 339.542 + 'px');
-		else
-			orta.style.setProperty("height", (0.241667 * windowWidth) - 339.542 + 'px');
-	}
-	else if(1335 <= windowWidth && windowWidth <= 1404) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.478873 * windowWidth) + 672.817 + 'px');
-		else
-			orta.style.setProperty("height", (-0.478873 * windowWidth) + 672.817 + 'px');
-	}
-	else if(1234 <= windowWidth && windowWidth <= 1334) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.34 * windowWidth) - 419.56 + 'px');
-		else
-			orta.style.setProperty("height", (0.34 * windowWidth) - 419.56 + 'px');
-	}
-	else if(1145 <= windowWidth && windowWidth <= 1233) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.666667 * windowWidth) + 822.667 + 'px');
-		else
-			orta.style.setProperty("height", (-0.666667 * windowWidth) + 822.667 + 'px');
-	}
-	else if(1086 <= windowWidth && windowWidth <= 1144) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (1.03448 * windowWidth) - 1123.45 + 'px');
-		else
-			orta.style.setProperty("height", (1.03448 * windowWidth) - 1123.45 + 'px');
-	}
-	else if(955 <= windowWidth && windowWidth <= 1085) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (-0.454545 * windowWidth) + 493.636 + 'px');
-		else
-			orta.style.setProperty("height", (-0.454545 * windowWidth) + 493.636 + 'px');
-	}
-	else if(886 <= windowWidth && windowWidth <= 954) {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (0.746269 * windowWidth) - 651.94 + 'px');
-		else
-			orta.style.setProperty("height", (0.746269 * windowWidth) - 651.94 + 'px');
-	}
-	else {
-		if(ifadeHeight > initial_IfadeHeight)
-			orta.style.setProperty("height", ifadeHeight - initial_IfadeHeight - 1 + (windowWidth * windowWidth * 0.000293752) - (0.927423 * windowWidth) + 590.695 + 'px');
-		else
-			orta.style.setProperty("height", (windowWidth * windowWidth * 0.000293752) - (0.927423 * windowWidth) + 590.695 + 'px');
-	}
+	else
+		orta.style.setProperty("height", '0px'); // removes div#orta when you click to sure1 and by doing so making sure1.value = '' and by doing so removing all text WITH WILL OF THE SACRED KING SUPREME ELEGANT ALLAH
 }
 
 function containerHeighter()
 {
 	if(1585 <= windowWidth) {
-		if("Firefox" != browser)
-			container.style.height =  (7 * lineHeight) + 'px'; // 7 * 92px = "644px";
-		else
+		if(browser == "Firefox" || browser == "Firefox-Android")
 			container.style.height =  (8 * lineHeight) + 'px'; // 8 * 79px = "632px";
+		else
+			container.style.height =  (7 * lineHeight) + 'px'; // 7 * 92px = "644px";
 	}
 	else if(886 <= windowWidth && windowWidth < 1585)
 		container.style.height = "calc(41.5vw - 1px)";
@@ -1459,7 +1544,7 @@ const resize_ob = new ResizeObserver(function(entries) {
 
 	var num_of_nl;
 
-	if(browser == "Firefox")
+	if(browser == "Firefox" || browser == "Firefox-Android")
 		num_of_nl = parseInt(heightIfade / 79) + 1; // textarea'nın sonuna kadar toplamın gösterilebilmesi için +1 gerekli
 	else
 		num_of_nl = parseInt(heightIfade / 92) + 1; // textarea'nın sonuna kadar toplamın gösterilebilmesi için +1 gerekli
@@ -2959,7 +3044,7 @@ notifications.push({
 	imageWidth: 'auto',
 	imageHeight: 301,
 	imageAlt: "Slipping of row color countings or color markings may occur in " + browser + "!",
-	title: "Coloring Markings or Row Coloring Countings May Slip in " + ((browser == "Firefox") ? "other browsers" : browser) + "!",
+	title: "Coloring Markings or Row Coloring Countings May Slip in " + ((browser == "Firefox" || browser == "Firefox-Android") ? "other browsers" : browser) + "!",
 	html: "<p style='font-size: x-large;'>In That Case " + ((browser == "iPad-Safari" || browser == "iPhone-Safari" || browser == "iPod-Safari" || browser.includes("Android")) ? "Rotate Your Device" : "Resize Width of Your Browser Window") + " and Then Continue Counting From Unslipped Verse You Remained or Just <a href='https://www.mozilla.org/en/firefox/new/' target='_blank'>Use Firefox</a>" + ((browser == "Firefox") ? "!</p>" : (" Instead of " + browser + "!</p>"))
 });
 
@@ -3041,7 +3126,7 @@ $('#ovpl').change(function(){
 function yataylaştırıcı(){
 	// önce "satır başına 1 ayet"i seçtiğimizde ve sonra renklendirecek harf seçtiğimizde renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için:
 	if(ovpl.checked){
-		if(browser != "Firefox") {
+		if(browser != "Firefox" && browser != "Firefox-Android") {
 			if(windowWidth < 886) document.getElementById("nextSura").style.marginTop = "24px";
 			else document.getElementById("nextSura").style.marginTop = "15px";
 		}
@@ -3055,7 +3140,7 @@ function yataylaştırıcı(){
 		}
 	}
 	else{
-		if(browser != "Firefox") {
+		if(browser != "Firefox" && browser != "Firefox-Android") {
 			if(windowWidth < 886) document.getElementById("nextSura").style.marginTop = "8px";
 			else document.getElementById("nextSura").style.marginTop = "0px";
 		}
@@ -3918,7 +4003,7 @@ function sonrakiSureyeGeç(){
 	}
 	else {
 		nextSura.style.display = "none";
-		if(browser != "Firefox")
+		if(browser != "Firefox" && browser != "Firefox-Android")
 			if(sure1.value && $("input[class=seçenekler]:checked").length > 0)
 				notFirefox.style.display = "block";
 			else
