@@ -244,7 +244,7 @@ const syncData89 = [
 	{start: '18.861', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#1">89:1</a>&nbsp;By the dawn.</p>'},
 	{start: '20.313', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#2">89:2</a>&nbsp;And the ten nights.</p>'},
 	{start: '22.706', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#3">89:3</a>&nbsp;By the even and the odd.</p>'},
-	{start: '24.945', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#4">89:4</a>&nbsp;By the night as it passes.</p>'},
+	{start: '24.945', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#4">89:4</a>&nbsp;By the night as it passes. (2023/05/26 UTC+3 07:34)</p>'},
 	{start: '27.940', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#5">89:5</a>&nbsp;A profound oath, for one who possesses intelligence.</p>'},
 	{start: '33.103', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#6">89:6</a>&nbsp;Have you noted what your OWNER did to `Aad?</p>'},
 	{start: '36.450', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#7">89:7</a>&nbsp;Erum; the town with tall buildings.</p>'},

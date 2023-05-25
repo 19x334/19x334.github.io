@@ -237,13 +237,11 @@ a:visited { text-decoration: none; }
 @media screen and (pointer: coarse) {
 	a:active { text-decoration: underline; }
 }
-@media only screen and (min-width: 768px) {
-	.text{
-		width: 77%;
-		margin-left: 11.5%;
-	}
-	a#knowledge-link { letter-spacing: 0.19vw; font-weight: bolder; }
+.text{
+	width: 77%;
+	margin-left: 11.5%;
 }
+a#knowledge-link { letter-spacing: 0.19vw; font-weight: bolder; }
 #But-How-Do-We-know-That {
 	margin-top: 0;
 	font-family: Dancing-Script;
@@ -316,26 +314,45 @@ body {
 	}
 }
 
-@media only screen and (max-width: 767px) {
-	.text{ text-align: center; }
+@media only screen and (orientation: portrait)
+{
 	#ikinciSayaç{ margin-top: 5vw; }
-	.text{
+	.text, #But-How-Do-We-know-That {
+		text-align: center;
+		font-size: 66px;
+		line-height: 112px;
 		width: 96%;
 		margin-left: 2%;
 	}
-	#timeWrapper { width: 92vw;}
-	#headLine{ 
+	a#knowledge-link {
+		letter-spacing: 0.19vw;
+		font-weight: bolder;
+		font-size: 66px;
+	}
+	.verses {
+		font-size: 66px;
+		line-height: 112px;
+	}
+	.fa-play, .fa-pause {
+		width: 114px;
+		height: 114px;
+	}
+	#timeWrapper { width: 92vw; }
+	#headLine { 
 		font-size: 8vw;
 		margin-bottom: 7vw;
 		line-height: 14vw;
 	}
 	/* Safari 10.1+ */
 	@media not all and (min-resolution:.001dpcm)
-	{ @supports (-webkit-appearance:none) {
-		#headLine{
-			font-size: 7.57vw;
+	{
+		@supports (-webkit-appearance:none)
+		{
+			#headLine{
+				font-size: 7.57vw;
+			}
 		}
-	}}
+	}
 	#verses{
 		margin-left: unset;
 	}
