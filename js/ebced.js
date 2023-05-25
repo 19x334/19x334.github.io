@@ -199,9 +199,25 @@ function from_sırano1and2_to_sureayet() {
 	
 };
 
+function nosuzayetlerisil() {
+	var str = ifade.value;
+	if (document.getElementById('sn').checked) {
+		str = str.replace(/^.*(:0).*$\n/gm, ''); // 0 nolu ayetleri sil
+		// delete verses which doesn't begin with numbers
+		ifade.value = str.replace(/^(?![1-9]).*$\n/gm, '');
+	}
+	loaded();
+}
+
 $('#sn').on('change', function(){
+	loading();
 	isColorMuqatta = 0;
-	loadXMLDoc();
+	if(sure1.value) {
+		loadXMLDoc();
+		yataylaştırıcı();
+	}
+	else
+		nosuzayetlerisil();	// sure, ayet ve sıranolar boş olsa bile
 });
 
 function kalem(){
@@ -738,18 +754,6 @@ document.getElementById("ifade").addEventListener("keydown",
 	}
 )
 
-$('#sn').on('change', nosuzayetlerisil) // sure, ayet ve sıranolar boş olsa bile
-$('#ifade').on('input', yazarkennosuzayetlerisil) // numarasız ayet yazımına izin verme
-
-function nosuzayetlerisil() {
-	loading();
-	var str = ifade.value;
-	if (document.getElementById('sn').checked) {
-		str = str.replace(/^.*(:0).*$\n/gm, ''); // 0 nolu ayetleri sil
-		// delete verses which doesn't begin with numbers
-		ifade.value = str.replace(/^(?![1-9]).*$\n/gm, '');
-	}
-}
 function yazarkennosuzayetlerisil() {
 	var str = ifade.value;
 	if (document.getElementById('sn').checked) {
@@ -758,6 +762,8 @@ function yazarkennosuzayetlerisil() {
 		ifade.value = str.replace(/^(?![1-9]).*$/gm, '')
 	}
 }
+
+$('#ifade').on('input', yazarkennosuzayetlerisil) // numarasız ayet yazımına izin verme
 
 function copyToClipboard(text) {
 	if (window.clipboardData && window.clipboardData.setData) {
@@ -1624,7 +1630,8 @@ function copyTextSizer()
 
 	document.getElementById("copyText").style.setProperty("width", width + "px");
 
-	if(ovpl.checked){
+	if(ovpl.checked && document.getElementById("coloredDiv"))
+	{
 		document.getElementsByClassName("hwt-backdrop")[0].style.setProperty('width', 'max-content', 'important');
 		document.getElementsByClassName("hwt-highlights")[0].style.setProperty('width', 'max-content', 'important');
 	}
@@ -3011,16 +3018,12 @@ $(window).load(function(){
 // önce "satır başına 1 ayet"i seçtiğimizde ve sonra renklendirecek harf seçtiğimizde
 // hwt classlı katmanların daha sonradan aktif olmasından dolayı
 // renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için
-// değişiklikleri burada değil renkleriSay() ve renklileriSay() fonksiyonlarının içinde yapıyoruz:
-$('.seçenekler').on('change', function(){
-	if(ovpl.checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
-	else renkleriSay();
-});
+// değişiklikleri burada değil renkleriSay() fonksiyonunun içinde yapıyoruz:
+$('.seçenekler').on('change', renkleriSay);
 
-$(window).resize(function(){ // do not put this in "jquery ready > resize" event beacuse it is not working properly maybe because it is too far from definition line of renkleriSay(); function or something else... research by testing IF SACRED KING SUPREME ELEGANT WILLS
-	if(ovpl.checked) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
-	else renkleriSay();
-});
+
+// do not put this in "jquery ready > resize" event beacuse it is not working properly maybe because it is too far from definition line of renkleriSay(); function or something else... research by testing IF SACRED KING SUPREME ELEGANT WILLS
+$(window).resize(renkleriSay);
 
 var direction;
 
@@ -3122,9 +3125,11 @@ $('#ovpl').change(function(){
 	// önce "satır başına 1 ayet"i seçtiğimizde ve sonra renklendirecek harf seçtiğimizde
 	// hwt classlı katmanların daha sonradan aktif olmasından dolayı
 	// renklendirmenin tüm yatay yazı alanı boyunca etkili olabilmesi için
-	// değişiklikleri burada değil renkleriSay() ve renklileriSay() fonksiyonlarının içinde yapıyoruz:
-	if(ovpl.checked == true) renkleriSay(); // change this function to renklileriSay() if ALLAH wills;
-	else renkleriSay();
+	// değişiklikleri burada değil renkleriSay() fonksiyonunun içinde yapıyoruz:
+	renkleriSay();
+	rengarenk();
+	yataylaştırıcı(); // you should call it second time for proper "verse per line" functioning
+	lineKeeper(); // after "verse per line" switching and scrolling in textarea then switching "verse per line" again cause line shift between textarea and left column total line coloring countings this lineKeeper(); call fixes that WITH WILL OF THE SACRED KING SUPREME ELEGANT!
 })
 
 function yataylaştırıcı(){
@@ -3151,7 +3156,8 @@ function yataylaştırıcı(){
 		ifade.style.setProperty('white-space', 'pre-wrap', 'important');
 		ifade.style.setProperty('overflow-x', 'hidden', 'important');
 		document.getElementById("copyText").style.setProperty('white-space', 'pre-wrap', 'important');
-		if(document.getElementById("coloredDiv")){
+		if(document.getElementById("coloredDiv"))
+		{
 			document.getElementsByClassName("hwt-backdrop")[0].style.setProperty('width', 'inherit', 'important');
 			document.getElementsByClassName("hwt-highlights")[0].style.setProperty('white-space', 'pre-wrap', 'important');
 
