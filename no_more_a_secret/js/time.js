@@ -60,7 +60,7 @@ function handleTickInit(tick) {
 }
 
 $(document).ready(function() {
-	setTimeout(gizleyici, 500);
+	setTimeout(gizleyici, 777);
 });
 $(window).resize(gizleyici);
 
