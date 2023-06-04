@@ -1216,7 +1216,7 @@ body {
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
 	mark {
-		/* 0.5px decreased for preventing vertical color marking slippings and fix for horizontal alignment in ios and ipados WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL ALLAH */
+		/* 0.5px decreased for preventing vertical color marking slippings and fix for horizontal alignment in ios and ipados WITH WILL OF THE SACRED SUPREME KING ELEGANT MERCIFUL ALLAH */
 		padding-top: 28px !important;
 		padding-bottom: 28px !important;
 	}

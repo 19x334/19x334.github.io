@@ -1519,7 +1519,7 @@ function ortaHeighter(ifadeHeight)
 		if(windowWidth <= 885)
 			orta.style.setProperty("height", (windowWidth * windowWidth * 0.000850837) - (1.57216 * windowWidth) + 724.966 + 'px');
 		else
-			orta.style.setProperty("height", '0px'); // removes div#orta when you click to sure1 and by doing so making sure1.value = '' and by doing so removing all text WITH WILL OF THE SACRED KING SUPREME ELEGANT ALLAH
+			orta.style.setProperty("height", '0px'); // removes div#orta when you click to sure1 and by doing so making sure1.value = '' and by doing so removing all text WITH WILL OF THE SACRED SUPREME KING ELEGANT ALLAH
 	}
 }
 
@@ -1650,15 +1650,15 @@ jQuery(document).ready(function($) {
     $(window).resize(function()
 	{
         // Check window width has actually changed and it's not just iOS triggering a resize event on scroll:
-        if ($(window).width() != windowWidth) { // only when window width is change WITH WILL OF THE SACRED KING SUPREME ELEGANT 1 GOD
+        if ($(window).width() != windowWidth) { // only when window width is change WITH WILL OF THE SACRED SUPREME KING ELEGANT 1 GOD
             
 			// Update the window width for next time:
             windowWidth = $(window).width();
 
             // Do stuff here:
 
-			// hence mobile safari counts scrolling as a resize event so exclude it WITH WILL OF THE SACRED KING SUPREME ELEGANT!
-			copyTextSizer(); // is a very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED KING SUPREME ELEGANT MERCIFUL 1 AND ONLY GOD!
+			// hence mobile safari counts scrolling as a resize event so exclude it WITH WILL OF THE SACRED SUPREME KING ELEGANT!
+			copyTextSizer(); // is a very cruical for preventing massive color slippings when window is resized WITH WILL OF THE SACRED SUPREME KING ELEGANT MERCIFUL 1 AND ONLY GOD!
 
 			
         }
@@ -2499,7 +2499,7 @@ function renklendir(ltr)
 	rengarenk();
 
 	setTimeout(() => {
-		message(); // for updating url address of browser WITH WILL OF THE SACRED KING SUPREME ELEGANT		
+		message(); // for updating url address of browser WITH WILL OF THE SACRED SUPREME KING ELEGANT		
 	}, 570);
 }
 
@@ -2546,7 +2546,7 @@ function rengarenk()
 			{ highlight: clrltrs[31], className: 'الرحيم' },
 			{ highlight: clrltrs[32], className: 'اسم' },
 			{ highlight: clrltrs[33], className: 'endSuffixedSoNotCounted' },
-			{ highlight: ["r"], className: 'newLine' } // special newLine reset character "r" for linebreak point detection with WILL OF THE SACRED KING SUPREME ELEGANT!
+			{ highlight: ["r"], className: 'newLine' } // special newLine reset character "r" for linebreak point detection with WILL OF THE SACRED SUPREME KING ELEGANT!
 		]
 	});
 
@@ -2856,7 +2856,7 @@ function message() {
 		}
 	}
 	linkUpdate = true;
-	window.location.hash = currentURL.slice(18, currentURL.length); // remove "19x334.github.io/#" section from start IF SACRED KING SUPREME ELEGANT WILLS
+	window.location.hash = currentURL.slice(18, currentURL.length); // remove "19x334.github.io/#" section from start IF SACRED SUPREME KING ELEGANT WILLS
 	linkUpdate = false;
 }
 
@@ -2959,7 +2959,7 @@ function addLines(numberOfLines) {
 
 	document.getElementById('satirlar').innerHTML = holder;
 
-	rengarenk(); // for renumbering stars in case of resizing in order to prevent newlines starting from any other number than 1 WITH WILL OF THE SACRED KING SUPREME ELEGANT
+	rengarenk(); // for renumbering stars in case of resizing in order to prevent newlines starting from any other number than 1 WITH WILL OF THE SACRED SUPREME KING ELEGANT
 
 	// ULU ALLAH İSTERSE satırlar gösterildikten sonra daralan textarea satır genişliği nedeniyle alt satırlara taşan renklendirilen harflerin altındaki ve üstündeki yıldızlar içerisindeki satır sıra numaralarının satır başında sıfırlanacak şekilde tekrar hesaplanması gerekiyor yeni oluşan satır genişliklerine göre chrome dışındaki tarayıcılar safari, edge ve firefox'ta satır sıra numaralarının doğru gösterilmesi/hesaplanması için ... bunun içinde rengarenk(); fonksiyonu çağrılarak jquery.highlight-within-textarea.js içerisinde ULU ALLAH'IN İZNİYLE yaptığım değişikliklerle satır sıra numaralarının yeniden hesaplanması sağlanması gerekiyor ULU ALLAH'IN İZNİYLE doğru satır sıra numaralarının gözükmesi için chrome dışındaki tarayıcılar bu yenilemeyi kendileri yapmaları gerektiğini düşünemiyorlar ve benim burada manuel olarak rengarenk(); fonksiyonunu çağırmam gerekiyor firefox edge ve safari için ULU ALLAH'IN İZNİYLE :) bu rengarenk(); çağrısı aynı zamanda window resize durumunda da tetikleniyor olması gerektiği gibi ULU ALLAH'IN İSTEĞİYLE!
 
@@ -3022,7 +3022,7 @@ $(window).load(function(){
 $('.seçenekler').on('change', renkleriSay);
 
 
-// do not put this in "jquery ready > resize" event beacuse it is not working properly maybe because it is too far from definition line of renkleriSay(); function or something else... research by testing IF SACRED KING SUPREME ELEGANT WILLS
+// do not put this in "jquery ready > resize" event beacuse it is not working properly maybe because it is too far from definition line of renkleriSay(); function or something else... research by testing IF SACRED SUPREME KING ELEGANT WILLS
 $(window).resize(renkleriSay);
 
 var direction;
@@ -3129,7 +3129,7 @@ $('#ovpl').change(function(){
 	renkleriSay();
 	rengarenk();
 	yataylaştırıcı(); // you should call it second time for proper "verse per line" functioning
-	lineKeeper(); // after "verse per line" switching and scrolling in textarea then switching "verse per line" again cause line shift between textarea and left column total line coloring countings this lineKeeper(); call fixes that WITH WILL OF THE SACRED KING SUPREME ELEGANT!
+	lineKeeper(); // after "verse per line" switching and scrolling in textarea then switching "verse per line" again cause line shift between textarea and left column total line coloring countings this lineKeeper(); call fixes that WITH WILL OF THE SACRED SUPREME KING ELEGANT!
 })
 
 function yataylaştırıcı(){
@@ -3938,7 +3938,7 @@ function detectBrowser()
 			browser = "iPhone-Safari";
 		else if (navigator.userAgent.match(/iPod/i))
 			browser = "iPod-Safari";
-		else if ((navigator.userAgent.match(/Mac/) || navigator.userAgent.match(/iPad/i)) && navigator.maxTouchPoints && navigator.maxTouchPoints >= 1) // even can detect newer ipad pro s WITH WILL OF THE SACRED KING SUPREME ELEGANT!
+		else if ((navigator.userAgent.match(/Mac/) || navigator.userAgent.match(/iPad/i)) && navigator.maxTouchPoints && navigator.maxTouchPoints >= 1) // even can detect newer ipad pro s WITH WILL OF THE SACRED SUPREME KING ELEGANT!
 			browser = "iPad-Safari";
 		else
 			browser = "Safari";
