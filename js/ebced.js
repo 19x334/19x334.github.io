@@ -61,19 +61,19 @@ function randombg()
 		"url('pic/size/425/resurrection.png')",
 		"url('/pic/size/425/heavenandhell.png')",
 		"url('/pic/size/425/tree-and-star-prostrate.png')",
-		"url('/pic/size/425/LION.png')"];
+		];
 	else if(biggestSide < 886)
 		bigSize = [
 		"url('/pic/size/886/space2.png')",
 		"url('/pic/size/886/space4.png')",
 		"url('/pic/size/886/space5.png')",
-		"url('/pic/size/886/space8.jpg')",
+		"url('/pic/size/886/space8.png')",
 		"url('pic/size/886/El-Konstantiniyye.png')",
 		"url('pic/size/886/moonEarthSun.png')",
 		"url('pic/size/886/resurrection.png')",
 		"url('/pic/size/886/heavenandhell.png')",
 		"url('/pic/size/886/tree-and-star-prostrate.png')",
-		"url('/pic/size/886/LION.png')"];
+		];
 	else if(biggestSide < 1024)
 		bigSize = [
 		"url('/pic/size/1024/space2.png')",
@@ -85,7 +85,7 @@ function randombg()
 		"url('pic/size/1024/resurrection.png')",
 		"url('/pic/size/1024/heavenandhell.png')",
 		"url('/pic/size/1024/tree-and-star-prostrate.png')",
-		"url('/pic/size/1024/LION.png')"];
+		];
 	else if(biggestSide < 1585)
 		bigSize = [
 		"url('/pic/size/1585/space2.png')",
@@ -97,22 +97,22 @@ function randombg()
 		"url('pic/size/1585/resurrection.png')",
 		"url('/pic/size/1585/heavenandhell.png')",
 		"url('/pic/size/1585/tree-and-star-prostrate.png')",
-		"url('/pic/size/1585/LION.png')"];
+		];
 	else
-		 bigSize = [
-		 "url('pic/space2.png')",
-		 "url('pic/space4.png')",
-		 "url('pic/space5.png')",
-		 "url('pic/space8.jpg')",
-		 "url('pic/El-Konstantiniyye.png')",
-		 "url('pic/moonEarthSun.png')",
-		 "url('pic/resurrection.png')",
-		 "url('/pic/heavenandhell.png')",
-		 "url('/pic/tree-and-star-prostrate.png')",
-		 "url('/pic/LION.png')"];
+		bigSize = [
+		"url('pic/space2.png')",
+		"url('pic/space4.png')",
+		"url('pic/space5.png')",
+		"url('pic/space8.jpg')",
+		"url('pic/El-Konstantiniyye.png')",
+		"url('pic/moonEarthSun.png')",
+		"url('pic/resurrection.png')",
+		"url('/pic/heavenandhell.png')",
+		"url('/pic/tree-and-star-prostrate.png')",
+		];
 
-	var random = Math.floor(Math.random() * 10);
-	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 10); // FOR DIFFERENT BACKGROUND IF GOD WILLS
+	var random = Math.floor(Math.random() * 9);
+	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 9); // FOR DIFFERENT BACKGROUND IF ALLAH WILLS
     document.getElementById("bg").style.backgroundImage = bigSize[random];
     document.getElementById("vücut").style.backgroundImage = bigSize[random];
 	localStorage.setItem("lastBgIndex", random);
