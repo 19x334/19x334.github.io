@@ -1,0 +1,1 @@
+window.location = "../Time_of_DoomsDay_Resurrection_is_No_More_A_Secret"
