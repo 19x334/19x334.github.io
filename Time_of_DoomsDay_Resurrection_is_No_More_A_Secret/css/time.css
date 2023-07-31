@@ -9,7 +9,7 @@
 }
 .image { width: min(auto, 100%); height: min(auto, 100%); max-height: 100vh; max-width: 100%; margin: auto; position: relative; display: block; }
 .yellow { color: yellow; font-weight: bolder; }
-
+.inline-block { display: inline-block; text-align: center; line-height: normal; padding-inline-start: 26.5px; }
 a#knowledge-link { color: black; }
 a#knowledge-link:hover {
 	color: white !important;
