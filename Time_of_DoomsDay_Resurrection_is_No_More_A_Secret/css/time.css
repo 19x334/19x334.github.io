@@ -21,6 +21,7 @@ a#knowwledge-link:hover .tick-label, a#knowwledge-link:hover #headLine{
 	color: black !important; background-color: transparent !important;
 	text-shadow: -1px -1px 5px white, 1px -1px 5px white, -1px 1px 5px white, 1px 1px 5px white !important;
 }
+td { padding: 1rem; }
 a#knowwledge-link:hover .tick-flip-panel { color: #000 !important; background-color: #fff !important; }
 a#knowwledge-link:hover .tick-flip-front { border-top: 1px solid black !important; border-left: 1px solid black !important; border-right: 1px solid black !important; }
 a#knowwledge-link:hover .tick-flip-back { border-bottom: 1px solid black !important; border-left: 1px solid black !important; border-right: 1px solid black !important; }
