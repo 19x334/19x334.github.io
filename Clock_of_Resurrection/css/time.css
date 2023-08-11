@@ -97,7 +97,7 @@ a.tick-credits { display: none; }
 }
 @media only screen and (min-width: 1025px) {
 	.fa-play{
-		background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/play.png);
+		background-image: url(/Clock_of_Resurrection/pic/play.png);
 		background-size: contain;
 		display: block;
 		width: 50px;
@@ -110,7 +110,7 @@ a.tick-credits { display: none; }
 		filter: drop-shadow(0 0 2px gray);
 	}
 	.fa-pause{
-		background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/pause.png);
+		background-image: url(/Clock_of_Resurrection/pic/pause.png);
 		background-size: contain;
 		display: block;
 		width: 50px;
@@ -126,7 +126,7 @@ a.tick-credits { display: none; }
 
 @media only screen and (max-width: 1024px) {
 	.fa-play{
-		background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/play.png);
+		background-image: url(/Clock_of_Resurrection/pic/play.png);
 		background-size: contain;
 		display: block;
 		width: 50px;
@@ -139,7 +139,7 @@ a.tick-credits { display: none; }
 		filter: drop-shadow(0 0 2px gray);
 	}
 	.fa-pause{
-		background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/pause.png);
+		background-image: url(/Clock_of_Resurrection/pic/pause.png);
 		background-size: contain;
 		display: block;
 		width: 50px;
@@ -171,7 +171,7 @@ a.tick-credits { display: none; }
 }
 #moonEarthSun{
 	background-color: black;
-	background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/moonEarthSun.png);
+	background-image: url(/Clock_of_Resurrection/pic/moonEarthSun.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -184,7 +184,7 @@ a.tick-credits { display: none; }
     justify-content: center;
 }
 #heaven{
-	background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/heaven.png);
+	background-image: url(/Clock_of_Resurrection/pic/heaven.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -201,7 +201,7 @@ a.tick-credits { display: none; }
 	transition-property: right;
 }
 #hell{
-	background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/hell.png);
+	background-image: url(/Clock_of_Resurrection/pic/hell.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -288,7 +288,7 @@ body {
 	body {
 		width: 100%;
 		min-height: 100vh !important;
-		background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/El-Konstantiniyye.jpg);
+		background-image: url(/Clock_of_Resurrection/pic/El-Konstantiniyye.jpg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -301,7 +301,7 @@ body {
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
 	#bg {
-		background-image: url(/Time_of_DoomsDay_Resurrection_is_No_More_A_Secret/pic/El-Konstantiniyye.jpg);
+		background-image: url(/Clock_of_Resurrection/pic/El-Konstantiniyye.jpg);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;

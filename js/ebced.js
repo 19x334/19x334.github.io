@@ -2569,7 +2569,7 @@ function message() {
 	var ayetiki2 = ayet2.value;
 	var sn = document.getElementById('sn');
 
-    var kopyalamaLinki = "19x334.github.io/#"
+    var kopyalamaLinki = "19x334.com/#"
     
     if (surebir) {
 		if (ayetbir1) {
@@ -2856,7 +2856,7 @@ function message() {
 		}
 	}
 	linkUpdate = true;
-	window.location.hash = currentURL.slice(18, currentURL.length); // remove "19x334.github.io/#" section from start IF SACRED SUPREME KING ELEGANT WILLS
+	window.location.hash = currentURL.slice(12, currentURL.length); // remove "19x334.com/#" section from start IF SACRED SUPREME KING ELEGANT WILLS
 	linkUpdate = false;
 }
 

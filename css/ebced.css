@@ -57,7 +57,7 @@ body{ scroll-behavior: smooth; }
 	cursor: pointer;
     background-color: transparent;
     width: 50vw;
-    height: 28.318vw;
+    height: 13.5vw;
     perspective: 100vw;
     display: block;
     position: relative;
@@ -821,18 +821,6 @@ textarea::-webkit-scrollbar-thumb {
 		margin-left: 7%;
 		margin-right: 7%;
 	}
-	#messengers{
-		position: relative;
-		background-image: url(/pic/MESSENGERS_OF_MISAQ-666_OF_THE_GOD-19_IN_3-81.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		width: min(103.83vh,100vw);
-    	height: min(100vh,96.3vw);
-		background-position: center;
-		margin: auto;
-		margin-bottom: 44px;
-		margin-top: 33px;
-	}
 	html, body { overflow-x: auto !important; /* gerektiğinde scroll çubuğunu mobil olmadığında gizler tablolar ekrana sığdığı için */ }
 	.container{
 		height: calc(41.5vw - 1px);
@@ -921,7 +909,7 @@ textarea::-webkit-scrollbar-thumb {
 
 	.flip-card-brothers {
 		width: 75vw;
-		height: 42.478vw;
+		height: 20.25vw;
 		perspective: 150vw;
 	}
 
@@ -1267,7 +1255,7 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	
 	.flip-card-brothers {
 		width: 100vw;
-		height: 56.636vw;
+		height: 27vw;
 		perspective: 200vw;
 	}
 
@@ -1359,17 +1347,6 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 		padding-bottom: 43px !important;
 	}
 
-	#messengers{
-		background-image: url(/pic/MESSENGERS_OF_MISAQ-666_OF_THE_GOD-19_IN_3-81.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		width: min(103.83vh,100vw);
-    	height: min(100vh,96.3vw);
-    	background-position: center;
-		margin: auto;
-    	margin-bottom: 44px;
-    	margin-top: 33px;
-	}
 	html, body { overflow-x: auto !important; /* gerektiğinde scroll çubuğunu gösterir mobilde sağa kaydırıp tabloları inceleyebilmek için gerekli*/ }
 	@-moz-document url-prefix() {
 		textarea {

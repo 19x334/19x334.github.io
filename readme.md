@@ -1,4 +1,3 @@
-# 19x334.github.io
 # 19x334.com
 # DidYouQuestionLife.com ?
 # Hayatı.Sorguladınmı.com ?
