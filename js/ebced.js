@@ -3079,8 +3079,7 @@ function alertt()
 			imageUrl: notifications[1].imageUrl,
 			imageWidth: 'auto',
 			imageHeight: 190,
-			imageAlt: 'DO NOT TOUCH QURAN! WITHOUT CLEANED UP! EVEN WITH MOUSE!',
-			width: 'auto'
+			imageAlt: 'DO NOT TOUCH QURAN! WITHOUT CLEANED UP! EVEN WITH MOUSE!'
 		}).then((value) => {
 			Swal.fire({
 				title: notifications[0].title,
