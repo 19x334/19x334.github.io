@@ -3106,7 +3106,8 @@ function alertt()
 						html: notifications[3].html
 					}).then((value) => {
 						v = 0; // starts verses from 0
-						clickLink = true;
+						clickLink = false; // insanları zorlama inşALLAH
+						// clickLink = true;
 					})
 				})
 			})
@@ -3561,7 +3562,8 @@ var versesOf74 = [
 
 var verseHead = document.getElementById("versesOf74");
 var v = 0;
-var clickLink = true;
+var clickLink = false; // insanları zorlama inşALLAH
+// var clickLink = true;
 
 function expresser() {
 	$('#versesOf74').fadeOut("1380", function() {
