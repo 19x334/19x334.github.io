@@ -1284,6 +1284,19 @@ body {
 .غغغ{ color: #b9c298; }
 */
 
+.flip-card-back-iste-73-5-teki-soz-73-9::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 0.2em;
+}
+ 
+.flip-card-back-iste-73-5-teki-soz-73-9::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.flip-card-back-iste-73-5-teki-soz-73-9::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background-color: red;
+  outline: 1px solid red;
+}
+
 /* Avoid Chrome to see Safari iOS hack */
 @supports (-webkit-touch-callout: none) {
 	/* The hack for iOS Safari */
