@@ -3057,9 +3057,18 @@ notifications.push({
 
 notifications.push({
 	imageUrl: "pic/işte_73-5_teki_söz_73-9.PNG",
-	imageAlt: "İŞTE 73:5 AYETİNDEKİ SÖZ",
-	title: "İŞTE 73:5 AYETİNDEKİ SÖZ",
-	html: "<p style='font-size: x-large;'>Doğunun ve batının Rabb'idir O. O'ndan başka ilah yoktur. Öyleyse yalnız O'nu vekil edin. <span class='blue'>73:9</span><br><br><b>İŞTE <span class='blue'>73:5</span> AYETİNDEKİ SÖZ:</b><br><br><u><b style='font-size: xx-large;'>''<span class='red'>ORTAK KOŞAN HERKES CEHENNEME GİRECEK!</span>''</u></b><br><br><span class='blue'>73</span>. Sure: ''Örtüsüne Bürünen''<br><br>Rahman ve Rahim olan ALLAH'ın Adıyla,<br><br><span class='blue'>1</span>. Ey örtüsüne bürünen!<br><br><span class='blue'>2</span>. Gecenin birazında kalk!<br><br><span class='blue'>3</span>. Gecenin yarısında veya ondan biraz önce.<br><br><span class='blue'>4</span>. Ya da yarısından biraz sonra… Kuran'ı da özenle düşüne düşüne oku.<br><br><span class='blue'>5</span>. Şüphesiz ki Biz, senin üzerine ağır bir söz bırakacağız.<br><br><span class='blue'>6</span>. Kuşkusuz gece, fikir inşası çok daha etkili ve ifade açısından daha uygundur.<br><br><span class='blue'>7</span>. Gündüz, uzun süre uğraşacağın işler var.<br><br><span class='blue'>8</span>. Rabb'inin adını an ve bütün benliğinle yalnızca O'na yönel.<br><br><span class='blue'>9</span>. Doğunun ve batının Rabb'idir O. O'ndan başka ilah yoktur. Öyleyse yalnız O'nu vekil edin.<br><br><span class='blue'>10</span>. Onların söylediklerine sabret. Ve onlardan güzellikle uzaklaş.<br><br><span class='blue'>11</span>. Varlık sahibi, yalanlayıcıları Bana bırak. Onlara biraz süre tanı.<br><br><span class='blue'>12</span>. Bizim yanımızda prangalar ve Cehennem var.<br><br><span class='blue'>13</span>. Ve boğazı tıkayan yiyecek ve acı bir azap vardır.<br><br><span class='blue'>14</span>. O gün yeryüzü ve dağlar şiddetle sarsılır ve dağlar dağılmış kum yığınları gibi olur.<br><br><span class='blue'>15</span>. Size tanıklık edecek bir resul gönderdik. Tıpkı Firavun'a da bir resul gönderdiğimiz gibi.<br><br><span class='blue'>16</span>. Firavun Resul'e isyan etti. Bunun üzerine onu çok zorlu bir tutuşla tutuverdik.<br><br><span class='blue'>17</span>. Eğer Kafirlerden olursanız, çocukların saçlarını ağartan o günden kendinizi nasıl koruyacaksınız?<br><br><span class='blue'>18</span>. Gök, o günün şiddeti ile çatlayıp parçalanacak ve O'nun uyarısı gerçekleşecektir.<br><br><span class='blue'>19</span>. Bu bir öğüttür. Dileyen Rabb'ine götüren bir yol edinir.<br><br><span class='blue'>20</span>. Hiç kuşkun olmasın, Rabbin senin durumunu biliyor. Gecenin üçte ikisinden daha azını, yarısını, üçte birini ayakta geçiriyorsun. Seninle beraber olanlardan bir grup da öyle. ALLAH, geceyi de gündüzü de ölçüye bağlamıştır. Sizin onu kuşatamayacağınızı bildi de size tövbe nasip etti. O halde Kur'an'dan, kolay geleni okuyun. Sizden hastalar olacağını bildi. Bir kısmının yeryüzünde dolaşıp ALLAH'ın lütfundan bir şeyler isteyeceklerini, diğer bir kısmının da ALLAH yolunda çarpışacaklarını bildi. O halde Kur'an'dan, kolay geleni okuyun! Namazı kılın! Zekatı verin. Güzel bir ödünçle ALLAH'a ödünç verin! Öz benlikleriniz için önden gönderdiğiniz iyiliğin, ALLAH katında hayrını daha çok, ödülünü daha büyük olarak bulacaksınız. ALLAH'tan af dileyin. Hiç kuşkusuz, ALLAH çok affedici, çok esirgeyicidir.<br>&nbsp;</p>"
+	imageAlt: "İŞTE 73:5 AYETİNDEKİ TANRI SÖZÜ",
+	title: "İŞTE 73:5 AYETİNDEKİ TANRI SÖZÜ",
+	html: "<p style='font-size: x-large;'>Doğunun ve batının Rabb'idir O. O'ndan başka ilah yoktur. Öyleyse yalnız O'nu vekil edin. <span class='blue'>73:9</span><br><br><b>İŞTE <span class='blue'>73:5</span> AYETİNDEKİ TANRI SÖZÜ:</b><br><br><u><b style='font-size: xx-large;'>''<span class='red'>ORTAK KOŞAN HERKES CEHENNEME GİRECEK!</span>''</u></b><br><br><span class='blue'>73</span>. Sure: ''Örtüsüne Bürünen''<br><br>Rahman ve Rahim olan ALLAH'ın Adıyla,<br><br><span class='blue'>1</span>. Ey örtüsüne bürünen!<br><br><span class='blue'>2</span>. Gecenin birazında kalk!<br><br><span class='blue'>3</span>. Gecenin yarısında veya ondan biraz önce.<br><br><span class='blue'>4</span>. Ya da yarısından biraz sonra… Kuran'ı da özenle düşüne düşüne oku.<br><br><span class='blue'>5</span>. Şüphesiz ki Biz, senin üzerine ağır bir söz bırakacağız.<br><br><span class='blue'>6</span>. Kuşkusuz gece, fikir inşası çok daha etkili ve ifade açısından daha uygundur.<br><br><span class='blue'>7</span>. Gündüz, uzun süre uğraşacağın işler var.<br><br><span class='blue'>8</span>. Rabb'inin adını an ve bütün benliğinle yalnızca O'na yönel.<br><br><span class='blue'>9</span>. Doğunun ve batının Rabb'idir O. O'ndan başka ilah yoktur. Öyleyse yalnız O'nu vekil edin.<br><br><span class='blue'>10</span>. Onların söylediklerine sabret. Ve onlardan güzellikle uzaklaş.<br><br><span class='blue'>11</span>. Varlık sahibi, yalanlayıcıları Bana bırak. Onlara biraz süre tanı.<br><br><span class='blue'>12</span>. Bizim yanımızda prangalar ve Cehennem var.<br><br><span class='blue'>13</span>. Ve boğazı tıkayan yiyecek ve acı bir azap vardır.<br><br><span class='blue'>14</span>. O gün yeryüzü ve dağlar şiddetle sarsılır ve dağlar dağılmış kum yığınları gibi olur.<br><br><span class='blue'>15</span>. Size tanıklık edecek bir resul gönderdik. Tıpkı Firavun'a da bir resul gönderdiğimiz gibi.<br><br><span class='blue'>16</span>. Firavun Resul'e isyan etti. Bunun üzerine onu çok zorlu bir tutuşla tutuverdik.<br><br><span class='blue'>17</span>. Eğer Kafirlerden olursanız, çocukların saçlarını ağartan o günden kendinizi nasıl koruyacaksınız?<br><br><span class='blue'>18</span>. Gök, o günün şiddeti ile çatlayıp parçalanacak ve O'nun uyarısı gerçekleşecektir.<br><br><span class='blue'>19</span>. Bu bir öğüttür. Dileyen Rabb'ine götüren bir yol edinir.<br><br><span class='blue'>20</span>. Hiç kuşkun olmasın, Rabbin senin durumunu biliyor. Gecenin üçte ikisinden daha azını, yarısını, üçte birini ayakta geçiriyorsun. Seninle beraber olanlardan bir grup da öyle. ALLAH, geceyi de gündüzü de ölçüye bağlamıştır. Sizin onu kuşatamayacağınızı bildi de size tövbe nasip etti. O halde Kur'an'dan, kolay geleni okuyun. Sizden hastalar olacağını bildi. Bir kısmının yeryüzünde dolaşıp ALLAH'ın lütfundan bir şeyler isteyeceklerini, diğer bir kısmının da ALLAH yolunda çarpışacaklarını bildi. O halde Kur'an'dan, kolay geleni okuyun! Namazı kılın! Zekatı verin. Güzel bir ödünçle ALLAH'a ödünç verin! Öz benlikleriniz için önden gönderdiğiniz iyiliğin, ALLAH katında hayrını daha çok, ödülünü daha büyük olarak bulacaksınız. ALLAH'tan af dileyin. Hiç kuşkusuz, ALLAH çok affedici, çok esirgeyicidir.<br>&nbsp;</p>"
+});
+
+notifications.push({
+	imageUrl: "pic/Furkan.jpg",
+	imageWidth: 'auto',
+	imageHeight: 301,
+	imageAlt: "Supreme ALLAH has send new book named Furkan to His Servant Muhammad Nabiyy Eren Şentürk in 21st Century!",
+	title: "Supreme ALLAH has send new book named Furkan to His Servant Muhammad Nabiyy Eren Şentürk in 21st Century!",
+	html: "<p>You can read it from <a href='http://FurkanHikmet.com' target='blank'>FurkanHikmet.com</a><br><br>Yüce ALLAH Kuranda buyurdu Ey adem oğulları, size içinizden elçiler gelip size ayetlerimi bildirdikleri zaman dinleyip kendilerini düzeltenlere ne bir korku vardır ne de onlar üzülürler.<br><br>Büyüklük taslayarak ayetlerimizi yalanlayanlar ise ateş halkıdır; orada ebedi kalıcıdırlar.<br><br>ALLAH'a yalan iftira edenden veya ayetlerini yalanlayandan daha zalim kim olabilir? Onların kitapta anlatılan payları kendilerine erişecektir. Elçilerimiz kendilerine gelip canlarını alırken: 'ALLAH'ın dışında taptıklarınız nerede,' dediklerinde, 'Bizi terkettiler,' derler. İnkarcı olduklarına dair kendi aleyhlerinde tanıklık ederler.<br><br>Araf'35-37</p>"
 });
 
 var uyarı = false;
@@ -3081,20 +3090,20 @@ function alertt()
 		clickLink = false;
 
 		Swal.fire({
-			title: notifications[4].title,
-			html: notifications[4].html,
-			imageUrl: notifications[4].imageUrl,
-			imageWidth: '100%',
-			imageHeight: 'auto',
-			imageAlt: 'İŞTE 73:5 AYETİNDEKİ SÖZ'
+			title: notifications[1].title,
+			html: notifications[1].text,
+			imageUrl: notifications[1].imageUrl,
+			imageWidth: 'auto',
+			imageHeight: 190,
+			imageAlt: 'DO NOT TOUCH QURAN! WITHOUT CLEANED UP! EVEN WITH MOUSE!'
 		}).then((value) => {
 			Swal.fire({
-				title: notifications[1].title,
-				html: notifications[1].text,
-				imageUrl: notifications[1].imageUrl,
-				imageWidth: 'auto',
-				imageHeight: 190,
-				imageAlt: 'DO NOT TOUCH QURAN! WITHOUT CLEANED UP! EVEN WITH MOUSE!'
+				title: notifications[4].title,
+				html: notifications[4].html,
+				imageUrl: notifications[4].imageUrl,
+				imageWidth: '100%',
+				imageHeight: 'auto',
+				imageAlt: 'İŞTE 73:5 AYETİNDEKİ TANRI SÖZÜ'
 			}).then((value) => {
 				Swal.fire({
 					title: notifications[0].title,
@@ -3113,12 +3122,12 @@ function alertt()
 						imageAlt: notifications[2].text
 					}).then((value) => {
 						Swal.fire({
-							imageUrl: notifications[3].imageUrl,
-							imageWidth: notifications[3].imageWidth,
-							imageHeight: notifications[3].imageHeight,
-							imageAlt: notifications[3].imageAlt,
-							title: notifications[3].title,
-							html: notifications[3].html
+							imageUrl: notifications[5].imageUrl,
+							imageWidth: notifications[5].imageWidth,
+							imageHeight: notifications[5].imageHeight,
+							imageAlt: notifications[5].imageAlt,
+							title: notifications[5].title,
+							html: notifications[5].html
 						}).then((value) => {
 							v = 0; // starts verses from 0
 							clickLink = false; // insanları zorlama inşALLAH
