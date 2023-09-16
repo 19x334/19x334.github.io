@@ -106,7 +106,7 @@ body{ scroll-behavior: smooth; }
 .flip-card-iste-73-5-teki-soz-73-9 {
 	cursor: pointer;
     background-color: transparent;
-    width: 642px;
+    width: 681px;
     height: 642px;
     perspective: 100vw;
     display: block;
@@ -151,7 +151,7 @@ body{ scroll-behavior: smooth; }
 }
 
 .iste-73-5-teki-soz-73-9 {
-	width: 642px;
+	width: 681px;
     height: 642px;
 }
 
@@ -974,7 +974,7 @@ textarea::-webkit-scrollbar-thumb {
 
 	.flip-card-iste-73-5-teki-soz-73-9 {
 		width: 75vw;
-		max-width: 642px !important;
+		max-width: 681px !important;
 		height: 75vw;
 		max-height: 642px !important;
 		perspective: 150vw;
@@ -982,12 +982,12 @@ textarea::-webkit-scrollbar-thumb {
 
 	.iste-73-5-teki-soz-73-9 {
 		width: calc(75vw - 38px);
-		max-width: 642px !important;
+		max-width: 681px !important;
 		height: auto;
 	}
 
 	.iste-73-5-teki-soz-73-9-back {
-		max-width: 642px !important;
+		max-width: 681px !important;
 		height: auto;
 		padding-left: 19px;
 		padding-right: 19px;
@@ -1049,7 +1049,7 @@ textarea::-webkit-scrollbar-thumb {
 	}
 
 	.iste-73-5-teki-soz-73-9-back {
-		max-width: 642px !important;
+		max-width: 681px !important;
 		height: auto;
 		padding-left: 19px;
 		padding-right: 19px;
@@ -1380,20 +1380,20 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 @media only screen and (max-width: 885px) {
 	
 	.flip-card-brothers {
-		width: calc(100vw - 16px);
+		width: calc(100vw - 3.2px);
 		height: 27vw;
 		perspective: 200vw;
 	}
 
 	.brothers {
-		width: calc(100vw - 16px);
+		width: calc(100vw - 3.2px);
 		height: auto;
 	}
 
 	.flip-card-iste-73-5-teki-soz-73-9 {
-		width: calc(100vw - 16px);
-		max-width: 642px !important;
-		height: calc(100vw - 16px);
+		width: calc(100vw - 3.2px);
+		max-width: 681px !important;
+		height: calc(100vw - 3.2px);
 		max-height: 642px !important;
 		perspective: 200vw;
 	}
