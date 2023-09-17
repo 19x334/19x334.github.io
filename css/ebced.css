@@ -1376,7 +1376,10 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	text-align: center;
 }
 #book {padding-top: 19px;}
-
+div#swal2-html-container {
+    overflow: visible;
+    height: max-content;
+}
 @media only screen and (max-width: 885px) {
 	
 	.flip-card-brothers {
