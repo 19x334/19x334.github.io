@@ -200,7 +200,7 @@ const syncData75 = [
 	{start: '18.721', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#2">75:2</a>&nbsp;And I swear to the blaming soul.</p>'},
 	{start: '21.784', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#3">75:3</a>&nbsp;Does the human being think that WE will not reconstruct his bones?</p>'},
 	{start: '26.500', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#4">75:4</a>&nbsp;Yes indeed; WE are able to reconstruct his finger tip.</p>'},
-	{start: '30.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#5">75:5</a>&nbsp;But the human being tends to believe only what he sees in front of him.</p>'},
+	{start: '30.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#5">75:5</a>&nbsp;But the human being desires to deny his Imam,</p>'},
 	{start: '35.610', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#6">75:6</a>&nbsp;He asks, "When is Day of The Resurrection?"</p>'},
 	{start: '38.902', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#7">75:7</a>&nbsp;Once the vision is sharpened.</p>'},
 	{start: '40.863', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#8">75:8</a>&nbsp;And the moon is eclipsed.</p>'},
