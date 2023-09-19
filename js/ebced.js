@@ -3104,6 +3104,13 @@ var notifications = [
 		title: "Supreme ALLAH has send new book named Furkan to His Servant Muhammad Nabiyy Eren Şentürk in 21st Century!",
 		html: "<p>You can read it from <a href='http://FurkanHikmet.com' target='blank'>FurkanHikmet.com</a><br><br>Yüce ALLAH Kuranda buyurdu Ey adem oğulları, size içinizden elçiler gelip size ayetlerimi bildirdikleri zaman dinleyip kendilerini düzeltenlere ne bir korku vardır ne de onlar üzülürler.<br><br>Büyüklük taslayarak ayetlerimizi yalanlayanlar ise ateş halkıdır; orada ebedi kalıcıdırlar.<br><br>ALLAH'a yalan iftira edenden veya ayetlerini yalanlayandan daha zalim kim olabilir? Onların kitapta anlatılan payları kendilerine erişecektir. Elçilerimiz kendilerine gelip canlarını alırken: 'ALLAH'ın dışında taptıklarınız nerede,' dediklerinde, 'Bizi terkettiler,' derler. İnkarcı olduklarına dair kendi aleyhlerinde tanıklık ederler.<br><br>Araf ' 35-37</p>"
 	}
+	,
+	{
+		imageUrl: "RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/hatırla.jpg",
+		imageAlt: "Dinle, Ey İsrail! Tanrımız RAB Tek RAB’dir!",
+		title: "Dinle, Ey İsrail! Tanrımız RAB Tek RAB’dir!",
+		html: "<p style='font-size: x-large;'>Selam, Yüce Ulu Eşsiz Tek ALLAH’ın, ben Kulu Meryemoğlu İsa Mesih Abdurrahman Ayyıldız'dan Daha Üst Düzey ve Yüce Ulu Eşsiz Tek ALLAH'a Daha Yakın, Son Derece Yakın Olan Üst Düzey Elçisi Burcu Bildirik’in üzerine Olsun!<br><br>ULU ALLAH’ın, benden Daha Üst Düzey ve O’na Son Derece Yakın Olan Üst Düzey Resulü Burcu Bildirik ‘i Yalanlamanız Nedeniyle, ULU RAB, Üzerinize 27 Temmuz 2017’de 44. Surede Vaat Edilen Duman Azabı’nı Gönderdi Ey İstanbul Artık Tövbe Edin!<img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/istanbul.jpg' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><b><a class='red' target='_blank' href='https://incil.info/YC2009/arama/Yasanin+Tekrari+6:4'><span class='blue'>''</span>Dinle, Ey İsrail! Tanrımız RAB Tek RAB’dir!<span class='blue'>''</span><br><br><span class='blue'>Tevrat - Yasa’nın Tekrarı 6:4</span></a></b><br><br><br><br><img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/duman.jpg' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1'>85 BÜRUC (GALAKSİLER) SURESİ</a><br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#0'>85:0</a> İSMİ'YLE TANRI'NIN ZARİF MERHAMETLİ,<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#1'>85:1</a> And olsun galaksiler sahibi göğe.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#2'>85:2</a> Söz verilen güne,<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#3'>85:3</a> Ve tanığa da tanık olunana da and olsun.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#4'>85:4</a> Kanyon halkına yazıklar olsun.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#5'>85:5</a> Tutuşturulmuş ateşin-<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#6'>85:6</a> Başında oturmuşlar,<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#7'>85:7</a> Ve inananlara yaptıkları işkenceyi seyrediyorlar.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#8'>85:8</a> İnananlardan nefret ediyorlardı. Sadece, onlar Üstün ve Övgüye layık olan TANRI’ya inandıkları için…<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#9'>85:9</a> Göklerin ve yerin yönetimi O'na aittir. Ve TANRI her şeye Tanıktır.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#10'>85:10</a> İnanan erkeklere ve kadınlara zulüm ve işkencede bulunan ve daha sonra tövbe etmeyenler cehennem azabını haketmişlerdir. Onlar için yakıcı bir azap vardır.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#9'>85:11</a> İnanan ve doğru davrananlar ise içlerinden ırmaklar akan bahçeleri haketmişlerdir. Büyük başarı budur.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#12'>85:12</a> Doğrusu, Efendinin yakalaması pek çetindir.<br><br><img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/duman1.jpeg' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#13'>85:13</a> Başlatan ve tekrarlayan O'dur.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#14'>85:14</a> O Bağışlayandır, Sevendir.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#15'>85:15</a> Şanlı yönetimin sahibidir.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#16'>85:16</a> Dilediğini yapandır.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#17'>85:17</a> Orduların tarihinden haberin var mı?<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#18'>85:18</a> Firavunun, Semud'un?<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#19'>85:19</a> İnkarcılar, kronik yalanlayıcılardır.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#20'>85:20</a> TANRI, onları arkalarından kuşatmıştır.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#21'>85:21</a> Gerçekten o, şanlı bir Kuran'dır.<br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/85.html?m=1#22'>85:22</a> Korunmuş bir ana levhadadır.<br><br><img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/duman3.jpeg' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><br><br>Selam, ALLAH’ın, benden Daha Üst Düzey ve ALLAH’a Son Derece Yakın Olan Üst Düzey Elçisi Burcu Bildirik’in üzerine Olsun!<br><br><br><br><b><a class='red' target='_blank' href='https://incil.info/YC2009/arama/Yasanin+Tekrari+6:4'><span class='blue'>''</span>Dinle, Ey İsrail! Tanrımız RAB Tek RAB’dir!<span class='blue'>''</span><br><br><span class='blue'>Tevrat - Yasa’nın Tekrarı 6:4</span></a></b><br><br><br><br><img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/duman4.JPG' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><br><br>Yüce Eşsiz Tek Ulu ALLAH 'ın, benden Daha Üst Düzey ve ULU ALLAH’a benden Çok Daha Yakın 1 Resulü Olan ve ULU ALLAH'ı 3 Defa Gören ve Melekler Tarafından Yıkanıp Giydirildikten Sonra Güzel Kokular Sürülerek RAB'bin Göklerdeki Taht Odasına Kabul Edilen ve Yüce Tahtının Önünde Farklı Renkte Pırlantalarla İşlenmiş Kırmızı Pelerin ve Kırmızı ve Yeşil Elmaslarla Bezenmiş Mücevherli Altın Taç Giymiş Olan KRALIMIZ RABBİMİZ ALLAH ile Arasında 30 cm. Mesafe Kalacak Kadar O'na Yakınlaşarak YÜCE ALLAH ile Görüşüp Konuşan ve O'na Son Derece Yakın Olan Kulu ve Üst Düzey Resulü Burcu Bildirik ile Yüce Rabbi’min ben Kuluna Çektiğim ve Çekeceğim Videolarla İlgili Olarak Gönderdiği Emri:<br><br><img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/IMG_0648.PNG' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><br><br>18 Eylül 2023 Günü, Ulu Yüce Eşsiz RABbim ALLAH, Kulu Mustafa Kemal Atatürk’ün Kendisi Tarafından Türkiye İçin Atanmış İtaat Edilmesi Gerekilen Musa Yasası’na Mensup Seçilmiş Bir Ulu’l Emr Olduğunu ve <br><br>Ayrıca Benden Daha Üst Düzey ve ULU ALLAH’a benden Çok Daha Yakın 1 Resulü Olan ve ULU ALLAH'ı 3 Defa Gören ve Melekler Tarafından Yıkanıp Giydirildikten Sonra Güzel Kokular Sürülerek RAB'bin Göklerdeki Taht Odasına Kabul Edilen ve Yüce Tahtının Önünde Farklı Renkte Pırlantalarla İşlenmiş Kırmızı Pelerin ve Kırmızı ve Yeşil Elmaslarla Bezenmiş Mücevherli Altın Taç Giymiş Olan KRALIMIZ RABBİMİZ ALLAH ile Arasında 30 cm. Mesafe Kalacak Kadar O'na Yakınlaşarak YÜCE ALLAH ile Görüşüp Konuşan ve O'na Son Derece Yakın Olan Kulu ve Resulü Burcu Bildirik Aracılığıyla da Din Kıyamet Günü’nde Mustafa Kemal Atatürk’ün, YÜCE ALLAH Katında İtibarlı Biri Olacağını Bildirdi ben Kuluna<br><br><img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/Mustafa_Kemal_Atatürk.JPG' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><br><br>Ve Ayrıca Bir Defasında da İnsan Kılığına Girmiş Melek Cebrail'den ''Ben, Atatürkçüyüm'' ifadesini gururla söylediğini işittim.<br><br>Selam, ALLAH’ın, benden Daha Üst Düzey ve ALLAH’a Son Derece Yakın Olan Üst Düzey Elçisi Burcu Bildirik’in üzerine Olsun!<br><br><br><br><b><a class='red' target='_blank' href='https://incil.info/YC2009/arama/Yasanin+Tekrari+6:4'><span class='blue'>''</span>Dinle, Ey İsrail! Tanrımız RAB Tek RAB’dir!<span class='blue'>''</span><br><br><span class='blue'>Tevrat - Yasa’nın Tekrarı 6:4</span></a></b><br><br><br><br><img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/duman4.JPG' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><br><br>Yüce Eşsiz Tek Ulu ALLAH 'ın, benden Daha Üst Düzey ve ULU ALLAH’a benden Çok Daha Yakın 1 Resulü Olan ve ULU ALLAH'ı 3 Defa Gören ve Melekler Tarafından Yıkanıp Giydirildikten Sonra Güzel Kokular Sürülerek RAB'bin Göklerdeki Taht Odasına Kabul Edilen ve Yüce Tahtının Önünde Farklı Renkte Pırlantalarla İşlenmiş Kırmızı Pelerin ve Kırmızı ve Yeşil Elmaslarla Bezenmiş Mücevherli Altın Taç Giymiş Olan KRALIMIZ RABBİMİZ ALLAH ile Arasında 30 cm. Mesafe Kalacak Kadar O'na Yakınlaşarak YÜCE ALLAH ile Görüşüp Konuşan ve O'na Son Derece Yakın Olan Kulu ve Üst Düzey Resulü Burcu Bildirik ‘in Hazırladığı<br><br><img src='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/üst_düzey_resul_burcu_bildirik_resulden.jpg' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img><br><br>“<a href='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/KURAN_TEVRAT_KARŞILAŞTIRMASI.pdf' target='blank'>KURAN TEVRAT KARŞILAŞTIRMASI.pdf</a>” Çalışmasına<br><br>Şu Linkten Ulaşabilirsiniz:<br><br><a href='RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/KURAN_TEVRAT_KARŞILAŞTIRMASI.pdf' target='blank'>19x334.com/RABbe_Son_Derece_Yakın_benden_Daha_Üst_Düzey_Resulü_Burcu_Bildirik/KURAN_TEVRAT_KARŞILAŞTIRMASI.pdf</a><br><br><a target='_blank' href='https://www.OnurluKURAN.com/p/73.html?m=1#17'>73:17</a> Eğer Kafirlerden olursanız, çocukların saçlarını ağartan o günden kendinizi nasıl koruyacaksınız?</p><br><br><img src='pic/heavenandhell.png' style='margin-left: -30.77px; width: calc(100% + 61.44px);'></img>"
+	}
 ];
 
 var uyarı = false;
@@ -3133,45 +3140,54 @@ function alertt()
 			imageAlt: 'DO NOT TOUCH QURAN! WITHOUT CLEANED UP! EVEN WITH MOUSE!'
 		}).then((value) => {
 			Swal.fire({
-				title: notifications[4].title,
-				html: notifications[4].html,
-				imageUrl: notifications[4].imageUrl,
+				title: notifications[6].title,
+				html: notifications[6].html,
+				imageUrl: notifications[6].imageUrl,	
 				imageWidth: '100%',
 				imageHeight: 'auto',
-				imageAlt: 'İŞTE 73:5 AYETİNDEKİ TANRI SÖZÜ'
+				imageAlt: notifications[6].imageAlt
 			}).then((value) => {
 				Swal.fire({
-					title: notifications[0].title,
-					html: notifications[0].html,
-					imageUrl: notifications[0].imageUrl,
-					imageWidth: 'auto',
-					imageHeight: 301,
-					imageAlt: 'GOD HAS PRESERVED QURAN BY MIRACLE OF 19!'
+					title: notifications[4].title,
+					html: notifications[4].html,
+					imageUrl: notifications[4].imageUrl,
+					imageWidth: '100%',
+					imageHeight: 'auto',
+					imageAlt: 'İŞTE 73:5 AYETİNDEKİ TANRI SÖZÜ'
 				}).then((value) => {
 					Swal.fire({
-						title: notifications[2].title,
-						html: notifications[2].text,
-						imageUrl: notifications[2].imageUrl,
+						title: notifications[0].title,
+						html: notifications[0].html,
+						imageUrl: notifications[0].imageUrl,
 						imageWidth: 'auto',
-						imageHeight: 'auto',
-						imageAlt: notifications[2].text
+						imageHeight: 301,
+						imageAlt: 'GOD HAS PRESERVED QURAN BY MIRACLE OF 19!'
 					}).then((value) => {
 						Swal.fire({
-							imageUrl: notifications[5].imageUrl,
-							imageWidth: notifications[5].imageWidth,
-							imageHeight: notifications[5].imageHeight,
-							imageAlt: notifications[5].imageAlt,
-							title: notifications[5].title,
-							html: notifications[5].html
+							title: notifications[2].title,
+							html: notifications[2].text,
+							imageUrl: notifications[2].imageUrl,
+							imageWidth: 'auto',
+							imageHeight: 'auto',
+							imageAlt: notifications[2].text
 						}).then((value) => {
-							v = 0; // starts verses from 0
-							clickLink = false; // insanları zorlama inşALLAH
-							// clickLink = true;
+							Swal.fire({
+								imageUrl: notifications[5].imageUrl,
+								imageWidth: notifications[5].imageWidth,
+								imageHeight: notifications[5].imageHeight,
+								imageAlt: notifications[5].imageAlt,
+								title: notifications[5].title,
+								html: notifications[5].html
+							}).then((value) => {
+								v = 0; // starts verses from 0
+								clickLink = false; // insanları zorlama inşALLAH
+								// clickLink = true;
+							})
 						})
 					})
 				})
 			})
-		})
+		})		
 		uyarı = false;
 	}
 

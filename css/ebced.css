@@ -1380,6 +1380,7 @@ div#swal2-html-container {
     overflow: visible;
     height: max-content;
 }
+a.red > span.blue:hover, a.red:hover > span.blue{ color: white; }
 @media only screen and (max-width: 885px) {
 	
 	.flip-card-brothers {
