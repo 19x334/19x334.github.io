@@ -1,1 +1,1 @@
-window.location = "../Clock_of_Resurrection"
+window.location = "../True_Clock_of_Resurrection"
