@@ -53,7 +53,7 @@ function handleTickInit(tick) {
 
 	// '2000-01-15T10:00:00+01:00'  to count up from 10 o'clock GMT+1 on the 15th of January 2000
 
-	// compose counter WITH WILL AND THE NAME OF THE SACRED SUPREME KING ELEGANT!
+	// compose counter WITH WILL AND THE NAME OF THE SACRED SUPREME KING RAHMAN!
 	Tick.count.down('2280-01-17T15:49:31+00:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
 		tick.value = value;
 	};
@@ -195,7 +195,7 @@ document.getElementsByClassName("verses")[0].addEventListener("mouseleave", func
 
 const syncData75 = [
 	{start: '5.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1">Chapter 75</a>&nbsp;The Resurrection</p>'},
-	{start: '10.000', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#0">75:0</a>&nbsp;IN THE NAME OF ALLAH THE ELEGANT THE MERCIFUL!</p>'},
+	{start: '10.000', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#0">75:0</a>&nbsp;IN THE NAME OF ALLAH RAHMAN THE MERCIFUL!</p>'},
 	{start: '15.800', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#1">75:1</a>&nbsp;I swear to DAY OF RESURRECTION.</p>'},
 	{start: '18.721', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#2">75:2</a>&nbsp;And I swear to the blaming soul.</p>'},
 	{start: '21.784', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#3">75:3</a>&nbsp;Does the human being think that WE will not reconstruct his bones?</p>'},
@@ -240,7 +240,7 @@ const syncData75 = [
 
 const syncData89 = [
 	{start: '7.795', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1">Chapter 89</a>&nbsp;The Dawn</p>'},
-	{start: '13.583', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#0">89:0</a>&nbsp;IN THE NAME OF ALLAH THE ELEGANT THE MERCIFUL!</p>'},
+	{start: '13.583', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#0">89:0</a>&nbsp;IN THE NAME OF ALLAH RAHMAN THE MERCIFUL!</p>'},
 	{start: '18.861', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#1">89:1</a>&nbsp;By the dawn.</p>'},
 	{start: '20.313', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#2">89:2</a>&nbsp;And the ten nights.</p>'},
 	{start: '22.706', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#3">89:3</a>&nbsp;By the even and the odd.</p>'},
@@ -275,7 +275,7 @@ const syncData89 = [
 
 const syncData100 = [
 	{start: '3.709', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1">Chapter 100</a>&nbsp;The Gallopers</p>'},
-	{start: '6.979', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#0">100:0</a>&nbsp;IN THE NAME OF ALLAH THE ELEGANT THE MERCIFUL!</p>'},
+	{start: '6.979', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#0">100:0</a>&nbsp;IN THE NAME OF ALLAH RAHMAN THE MERCIFUL!</p>'},
 	{start: '11.868', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#1">100:1</a>&nbsp;By the fast gallopers (of gog (han) and magog (zhuang) races of china).</p>'},
 	{start: '13.575', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#2">100:2</a>&nbsp;Igniting sparks.</p>'},
 	{start: '15.343', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#3">100:3</a>&nbsp;Invading (Uyghurs) by morning.</p>'},
