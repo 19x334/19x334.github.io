@@ -1362,10 +1362,18 @@ _::-webkit-full-page-media, _:future, :root .flip-card-front {
 	backdrop-filter: none;
 	-webkit-backdrop-filter: none;
 }
-
+span.list {
+	text-align: left;
+    display: block;
+    line-height: 34px;
+}
 #açıklama{
 	text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
 }
+.black { color: black !important; }
+
+a:hover > b, a > b:hover  { color: white !important; }
+
 #primary {
 	float: left;
     display: inline-block !important;
@@ -1381,6 +1389,7 @@ div#swal2-html-container {
     height: max-content;
 }
 a > span:hover, a:hover > span{ color: white; }
+a.image:hover { background-color: transparent !important; }
 @media only screen and (max-width: 885px) {
 	
 	.flip-card-brothers {
