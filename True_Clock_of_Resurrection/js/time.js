@@ -244,7 +244,7 @@ const syncData89 = [
 	{start: '18.861', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#1">89:1</a>&nbsp;By the dawn.</p>'},
 	{start: '20.313', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#2">89:2</a>&nbsp;And the ten nights.</p>'},
 	{start: '22.706', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#3">89:3</a>&nbsp;By the even and the odd.</p>'},
-	{start: '24.945', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#4">89:4</a>&nbsp;By the night as it passes. (2023/05/26 UTC+3 07:34)</p>'},
+	{start: '24.945', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#4">89:4</a>&nbsp;By the night as it passes. (Morning of 2280/01/17)</p>'},
 	{start: '27.940', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#5">89:5</a>&nbsp;A profound oath, for one who possesses intelligence.</p>'},
 	{start: '33.103', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#6">89:6</a>&nbsp;Have you noted what your OWNER did to `Aad?</p>'},
 	{start: '36.450', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/89.html?m=1#7">89:7</a>&nbsp;Erum; the town with tall buildings.</p>'},
@@ -276,17 +276,17 @@ const syncData89 = [
 const syncData100 = [
 	{start: '3.709', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1">Chapter 100</a>&nbsp;The Gallopers</p>'},
 	{start: '6.979', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#0">100:0</a>&nbsp;IN THE NAME OF ALLAH RAHMAN THE MERCIFUL!</p>'},
-	{start: '11.868', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#1">100:1</a>&nbsp;By the fast gallopers (of gog (han) and magog (zhuang) races of china).</p>'},
+	{start: '11.868', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#1">100:1</a>&nbsp;By the fast gallopers ( of gog (han) and magog (zhuang) ).</p>'},
 	{start: '13.575', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#2">100:2</a>&nbsp;Igniting sparks.</p>'},
-	{start: '15.343', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#3">100:3</a>&nbsp;Invading (Uyghurs) by morning.</p>'},
-	{start: '17.845', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#4">100:4</a>&nbsp;Striking terror therein (The East Turkistan).</p>'},
-	{start: '20.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#5">100:5</a>&nbsp;Penetrating to the heart of their territory (Urumchi).</p>'},
-	{start: '23.181', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#6">100:6</a>&nbsp;the (atheist or pagan) human being (of chinese gog (han) and magog (zhuang) races) is unappreciative of his OWNER.</p>'},
+	{start: '15.343', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#3">100:3</a>&nbsp;Invading by morning.</p>'},
+	{start: '17.845', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#4">100:4</a>&nbsp;Striking terror therein.</p>'},
+	{start: '20.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#5">100:5</a>&nbsp;Penetrating to the heart of their territory.</p>'},
+	{start: '23.181', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#6">100:6</a>&nbsp;the human being is unappreciative of his LORD.</p>'},
 	{start: '26.853', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#7">100:7</a>&nbsp;he bears witness to this FACT.</p>'},
 	{start: '29.445', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#8">100:8</a>&nbsp;he loves material things excessively.</p>'},
-	{start: '32.445', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#9">100:9</a>&nbsp;Does he not realize that THE DAY will come when the graves are OPENED?</p>'},
+	{start: '32.445', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#9">100:9</a>&nbsp;Does he not realize that THE DAY will come (17/1/2280 UTC 15:49:31) when the graves are OPENED?</p>'},
 	{start: '37.464', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#10">100:10</a>&nbsp;And all secrets are BROUGHT OUT.</p>'},
-	{start: '40.028', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#11">100:11</a>&nbsp;they (humans of gog (han) and magog (zhuang) races of china) will find out, on THAT DAY, that their OWNER HAS BEEN FULLY COGNIZANT OF them</p>'}
+	{start: '40.028', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#11">100:11</a>&nbsp;they will find out, on THAT DAY, that their LORD HAS BEEN FULLY COGNIZANT OF them</p>'}
 ];
 
 const audio = document.getElementById("player"), audio2 = document.getElementById("player2");
