@@ -122,7 +122,7 @@ function hover(isReal)
 	clearInterval(bgIntervalId);
 
 	if(random == 6 || random == 4) headLine.innerText = "Time Remaining to Day of The Resurrection:";
-	else headLine.innerText = "Time Remaining to The End of The 7 Universes:";
+	else headLine.innerText = "Time Remaining to End of 7 Fold Universes:";
 
 	if(windowWidth > 767){
 		heaven.style.right = "-25%";
