@@ -57,7 +57,7 @@ body{ scroll-behavior: smooth; }
 	cursor: pointer;
     background-color: transparent;
     width: 50vw;
-    height: 13.5vw;
+    height: 11.66vw;
     perspective: 100vw;
     display: block;
     position: relative;
@@ -962,7 +962,7 @@ textarea::-webkit-scrollbar-thumb {
 
 	.flip-card-brothers {
 		width: 75vw;
-		height: 20.25vw;
+		height: 17.48vw;
 		perspective: 150vw;
 	}
 
@@ -1394,7 +1394,7 @@ a.image:hover { background-color: transparent !important; }
 	
 	.flip-card-brothers {
 		width: calc(100vw - 3.2px);
-		height: 27vw;
+		height: 23.32vw;
 		perspective: 200vw;
 	}
 
