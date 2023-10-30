@@ -38,6 +38,12 @@
 
 body{ scroll-behavior: smooth; }
 
+.n5356 {
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+}
+
 #bottomRightBox {
 	display: block;
 	position: relative;
