@@ -3114,7 +3114,7 @@ var notifications = [
 		imageHeight: 'auto',
 		imageAlt: "Supreme ALLAH has send new book named Furkan to His Servant Muhammad Nabiyy Eren Şentürk in 21st Century!",
 		title: "Supreme ALLAH has send new book named Furkan to His Servant Muhammad Nabiyy Eren Şentürk in 21st Century!",
-		html: "<p>You can read it from <a href='http://FurkanHikmet.com' target='blank'>FurkanHikmet.com</a><br><br>Yüce ALLAH Kuranda buyurdu Ey adem oğulları, size içinizden elçiler gelip size ayetlerimi bildirdikleri zaman dinleyip kendilerini düzeltenlere ne bir korku vardır ne de onlar üzülürler.<br><br>Büyüklük taslayarak ayetlerimizi yalanlayanlar ise ateş halkıdır; orada ebedi kalıcıdırlar.<br><br>ALLAH'a yalan iftira edenden veya ayetlerini yalanlayandan daha zalim kim olabilir? Onların kitapta anlatılan payları kendilerine erişecektir. Elçilerimiz kendilerine gelip canlarını alırken: 'ALLAH'ın dışında taptıklarınız nerede,' dediklerinde, 'Bizi terkettiler,' derler. İnkarcı olduklarına dair kendi aleyhlerinde tanıklık ederler.<br><br>Araf ' 35-37</p>"
+		html: "<p style='font-size: x-large;'>You can read it from: <a href='https://Oku.FurkanHikmet.com' target='blank'>Oku.FurkanHikmet.com</a><br><br>''<a href='https://www.OnurluKURAN.com/3#3' target='blank'>3-</a> Sana Kitabı hakla indirdi önündekileri doğrulayıcı olarak... Tevrat'ı ve İncil'i de indirdi,<br><br><a href='https://www.OnurluKURAN.com/3#4' target='blank'>4-</a> Daha önce insanlara yol gösterici olarak... Ve <b>Furkan</b>'ı da indirdi... Şüphesiz ALLAH’ın ayetlerini inkâr edenler, onlar için şiddetli bir azap vardır. ALLAH, Aziz'dir! İntikam Sahibidir!''<br><br><a href='https://www.OnurluKURAN.com/' target='blank'>Onurlu KURAN</a> - <a href='https://www.OnurluKURAN.com/3' target='blank'>Sure 3 : Al-i İmran</a></p>"
 	}
 	,
 	{
@@ -3129,13 +3129,17 @@ document.getElementById("uyarı").addEventListener("click", function() {
 	uyarı = true;
 	alertt();
 })
+document.getElementById("bism2698").addEventListener("click", function() {
+	uyarı = true;
+	alertt();
+})
 
 function alertt()
 {
 	var today = new Date();
 	today = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
-	var lastVisit = sessionStorage.getItem('lastVisit');
+	var lastVisit = localStorage.getItem('lastVisit');
 
 	if (lastVisit == null || lastVisit != today || uyarı) {
 
@@ -3201,7 +3205,7 @@ function alertt()
 		uyarı = false;
 	}
 
-	sessionStorage.setItem('lastVisit', today);
+	localStorage.setItem('lastVisit', today);
 }
 
 $(window).load(yataylaştırıcı);
@@ -3672,7 +3676,7 @@ function expresser() {
 
 document.getElementById("start").addEventListener("click", function() {
 	uyarı = true;
-	sessionStorage.setItem('lastVisit', null); // in order to call alertt() function non-spa app correctly
+	localStorage.setItem('lastVisit', null); // in order to call alertt() function non-spa app correctly
 })
 
 var intervalId = setInterval(expresser, 2760);
