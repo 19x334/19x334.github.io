@@ -3643,8 +3643,8 @@ var versesOf74 = [
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#21">74:21</a>&nbsp;then he looked.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#22">74:22</a>&nbsp;then he frowned and scowled.</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#23">74:23</a>&nbsp;then he turned away arrogantly.</p>',
-	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#24">74:24</a>&nbsp;so, he said: "THIS(QURAN) is nothing except transmitted sorcery".</p>',
-	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#25">74:25</a>&nbsp;"THIS(QURAN) is nothing except word of a human".</p>',
+	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#24">74:24</a>&nbsp;so, he said: "THIS is nothing except transmitted sorcery".</p>',
+	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#25">74:25</a>&nbsp;"THIS is nothing except word of a human".</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#26">74:26</a>&nbsp;Soon I WILL BURN him in SAQAR!</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#27">74:27</a>&nbsp;And Do you Know What Is SAQAR?</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#28">74:28</a>&nbsp;IT NEITHER Remains (Anything Back) NOR Leaves (Alone).</p>'
