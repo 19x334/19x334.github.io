@@ -3141,7 +3141,7 @@ function alertt()
 
 	var lastVisit = localStorage.getItem('lastVisit');
 
-	if (lastVisit == null || lastVisit != today || uyarı) {
+	if (lastVisit == null /* || lastVisit != today */ || uyarı) {
 
 		clickLink = false;
 
