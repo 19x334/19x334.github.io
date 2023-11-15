@@ -60,7 +60,6 @@ function randombg()
 		"url('pic/size/425/moonEarthSun.png')",
 		"url('pic/size/425/resurrection.png')",
 		"url('/pic/size/425/heavenandhell.png')",
-		"url('/pic/size/425/tree-and-star-prostrate.png')",
 		];
 	else if(biggestSide < 886)
 		bigSize = [
@@ -72,7 +71,6 @@ function randombg()
 		"url('pic/size/886/moonEarthSun.png')",
 		"url('pic/size/886/resurrection.png')",
 		"url('/pic/size/886/heavenandhell.png')",
-		"url('/pic/size/886/tree-and-star-prostrate.png')",
 		];
 	else if(biggestSide < 1024)
 		bigSize = [
@@ -84,7 +82,6 @@ function randombg()
 		"url('pic/size/1024/moonEarthSun.png')",
 		"url('pic/size/1024/resurrection.png')",
 		"url('/pic/size/1024/heavenandhell.png')",
-		"url('/pic/size/1024/tree-and-star-prostrate.png')",
 		];
 	else if(biggestSide < 1585)
 		bigSize = [
@@ -96,7 +93,6 @@ function randombg()
 		"url('pic/size/1585/moonEarthSun.png')",
 		"url('pic/size/1585/resurrection.png')",
 		"url('/pic/size/1585/heavenandhell.png')",
-		"url('/pic/size/1585/tree-and-star-prostrate.png')",
 		];
 	else
 		bigSize = [
@@ -108,11 +104,10 @@ function randombg()
 		"url('pic/moonEarthSun.png')",
 		"url('pic/resurrection.png')",
 		"url('/pic/heavenandhell.png')",
-		"url('/pic/tree-and-star-prostrate.png')",
 		];
 
-	var random = Math.floor(Math.random() * 9);
-	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 9); // FOR DIFFERENT BACKGROUND IF ALLAH WILLS
+	var random = Math.floor(Math.random() * 8);
+	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 8); // FOR DIFFERENT BACKGROUND IF ALLAH gives permission
     document.getElementById("bg").style.backgroundImage = bigSize[random];
     document.getElementById("vücut").style.backgroundImage = bigSize[random];
 	localStorage.setItem("lastBgIndex", random);
