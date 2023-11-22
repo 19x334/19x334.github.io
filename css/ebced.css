@@ -1098,6 +1098,7 @@ a:visited { text-decoration: none; }
 
 @media (hover:hover) {
 	a:hover { text-decoration: none; color: white !important; background-color: rgb(0,0,142) !important;}
+	a.imgLogos:hover { filter: invert(100%); text-decoration: none; color: white !important; background-color: transparent !important;}
 	#bism2698:hover { text-decoration: none; color: white !important; background-color: transparent !important; cursor: none !important; text-shadow: -1px -1px 27px black, 1px -1px 27px black, -1px 1px 27px black, 1px 1px 27px black; }
 	.huruf:hover {background-color: cornflowerblue;}
 	.harf:hover {background-color: coral;}
@@ -1108,6 +1109,7 @@ a:visited { text-decoration: none; }
 }
 @media screen and (pointer: coarse) {
 	a:active { text-decoration: underline; }
+	a.imgLogos:active { filter: invert(100%); text-decoration: none; color: white !important; background-color: transparent !important;}
 	.huruf:active {background-color: cornflowerblue;}
 	.harf:active {background-color: coral;}
 	#ovpll:active, #snl:active  {
