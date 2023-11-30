@@ -3108,7 +3108,7 @@ var notifications = [
 		imageWidth: 'auto',
 		imageHeight: 'auto',
 		imageAlt: "Sacred Supreme 1 And Only ALLAH has send new book named Furkan to His Servant Muhammad Nabiyy Eren Şentürk in 21st Century!",
-		title: "Sacred Supreme 1 And Only ALLAH has send new book named Furkan to His Servant Muhammad Nabiyy Eren Şentürk in 21st Century!",
+		title: "Sacred Supreme 1 And Only ALLAH has send new book named Furkan to His Servant <a target='_blank' href='https://facebook.com/muhammed.ibrahimoglu.334'>Muhammad Nabiyy Eren Şentürk</a> in 21st Century!",
 		html: "<p style='font-size: x-large;'>You can read it from: <br><br><a href='https://Oku.FurkanHikmet.com/1' style='font-size: xx-large;' target='blank'>Oku.FurkanHikmet.com</a><br><br><a class='imgLogos' href='https://Oku.FurkanHikmet.com/1' target='blank'><br><br><img alt='Sacred Supreme 1 And Only ALLAH has send new book named Furkan to His Servant Muhammad Nabiyy Eren Şentürk in 21st Century!' src='pic/Sacred_FURKAN_Wisdom_Logo.png' style='margin: 0; width: calc(100% - 228px);'></img></a><br><br><br><br>''<a href='https://www.OnurluKURAN.com/3#3' target='blank'>3-</a> Sana Kitabı hakla indirdi önündekileri doğrulayıcı olarak... Tevrat'ı ve İncil'i de indirdi,<br><br><a href='https://www.OnurluKURAN.com/3#4' target='blank'>4-</a> Daha önce insanlara yol gösterici olarak... Ve <b>Furkan</b>'ı da indirdi... Şüphesiz ALLAH’ın ayetlerini inkâr edenler, onlar için şiddetli bir azap vardır. ALLAH, Aziz'dir! İntikam Sahibidir!''<br><br><a href='https://www.OnurluKURAN.com/' target='blank'>Onurlu KURAN</a> - <a href='https://www.OnurluKURAN.com/3' target='blank'>Sure 3 : Al-i İmran</a><br><br></p>"
 	}
 	,
