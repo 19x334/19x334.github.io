@@ -1,4 +1,4 @@
-// IN THE NAME OF THE GOD RAHMAN THE MERCIFUL!
+// IN THE NAME OF ALLAH RAHMAN RAHIM!
 // SACRED & SUPREME RAHMAN YOUR NAME IS SACRED & SUPREME!
 
 var browser = detectBrowser();
@@ -3614,7 +3614,7 @@ audio.onended = function() {
 };
 
 var versesOf74 = [
-	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#0">74:0</a>&nbsp;IN THE NAME OF THE GOD RAHMAN THE MERCIFUL!</p>',
+	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#0">74:0</a>&nbsp;IN THE NAME OF ALLAH RAHMAN RAHIM!</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#1">74:1</a>&nbsp;o you hidden secret</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#2">74:2</a>&nbsp;Get Up and Warn!</p>',
 	'<p><a target="_blank" class="antique-link" href="http://honourableQURAN.blogspot.com/p/74.html?m=1#3">74:3</a>&nbsp;Magnify your OWNER!</p>',
