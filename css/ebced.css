@@ -113,7 +113,7 @@ body{ scroll-behavior: smooth; }
 	cursor: pointer;
     background-color: transparent;
     width: 681px;
-    height: 642px;
+    height: 481px;
     perspective: 100vw;
     display: block;
     position: relative;
@@ -982,7 +982,7 @@ textarea::-webkit-scrollbar-thumb {
 		width: 75vw;
 		max-width: 681px !important;
 		height: 75vw;
-		max-height: 642px !important;
+		max-height: 481px !important;
 		perspective: 150vw;
 	}
 
@@ -1415,7 +1415,7 @@ a.image:hover { background-color: transparent !important; }
 		width: calc(100vw - 3.2px);
 		max-width: 681px !important;
 		height: calc(100vw - 3.2px);
-		max-height: 642px !important;
+		max-height: 481px !important;
 		perspective: 200vw;
 	}
 	.iste-73-5-teki-soz-73-9 {
