@@ -108,12 +108,11 @@ body{ scroll-behavior: smooth; }
     height: auto;
 }
 
-
 .flip-card-iste-73-5-teki-soz-73-9 {
 	cursor: pointer;
     background-color: transparent;
     width: 681px;
-    height: 481px;
+    height: 482px;
     perspective: 100vw;
     display: block;
     position: relative;
@@ -158,7 +157,7 @@ body{ scroll-behavior: smooth; }
 
 .iste-73-5-teki-soz-73-9 {
 	width: 681px;
-    height: 642px;
+    height: 482px;
 }
 
 #kapsayıcı {
