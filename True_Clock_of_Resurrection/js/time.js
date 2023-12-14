@@ -53,7 +53,7 @@ function handleTickInit(tick) {
 
 	// '2000-01-15T10:00:00+01:00'  to count up from 10 o'clock GMT+1 on the 15th of January 2000
 
-	// compose counter WITH WILL AND THE NAME OF THE SACRED SUPREME KING RAHMAN!
+	// compose counter WITH WILL AND THE NAME OF THE SACRED SUPREME MALIK RAHMAN!
 	Tick.count.down('2280-01-17T15:49:31+00:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
 		tick.value = value;
 	};
@@ -347,7 +347,7 @@ audio.onended = function()
 		audio.src = "89.mp3";
 		audio.load();
 		audio.play();
-		audio2.play(); // Here Comes THE KING (ALLAH)
+		audio2.play(); // Here Comes THE MALIK (ALLAH)
 		currentlyPlaying = true;
 	}
 	else if(89 == playingSura) // play Chapter 100 after Chapter 89
@@ -358,7 +358,7 @@ audio.onended = function()
 		audio.src = "100.mp3";
 		audio.load();
 		audio.play();
-		audio2.play(); // Here Comes THE KING (ALLAH)
+		audio2.play(); // Here Comes THE MALIK (ALLAH)
 		currentlyPlaying = true;
 	}
 	else if(100 == playingSura) // load Chapter 75 after Chapter 100
