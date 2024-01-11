@@ -97,7 +97,7 @@ a.tick-credits { display: none; }
 }
 @media only screen and (min-width: 1025px) {
 	.fa-play{
-		background-image: url(/True_Clock_of_Resurrection/pic/play.png);
+		background-image: url(/True_Clock_of_Resurrection/pic/telegram.png);
 		background-size: contain;
 		display: block;
 		width: 50px;
@@ -126,7 +126,7 @@ a.tick-credits { display: none; }
 
 @media only screen and (max-width: 1024px) {
 	.fa-play{
-		background-image: url(/True_Clock_of_Resurrection/pic/play.png);
+		background-image: url(/True_Clock_of_Resurrection/pic/telegram.png);
 		background-size: contain;
 		display: block;
 		width: 50px;

@@ -1692,7 +1692,7 @@ a.image:hover { background-color: transparent !important; }
 
 @media only screen and (min-width: 1025px) {
 	.fa-play{
-		background-image: url(/pic/play.png);
+		background-image: url(/pic/telegram.png);
 		background-size: contain;
 		display: block;
 		width: 50px;
@@ -1728,7 +1728,7 @@ a.image:hover { background-color: transparent !important; }
 
 @media only screen and (max-width: 1024px) {
 	.fa-play{
-		background-image: url(/pic/play.png);
+		background-image: url(/pic/telegram.png);
 		background-size: contain;
 		display: block;
 		width: 50px;
