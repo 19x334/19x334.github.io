@@ -3,8 +3,8 @@
     SACRED & SUPREME RAHMAN YOUR NAME IS SACRED & SUPREME!
 */
 .bulanık {
-	backdrop-filter: blur(3.34px) saturate(180%);
-	-webkit-backdrop-filter: blur(3.34px) saturate(180%);
+	backdrop-filter: saturate(180%);
+	-webkit-backdrop-filter: saturate(180%);
 }
 @font-face {
     font-family: Dancing-Script;
