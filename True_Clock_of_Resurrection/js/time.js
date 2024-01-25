@@ -533,11 +533,10 @@ var anchors = document.getElementsByTagName("a");
 for(var i = 0; i < anchors.length; i++)
 {
 	anchors[i].addEventListener("mouseover", function(e) {
-		document.getElementById("vücut").classList.remove("bulanık");
-		console.log(i);
+		document.getElementById("vücut").classList.add("bulanık");
 	});
 	
 	anchors[i].addEventListener("mouseleave", function(e) {
-		document.getElementById("vücut").classList.add("bulanık");
+		document.getElementById("vücut").classList.remove("bulanık");
 	});
 }
