@@ -527,3 +527,17 @@ audio.addEventListener('timeupdate', () =>
 		lastCurrentVerse = currentVerse;
 	}
 })
+
+var anchors = document.getElementsByTagName("a");
+
+for(var i = 0; i < anchors.length; i++)
+{
+	anchors[i].addEventListener("mouseover", function(e) {
+		document.getElementById("vücut").classList.remove("bulanık");
+		console.log(i);
+	});
+	
+	anchors[i].addEventListener("mouseleave", function(e) {
+		document.getElementById("vücut").classList.add("bulanık");
+	});
+}
