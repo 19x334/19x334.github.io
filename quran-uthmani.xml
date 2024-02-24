@@ -1,42 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
 
-# PLEASE DO NOT REMOVE OR CHANGE THIS COPYRIGHT BLOCK
+# HONOURABLE & GLORIOUS QURAN
 #====================================================================
 #
 #  Tanzil Quran Text (Uthmani, Version 1.1) [Version which includes tatweel below superscript alefs (like in الرَّحْمَـٰن)]
-#  Copyright (C) 2007-2022 Tanzil Project
-#  License: Creative Commons Attribution 3.0
+#  2007-2022 Tanzil Project
 #
 #  This copy of the Quran text is carefully produced, highly 
 #  verified and continuously monitored by a group of specialists 
 #  at Tanzil Project.
 #
+#  Please check updates at: http://tanzil.net/updates/
+#
 #=================================================
+#
+#  7:69 In Original Revelation Word "bastatan" written as بَسْطَةً with letter sin سْ not with letter sad صْۜ and Tashkent Copy of Glorious QURAN is confirming this at its page 361 = 19 x 19 ! ->  http://19x334.com/img/bastatan19.jpg
 #
 #  9:128-129 are from satan! NOT FROM THE GOD!
 #
-#  68:1 NuN with 2 Ns : نون! IS TRUE ORIGINIAL ! read: http://19x334.com/#ovpl=0&onv=0&sura=68&count=ن
+#  68:1 NuN with 2 Ns : نون! IS TRUE ORIGINAL ! read: http://19x334.com/#ovpl=0&onv=0&sura=68&count=ن
 #
-#  39:53 "YAIBAD" IS TRUE ORIGINIAL ! Letter ي at the end of يَـٰعِبَاد is from satan! NOT FROM THE GOD!
-#
-#=================================================
-#
-#  TERMS OF USE:
-#
-#  - Permission is granted to copy and distribute verbatim copies 
-#    of this text, but CHANGING IT IS NOT ALLOWED.
-#
-#  - This Quran text can be used in any website or application, 
-#    provided that its source (Tanzil Project) is clearly indicated, 
-#    and a link is made to tanzil.net to enable users to keep
-#    track of changes.
-#
-#  - This copyright notice shall be included in all verbatim copies 
-#    of the text, and shall be reproduced appropriately in all files 
-#    derived from or containing substantial portion of this text.
-#
-#  Please check updates at: http://tanzil.net/updates/
+#  39:53 "YAIBAD" IS TRUE ORIGINAL ! Letter ي added at the end of يَـٰعِبَاد is from satan! NOT FROM THE GOD!
 #
 #====================================================================
 	
@@ -1083,7 +1068,7 @@
 		<aya index="a66" text="7:66 قَالَ ٱلْمَلَأُ ٱلَّذِينَ كَفَرُوا۟ مِن قَوْمِهِۦٓ إِنَّا لَنَرَىٰكَ فِى سَفَاهَةٍ وَإِنَّا لَنَظُنُّكَ مِنَ ٱلْكَـٰذِبِينَ" />
 		<aya index="a67" text="7:67 قَالَ يَـٰقَوْمِ لَيْسَ بِى سَفَاهَةٌ وَلَـٰكِنِّى رَسُولٌ مِّن رَّبِّ ٱلْعَـٰلَمِينَ" />
 		<aya index="a68" text="7:68 أُبَلِّغُكُمْ رِسَـٰلَـٰتِ رَبِّى وَأَنَا۠ لَكُمْ نَاصِحٌ أَمِينٌ" />
-		<aya index="a69" text="7:69 أَوَعَجِبْتُمْ أَن جَآءَكُمْ ذِكْرٌ مِّن رَّبِّكُمْ عَلَىٰ رَجُلٍ مِّنكُمْ لِيُنذِرَكُمْ وَٱذْكُرُوٓا۟ إِذْ جَعَلَكُمْ خُلَفَآءَ مِنۢ بَعْدِ قَوْمِ نُوحٍ وَزَادَكُمْ فِى ٱلْخَلْقِ بَصْۜطَةً فَٱذْكُرُوٓا۟ ءَالَآءَ ٱللَّهِ لَعَلَّكُمْ تُفْلِحُونَ" />
+		<aya index="a69" text="7:69 أَوَعَجِبْتُمْ أَن جَآءَكُمْ ذِكْرٌ مِّن رَّبِّكُمْ عَلَىٰ رَجُلٍ مِّنكُمْ لِيُنذِرَكُمْ وَٱذْكُرُوٓا۟ إِذْ جَعَلَكُمْ خُلَفَآءَ مِنۢ بَعْدِ قَوْمِ نُوحٍ وَزَادَكُمْ فِى ٱلْخَلْقِ بَسْطَةً فَٱذْكُرُوٓا۟ ءَالَآءَ ٱللَّهِ لَعَلَّكُمْ تُفْلِحُونَ" />
 		<aya index="a70" text="7:70 قَالُوٓا۟ أَجِئْتَنَا لِنَعْبُدَ ٱللَّهَ وَحْدَهُۥ وَنَذَرَ مَا كَانَ يَعْبُدُ ءَابَآؤُنَا فَأْتِنَا بِمَا تَعِدُنَآ إِن كُنتَ مِنَ ٱلصَّـٰدِقِينَ" />
 		<aya index="a71" text="7:71 قَالَ قَدْ وَقَعَ عَلَيْكُم مِّن رَّبِّكُمْ رِجْسٌ وَغَضَبٌ أَتُجَـٰدِلُونَنِى فِىٓ أَسْمَآءٍ سَمَّيْتُمُوهَآ أَنتُمْ وَءَابَآؤُكُم مَّا نَزَّلَ ٱللَّهُ بِهَا مِن سُلْطَـٰنٍ فَٱنتَظِرُوٓا۟ إِنِّى مَعَكُم مِّنَ ٱلْمُنتَظِرِينَ" />
 		<aya index="a72" text="7:72 فَأَنجَيْنَـٰهُ وَٱلَّذِينَ مَعَهُۥ بِرَحْمَةٍ مِّنَّا وَقَطَعْنَا دَابِرَ ٱلَّذِينَ كَذَّبُوا۟ بِـَٔايَـٰتِنَا وَمَا كَانُوا۟ مُؤْمِنِينَ" />
@@ -4264,7 +4249,7 @@
 		<aya index="a50" text="39:50 قَدْ قَالَهَا ٱلَّذِينَ مِن قَبْلِهِمْ فَمَآ أَغْنَىٰ عَنْهُم مَّا كَانُوا۟ يَكْسِبُونَ" />
 		<aya index="a51" text="39:51 فَأَصَابَهُمْ سَيِّـَٔاتُ مَا كَسَبُوا۟ وَٱلَّذِينَ ظَلَمُوا۟ مِنْ هَـٰٓؤُلَآءِ سَيُصِيبُهُمْ سَيِّـَٔاتُ مَا كَسَبُوا۟ وَمَا هُم بِمُعْجِزِينَ" />
 		<aya index="a52" text="39:52 أَوَلَمْ يَعْلَمُوٓا۟ أَنَّ ٱللَّهَ يَبْسُطُ ٱلرِّزْقَ لِمَن يَشَآءُ وَيَقْدِرُ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّقَوْمٍ يُؤْمِنُونَ" />
-		<aya index="a53" text="39:53 قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ" />
+		<aya index="a53" text="39:53 قُلْ يَـٰعِبَاد ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ" />
 		<aya index="a54" text="39:54 وَأَنِيبُوٓا۟ إِلَىٰ رَبِّكُمْ وَأَسْلِمُوا۟ لَهُۥ مِن قَبْلِ أَن يَأْتِيَكُمُ ٱلْعَذَابُ ثُمَّ لَا تُنصَرُونَ" />
 		<aya index="a55" text="39:55 وَٱتَّبِعُوٓا۟ أَحْسَنَ مَآ أُنزِلَ إِلَيْكُم مِّن رَّبِّكُم مِّن قَبْلِ أَن يَأْتِيَكُمُ ٱلْعَذَابُ بَغْتَةً وَأَنتُمْ لَا تَشْعُرُونَ" />
 		<aya index="a56" text="39:56 أَن تَقُولَ نَفْسٌ يَـٰحَسْرَتَىٰ عَلَىٰ مَا فَرَّطتُ فِى جَنۢبِ ٱللَّهِ وَإِن كُنتُ لَمِنَ ٱلسَّـٰخِرِينَ" />
@@ -5512,7 +5497,7 @@
 	</sura>
 	<sura index="s68" name="القلم">
 		<aya index="a0" text="68:0 بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ" />
-		<aya index="a1" text="68:1 نٓ وَٱلْقَلَمِ وَمَا يَسْطُرُونَ" />
+		<aya index="a1" text="68:1 نون وَٱلْقَلَمِ وَمَا يَسْطُرُونَ" />
 		<aya index="a2" text="68:2 مَآ أَنتَ بِنِعْمَةِ رَبِّكَ بِمَجْنُونٍ" />
 		<aya index="a3" text="68:3 وَإِنَّ لَكَ لَأَجْرًا غَيْرَ مَمْنُونٍ" />
 		<aya index="a4" text="68:4 وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ" />
