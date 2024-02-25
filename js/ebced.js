@@ -113,6 +113,197 @@ function randombg()
 	localStorage.setItem("lastBgIndex", random);
 }
 
+
+var backs = document.getElementsByClassName("back");
+
+function yukarıya(yön) { return yön < 0; } // yukarı -
+function aşağıya(yön) { return yön > 0; } // aşağı +
+
+function sagTaraftayken(i) { return backs[i].scrollWidth - backs[i].scrollLeft - backs[i].clientWidth < backs[i].scrollWidth - 1 - windowWidth; }
+function solTaraftayken(i) { return backs[i].scrollLeft < backs[i].scrollWidth - 1 - windowWidth; }
+
+
+backs[0].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(0)) || (sagTaraftayken(0) && yukarıya(e.deltaY)))
+	{
+		backs[0].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[1].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(1)) || (sagTaraftayken(1) && yukarıya(e.deltaY)))
+	{
+		backs[1].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[2].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(2)) || (sagTaraftayken(2) && yukarıya(e.deltaY)))
+	{
+		backs[2].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[3].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(3)) || (sagTaraftayken(3) && yukarıya(e.deltaY)))
+	{
+		backs[3].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[4].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(4)) || (sagTaraftayken(4) && yukarıya(e.deltaY)))
+	{
+		backs[4].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[5].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(5)) || (sagTaraftayken(5) && yukarıya(e.deltaY)))
+	{
+		backs[5].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[6].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(6)) || (sagTaraftayken(6) && yukarıya(e.deltaY)))
+	{
+		backs[6].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[7].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(7)) || (sagTaraftayken(7) && yukarıya(e.deltaY)))
+	{
+		backs[7].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[8].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(8)) || (sagTaraftayken(8) && yukarıya(e.deltaY)))
+	{
+		backs[8].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[9].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(9)) || (sagTaraftayken(9) && yukarıya(e.deltaY)))
+	{
+		backs[9].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[10].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(10)) || (sagTaraftayken(10) && yukarıya(e.deltaY)))
+	{
+		backs[10].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+backs[11].addEventListener("wheel", function (e)
+{
+	// console.log(e.deltaY)
+	if((aşağıya(e.deltaY) && solTaraftayken(11)) || (sagTaraftayken(11) && yukarıya(e.deltaY)))
+	{
+		backs[11].scrollLeft += e.deltaY;
+		e.preventDefault();  // e.bubbles = false; 
+		// yatay kaydırma açık MaşALLAH
+	}
+	else
+	{
+		// dikey kaydırma açık MaşALLAH"
+		return true; // reverse effect of e.preventDefault(); İnşALLAH MaşALLAH !
+	}
+});
+
 function divide19(numberDividableBy19){
 	if(numberDividableBy19 == 0) return '0';
 	else {
