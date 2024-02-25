@@ -555,6 +555,12 @@ table {
 	border-collapse:collapse;
     border-radius: 1em;
     overflow: hidden;
+	background: url(/pic/book-arabic-019.png), rgba(255,255,255,0.74);
+	background-size: 47.8% auto, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+	backdrop-filter: blur(14px) saturate(180%);
+	-webkit-backdrop-filter: blur(14px) saturate(180%);
 }
 caption{ background-color: white; }
 table th {
@@ -571,16 +577,11 @@ table td {
 	color: #313030;
 }
 .back {
+	max-width: 100%;
+    overflow-x: auto;
 	width: fit-content;
     height: fit-content;
 	margin: auto;
-	background: url(/pic/book-arabic-019.png), rgba(255,255,255,0.74);
-	background-size: 47.8% auto, 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-	backdrop-filter: blur(14px) saturate(180%);
-	-webkit-backdrop-filter: blur(14px) saturate(180%);
-    border-radius: 1em;
 }
 #ELMRŜ:before {
 	display: table;
@@ -829,6 +830,7 @@ table#BISMILLAHIRRAHMANIRRAHIM-2 {
 	border-radius: 1em;
 	text-align: center;
 	line-height: 32px;
+	overflow-wrap: break-word;
 }
 #Ŝ_caption{
 	text-align: center;
