@@ -541,7 +541,7 @@ function loadXMLDoc() {
 			bölümaçıcı(this);
     	}
 	}
-	xmlhttp.open("GET", "quran-uthmani.xml", true);
+	xmlhttp.open("GET", "QURAN-AL-MACID.xml", true);
 	xmlhttp.send();
 }
 
