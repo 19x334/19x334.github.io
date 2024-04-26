@@ -541,7 +541,7 @@ function loadXMLDoc() {
 			bölümaçıcı(this);
     	}
 	}
-	xmlhttp.open("GET", "QURAN-AL-MACID.xml", true);
+	xmlhttp.open("GET", "GLORIOUS-QURAN.xml", true);
 	xmlhttp.send();
 }
 
