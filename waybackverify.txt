@@ -1,7 +1,9 @@
 Selam, I would like to remove these url s at dates specified alongside them:
 
 - [Between : 1.1.2023 - 31.12.2023]* > 19x334.com/True_Clock_of_Resurrection
+
 - [Between : 1.1.2023 - 31.12.2023]* > 19x334.github.io/no_more_a_secret
+
 - [Between : 1.1.2023 - 31.12.2023]* > 19x334.com/no_more_a_secret
 
 both as http://.... and and as https://....
