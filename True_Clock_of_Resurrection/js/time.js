@@ -1,4 +1,4 @@
-// İSMİYLE TANRI'NIN ZARİF MERHAMETLİ
+// İSMİYLE TANRI'NIN ŞEFKATLİ MERHAMETLİ
 
 /*
 
@@ -214,7 +214,7 @@ const syncData75 = [
 	{start: '73.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#16">75:16</a>&nbsp;Do not move your tongue to hasten it.</p>'},
 	{start: '76.875', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#17">75:17</a>&nbsp;It is WE who will collect it into QURAN.</p>'},
 	{start: '81.125', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#18">75:18</a>&nbsp;Once WE recite it, you shall follow such a QURAN.</p>'},
-	{start: '85.600', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#19">75:19</a>&nbsp;Then it is WE who will explain it.</p>'},
+	{start: '85.600', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#19">75:19</a>&nbsp;Then it is WE WHO Will Explain It!</p>'},
 	{start: '89.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#20">75:20</a>&nbsp;Indeed, you love this fleeting life.</p>'},
 	{start: '93.250', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#21">75:21</a>&nbsp;While disregarding the Hereafter.</p>'},
 	{start: '96.875', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#22">75:22</a>&nbsp;Some faces, on that day, will be happy.</p>'},
