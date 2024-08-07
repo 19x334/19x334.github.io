@@ -1,4 +1,4 @@
-// İSMİYLE TANRI'NIN ŞEFKATLİ MERHAMETLİ
+// our LORD MOST SACRED IS FREE FROM ALL deficiencies!
 
 /*
 
