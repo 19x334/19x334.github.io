@@ -221,7 +221,7 @@ const syncData75 = [
 	{start: '100.154', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#23">75:23</a>&nbsp;Looking at their OWNER.</p>'},
 	{start: '102.371', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#24">75:24</a>&nbsp;Other faces will be, on that day, miserable.</p>'},
 	{start: '106.196', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#25">75:25</a>&nbsp;Expecting the worst.</p>'},
-	{start: '108.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#26">75:26</a>&nbsp;Indeed, when (the soul) reaches the throat.</p>'},
+	{start: '108.750', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#26">75:26</a>&nbsp;Indeed, when reaches the throat.</p>'},
 	{start: '112.250', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#27">75:27</a>&nbsp;And it is ordered: "Let go!"</p>'},
 	{start: '115.886', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#28">75:28</a>&nbsp;He knows it is the end.</p>'},
 	{start: '118.000', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/75.html?m=1#29">75:29</a>&nbsp;Each leg will lay motionless next to the other leg.</p>'},
