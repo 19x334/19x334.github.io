@@ -1,1 +1,0 @@
-window.location = "../True_Clock_of_Resurrection"
