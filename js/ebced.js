@@ -55,7 +55,6 @@ function randombg()
 		"url('/pic/size/425/space4.png')",
 		"url('/pic/size/425/space5.png')",
 		"url('/pic/size/425/space8.jpg')",
-		"url('pic/size/425/El-Konstantiniyye.png')",
 		"url('pic/size/425/moonEarthSun.png')",
 		"url('pic/size/425/resurrection.png')",
 		"url('/pic/size/425/heavenandhell.png')",
@@ -66,7 +65,6 @@ function randombg()
 		"url('/pic/size/886/space4.png')",
 		"url('/pic/size/886/space5.png')",
 		"url('/pic/size/886/space8.png')",
-		"url('pic/size/886/El-Konstantiniyye.png')",
 		"url('pic/size/886/moonEarthSun.png')",
 		"url('pic/size/886/resurrection.png')",
 		"url('/pic/size/886/heavenandhell.png')",
@@ -77,7 +75,6 @@ function randombg()
 		"url('/pic/size/1024/space4.png')",
 		"url('/pic/size/1024/space5.png')",
 		"url('/pic/size/1024/space8.jpg')",
-		"url('pic/size/1024/El-Konstantiniyye.png')",
 		"url('pic/size/1024/moonEarthSun.png')",
 		"url('pic/size/1024/resurrection.png')",
 		"url('/pic/size/1024/heavenandhell.png')",
@@ -88,7 +85,6 @@ function randombg()
 		"url('/pic/size/1585/space4.png')",
 		"url('/pic/size/1585/space5.png')",
 		"url('/pic/size/1585/space8.jpg')",
-		"url('pic/size/1585/El-Konstantiniyye.png')",
 		"url('pic/size/1585/moonEarthSun.png')",
 		"url('pic/size/1585/resurrection.png')",
 		"url('/pic/size/1585/heavenandhell.png')",
@@ -99,14 +95,13 @@ function randombg()
 		"url('pic/space4.png')",
 		"url('pic/space5.png')",
 		"url('pic/space8.jpg')",
-		"url('pic/El-Konstantiniyye.png')",
 		"url('pic/moonEarthSun.png')",
 		"url('pic/resurrection.png')",
 		"url('/pic/heavenandhell.png')",
 		];
 
-	var random = Math.floor(Math.random() * 8);
-	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 8); // FOR DIFFERENT BACKGROUND IF ALLAH gives permission
+	var random = Math.floor(Math.random() * 7);
+	while(localStorage.getItem("lastBgIndex") == random) random = Math.floor(Math.random() * 7); // FOR DIFFERENT BACKGROUND IF ALLAH gives permission
     document.getElementById("bg").style.backgroundImage = bigSize[random];
     document.getElementById("vücut").style.backgroundImage = bigSize[random];
 	localStorage.setItem("lastBgIndex", random);
