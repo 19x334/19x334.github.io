@@ -112,7 +112,7 @@ body{ scroll-behavior: smooth; }
 	cursor: pointer;
     background-color: transparent;
     width: 681px;
-    height: 482px;
+    height: 409.49px;
     perspective: 100vw;
     display: block;
     position: relative;
@@ -982,12 +982,11 @@ textarea::-webkit-scrollbar-thumb {
 		height: auto;
 	}
 
-
 	.flip-card-iste-73-5-teki-soz-73-9 {
-		width: 75vw;
-		max-width: 681px !important;
-		height: 49.76vw;
-		max-height: 452px !important;
+		width: 70vw;
+		max-width: 629px !important;
+		height: 39.8vw;
+		max-height: 384px !important;
 		perspective: 150vw;
 	}
 
@@ -1336,7 +1335,7 @@ body {
 	
 		.flip-card-iste-73-5-teki-soz-73-9 {
 			width: 100vw;
-			height: 66.34vw;
+			height: 56.35vw;
 		}
 	
 		.iste-73-5-teki-soz-73-9-back {
@@ -1429,8 +1428,8 @@ a.image:hover { background-color: transparent !important; }
 	.flip-card-iste-73-5-teki-soz-73-9 {
 		width: calc(100vw - 3.2px);
 		max-width: 681px !important;
-		height: calc(66.34vw - 3.2px);
-		max-height: 452px !important;
+		height: calc(56.35vw - 3.2px);
+		max-height: 384px !important;
 		perspective: 200vw;
 	}
 	.iste-73-5-teki-soz-73-9 {
