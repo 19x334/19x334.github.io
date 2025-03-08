@@ -53,8 +53,8 @@ function handleTickInit(tick) {
 
 	// '2000-01-15T10:00:00+01:00'  to count up from 10 o'clock GMT+1 on the 15th of January 2000
 
-	// compose counter WITH WILL AND THE NAME OF THE SACRED SUPREME MALIK RAHMAN!
-	Tick.count.down('2280-01-17T15:49:31+00:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
+	// compose counter WITH WILL AND THE NAME OF THE CLOCK!
+	Tick.count.down('2280-01-17T15:49:32+00:00', { format: ['y','M','d','h','m','s'] }).onupdate = function (value) {
 		tick.value = value;
 	};
 }
@@ -284,7 +284,7 @@ const syncData100 = [
 	{start: '23.181', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#6">100:6</a>&nbsp;the human being is unappreciative of his LORD.</p>'},
 	{start: '26.853', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#7">100:7</a>&nbsp;he bears witness to this FACT.</p>'},
 	{start: '29.445', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#8">100:8</a>&nbsp;he loves material things excessively.</p>'},
-	{start: '32.445', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#9">100:9</a>&nbsp;Does he not realize that THE DAY will come (17/01/2280 UTC 15:49:31) when the graves are OPENED?</p>'},
+	{start: '32.445', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#9">100:9</a>&nbsp;Does he not realize that THE DAY will come (17/01/2280 UTC 15:49:32) when the graves are OPENED?</p>'},
 	{start: '37.464', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#10">100:10</a>&nbsp;And all secrets are BROUGHT OUT.</p>'},
 	{start: '40.028', text: '<p class="verses"><a target="_blank" class="antique-link" href="http://honourablequran.blogspot.com/p/100.html?m=1#11">100:11</a>&nbsp;they will find out, on THAT DAY, that their LORD HAS BEEN FULLY COGNIZANT OF them</p>'}
 ];

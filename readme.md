@@ -1,5 +1,5 @@
 # 19x334.com
-# TrueClock.Org
+# KıyametSaati.com
 # Kıyamet.Net
 # DidYouQuestionLife.com ?
 # Hayatı.Sorguladınmı.com ?
